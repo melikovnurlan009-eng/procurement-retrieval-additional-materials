@@ -1,0 +1,97 @@
+{
+  "reconstruction_error_mean": 0.0,
+  "reconstruction_error_max": 0.0,
+  "bm25_raw_spearman_vs_neg_pre_rerank_rank": 0.12962121346184075,
+  "bm25_norm_spearman_vs_neg_pre_rerank_rank": 0.16967976141426241,
+  "bm25_mw_essential_vs_nongold": {
+    "n1": 187,
+    "n2": 105585,
+    "U": 14382561.0,
+    "p": 3.0300260358838094e-27,
+    "cliffs_delta": 0.4569
+  },
+  "bm25_auc_essential_vs_rest": 0.7283018388440338,
+  "bm25_effective_weighted_range": {
+    "min": 0.00027922422224315737,
+    "max": 0.3999999792427818,
+    "mean": 0.2022621718288875,
+    "median": 0.22707923290355275,
+    "sd": 0.12462517498749606,
+    "iqr": 0.23502473303734056,
+    "p10_p90_spread": 0.3391728342865942
+  },
+  "dense_mw_essential_vs_nongold": {
+    "n1": 187,
+    "n2": 105585,
+    "U": 16724646.0,
+    "p": 1.249838951817506e-60,
+    "cliffs_delta": 0.6941
+  },
+  "dense_mw_essential_vs_wrongregime": {
+    "n1": 187,
+    "n2": 5,
+    "U": 598.0,
+    "p": 0.2988210203218366,
+    "cliffs_delta": 0.2791
+  },
+  "dense_auc_essential_vs_rest": 0.8468860275513757,
+  "dense_gap_essential_minus_nongold_raw": 0.10058165617346049,
+  "dense_gap_essential_minus_wrongregime_raw": 0.02403477850267388,
+  "dense_effective_weighted_range": {
+    "min": 1.57797862998299e-05,
+    "max": 0.599925511675932,
+    "mean": 0.3167869851440687,
+    "median": 0.3767931551521519,
+    "sd": 0.1856938350272893,
+    "iqr": 0.33862851192030186,
+    "p10_p90_spread": 0.5042274419935326
+  },
+  "authority_primary_vs_secondary_raw_diff": 0.030000000000000027,
+  "authority_primary_vs_secondary_norm_diff": 0.7128843991069436,
+  "authority_primary_vs_secondary_weighted_diff": 0.07128843991069438,
+  "authority_amplification_factor_norm_over_raw": 23.762813303564766,
+  "authority_pairwise_inversions_total": 943159,
+  "authority_pairwise_comparisons_total": 4892223,
+  "authority_pairwise_inversion_rate": 0.19278740973173136,
+  "n_secondary_demoted_below_primary_by_authority": 585958,
+  "n_primary_demoted_below_secondary_by_authority": 357201,
+  "secondary_demoted_rate": 0.11977336274327642,
+  "primary_demoted_rate": 0.07301404698845494,
+  "jurisdiction_counts": {
+    "UK": 92865,
+    "Scotland": 6299,
+    "EU": 5088,
+    "England/Wales/UK central government context": 1571
+  },
+  "n_eu_candidates": 5088,
+  "jurisdiction_eu_mean_score_change": 0.4091651917702089,
+  "n_eu_essential_gold_candidates": 0,
+  "ce_auc_essential_vs_rest": 0.687988954379196,
+  "ce_n_essential_gold_moved_into_top25": 22,
+  "ce_n_essential_gold_moved_out_of_top25": 12,
+  "ce_harmful_demotion_rate": 0.09090909090909091,
+  "ce_mean_rank_movement_essential_gold": 3.592814371257485,
+  "ce_median_rank_movement_essential_gold": 1.0,
+  "top25_per_lane_DEV": {
+    "split": "DEV",
+    "n_scenarios": 95,
+    "n_requirements": 155,
+    "RequirementRecall@25-per-lane": 0.8129032258064516,
+    "CompleteCoverage@25-per-lane": 0.7473684210526316,
+    "n_mixed_evidence_scenarios": 17,
+    "DualEvidenceCoverage@25-per-lane": 0.7647058823529411,
+    "legislation_side_coverage": 1.0,
+    "nonlegislation_side_coverage": 0.7647058823529411
+  },
+  "top25_per_lane_TEST": {
+    "split": "TEST (confirmation only, baseline CE config, not tuned)",
+    "n_scenarios": 94,
+    "n_requirements": 139,
+    "RequirementRecall@25-per-lane": 0.8057553956834532,
+    "CompleteCoverage@25-per-lane": 0.7553191489361702,
+    "n_mixed_evidence_scenarios": 15,
+    "DualEvidenceCoverage@25-per-lane": 0.6,
+    "legislation_side_coverage": 0.8666666666666667,
+    "nonlegislation_side_coverage": 0.6666666666666666
+  }
+}

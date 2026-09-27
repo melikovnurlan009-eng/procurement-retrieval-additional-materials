@@ -1,0 +1,16 @@
+# The 165 MB corpus index is not distributed here; see corpus/CORPUS_BUILD.md.
+corpus/*.sqlite3
+corpus/*.sqlite3-*
+
+# Local environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Manifests written by a local run of the harness; the frozen ones live in config/.
+results/manifest.json
+results/config.json
+
+.DS_Store

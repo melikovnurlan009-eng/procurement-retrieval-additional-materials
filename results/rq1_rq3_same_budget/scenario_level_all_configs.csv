@@ -1,0 +1,1702 @@
+split,config,config_id,budget,scenario_id,suite,category,n_satisfied,n_total,complete_coverage
+TEST,pooled:BM25 only,1,top-50 (pooled),DEV002,exact_anchor,direct legal anchor,0,2,0.0
+TEST,pooled:BM25 only,1,top-50 (pooled),DEV003,exact_anchor,direct legal anchor,0,1,0.0
+TEST,pooled:BM25 only,1,top-50 (pooled),DEV006,semantic,semantic / practitioner phrasing,0,2,0.0
+TEST,pooled:BM25 only,1,top-50 (pooled),DEV008,semantic,semantic / practitioner phrasing,2,2,1.0
+TEST,pooled:BM25 only,1,top-50 (pooled),DEV009,semantic,semantic / practitioner phrasing,0,2,0.0
+TEST,pooled:BM25 only,1,top-50 (pooled),DEV010,semantic,semantic / practitioner phrasing,0,1,0.0
+TEST,pooled:BM25 only,1,top-50 (pooled),DEV015,vocabulary_mismatch,vocabulary mismatch,0,2,0.0
+TEST,pooled:BM25 only,1,top-50 (pooled),DEV016,vocabulary_mismatch,vocabulary mismatch,0,2,0.0
+TEST,pooled:BM25 only,1,top-50 (pooled),DEV019,cross_reference_multi_instrument,cross_reference_multi_instrument,0,2,0.0
+TEST,pooled:BM25 only,1,top-50 (pooled),DEV021,cross_reference_multi_instrument,cross_reference_multi_instrument,0,2,0.0
+TEST,pooled:BM25 only,1,top-50 (pooled),DEV022,cross_reference_multi_instrument,cross_reference_multi_instrument,0,2,0.0
+TEST,pooled:BM25 only,1,top-50 (pooled),DEV024,cross_reference_multi_instrument,cross_reference_multi_instrument,1,2,0.0
+TEST,pooled:BM25 only,1,top-50 (pooled),DEV025,applicability,applicability / transition,1,2,0.0
+TEST,pooled:BM25 only,1,top-50 (pooled),DEV028,applicability,applicability / transition,2,2,1.0
+TEST,pooled:BM25 only,1,top-50 (pooled),DEV032,procedural_multi_evidence,procedural_multi_evidence,1,2,0.0
+TEST,pooled:BM25 only,1,top-50 (pooled),DEV033,procedural_multi_evidence,procedural_multi_evidence,1,2,0.0
+TEST,pooled:BM25 only,1,top-50 (pooled),DEV036,authority,authority / source-role sensitive,0,1,0.0
+TEST,pooled:BM25 only,1,top-50 (pooled),DEV037,authority,authority / source-role sensitive,0,1,0.0
+TEST,pooled:BM25 only,1,top-50 (pooled),DEV038,compound,compound / multi-requirement,1,3,0.0
+TEST,pooled:BM25 only,1,top-50 (pooled),TEST002,exact_anchor,direct legal anchor,0,1,0.0
+TEST,pooled:BM25 only,1,top-50 (pooled),TEST006,semantic,semantic / practitioner phrasing,0,1,0.0
+TEST,pooled:BM25 only,1,top-50 (pooled),TEST007,vocabulary_mismatch,vocabulary mismatch,0,2,0.0
+TEST,pooled:BM25 only,1,top-50 (pooled),TEST008,vocabulary_mismatch,vocabulary mismatch,1,2,0.0
+TEST,pooled:BM25 only,1,top-50 (pooled),TEST010,cross_reference_multi_instrument,cross_reference_multi_instrument,1,2,0.0
+TEST,pooled:BM25 only,1,top-50 (pooled),TEST014,applicability,applicability / transition,0,2,0.0
+TEST,pooled:BM25 only,1,top-50 (pooled),TEST016,procedural_multi_evidence,procedural_multi_evidence,0,2,0.0
+TEST,pooled:BM25 only,1,top-50 (pooled),TEST018,procedural_multi_evidence,procedural_multi_evidence,0,2,0.0
+TEST,pooled:BM25 only,1,top-50 (pooled),TEST020,compound,compound / multi-requirement,1,2,0.0
+TEST,pooled:BM25 only,1,top-50 (pooled),FAQ001,exact_anchor,direct legal anchor,0,1,0.0
+TEST,pooled:BM25 only,1,top-50 (pooled),FAQ004,semantic,semantic / practitioner phrasing,0,1,0.0
+TEST,pooled:BM25 only,1,top-50 (pooled),FAQ005,semantic,semantic / practitioner phrasing,0,1,0.0
+TEST,pooled:BM25 only,1,top-50 (pooled),FAQ010,applicability,applicability / transition,0,1,0.0
+TEST,pooled:BM25 only,1,top-50 (pooled),FAQ015,exact_anchor,direct legal anchor,0,1,0.0
+TEST,pooled:BM25 only,1,top-50 (pooled),FAQ016,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,pooled:BM25 only,1,top-50 (pooled),FAQ017,semantic,semantic / practitioner phrasing,0,1,0.0
+TEST,pooled:BM25 only,1,top-50 (pooled),FAQ018,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,pooled:BM25 only,1,top-50 (pooled),FAQ020,semantic,semantic / practitioner phrasing,0,1,0.0
+TEST,pooled:BM25 only,1,top-50 (pooled),FAQ024,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,pooled:BM25 only,1,top-50 (pooled),FAQ026,exact_anchor,direct legal anchor,0,1,0.0
+TEST,pooled:BM25 only,1,top-50 (pooled),FAQ029,semantic,semantic / practitioner phrasing,0,1,0.0
+TEST,pooled:BM25 only,1,top-50 (pooled),FAQ030,semantic,semantic / practitioner phrasing,0,1,0.0
+TEST,pooled:BM25 only,1,top-50 (pooled),FAQ032,exact_anchor,direct legal anchor,0,1,0.0
+TEST,pooled:BM25 only,1,top-50 (pooled),FAQ034,cross_reference_multi_instrument,cross_reference_multi_instrument,0,2,0.0
+TEST,pooled:BM25 only,1,top-50 (pooled),FAQ035,exact_anchor,direct legal anchor,1,1,1.0
+TEST,pooled:BM25 only,1,top-50 (pooled),FAQ037,exact_anchor,direct legal anchor,1,1,1.0
+TEST,pooled:BM25 only,1,top-50 (pooled),FAQ039,cross_reference_multi_instrument,cross_reference_multi_instrument,0,1,0.0
+TEST,pooled:BM25 only,1,top-50 (pooled),FAQ041,exact_anchor,direct legal anchor,1,1,1.0
+TEST,pooled:BM25 only,1,top-50 (pooled),FAQ044,exact_anchor,direct legal anchor,1,1,1.0
+TEST,pooled:BM25 only,1,top-50 (pooled),FAQ047,exact_anchor,direct legal anchor,0,1,0.0
+TEST,pooled:BM25 only,1,top-50 (pooled),FAQ048,cross_reference_multi_instrument,cross_reference_multi_instrument,0,1,0.0
+TEST,pooled:BM25 only,1,top-50 (pooled),FAQ049,exact_anchor,direct legal anchor,0,1,0.0
+TEST,pooled:BM25 only,1,top-50 (pooled),FAQ050,exact_anchor,direct legal anchor,0,1,0.0
+TEST,pooled:BM25 only,1,top-50 (pooled),FAQ056,exact_anchor,direct legal anchor,1,1,1.0
+TEST,pooled:BM25 only,1,top-50 (pooled),FAQ057,exact_anchor,direct legal anchor,0,1,0.0
+TEST,pooled:BM25 only,1,top-50 (pooled),FAQ060,cross_reference_multi_instrument,cross_reference_multi_instrument,0,1,0.0
+TEST,pooled:BM25 only,1,top-50 (pooled),FAQ074,semantic,semantic / practitioner phrasing,0,1,0.0
+TEST,pooled:BM25 only,1,top-50 (pooled),FAQ076,exact_anchor,direct legal anchor,1,1,1.0
+TEST,pooled:BM25 only,1,top-50 (pooled),FAQ079,exact_anchor,direct legal anchor,0,1,0.0
+TEST,pooled:BM25 only,1,top-50 (pooled),FAQ082,semantic,semantic / practitioner phrasing,0,1,0.0
+TEST,pooled:BM25 only,1,top-50 (pooled),FAQ084,cross_reference_multi_instrument,cross_reference_multi_instrument,1,1,1.0
+TEST,pooled:BM25 only,1,top-50 (pooled),FAQ085,semantic,semantic / practitioner phrasing,0,1,0.0
+TEST,pooled:BM25 only,1,top-50 (pooled),FAQ086,exact_anchor,direct legal anchor,0,1,0.0
+TEST,pooled:BM25 only,1,top-50 (pooled),FAQ087,exact_anchor,direct legal anchor,1,1,1.0
+TEST,pooled:BM25 only,1,top-50 (pooled),FAQ088,exact_anchor,direct legal anchor,0,1,0.0
+TEST,pooled:BM25 only,1,top-50 (pooled),FAQ089,exact_anchor,direct legal anchor,0,1,0.0
+TEST,pooled:BM25 only,1,top-50 (pooled),FAQ090,applicability,applicability / transition,1,1,1.0
+TEST,pooled:BM25 only,1,top-50 (pooled),EXP_PPN001,applicability,applicability / transition,1,2,0.0
+TEST,pooled:BM25 only,1,top-50 (pooled),EXP_PPN003,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,pooled:BM25 only,1,top-50 (pooled),EXP_PPN006,procedural_multi_evidence,procedural_multi_evidence,0,2,0.0
+TEST,pooled:BM25 only,1,top-50 (pooled),EXP_PPN009,procedural_multi_evidence,procedural_multi_evidence,1,2,0.0
+TEST,pooled:BM25 only,1,top-50 (pooled),EXP_REG006,procedural_multi_evidence,procedural_multi_evidence,1,2,0.0
+TEST,pooled:BM25 only,1,top-50 (pooled),EXP_GUID001,expansion_v2_official_guidance,expansion_v2_official_guidance,1,2,0.0
+TEST,pooled:BM25 only,1,top-50 (pooled),EXP_GUID002,expansion_v2_official_guidance,expansion_v2_official_guidance,1,2,0.0
+TEST,pooled:BM25 only,1,top-50 (pooled),EXP_GUID003,expansion_v2_official_guidance,expansion_v2_official_guidance,1,2,0.0
+TEST,pooled:BM25 only,1,top-50 (pooled),EXP_GUID004,expansion_v2_official_guidance,expansion_v2_official_guidance,0,2,0.0
+TEST,pooled:BM25 only,1,top-50 (pooled),EXP_GUID008,expansion_v2_official_guidance,expansion_v2_official_guidance,0,2,0.0
+TEST,pooled:BM25 only,1,top-50 (pooled),EXP_GUID012,expansion_v2_official_guidance,expansion_v2_official_guidance,1,1,1.0
+TEST,pooled:BM25 only,1,top-50 (pooled),EXP_WORK001,official_workflow_expansion_v2,official_workflow_expansion_v2,1,2,0.0
+TEST,pooled:BM25 only,1,top-50 (pooled),EXP_WORK005,official_workflow_expansion_v2,official_workflow_expansion_v2,2,3,0.0
+TEST,pooled:BM25 only,1,top-50 (pooled),EXP_WORK006,official_workflow_expansion_v2,official_workflow_expansion_v2,1,2,0.0
+TEST,pooled:BM25 only,1,top-50 (pooled),EXP_WORK009,official_workflow_expansion_v2,official_workflow_expansion_v2,1,1,1.0
+TEST,pooled:BM25 only,1,top-50 (pooled),EXP_WORK010,official_workflow_expansion_v2,official_workflow_expansion_v2,1,1,1.0
+TEST,pooled:BM25 only,1,top-50 (pooled),EXP_TRANS002,procedural_multi_evidence,procedural_multi_evidence,2,2,1.0
+TEST,pooled:BM25 only,1,top-50 (pooled),EXP_TRANS003,procedural_multi_evidence,procedural_multi_evidence,2,2,1.0
+TEST,pooled:BM25 only,1,top-50 (pooled),EXP_TRANS004,applicability,applicability / transition,0,1,0.0
+TEST,pooled:BM25 only,1,top-50 (pooled),EXP_TRANS008,applicability,applicability / transition,0,1,0.0
+TEST,pooled:BM25 only,1,top-50 (pooled),EXP_TRANS009,procedural_multi_evidence,procedural_multi_evidence,0,2,0.0
+TEST,pooled:BM25 only,1,top-50 (pooled),EXP_SEC006,faq90,faq90,0,3,0.0
+TEST,pooled:BM25 only,1,top-50 (pooled),EXP_SEC007,faq90,faq90,2,2,1.0
+TEST,pooled:BM25 only,1,top-50 (pooled),EXP_SEC010,faq90,faq90,1,1,1.0
+TEST,pooled:BM25 only,1,top-50 (pooled),EXP_SEC011,faq90,faq90,1,3,0.0
+TEST,pooled:BM25 only,1,top-50 (pooled),EXP_SEC012,faq90,faq90,1,1,1.0
+TEST,pooled:BM25 only,1,top-50 (pooled),EXP_SEC014,faq90,faq90,1,1,1.0
+TEST,pooled:BM25 only,1,top-50 (pooled),EXP_SEC016,faq90,faq90,0,1,0.0
+TEST,pooled:Dense only,2,top-50 (pooled),DEV002,exact_anchor,direct legal anchor,1,2,0.0
+TEST,pooled:Dense only,2,top-50 (pooled),DEV003,exact_anchor,direct legal anchor,1,1,1.0
+TEST,pooled:Dense only,2,top-50 (pooled),DEV006,semantic,semantic / practitioner phrasing,1,2,0.0
+TEST,pooled:Dense only,2,top-50 (pooled),DEV008,semantic,semantic / practitioner phrasing,0,2,0.0
+TEST,pooled:Dense only,2,top-50 (pooled),DEV009,semantic,semantic / practitioner phrasing,2,2,1.0
+TEST,pooled:Dense only,2,top-50 (pooled),DEV010,semantic,semantic / practitioner phrasing,0,1,0.0
+TEST,pooled:Dense only,2,top-50 (pooled),DEV015,vocabulary_mismatch,vocabulary mismatch,0,2,0.0
+TEST,pooled:Dense only,2,top-50 (pooled),DEV016,vocabulary_mismatch,vocabulary mismatch,2,2,1.0
+TEST,pooled:Dense only,2,top-50 (pooled),DEV019,cross_reference_multi_instrument,cross_reference_multi_instrument,0,2,0.0
+TEST,pooled:Dense only,2,top-50 (pooled),DEV021,cross_reference_multi_instrument,cross_reference_multi_instrument,1,2,0.0
+TEST,pooled:Dense only,2,top-50 (pooled),DEV022,cross_reference_multi_instrument,cross_reference_multi_instrument,1,2,0.0
+TEST,pooled:Dense only,2,top-50 (pooled),DEV024,cross_reference_multi_instrument,cross_reference_multi_instrument,1,2,0.0
+TEST,pooled:Dense only,2,top-50 (pooled),DEV025,applicability,applicability / transition,1,2,0.0
+TEST,pooled:Dense only,2,top-50 (pooled),DEV028,applicability,applicability / transition,0,2,0.0
+TEST,pooled:Dense only,2,top-50 (pooled),DEV032,procedural_multi_evidence,procedural_multi_evidence,0,2,0.0
+TEST,pooled:Dense only,2,top-50 (pooled),DEV033,procedural_multi_evidence,procedural_multi_evidence,1,2,0.0
+TEST,pooled:Dense only,2,top-50 (pooled),DEV036,authority,authority / source-role sensitive,1,1,1.0
+TEST,pooled:Dense only,2,top-50 (pooled),DEV037,authority,authority / source-role sensitive,0,1,0.0
+TEST,pooled:Dense only,2,top-50 (pooled),DEV038,compound,compound / multi-requirement,1,3,0.0
+TEST,pooled:Dense only,2,top-50 (pooled),TEST002,exact_anchor,direct legal anchor,1,1,1.0
+TEST,pooled:Dense only,2,top-50 (pooled),TEST006,semantic,semantic / practitioner phrasing,0,1,0.0
+TEST,pooled:Dense only,2,top-50 (pooled),TEST007,vocabulary_mismatch,vocabulary mismatch,0,2,0.0
+TEST,pooled:Dense only,2,top-50 (pooled),TEST008,vocabulary_mismatch,vocabulary mismatch,0,2,0.0
+TEST,pooled:Dense only,2,top-50 (pooled),TEST010,cross_reference_multi_instrument,cross_reference_multi_instrument,0,2,0.0
+TEST,pooled:Dense only,2,top-50 (pooled),TEST014,applicability,applicability / transition,1,2,0.0
+TEST,pooled:Dense only,2,top-50 (pooled),TEST016,procedural_multi_evidence,procedural_multi_evidence,1,2,0.0
+TEST,pooled:Dense only,2,top-50 (pooled),TEST018,procedural_multi_evidence,procedural_multi_evidence,1,2,0.0
+TEST,pooled:Dense only,2,top-50 (pooled),TEST020,compound,compound / multi-requirement,1,2,0.0
+TEST,pooled:Dense only,2,top-50 (pooled),FAQ001,exact_anchor,direct legal anchor,1,1,1.0
+TEST,pooled:Dense only,2,top-50 (pooled),FAQ004,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,pooled:Dense only,2,top-50 (pooled),FAQ005,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,pooled:Dense only,2,top-50 (pooled),FAQ010,applicability,applicability / transition,0,1,0.0
+TEST,pooled:Dense only,2,top-50 (pooled),FAQ015,exact_anchor,direct legal anchor,0,1,0.0
+TEST,pooled:Dense only,2,top-50 (pooled),FAQ016,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,pooled:Dense only,2,top-50 (pooled),FAQ017,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,pooled:Dense only,2,top-50 (pooled),FAQ018,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,pooled:Dense only,2,top-50 (pooled),FAQ020,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,pooled:Dense only,2,top-50 (pooled),FAQ024,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,pooled:Dense only,2,top-50 (pooled),FAQ026,exact_anchor,direct legal anchor,0,1,0.0
+TEST,pooled:Dense only,2,top-50 (pooled),FAQ029,semantic,semantic / practitioner phrasing,0,1,0.0
+TEST,pooled:Dense only,2,top-50 (pooled),FAQ030,semantic,semantic / practitioner phrasing,0,1,0.0
+TEST,pooled:Dense only,2,top-50 (pooled),FAQ032,exact_anchor,direct legal anchor,0,1,0.0
+TEST,pooled:Dense only,2,top-50 (pooled),FAQ034,cross_reference_multi_instrument,cross_reference_multi_instrument,0,2,0.0
+TEST,pooled:Dense only,2,top-50 (pooled),FAQ035,exact_anchor,direct legal anchor,1,1,1.0
+TEST,pooled:Dense only,2,top-50 (pooled),FAQ037,exact_anchor,direct legal anchor,0,1,0.0
+TEST,pooled:Dense only,2,top-50 (pooled),FAQ039,cross_reference_multi_instrument,cross_reference_multi_instrument,0,1,0.0
+TEST,pooled:Dense only,2,top-50 (pooled),FAQ041,exact_anchor,direct legal anchor,0,1,0.0
+TEST,pooled:Dense only,2,top-50 (pooled),FAQ044,exact_anchor,direct legal anchor,1,1,1.0
+TEST,pooled:Dense only,2,top-50 (pooled),FAQ047,exact_anchor,direct legal anchor,1,1,1.0
+TEST,pooled:Dense only,2,top-50 (pooled),FAQ048,cross_reference_multi_instrument,cross_reference_multi_instrument,0,1,0.0
+TEST,pooled:Dense only,2,top-50 (pooled),FAQ049,exact_anchor,direct legal anchor,1,1,1.0
+TEST,pooled:Dense only,2,top-50 (pooled),FAQ050,exact_anchor,direct legal anchor,0,1,0.0
+TEST,pooled:Dense only,2,top-50 (pooled),FAQ056,exact_anchor,direct legal anchor,1,1,1.0
+TEST,pooled:Dense only,2,top-50 (pooled),FAQ057,exact_anchor,direct legal anchor,1,1,1.0
+TEST,pooled:Dense only,2,top-50 (pooled),FAQ060,cross_reference_multi_instrument,cross_reference_multi_instrument,1,1,1.0
+TEST,pooled:Dense only,2,top-50 (pooled),FAQ074,semantic,semantic / practitioner phrasing,0,1,0.0
+TEST,pooled:Dense only,2,top-50 (pooled),FAQ076,exact_anchor,direct legal anchor,1,1,1.0
+TEST,pooled:Dense only,2,top-50 (pooled),FAQ079,exact_anchor,direct legal anchor,1,1,1.0
+TEST,pooled:Dense only,2,top-50 (pooled),FAQ082,semantic,semantic / practitioner phrasing,0,1,0.0
+TEST,pooled:Dense only,2,top-50 (pooled),FAQ084,cross_reference_multi_instrument,cross_reference_multi_instrument,0,1,0.0
+TEST,pooled:Dense only,2,top-50 (pooled),FAQ085,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,pooled:Dense only,2,top-50 (pooled),FAQ086,exact_anchor,direct legal anchor,0,1,0.0
+TEST,pooled:Dense only,2,top-50 (pooled),FAQ087,exact_anchor,direct legal anchor,1,1,1.0
+TEST,pooled:Dense only,2,top-50 (pooled),FAQ088,exact_anchor,direct legal anchor,0,1,0.0
+TEST,pooled:Dense only,2,top-50 (pooled),FAQ089,exact_anchor,direct legal anchor,1,1,1.0
+TEST,pooled:Dense only,2,top-50 (pooled),FAQ090,applicability,applicability / transition,1,1,1.0
+TEST,pooled:Dense only,2,top-50 (pooled),EXP_PPN001,applicability,applicability / transition,0,2,0.0
+TEST,pooled:Dense only,2,top-50 (pooled),EXP_PPN003,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,pooled:Dense only,2,top-50 (pooled),EXP_PPN006,procedural_multi_evidence,procedural_multi_evidence,1,2,0.0
+TEST,pooled:Dense only,2,top-50 (pooled),EXP_PPN009,procedural_multi_evidence,procedural_multi_evidence,1,2,0.0
+TEST,pooled:Dense only,2,top-50 (pooled),EXP_REG006,procedural_multi_evidence,procedural_multi_evidence,1,2,0.0
+TEST,pooled:Dense only,2,top-50 (pooled),EXP_GUID001,expansion_v2_official_guidance,expansion_v2_official_guidance,2,2,1.0
+TEST,pooled:Dense only,2,top-50 (pooled),EXP_GUID002,expansion_v2_official_guidance,expansion_v2_official_guidance,1,2,0.0
+TEST,pooled:Dense only,2,top-50 (pooled),EXP_GUID003,expansion_v2_official_guidance,expansion_v2_official_guidance,2,2,1.0
+TEST,pooled:Dense only,2,top-50 (pooled),EXP_GUID004,expansion_v2_official_guidance,expansion_v2_official_guidance,0,2,0.0
+TEST,pooled:Dense only,2,top-50 (pooled),EXP_GUID008,expansion_v2_official_guidance,expansion_v2_official_guidance,0,2,0.0
+TEST,pooled:Dense only,2,top-50 (pooled),EXP_GUID012,expansion_v2_official_guidance,expansion_v2_official_guidance,1,1,1.0
+TEST,pooled:Dense only,2,top-50 (pooled),EXP_WORK001,official_workflow_expansion_v2,official_workflow_expansion_v2,2,2,1.0
+TEST,pooled:Dense only,2,top-50 (pooled),EXP_WORK005,official_workflow_expansion_v2,official_workflow_expansion_v2,2,3,0.0
+TEST,pooled:Dense only,2,top-50 (pooled),EXP_WORK006,official_workflow_expansion_v2,official_workflow_expansion_v2,2,2,1.0
+TEST,pooled:Dense only,2,top-50 (pooled),EXP_WORK009,official_workflow_expansion_v2,official_workflow_expansion_v2,1,1,1.0
+TEST,pooled:Dense only,2,top-50 (pooled),EXP_WORK010,official_workflow_expansion_v2,official_workflow_expansion_v2,1,1,1.0
+TEST,pooled:Dense only,2,top-50 (pooled),EXP_TRANS002,procedural_multi_evidence,procedural_multi_evidence,1,2,0.0
+TEST,pooled:Dense only,2,top-50 (pooled),EXP_TRANS003,procedural_multi_evidence,procedural_multi_evidence,1,2,0.0
+TEST,pooled:Dense only,2,top-50 (pooled),EXP_TRANS004,applicability,applicability / transition,0,1,0.0
+TEST,pooled:Dense only,2,top-50 (pooled),EXP_TRANS008,applicability,applicability / transition,0,1,0.0
+TEST,pooled:Dense only,2,top-50 (pooled),EXP_TRANS009,procedural_multi_evidence,procedural_multi_evidence,1,2,0.0
+TEST,pooled:Dense only,2,top-50 (pooled),EXP_SEC006,faq90,faq90,1,3,0.0
+TEST,pooled:Dense only,2,top-50 (pooled),EXP_SEC007,faq90,faq90,2,2,1.0
+TEST,pooled:Dense only,2,top-50 (pooled),EXP_SEC010,faq90,faq90,1,1,1.0
+TEST,pooled:Dense only,2,top-50 (pooled),EXP_SEC011,faq90,faq90,1,3,0.0
+TEST,pooled:Dense only,2,top-50 (pooled),EXP_SEC012,faq90,faq90,1,1,1.0
+TEST,pooled:Dense only,2,top-50 (pooled),EXP_SEC014,faq90,faq90,1,1,1.0
+TEST,pooled:Dense only,2,top-50 (pooled),EXP_SEC016,faq90,faq90,1,1,1.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),DEV002,exact_anchor,direct legal anchor,0,2,0.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),DEV003,exact_anchor,direct legal anchor,0,1,0.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),DEV006,semantic,semantic / practitioner phrasing,1,2,0.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),DEV008,semantic,semantic / practitioner phrasing,2,2,1.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),DEV009,semantic,semantic / practitioner phrasing,0,2,0.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),DEV010,semantic,semantic / practitioner phrasing,0,1,0.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),DEV015,vocabulary_mismatch,vocabulary mismatch,0,2,0.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),DEV016,vocabulary_mismatch,vocabulary mismatch,0,2,0.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),DEV019,cross_reference_multi_instrument,cross_reference_multi_instrument,0,2,0.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),DEV021,cross_reference_multi_instrument,cross_reference_multi_instrument,1,2,0.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),DEV022,cross_reference_multi_instrument,cross_reference_multi_instrument,0,2,0.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),DEV024,cross_reference_multi_instrument,cross_reference_multi_instrument,1,2,0.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),DEV025,applicability,applicability / transition,1,2,0.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),DEV028,applicability,applicability / transition,0,2,0.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),DEV032,procedural_multi_evidence,procedural_multi_evidence,0,2,0.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),DEV033,procedural_multi_evidence,procedural_multi_evidence,1,2,0.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),DEV036,authority,authority / source-role sensitive,0,1,0.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),DEV037,authority,authority / source-role sensitive,0,1,0.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),DEV038,compound,compound / multi-requirement,1,3,0.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),TEST002,exact_anchor,direct legal anchor,1,1,1.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),TEST006,semantic,semantic / practitioner phrasing,0,1,0.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),TEST007,vocabulary_mismatch,vocabulary mismatch,1,2,0.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),TEST008,vocabulary_mismatch,vocabulary mismatch,0,2,0.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),TEST010,cross_reference_multi_instrument,cross_reference_multi_instrument,0,2,0.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),TEST014,applicability,applicability / transition,0,2,0.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),TEST016,procedural_multi_evidence,procedural_multi_evidence,1,2,0.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),TEST018,procedural_multi_evidence,procedural_multi_evidence,0,2,0.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),TEST020,compound,compound / multi-requirement,1,2,0.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),FAQ001,exact_anchor,direct legal anchor,0,1,0.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),FAQ004,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),FAQ005,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),FAQ010,applicability,applicability / transition,0,1,0.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),FAQ015,exact_anchor,direct legal anchor,0,1,0.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),FAQ016,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),FAQ017,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),FAQ018,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),FAQ020,semantic,semantic / practitioner phrasing,0,1,0.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),FAQ024,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),FAQ026,exact_anchor,direct legal anchor,0,1,0.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),FAQ029,semantic,semantic / practitioner phrasing,0,1,0.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),FAQ030,semantic,semantic / practitioner phrasing,0,1,0.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),FAQ032,exact_anchor,direct legal anchor,0,1,0.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),FAQ034,cross_reference_multi_instrument,cross_reference_multi_instrument,0,2,0.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),FAQ035,exact_anchor,direct legal anchor,1,1,1.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),FAQ037,exact_anchor,direct legal anchor,1,1,1.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),FAQ039,cross_reference_multi_instrument,cross_reference_multi_instrument,0,1,0.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),FAQ041,exact_anchor,direct legal anchor,0,1,0.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),FAQ044,exact_anchor,direct legal anchor,1,1,1.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),FAQ047,exact_anchor,direct legal anchor,1,1,1.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),FAQ048,cross_reference_multi_instrument,cross_reference_multi_instrument,0,1,0.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),FAQ049,exact_anchor,direct legal anchor,0,1,0.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),FAQ050,exact_anchor,direct legal anchor,0,1,0.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),FAQ056,exact_anchor,direct legal anchor,1,1,1.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),FAQ057,exact_anchor,direct legal anchor,1,1,1.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),FAQ060,cross_reference_multi_instrument,cross_reference_multi_instrument,0,1,0.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),FAQ074,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),FAQ076,exact_anchor,direct legal anchor,1,1,1.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),FAQ079,exact_anchor,direct legal anchor,1,1,1.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),FAQ082,semantic,semantic / practitioner phrasing,0,1,0.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),FAQ084,cross_reference_multi_instrument,cross_reference_multi_instrument,1,1,1.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),FAQ085,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),FAQ086,exact_anchor,direct legal anchor,0,1,0.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),FAQ087,exact_anchor,direct legal anchor,1,1,1.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),FAQ088,exact_anchor,direct legal anchor,0,1,0.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),FAQ089,exact_anchor,direct legal anchor,1,1,1.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),FAQ090,applicability,applicability / transition,1,1,1.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),EXP_PPN001,applicability,applicability / transition,2,2,1.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),EXP_PPN003,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),EXP_PPN006,procedural_multi_evidence,procedural_multi_evidence,1,2,0.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),EXP_PPN009,procedural_multi_evidence,procedural_multi_evidence,2,2,1.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),EXP_REG006,procedural_multi_evidence,procedural_multi_evidence,1,2,0.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),EXP_GUID001,expansion_v2_official_guidance,expansion_v2_official_guidance,1,2,0.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),EXP_GUID002,expansion_v2_official_guidance,expansion_v2_official_guidance,1,2,0.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),EXP_GUID003,expansion_v2_official_guidance,expansion_v2_official_guidance,1,2,0.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),EXP_GUID004,expansion_v2_official_guidance,expansion_v2_official_guidance,0,2,0.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),EXP_GUID008,expansion_v2_official_guidance,expansion_v2_official_guidance,1,2,0.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),EXP_GUID012,expansion_v2_official_guidance,expansion_v2_official_guidance,1,1,1.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),EXP_WORK001,official_workflow_expansion_v2,official_workflow_expansion_v2,2,2,1.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),EXP_WORK005,official_workflow_expansion_v2,official_workflow_expansion_v2,2,3,0.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),EXP_WORK006,official_workflow_expansion_v2,official_workflow_expansion_v2,2,2,1.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),EXP_WORK009,official_workflow_expansion_v2,official_workflow_expansion_v2,1,1,1.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),EXP_WORK010,official_workflow_expansion_v2,official_workflow_expansion_v2,1,1,1.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),EXP_TRANS002,procedural_multi_evidence,procedural_multi_evidence,2,2,1.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),EXP_TRANS003,procedural_multi_evidence,procedural_multi_evidence,2,2,1.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),EXP_TRANS004,applicability,applicability / transition,0,1,0.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),EXP_TRANS008,applicability,applicability / transition,1,1,1.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),EXP_TRANS009,procedural_multi_evidence,procedural_multi_evidence,1,2,0.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),EXP_SEC006,faq90,faq90,1,3,0.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),EXP_SEC007,faq90,faq90,2,2,1.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),EXP_SEC010,faq90,faq90,1,1,1.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),EXP_SEC011,faq90,faq90,1,3,0.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),EXP_SEC012,faq90,faq90,1,1,1.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),EXP_SEC014,faq90,faq90,1,1,1.0
+TEST,pooled:BM25+Dense hybrid,3,top-50 (pooled),EXP_SEC016,faq90,faq90,1,1,1.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),DEV002,exact_anchor,direct legal anchor,1,2,0.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),DEV003,exact_anchor,direct legal anchor,0,1,0.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),DEV006,semantic,semantic / practitioner phrasing,1,2,0.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),DEV008,semantic,semantic / practitioner phrasing,2,2,1.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),DEV009,semantic,semantic / practitioner phrasing,0,2,0.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),DEV010,semantic,semantic / practitioner phrasing,0,1,0.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),DEV015,vocabulary_mismatch,vocabulary mismatch,0,2,0.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),DEV016,vocabulary_mismatch,vocabulary mismatch,1,2,0.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),DEV019,cross_reference_multi_instrument,cross_reference_multi_instrument,0,2,0.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),DEV021,cross_reference_multi_instrument,cross_reference_multi_instrument,1,2,0.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),DEV022,cross_reference_multi_instrument,cross_reference_multi_instrument,1,2,0.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),DEV024,cross_reference_multi_instrument,cross_reference_multi_instrument,1,2,0.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),DEV025,applicability,applicability / transition,1,2,0.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),DEV028,applicability,applicability / transition,2,2,1.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),DEV032,procedural_multi_evidence,procedural_multi_evidence,0,2,0.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),DEV033,procedural_multi_evidence,procedural_multi_evidence,1,2,0.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),DEV036,authority,authority / source-role sensitive,0,1,0.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),DEV037,authority,authority / source-role sensitive,0,1,0.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),DEV038,compound,compound / multi-requirement,1,3,0.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),TEST002,exact_anchor,direct legal anchor,1,1,1.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),TEST006,semantic,semantic / practitioner phrasing,0,1,0.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),TEST007,vocabulary_mismatch,vocabulary mismatch,1,2,0.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),TEST008,vocabulary_mismatch,vocabulary mismatch,0,2,0.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),TEST010,cross_reference_multi_instrument,cross_reference_multi_instrument,2,2,1.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),TEST014,applicability,applicability / transition,0,2,0.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),TEST016,procedural_multi_evidence,procedural_multi_evidence,1,2,0.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),TEST018,procedural_multi_evidence,procedural_multi_evidence,0,2,0.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),TEST020,compound,compound / multi-requirement,1,2,0.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),FAQ001,exact_anchor,direct legal anchor,1,1,1.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),FAQ004,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),FAQ005,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),FAQ010,applicability,applicability / transition,0,1,0.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),FAQ015,exact_anchor,direct legal anchor,0,1,0.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),FAQ016,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),FAQ017,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),FAQ018,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),FAQ020,semantic,semantic / practitioner phrasing,0,1,0.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),FAQ024,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),FAQ026,exact_anchor,direct legal anchor,0,1,0.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),FAQ029,semantic,semantic / practitioner phrasing,0,1,0.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),FAQ030,semantic,semantic / practitioner phrasing,0,1,0.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),FAQ032,exact_anchor,direct legal anchor,1,1,1.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),FAQ034,cross_reference_multi_instrument,cross_reference_multi_instrument,2,2,1.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),FAQ035,exact_anchor,direct legal anchor,1,1,1.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),FAQ037,exact_anchor,direct legal anchor,1,1,1.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),FAQ039,cross_reference_multi_instrument,cross_reference_multi_instrument,0,1,0.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),FAQ041,exact_anchor,direct legal anchor,1,1,1.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),FAQ044,exact_anchor,direct legal anchor,1,1,1.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),FAQ047,exact_anchor,direct legal anchor,1,1,1.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),FAQ048,cross_reference_multi_instrument,cross_reference_multi_instrument,1,1,1.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),FAQ049,exact_anchor,direct legal anchor,0,1,0.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),FAQ050,exact_anchor,direct legal anchor,0,1,0.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),FAQ056,exact_anchor,direct legal anchor,1,1,1.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),FAQ057,exact_anchor,direct legal anchor,1,1,1.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),FAQ060,cross_reference_multi_instrument,cross_reference_multi_instrument,0,1,0.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),FAQ074,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),FAQ076,exact_anchor,direct legal anchor,1,1,1.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),FAQ079,exact_anchor,direct legal anchor,1,1,1.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),FAQ082,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),FAQ084,cross_reference_multi_instrument,cross_reference_multi_instrument,1,1,1.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),FAQ085,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),FAQ086,exact_anchor,direct legal anchor,0,1,0.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),FAQ087,exact_anchor,direct legal anchor,1,1,1.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),FAQ088,exact_anchor,direct legal anchor,0,1,0.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),FAQ089,exact_anchor,direct legal anchor,1,1,1.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),FAQ090,applicability,applicability / transition,1,1,1.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),EXP_PPN001,applicability,applicability / transition,2,2,1.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),EXP_PPN003,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),EXP_PPN006,procedural_multi_evidence,procedural_multi_evidence,1,2,0.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),EXP_PPN009,procedural_multi_evidence,procedural_multi_evidence,2,2,1.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),EXP_REG006,procedural_multi_evidence,procedural_multi_evidence,1,2,0.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),EXP_GUID001,expansion_v2_official_guidance,expansion_v2_official_guidance,1,2,0.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),EXP_GUID002,expansion_v2_official_guidance,expansion_v2_official_guidance,2,2,1.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),EXP_GUID003,expansion_v2_official_guidance,expansion_v2_official_guidance,1,2,0.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),EXP_GUID004,expansion_v2_official_guidance,expansion_v2_official_guidance,1,2,0.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),EXP_GUID008,expansion_v2_official_guidance,expansion_v2_official_guidance,2,2,1.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),EXP_GUID012,expansion_v2_official_guidance,expansion_v2_official_guidance,1,1,1.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),EXP_WORK001,official_workflow_expansion_v2,official_workflow_expansion_v2,2,2,1.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),EXP_WORK005,official_workflow_expansion_v2,official_workflow_expansion_v2,2,3,0.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),EXP_WORK006,official_workflow_expansion_v2,official_workflow_expansion_v2,2,2,1.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),EXP_WORK009,official_workflow_expansion_v2,official_workflow_expansion_v2,1,1,1.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),EXP_WORK010,official_workflow_expansion_v2,official_workflow_expansion_v2,1,1,1.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),EXP_TRANS002,procedural_multi_evidence,procedural_multi_evidence,2,2,1.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),EXP_TRANS003,procedural_multi_evidence,procedural_multi_evidence,2,2,1.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),EXP_TRANS004,applicability,applicability / transition,0,1,0.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),EXP_TRANS008,applicability,applicability / transition,1,1,1.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),EXP_TRANS009,procedural_multi_evidence,procedural_multi_evidence,2,2,1.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),EXP_SEC006,faq90,faq90,2,3,0.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),EXP_SEC007,faq90,faq90,2,2,1.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),EXP_SEC010,faq90,faq90,1,1,1.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),EXP_SEC011,faq90,faq90,1,3,0.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),EXP_SEC012,faq90,faq90,1,1,1.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),EXP_SEC014,faq90,faq90,1,1,1.0
+TEST,pooled:Hybrid + authority,4,top-50 (pooled),EXP_SEC016,faq90,faq90,1,1,1.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),DEV002,exact_anchor,direct legal anchor,0,2,0.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),DEV003,exact_anchor,direct legal anchor,0,1,0.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),DEV006,semantic,semantic / practitioner phrasing,1,2,0.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),DEV008,semantic,semantic / practitioner phrasing,2,2,1.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),DEV009,semantic,semantic / practitioner phrasing,0,2,0.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),DEV010,semantic,semantic / practitioner phrasing,0,1,0.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),DEV015,vocabulary_mismatch,vocabulary mismatch,0,2,0.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),DEV016,vocabulary_mismatch,vocabulary mismatch,0,2,0.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),DEV019,cross_reference_multi_instrument,cross_reference_multi_instrument,0,2,0.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),DEV021,cross_reference_multi_instrument,cross_reference_multi_instrument,1,2,0.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),DEV022,cross_reference_multi_instrument,cross_reference_multi_instrument,0,2,0.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),DEV024,cross_reference_multi_instrument,cross_reference_multi_instrument,1,2,0.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),DEV025,applicability,applicability / transition,1,2,0.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),DEV028,applicability,applicability / transition,0,2,0.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),DEV032,procedural_multi_evidence,procedural_multi_evidence,0,2,0.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),DEV033,procedural_multi_evidence,procedural_multi_evidence,1,2,0.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),DEV036,authority,authority / source-role sensitive,0,1,0.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),DEV037,authority,authority / source-role sensitive,0,1,0.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),DEV038,compound,compound / multi-requirement,1,3,0.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),TEST002,exact_anchor,direct legal anchor,1,1,1.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),TEST006,semantic,semantic / practitioner phrasing,0,1,0.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),TEST007,vocabulary_mismatch,vocabulary mismatch,1,2,0.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),TEST008,vocabulary_mismatch,vocabulary mismatch,0,2,0.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),TEST010,cross_reference_multi_instrument,cross_reference_multi_instrument,0,2,0.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),TEST014,applicability,applicability / transition,0,2,0.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),TEST016,procedural_multi_evidence,procedural_multi_evidence,1,2,0.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),TEST018,procedural_multi_evidence,procedural_multi_evidence,0,2,0.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),TEST020,compound,compound / multi-requirement,1,2,0.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),FAQ001,exact_anchor,direct legal anchor,0,1,0.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),FAQ004,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),FAQ005,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),FAQ010,applicability,applicability / transition,0,1,0.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),FAQ015,exact_anchor,direct legal anchor,0,1,0.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),FAQ016,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),FAQ017,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),FAQ018,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),FAQ020,semantic,semantic / practitioner phrasing,0,1,0.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),FAQ024,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),FAQ026,exact_anchor,direct legal anchor,0,1,0.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),FAQ029,semantic,semantic / practitioner phrasing,0,1,0.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),FAQ030,semantic,semantic / practitioner phrasing,0,1,0.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),FAQ032,exact_anchor,direct legal anchor,0,1,0.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),FAQ034,cross_reference_multi_instrument,cross_reference_multi_instrument,0,2,0.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),FAQ035,exact_anchor,direct legal anchor,1,1,1.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),FAQ037,exact_anchor,direct legal anchor,1,1,1.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),FAQ039,cross_reference_multi_instrument,cross_reference_multi_instrument,0,1,0.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),FAQ041,exact_anchor,direct legal anchor,0,1,0.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),FAQ044,exact_anchor,direct legal anchor,1,1,1.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),FAQ047,exact_anchor,direct legal anchor,1,1,1.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),FAQ048,cross_reference_multi_instrument,cross_reference_multi_instrument,0,1,0.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),FAQ049,exact_anchor,direct legal anchor,0,1,0.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),FAQ050,exact_anchor,direct legal anchor,0,1,0.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),FAQ056,exact_anchor,direct legal anchor,1,1,1.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),FAQ057,exact_anchor,direct legal anchor,1,1,1.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),FAQ060,cross_reference_multi_instrument,cross_reference_multi_instrument,0,1,0.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),FAQ074,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),FAQ076,exact_anchor,direct legal anchor,1,1,1.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),FAQ079,exact_anchor,direct legal anchor,1,1,1.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),FAQ082,semantic,semantic / practitioner phrasing,0,1,0.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),FAQ084,cross_reference_multi_instrument,cross_reference_multi_instrument,1,1,1.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),FAQ085,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),FAQ086,exact_anchor,direct legal anchor,0,1,0.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),FAQ087,exact_anchor,direct legal anchor,1,1,1.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),FAQ088,exact_anchor,direct legal anchor,0,1,0.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),FAQ089,exact_anchor,direct legal anchor,1,1,1.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),FAQ090,applicability,applicability / transition,1,1,1.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),EXP_PPN001,applicability,applicability / transition,2,2,1.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),EXP_PPN003,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),EXP_PPN006,procedural_multi_evidence,procedural_multi_evidence,1,2,0.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),EXP_PPN009,procedural_multi_evidence,procedural_multi_evidence,2,2,1.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),EXP_REG006,procedural_multi_evidence,procedural_multi_evidence,1,2,0.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),EXP_GUID001,expansion_v2_official_guidance,expansion_v2_official_guidance,1,2,0.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),EXP_GUID002,expansion_v2_official_guidance,expansion_v2_official_guidance,1,2,0.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),EXP_GUID003,expansion_v2_official_guidance,expansion_v2_official_guidance,1,2,0.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),EXP_GUID004,expansion_v2_official_guidance,expansion_v2_official_guidance,0,2,0.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),EXP_GUID008,expansion_v2_official_guidance,expansion_v2_official_guidance,1,2,0.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),EXP_GUID012,expansion_v2_official_guidance,expansion_v2_official_guidance,1,1,1.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),EXP_WORK001,official_workflow_expansion_v2,official_workflow_expansion_v2,2,2,1.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),EXP_WORK005,official_workflow_expansion_v2,official_workflow_expansion_v2,2,3,0.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),EXP_WORK006,official_workflow_expansion_v2,official_workflow_expansion_v2,2,2,1.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),EXP_WORK009,official_workflow_expansion_v2,official_workflow_expansion_v2,1,1,1.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),EXP_WORK010,official_workflow_expansion_v2,official_workflow_expansion_v2,1,1,1.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),EXP_TRANS002,procedural_multi_evidence,procedural_multi_evidence,2,2,1.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),EXP_TRANS003,procedural_multi_evidence,procedural_multi_evidence,2,2,1.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),EXP_TRANS004,applicability,applicability / transition,0,1,0.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),EXP_TRANS008,applicability,applicability / transition,1,1,1.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),EXP_TRANS009,procedural_multi_evidence,procedural_multi_evidence,1,2,0.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),EXP_SEC006,faq90,faq90,1,3,0.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),EXP_SEC007,faq90,faq90,2,2,1.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),EXP_SEC010,faq90,faq90,1,1,1.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),EXP_SEC011,faq90,faq90,1,3,0.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),EXP_SEC012,faq90,faq90,1,1,1.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),EXP_SEC014,faq90,faq90,1,1,1.0
+TEST,pooled:Hybrid + jurisdiction,5,top-50 (pooled),EXP_SEC016,faq90,faq90,1,1,1.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),DEV002,exact_anchor,direct legal anchor,1,2,0.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),DEV003,exact_anchor,direct legal anchor,0,1,0.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),DEV006,semantic,semantic / practitioner phrasing,1,2,0.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),DEV008,semantic,semantic / practitioner phrasing,2,2,1.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),DEV009,semantic,semantic / practitioner phrasing,0,2,0.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),DEV010,semantic,semantic / practitioner phrasing,0,1,0.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),DEV015,vocabulary_mismatch,vocabulary mismatch,0,2,0.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),DEV016,vocabulary_mismatch,vocabulary mismatch,1,2,0.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),DEV019,cross_reference_multi_instrument,cross_reference_multi_instrument,0,2,0.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),DEV021,cross_reference_multi_instrument,cross_reference_multi_instrument,1,2,0.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),DEV022,cross_reference_multi_instrument,cross_reference_multi_instrument,1,2,0.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),DEV024,cross_reference_multi_instrument,cross_reference_multi_instrument,1,2,0.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),DEV025,applicability,applicability / transition,1,2,0.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),DEV028,applicability,applicability / transition,2,2,1.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),DEV032,procedural_multi_evidence,procedural_multi_evidence,0,2,0.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),DEV033,procedural_multi_evidence,procedural_multi_evidence,1,2,0.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),DEV036,authority,authority / source-role sensitive,0,1,0.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),DEV037,authority,authority / source-role sensitive,0,1,0.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),DEV038,compound,compound / multi-requirement,1,3,0.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),TEST002,exact_anchor,direct legal anchor,1,1,1.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),TEST006,semantic,semantic / practitioner phrasing,0,1,0.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),TEST007,vocabulary_mismatch,vocabulary mismatch,1,2,0.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),TEST008,vocabulary_mismatch,vocabulary mismatch,0,2,0.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),TEST010,cross_reference_multi_instrument,cross_reference_multi_instrument,2,2,1.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),TEST014,applicability,applicability / transition,0,2,0.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),TEST016,procedural_multi_evidence,procedural_multi_evidence,1,2,0.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),TEST018,procedural_multi_evidence,procedural_multi_evidence,0,2,0.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),TEST020,compound,compound / multi-requirement,1,2,0.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),FAQ001,exact_anchor,direct legal anchor,1,1,1.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),FAQ004,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),FAQ005,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),FAQ010,applicability,applicability / transition,0,1,0.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),FAQ015,exact_anchor,direct legal anchor,0,1,0.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),FAQ016,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),FAQ017,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),FAQ018,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),FAQ020,semantic,semantic / practitioner phrasing,0,1,0.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),FAQ024,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),FAQ026,exact_anchor,direct legal anchor,0,1,0.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),FAQ029,semantic,semantic / practitioner phrasing,0,1,0.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),FAQ030,semantic,semantic / practitioner phrasing,0,1,0.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),FAQ032,exact_anchor,direct legal anchor,1,1,1.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),FAQ034,cross_reference_multi_instrument,cross_reference_multi_instrument,2,2,1.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),FAQ035,exact_anchor,direct legal anchor,1,1,1.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),FAQ037,exact_anchor,direct legal anchor,1,1,1.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),FAQ039,cross_reference_multi_instrument,cross_reference_multi_instrument,0,1,0.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),FAQ041,exact_anchor,direct legal anchor,1,1,1.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),FAQ044,exact_anchor,direct legal anchor,1,1,1.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),FAQ047,exact_anchor,direct legal anchor,1,1,1.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),FAQ048,cross_reference_multi_instrument,cross_reference_multi_instrument,1,1,1.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),FAQ049,exact_anchor,direct legal anchor,0,1,0.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),FAQ050,exact_anchor,direct legal anchor,0,1,0.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),FAQ056,exact_anchor,direct legal anchor,1,1,1.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),FAQ057,exact_anchor,direct legal anchor,1,1,1.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),FAQ060,cross_reference_multi_instrument,cross_reference_multi_instrument,0,1,0.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),FAQ074,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),FAQ076,exact_anchor,direct legal anchor,1,1,1.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),FAQ079,exact_anchor,direct legal anchor,1,1,1.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),FAQ082,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),FAQ084,cross_reference_multi_instrument,cross_reference_multi_instrument,1,1,1.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),FAQ085,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),FAQ086,exact_anchor,direct legal anchor,0,1,0.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),FAQ087,exact_anchor,direct legal anchor,1,1,1.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),FAQ088,exact_anchor,direct legal anchor,0,1,0.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),FAQ089,exact_anchor,direct legal anchor,1,1,1.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),FAQ090,applicability,applicability / transition,1,1,1.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),EXP_PPN001,applicability,applicability / transition,2,2,1.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),EXP_PPN003,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),EXP_PPN006,procedural_multi_evidence,procedural_multi_evidence,1,2,0.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),EXP_PPN009,procedural_multi_evidence,procedural_multi_evidence,2,2,1.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),EXP_REG006,procedural_multi_evidence,procedural_multi_evidence,1,2,0.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),EXP_GUID001,expansion_v2_official_guidance,expansion_v2_official_guidance,1,2,0.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),EXP_GUID002,expansion_v2_official_guidance,expansion_v2_official_guidance,2,2,1.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),EXP_GUID003,expansion_v2_official_guidance,expansion_v2_official_guidance,1,2,0.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),EXP_GUID004,expansion_v2_official_guidance,expansion_v2_official_guidance,1,2,0.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),EXP_GUID008,expansion_v2_official_guidance,expansion_v2_official_guidance,2,2,1.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),EXP_GUID012,expansion_v2_official_guidance,expansion_v2_official_guidance,1,1,1.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),EXP_WORK001,official_workflow_expansion_v2,official_workflow_expansion_v2,2,2,1.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),EXP_WORK005,official_workflow_expansion_v2,official_workflow_expansion_v2,2,3,0.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),EXP_WORK006,official_workflow_expansion_v2,official_workflow_expansion_v2,2,2,1.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),EXP_WORK009,official_workflow_expansion_v2,official_workflow_expansion_v2,1,1,1.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),EXP_WORK010,official_workflow_expansion_v2,official_workflow_expansion_v2,1,1,1.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),EXP_TRANS002,procedural_multi_evidence,procedural_multi_evidence,2,2,1.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),EXP_TRANS003,procedural_multi_evidence,procedural_multi_evidence,2,2,1.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),EXP_TRANS004,applicability,applicability / transition,0,1,0.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),EXP_TRANS008,applicability,applicability / transition,1,1,1.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),EXP_TRANS009,procedural_multi_evidence,procedural_multi_evidence,2,2,1.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),EXP_SEC006,faq90,faq90,2,3,0.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),EXP_SEC007,faq90,faq90,2,2,1.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),EXP_SEC010,faq90,faq90,1,1,1.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),EXP_SEC011,faq90,faq90,1,3,0.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),EXP_SEC012,faq90,faq90,1,1,1.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),EXP_SEC014,faq90,faq90,1,1,1.0
+TEST,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),EXP_SEC016,faq90,faq90,1,1,1.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),DEV002,exact_anchor,direct legal anchor,2,2,1.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),DEV003,exact_anchor,direct legal anchor,1,1,1.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),DEV006,semantic,semantic / practitioner phrasing,1,2,0.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),DEV008,semantic,semantic / practitioner phrasing,2,2,1.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),DEV009,semantic,semantic / practitioner phrasing,2,2,1.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),DEV010,semantic,semantic / practitioner phrasing,0,1,0.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),DEV015,vocabulary_mismatch,vocabulary mismatch,1,2,0.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),DEV016,vocabulary_mismatch,vocabulary mismatch,2,2,1.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),DEV019,cross_reference_multi_instrument,cross_reference_multi_instrument,0,2,0.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),DEV021,cross_reference_multi_instrument,cross_reference_multi_instrument,1,2,0.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),DEV022,cross_reference_multi_instrument,cross_reference_multi_instrument,1,2,0.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),DEV024,cross_reference_multi_instrument,cross_reference_multi_instrument,2,2,1.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),DEV025,applicability,applicability / transition,1,2,0.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),DEV028,applicability,applicability / transition,2,2,1.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),DEV032,procedural_multi_evidence,procedural_multi_evidence,0,2,0.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),DEV033,procedural_multi_evidence,procedural_multi_evidence,2,2,1.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),DEV036,authority,authority / source-role sensitive,1,1,1.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),DEV037,authority,authority / source-role sensitive,1,1,1.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),DEV038,compound,compound / multi-requirement,1,3,0.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),TEST002,exact_anchor,direct legal anchor,1,1,1.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),TEST006,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),TEST007,vocabulary_mismatch,vocabulary mismatch,2,2,1.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),TEST008,vocabulary_mismatch,vocabulary mismatch,0,2,0.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),TEST010,cross_reference_multi_instrument,cross_reference_multi_instrument,2,2,1.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),TEST014,applicability,applicability / transition,1,2,0.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),TEST016,procedural_multi_evidence,procedural_multi_evidence,1,2,0.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),TEST018,procedural_multi_evidence,procedural_multi_evidence,0,2,0.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),TEST020,compound,compound / multi-requirement,1,2,0.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),FAQ001,exact_anchor,direct legal anchor,1,1,1.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),FAQ004,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),FAQ005,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),FAQ010,applicability,applicability / transition,0,1,0.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),FAQ015,exact_anchor,direct legal anchor,1,1,1.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),FAQ016,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),FAQ017,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),FAQ018,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),FAQ020,semantic,semantic / practitioner phrasing,0,1,0.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),FAQ024,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),FAQ026,exact_anchor,direct legal anchor,0,1,0.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),FAQ029,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),FAQ030,semantic,semantic / practitioner phrasing,0,1,0.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),FAQ032,exact_anchor,direct legal anchor,1,1,1.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),FAQ034,cross_reference_multi_instrument,cross_reference_multi_instrument,2,2,1.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),FAQ035,exact_anchor,direct legal anchor,1,1,1.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),FAQ037,exact_anchor,direct legal anchor,1,1,1.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),FAQ039,cross_reference_multi_instrument,cross_reference_multi_instrument,0,1,0.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),FAQ041,exact_anchor,direct legal anchor,1,1,1.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),FAQ044,exact_anchor,direct legal anchor,1,1,1.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),FAQ047,exact_anchor,direct legal anchor,1,1,1.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),FAQ048,cross_reference_multi_instrument,cross_reference_multi_instrument,1,1,1.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),FAQ049,exact_anchor,direct legal anchor,1,1,1.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),FAQ050,exact_anchor,direct legal anchor,1,1,1.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),FAQ056,exact_anchor,direct legal anchor,1,1,1.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),FAQ057,exact_anchor,direct legal anchor,1,1,1.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),FAQ060,cross_reference_multi_instrument,cross_reference_multi_instrument,1,1,1.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),FAQ074,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),FAQ076,exact_anchor,direct legal anchor,1,1,1.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),FAQ079,exact_anchor,direct legal anchor,1,1,1.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),FAQ082,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),FAQ084,cross_reference_multi_instrument,cross_reference_multi_instrument,1,1,1.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),FAQ085,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),FAQ086,exact_anchor,direct legal anchor,0,1,0.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),FAQ087,exact_anchor,direct legal anchor,1,1,1.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),FAQ088,exact_anchor,direct legal anchor,1,1,1.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),FAQ089,exact_anchor,direct legal anchor,1,1,1.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),FAQ090,applicability,applicability / transition,1,1,1.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),EXP_PPN001,applicability,applicability / transition,0,2,0.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),EXP_PPN003,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),EXP_PPN006,procedural_multi_evidence,procedural_multi_evidence,1,2,0.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),EXP_PPN009,procedural_multi_evidence,procedural_multi_evidence,2,2,1.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),EXP_REG006,procedural_multi_evidence,procedural_multi_evidence,2,2,1.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),EXP_GUID001,expansion_v2_official_guidance,expansion_v2_official_guidance,2,2,1.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),EXP_GUID002,expansion_v2_official_guidance,expansion_v2_official_guidance,2,2,1.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),EXP_GUID003,expansion_v2_official_guidance,expansion_v2_official_guidance,1,2,0.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),EXP_GUID004,expansion_v2_official_guidance,expansion_v2_official_guidance,0,2,0.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),EXP_GUID008,expansion_v2_official_guidance,expansion_v2_official_guidance,1,2,0.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),EXP_GUID012,expansion_v2_official_guidance,expansion_v2_official_guidance,1,1,1.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),EXP_WORK001,official_workflow_expansion_v2,official_workflow_expansion_v2,2,2,1.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),EXP_WORK005,official_workflow_expansion_v2,official_workflow_expansion_v2,2,3,0.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),EXP_WORK006,official_workflow_expansion_v2,official_workflow_expansion_v2,2,2,1.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),EXP_WORK009,official_workflow_expansion_v2,official_workflow_expansion_v2,1,1,1.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),EXP_WORK010,official_workflow_expansion_v2,official_workflow_expansion_v2,1,1,1.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),EXP_TRANS002,procedural_multi_evidence,procedural_multi_evidence,2,2,1.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),EXP_TRANS003,procedural_multi_evidence,procedural_multi_evidence,2,2,1.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),EXP_TRANS004,applicability,applicability / transition,0,1,0.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),EXP_TRANS008,applicability,applicability / transition,1,1,1.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),EXP_TRANS009,procedural_multi_evidence,procedural_multi_evidence,2,2,1.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),EXP_SEC006,faq90,faq90,1,3,0.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),EXP_SEC007,faq90,faq90,2,2,1.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),EXP_SEC010,faq90,faq90,1,1,1.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),EXP_SEC011,faq90,faq90,2,3,0.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),EXP_SEC012,faq90,faq90,1,1,1.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),EXP_SEC014,faq90,faq90,1,1,1.0
+TEST,two_lane:no_authority,7,25+25 (two-lane),EXP_SEC016,faq90,faq90,1,1,1.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),DEV002,exact_anchor,direct legal anchor,2,2,1.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),DEV002,exact_anchor,direct legal anchor,1,2,0.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),DEV003,exact_anchor,direct legal anchor,1,1,1.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),DEV003,exact_anchor,direct legal anchor,1,1,1.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),DEV006,semantic,semantic / practitioner phrasing,1,2,0.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),DEV006,semantic,semantic / practitioner phrasing,1,2,0.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),DEV008,semantic,semantic / practitioner phrasing,2,2,1.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),DEV008,semantic,semantic / practitioner phrasing,2,2,1.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),DEV009,semantic,semantic / practitioner phrasing,2,2,1.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),DEV009,semantic,semantic / practitioner phrasing,2,2,1.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),DEV010,semantic,semantic / practitioner phrasing,0,1,0.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),DEV010,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),DEV015,vocabulary_mismatch,vocabulary mismatch,1,2,0.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),DEV015,vocabulary_mismatch,vocabulary mismatch,1,2,0.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),DEV016,vocabulary_mismatch,vocabulary mismatch,2,2,1.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),DEV016,vocabulary_mismatch,vocabulary mismatch,2,2,1.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),DEV019,cross_reference_multi_instrument,cross_reference_multi_instrument,0,2,0.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),DEV019,cross_reference_multi_instrument,cross_reference_multi_instrument,2,2,1.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),DEV021,cross_reference_multi_instrument,cross_reference_multi_instrument,1,2,0.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),DEV021,cross_reference_multi_instrument,cross_reference_multi_instrument,2,2,1.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),DEV022,cross_reference_multi_instrument,cross_reference_multi_instrument,1,2,0.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),DEV022,cross_reference_multi_instrument,cross_reference_multi_instrument,1,2,0.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),DEV024,cross_reference_multi_instrument,cross_reference_multi_instrument,2,2,1.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),DEV024,cross_reference_multi_instrument,cross_reference_multi_instrument,2,2,1.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),DEV025,applicability,applicability / transition,1,2,0.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),DEV025,applicability,applicability / transition,2,2,1.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),DEV028,applicability,applicability / transition,2,2,1.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),DEV028,applicability,applicability / transition,2,2,1.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),DEV032,procedural_multi_evidence,procedural_multi_evidence,0,2,0.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),DEV032,procedural_multi_evidence,procedural_multi_evidence,0,2,0.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),DEV033,procedural_multi_evidence,procedural_multi_evidence,2,2,1.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),DEV033,procedural_multi_evidence,procedural_multi_evidence,2,2,1.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),DEV036,authority,authority / source-role sensitive,1,1,1.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),DEV036,authority,authority / source-role sensitive,1,1,1.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),DEV037,authority,authority / source-role sensitive,1,1,1.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),DEV037,authority,authority / source-role sensitive,1,1,1.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),DEV038,compound,compound / multi-requirement,2,3,0.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),DEV038,compound,compound / multi-requirement,2,3,0.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),TEST002,exact_anchor,direct legal anchor,1,1,1.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),TEST002,exact_anchor,direct legal anchor,1,1,1.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),TEST006,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),TEST006,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),TEST007,vocabulary_mismatch,vocabulary mismatch,2,2,1.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),TEST007,vocabulary_mismatch,vocabulary mismatch,2,2,1.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),TEST008,vocabulary_mismatch,vocabulary mismatch,0,2,0.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),TEST008,vocabulary_mismatch,vocabulary mismatch,0,2,0.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),TEST010,cross_reference_multi_instrument,cross_reference_multi_instrument,2,2,1.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),TEST010,cross_reference_multi_instrument,cross_reference_multi_instrument,2,2,1.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),TEST014,applicability,applicability / transition,1,2,0.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),TEST014,applicability,applicability / transition,1,2,0.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),TEST016,procedural_multi_evidence,procedural_multi_evidence,1,2,0.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),TEST016,procedural_multi_evidence,procedural_multi_evidence,1,2,0.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),TEST018,procedural_multi_evidence,procedural_multi_evidence,0,2,0.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),TEST018,procedural_multi_evidence,procedural_multi_evidence,1,2,0.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),TEST020,compound,compound / multi-requirement,1,2,0.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),TEST020,compound,compound / multi-requirement,2,2,1.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),FAQ001,exact_anchor,direct legal anchor,1,1,1.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),FAQ001,exact_anchor,direct legal anchor,1,1,1.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),FAQ004,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),FAQ004,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),FAQ005,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),FAQ005,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),FAQ010,applicability,applicability / transition,0,1,0.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),FAQ010,applicability,applicability / transition,0,1,0.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),FAQ015,exact_anchor,direct legal anchor,1,1,1.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),FAQ015,exact_anchor,direct legal anchor,1,1,1.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),FAQ016,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),FAQ016,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),FAQ017,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),FAQ017,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),FAQ018,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),FAQ018,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),FAQ020,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),FAQ020,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),FAQ024,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),FAQ024,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),FAQ026,exact_anchor,direct legal anchor,0,1,0.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),FAQ026,exact_anchor,direct legal anchor,0,1,0.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),FAQ029,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),FAQ029,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),FAQ030,semantic,semantic / practitioner phrasing,0,1,0.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),FAQ030,semantic,semantic / practitioner phrasing,0,1,0.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),FAQ032,exact_anchor,direct legal anchor,1,1,1.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),FAQ032,exact_anchor,direct legal anchor,1,1,1.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),FAQ034,cross_reference_multi_instrument,cross_reference_multi_instrument,2,2,1.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),FAQ034,cross_reference_multi_instrument,cross_reference_multi_instrument,2,2,1.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),FAQ035,exact_anchor,direct legal anchor,1,1,1.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),FAQ035,exact_anchor,direct legal anchor,1,1,1.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),FAQ037,exact_anchor,direct legal anchor,1,1,1.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),FAQ037,exact_anchor,direct legal anchor,1,1,1.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),FAQ039,cross_reference_multi_instrument,cross_reference_multi_instrument,0,1,0.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),FAQ039,cross_reference_multi_instrument,cross_reference_multi_instrument,0,1,0.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),FAQ041,exact_anchor,direct legal anchor,1,1,1.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),FAQ041,exact_anchor,direct legal anchor,1,1,1.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),FAQ044,exact_anchor,direct legal anchor,1,1,1.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),FAQ044,exact_anchor,direct legal anchor,1,1,1.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),FAQ047,exact_anchor,direct legal anchor,1,1,1.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),FAQ047,exact_anchor,direct legal anchor,1,1,1.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),FAQ048,cross_reference_multi_instrument,cross_reference_multi_instrument,1,1,1.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),FAQ048,cross_reference_multi_instrument,cross_reference_multi_instrument,1,1,1.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),FAQ049,exact_anchor,direct legal anchor,1,1,1.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),FAQ049,exact_anchor,direct legal anchor,1,1,1.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),FAQ050,exact_anchor,direct legal anchor,1,1,1.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),FAQ050,exact_anchor,direct legal anchor,1,1,1.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),FAQ056,exact_anchor,direct legal anchor,1,1,1.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),FAQ056,exact_anchor,direct legal anchor,1,1,1.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),FAQ057,exact_anchor,direct legal anchor,1,1,1.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),FAQ057,exact_anchor,direct legal anchor,1,1,1.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),FAQ060,cross_reference_multi_instrument,cross_reference_multi_instrument,1,1,1.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),FAQ060,cross_reference_multi_instrument,cross_reference_multi_instrument,1,1,1.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),FAQ074,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),FAQ074,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),FAQ076,exact_anchor,direct legal anchor,1,1,1.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),FAQ076,exact_anchor,direct legal anchor,1,1,1.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),FAQ079,exact_anchor,direct legal anchor,1,1,1.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),FAQ079,exact_anchor,direct legal anchor,1,1,1.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),FAQ082,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),FAQ082,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),FAQ084,cross_reference_multi_instrument,cross_reference_multi_instrument,1,1,1.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),FAQ084,cross_reference_multi_instrument,cross_reference_multi_instrument,0,1,0.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),FAQ085,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),FAQ085,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),FAQ086,exact_anchor,direct legal anchor,0,1,0.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),FAQ086,exact_anchor,direct legal anchor,1,1,1.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),FAQ087,exact_anchor,direct legal anchor,1,1,1.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),FAQ087,exact_anchor,direct legal anchor,1,1,1.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),FAQ088,exact_anchor,direct legal anchor,1,1,1.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),FAQ088,exact_anchor,direct legal anchor,1,1,1.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),FAQ089,exact_anchor,direct legal anchor,1,1,1.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),FAQ089,exact_anchor,direct legal anchor,1,1,1.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),FAQ090,applicability,applicability / transition,1,1,1.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),FAQ090,applicability,applicability / transition,1,1,1.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),EXP_PPN001,applicability,applicability / transition,0,2,0.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),EXP_PPN001,applicability,applicability / transition,0,2,0.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),EXP_PPN003,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),EXP_PPN003,semantic,semantic / practitioner phrasing,1,1,1.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),EXP_PPN006,procedural_multi_evidence,procedural_multi_evidence,1,2,0.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),EXP_PPN006,procedural_multi_evidence,procedural_multi_evidence,1,2,0.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),EXP_PPN009,procedural_multi_evidence,procedural_multi_evidence,2,2,1.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),EXP_PPN009,procedural_multi_evidence,procedural_multi_evidence,2,2,1.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),EXP_REG006,procedural_multi_evidence,procedural_multi_evidence,2,2,1.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),EXP_REG006,procedural_multi_evidence,procedural_multi_evidence,2,2,1.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),EXP_GUID001,expansion_v2_official_guidance,expansion_v2_official_guidance,2,2,1.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),EXP_GUID001,expansion_v2_official_guidance,expansion_v2_official_guidance,2,2,1.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),EXP_GUID002,expansion_v2_official_guidance,expansion_v2_official_guidance,2,2,1.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),EXP_GUID002,expansion_v2_official_guidance,expansion_v2_official_guidance,2,2,1.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),EXP_GUID003,expansion_v2_official_guidance,expansion_v2_official_guidance,1,2,0.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),EXP_GUID003,expansion_v2_official_guidance,expansion_v2_official_guidance,2,2,1.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),EXP_GUID004,expansion_v2_official_guidance,expansion_v2_official_guidance,0,2,0.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),EXP_GUID004,expansion_v2_official_guidance,expansion_v2_official_guidance,1,2,0.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),EXP_GUID008,expansion_v2_official_guidance,expansion_v2_official_guidance,2,2,1.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),EXP_GUID008,expansion_v2_official_guidance,expansion_v2_official_guidance,1,2,0.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),EXP_GUID012,expansion_v2_official_guidance,expansion_v2_official_guidance,1,1,1.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),EXP_GUID012,expansion_v2_official_guidance,expansion_v2_official_guidance,1,1,1.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),EXP_WORK001,official_workflow_expansion_v2,official_workflow_expansion_v2,2,2,1.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),EXP_WORK001,official_workflow_expansion_v2,official_workflow_expansion_v2,2,2,1.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),EXP_WORK005,official_workflow_expansion_v2,official_workflow_expansion_v2,2,3,0.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),EXP_WORK005,official_workflow_expansion_v2,official_workflow_expansion_v2,2,3,0.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),EXP_WORK006,official_workflow_expansion_v2,official_workflow_expansion_v2,2,2,1.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),EXP_WORK006,official_workflow_expansion_v2,official_workflow_expansion_v2,2,2,1.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),EXP_WORK009,official_workflow_expansion_v2,official_workflow_expansion_v2,1,1,1.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),EXP_WORK009,official_workflow_expansion_v2,official_workflow_expansion_v2,1,1,1.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),EXP_WORK010,official_workflow_expansion_v2,official_workflow_expansion_v2,1,1,1.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),EXP_WORK010,official_workflow_expansion_v2,official_workflow_expansion_v2,1,1,1.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),EXP_TRANS002,procedural_multi_evidence,procedural_multi_evidence,2,2,1.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),EXP_TRANS002,procedural_multi_evidence,procedural_multi_evidence,2,2,1.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),EXP_TRANS003,procedural_multi_evidence,procedural_multi_evidence,2,2,1.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),EXP_TRANS003,procedural_multi_evidence,procedural_multi_evidence,2,2,1.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),EXP_TRANS004,applicability,applicability / transition,0,1,0.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),EXP_TRANS004,applicability,applicability / transition,0,1,0.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),EXP_TRANS008,applicability,applicability / transition,1,1,1.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),EXP_TRANS008,applicability,applicability / transition,1,1,1.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),EXP_TRANS009,procedural_multi_evidence,procedural_multi_evidence,2,2,1.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),EXP_TRANS009,procedural_multi_evidence,procedural_multi_evidence,2,2,1.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),EXP_SEC006,faq90,faq90,2,3,0.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),EXP_SEC006,faq90,faq90,1,3,0.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),EXP_SEC007,faq90,faq90,2,2,1.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),EXP_SEC007,faq90,faq90,2,2,1.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),EXP_SEC010,faq90,faq90,1,1,1.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),EXP_SEC010,faq90,faq90,1,1,1.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),EXP_SEC011,faq90,faq90,2,3,0.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),EXP_SEC011,faq90,faq90,2,3,0.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),EXP_SEC012,faq90,faq90,1,1,1.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),EXP_SEC012,faq90,faq90,1,1,1.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),EXP_SEC014,faq90,faq90,1,1,1.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),EXP_SEC014,faq90,faq90,1,1,1.0
+TEST,two_lane:full_pre_CE,8,25+25 (two-lane),EXP_SEC016,faq90,faq90,1,1,1.0
+TEST,two_lane:full_post_CE,9,25+25 (two-lane),EXP_SEC016,faq90,faq90,1,1,1.0
+DEV,pooled:BM25 only,1,top-50 (pooled),DEV001,exact_anchor,direct legal anchor,1,2,0.0
+DEV,pooled:BM25 only,1,top-50 (pooled),DEV004,exact_anchor,direct legal anchor,0,2,0.0
+DEV,pooled:BM25 only,1,top-50 (pooled),DEV005,exact_anchor,direct legal anchor,0,2,0.0
+DEV,pooled:BM25 only,1,top-50 (pooled),DEV007,semantic,semantic / practitioner phrasing,0,2,0.0
+DEV,pooled:BM25 only,1,top-50 (pooled),DEV011,semantic,semantic / practitioner phrasing,1,2,0.0
+DEV,pooled:BM25 only,1,top-50 (pooled),DEV012,semantic,semantic / practitioner phrasing,2,2,1.0
+DEV,pooled:BM25 only,1,top-50 (pooled),DEV013,vocabulary_mismatch,vocabulary mismatch,0,2,0.0
+DEV,pooled:BM25 only,1,top-50 (pooled),DEV014,vocabulary_mismatch,vocabulary mismatch,0,3,0.0
+DEV,pooled:BM25 only,1,top-50 (pooled),DEV017,vocabulary_mismatch,vocabulary mismatch,0,2,0.0
+DEV,pooled:BM25 only,1,top-50 (pooled),DEV018,cross_reference_multi_instrument,cross_reference_multi_instrument,0,3,0.0
+DEV,pooled:BM25 only,1,top-50 (pooled),DEV020,cross_reference_multi_instrument,cross_reference_multi_instrument,0,2,0.0
+DEV,pooled:BM25 only,1,top-50 (pooled),DEV023,cross_reference_multi_instrument,cross_reference_multi_instrument,0,2,0.0
+DEV,pooled:BM25 only,1,top-50 (pooled),DEV026,applicability,applicability / transition,1,2,0.0
+DEV,pooled:BM25 only,1,top-50 (pooled),DEV027,applicability,applicability / transition,1,2,0.0
+DEV,pooled:BM25 only,1,top-50 (pooled),DEV029,applicability,applicability / transition,0,2,0.0
+DEV,pooled:BM25 only,1,top-50 (pooled),DEV030,procedural_multi_evidence,procedural_multi_evidence,2,2,1.0
+DEV,pooled:BM25 only,1,top-50 (pooled),DEV031,procedural_multi_evidence,procedural_multi_evidence,0,4,0.0
+DEV,pooled:BM25 only,1,top-50 (pooled),DEV034,procedural_multi_evidence,procedural_multi_evidence,0,2,0.0
+DEV,pooled:BM25 only,1,top-50 (pooled),DEV035,authority,authority / source-role sensitive,0,1,0.0
+DEV,pooled:BM25 only,1,top-50 (pooled),DEV039,compound,compound / multi-requirement,0,3,0.0
+DEV,pooled:BM25 only,1,top-50 (pooled),DEV040,compound,compound / multi-requirement,1,3,0.0
+DEV,pooled:BM25 only,1,top-50 (pooled),TEST001,exact_anchor,direct legal anchor,0,1,0.0
+DEV,pooled:BM25 only,1,top-50 (pooled),TEST003,exact_anchor,direct legal anchor,0,2,0.0
+DEV,pooled:BM25 only,1,top-50 (pooled),TEST004,semantic,semantic / practitioner phrasing,0,2,0.0
+DEV,pooled:BM25 only,1,top-50 (pooled),TEST005,semantic,semantic / practitioner phrasing,0,1,0.0
+DEV,pooled:BM25 only,1,top-50 (pooled),TEST009,vocabulary_mismatch,vocabulary mismatch,0,2,0.0
+DEV,pooled:BM25 only,1,top-50 (pooled),TEST011,cross_reference_multi_instrument,cross_reference_multi_instrument,0,2,0.0
+DEV,pooled:BM25 only,1,top-50 (pooled),TEST012,cross_reference_multi_instrument,cross_reference_multi_instrument,1,2,0.0
+DEV,pooled:BM25 only,1,top-50 (pooled),TEST013,applicability,applicability / transition,0,2,0.0
+DEV,pooled:BM25 only,1,top-50 (pooled),TEST015,applicability,applicability / transition,0,2,0.0
+DEV,pooled:BM25 only,1,top-50 (pooled),TEST017,procedural_multi_evidence,procedural_multi_evidence,0,3,0.0
+DEV,pooled:BM25 only,1,top-50 (pooled),TEST019,authority,authority / source-role sensitive,0,1,0.0
+DEV,pooled:BM25 only,1,top-50 (pooled),FAQ003,semantic,semantic / practitioner phrasing,1,1,1.0
+DEV,pooled:BM25 only,1,top-50 (pooled),FAQ006,semantic,semantic / practitioner phrasing,1,1,1.0
+DEV,pooled:BM25 only,1,top-50 (pooled),FAQ008,semantic,semantic / practitioner phrasing,0,1,0.0
+DEV,pooled:BM25 only,1,top-50 (pooled),FAQ009,semantic,semantic / practitioner phrasing,0,1,0.0
+DEV,pooled:BM25 only,1,top-50 (pooled),FAQ011,semantic,semantic / practitioner phrasing,1,1,1.0
+DEV,pooled:BM25 only,1,top-50 (pooled),FAQ012,semantic,semantic / practitioner phrasing,0,1,0.0
+DEV,pooled:BM25 only,1,top-50 (pooled),FAQ014,semantic,semantic / practitioner phrasing,2,2,1.0
+DEV,pooled:BM25 only,1,top-50 (pooled),FAQ023,exact_anchor,direct legal anchor,0,1,0.0
+DEV,pooled:BM25 only,1,top-50 (pooled),FAQ025,semantic,semantic / practitioner phrasing,0,1,0.0
+DEV,pooled:BM25 only,1,top-50 (pooled),FAQ028,exact_anchor,direct legal anchor,0,1,0.0
+DEV,pooled:BM25 only,1,top-50 (pooled),FAQ031,semantic,semantic / practitioner phrasing,0,1,0.0
+DEV,pooled:BM25 only,1,top-50 (pooled),FAQ033,exact_anchor,direct legal anchor,0,1,0.0
+DEV,pooled:BM25 only,1,top-50 (pooled),FAQ036,semantic,semantic / practitioner phrasing,0,1,0.0
+DEV,pooled:BM25 only,1,top-50 (pooled),FAQ038,exact_anchor,direct legal anchor,1,1,1.0
+DEV,pooled:BM25 only,1,top-50 (pooled),FAQ040,exact_anchor,direct legal anchor,1,1,1.0
+DEV,pooled:BM25 only,1,top-50 (pooled),FAQ042,cross_reference_multi_instrument,cross_reference_multi_instrument,0,1,0.0
+DEV,pooled:BM25 only,1,top-50 (pooled),FAQ043,cross_reference_multi_instrument,cross_reference_multi_instrument,0,1,0.0
+DEV,pooled:BM25 only,1,top-50 (pooled),FAQ045,semantic,semantic / practitioner phrasing,0,1,0.0
+DEV,pooled:BM25 only,1,top-50 (pooled),FAQ046,exact_anchor,direct legal anchor,0,1,0.0
+DEV,pooled:BM25 only,1,top-50 (pooled),FAQ051,cross_reference_multi_instrument,cross_reference_multi_instrument,0,1,0.0
+DEV,pooled:BM25 only,1,top-50 (pooled),FAQ052,exact_anchor,direct legal anchor,0,1,0.0
+DEV,pooled:BM25 only,1,top-50 (pooled),FAQ053,exact_anchor,direct legal anchor,0,1,0.0
+DEV,pooled:BM25 only,1,top-50 (pooled),FAQ054,exact_anchor,direct legal anchor,0,1,0.0
+DEV,pooled:BM25 only,1,top-50 (pooled),FAQ055,exact_anchor,direct legal anchor,0,1,0.0
+DEV,pooled:BM25 only,1,top-50 (pooled),FAQ058,exact_anchor,direct legal anchor,0,1,0.0
+DEV,pooled:BM25 only,1,top-50 (pooled),FAQ059,exact_anchor,direct legal anchor,0,1,0.0
+DEV,pooled:BM25 only,1,top-50 (pooled),FAQ063,exact_anchor,direct legal anchor,0,1,0.0
+DEV,pooled:BM25 only,1,top-50 (pooled),FAQ070,exact_anchor,direct legal anchor,0,1,0.0
+DEV,pooled:BM25 only,1,top-50 (pooled),FAQ071,exact_anchor,direct legal anchor,0,1,0.0
+DEV,pooled:BM25 only,1,top-50 (pooled),FAQ075,semantic,semantic / practitioner phrasing,0,1,0.0
+DEV,pooled:BM25 only,1,top-50 (pooled),FAQ078,exact_anchor,direct legal anchor,0,1,0.0
+DEV,pooled:BM25 only,1,top-50 (pooled),FAQ080,exact_anchor,direct legal anchor,1,1,1.0
+DEV,pooled:BM25 only,1,top-50 (pooled),FAQ081,exact_anchor,direct legal anchor,0,1,0.0
+DEV,pooled:BM25 only,1,top-50 (pooled),EXP_PPN002,procedural_multi_evidence,procedural_multi_evidence,1,2,0.0
+DEV,pooled:BM25 only,1,top-50 (pooled),EXP_PPN004,semantic,semantic / practitioner phrasing,1,1,1.0
+DEV,pooled:BM25 only,1,top-50 (pooled),EXP_PPN005,applicability,applicability / transition,1,1,1.0
+DEV,pooled:BM25 only,1,top-50 (pooled),EXP_PPN008,cross_reference_multi_instrument,cross_reference_multi_instrument,1,2,0.0
+DEV,pooled:BM25 only,1,top-50 (pooled),EXP_REG001,procedural_multi_evidence,procedural_multi_evidence,1,2,0.0
+DEV,pooled:BM25 only,1,top-50 (pooled),EXP_REG002,procedural_multi_evidence,procedural_multi_evidence,1,2,0.0
+DEV,pooled:BM25 only,1,top-50 (pooled),EXP_REG003,compound,compound / multi-requirement,2,2,1.0
+DEV,pooled:BM25 only,1,top-50 (pooled),EXP_REG004,procedural_multi_evidence,procedural_multi_evidence,1,2,0.0
+DEV,pooled:BM25 only,1,top-50 (pooled),EXP_GUID005,expansion_v2_official_guidance,expansion_v2_official_guidance,0,2,0.0
+DEV,pooled:BM25 only,1,top-50 (pooled),EXP_GUID006,expansion_v2_official_guidance,expansion_v2_official_guidance,1,2,0.0
+DEV,pooled:BM25 only,1,top-50 (pooled),EXP_GUID007,expansion_v2_official_guidance,expansion_v2_official_guidance,2,2,1.0
+DEV,pooled:BM25 only,1,top-50 (pooled),EXP_GUID009,expansion_v2_official_guidance,expansion_v2_official_guidance,1,2,0.0
+DEV,pooled:BM25 only,1,top-50 (pooled),EXP_GUID010,expansion_v2_official_guidance,expansion_v2_official_guidance,1,2,0.0
+DEV,pooled:BM25 only,1,top-50 (pooled),EXP_GUID011,expansion_v2_official_guidance,expansion_v2_official_guidance,0,1,0.0
+DEV,pooled:BM25 only,1,top-50 (pooled),EXP_WORK002,official_workflow_expansion_v2,official_workflow_expansion_v2,1,2,0.0
+DEV,pooled:BM25 only,1,top-50 (pooled),EXP_WORK003,official_workflow_expansion_v2,official_workflow_expansion_v2,0,2,0.0
+DEV,pooled:BM25 only,1,top-50 (pooled),EXP_WORK004,official_workflow_expansion_v2,official_workflow_expansion_v2,2,2,1.0
+DEV,pooled:BM25 only,1,top-50 (pooled),EXP_WORK008,official_workflow_expansion_v2,official_workflow_expansion_v2,1,1,1.0
+DEV,pooled:BM25 only,1,top-50 (pooled),EXP_TRANS001,procedural_multi_evidence,procedural_multi_evidence,2,2,1.0
+DEV,pooled:BM25 only,1,top-50 (pooled),EXP_TRANS005,applicability,applicability / transition,0,1,0.0
+DEV,pooled:BM25 only,1,top-50 (pooled),EXP_TRANS006,applicability,applicability / transition,1,1,1.0
+DEV,pooled:BM25 only,1,top-50 (pooled),EXP_TRANS007,procedural_multi_evidence,procedural_multi_evidence,1,2,0.0
+DEV,pooled:BM25 only,1,top-50 (pooled),EXP_SEC002,faq90,faq90,2,3,0.0
+DEV,pooled:BM25 only,1,top-50 (pooled),EXP_SEC003,faq90,faq90,0,3,0.0
+DEV,pooled:BM25 only,1,top-50 (pooled),EXP_SEC005,faq90,faq90,2,3,0.0
+DEV,pooled:BM25 only,1,top-50 (pooled),EXP_SEC008,faq90,faq90,0,2,0.0
+DEV,pooled:BM25 only,1,top-50 (pooled),EXP_SEC009,faq90,faq90,1,2,0.0
+DEV,pooled:BM25 only,1,top-50 (pooled),EXP_SEC013,faq90,faq90,1,1,1.0
+DEV,pooled:BM25 only,1,top-50 (pooled),EXP_SEC015,faq90,faq90,0,1,0.0
+DEV,pooled:BM25 only,1,top-50 (pooled),EXP_SEC017,faq90,faq90,0,1,0.0
+DEV,pooled:Dense only,2,top-50 (pooled),DEV001,exact_anchor,direct legal anchor,1,2,0.0
+DEV,pooled:Dense only,2,top-50 (pooled),DEV004,exact_anchor,direct legal anchor,1,2,0.0
+DEV,pooled:Dense only,2,top-50 (pooled),DEV005,exact_anchor,direct legal anchor,1,2,0.0
+DEV,pooled:Dense only,2,top-50 (pooled),DEV007,semantic,semantic / practitioner phrasing,0,2,0.0
+DEV,pooled:Dense only,2,top-50 (pooled),DEV011,semantic,semantic / practitioner phrasing,1,2,0.0
+DEV,pooled:Dense only,2,top-50 (pooled),DEV012,semantic,semantic / practitioner phrasing,2,2,1.0
+DEV,pooled:Dense only,2,top-50 (pooled),DEV013,vocabulary_mismatch,vocabulary mismatch,0,2,0.0
+DEV,pooled:Dense only,2,top-50 (pooled),DEV014,vocabulary_mismatch,vocabulary mismatch,1,3,0.0
+DEV,pooled:Dense only,2,top-50 (pooled),DEV017,vocabulary_mismatch,vocabulary mismatch,2,2,1.0
+DEV,pooled:Dense only,2,top-50 (pooled),DEV018,cross_reference_multi_instrument,cross_reference_multi_instrument,2,3,0.0
+DEV,pooled:Dense only,2,top-50 (pooled),DEV020,cross_reference_multi_instrument,cross_reference_multi_instrument,2,2,1.0
+DEV,pooled:Dense only,2,top-50 (pooled),DEV023,cross_reference_multi_instrument,cross_reference_multi_instrument,0,2,0.0
+DEV,pooled:Dense only,2,top-50 (pooled),DEV026,applicability,applicability / transition,1,2,0.0
+DEV,pooled:Dense only,2,top-50 (pooled),DEV027,applicability,applicability / transition,2,2,1.0
+DEV,pooled:Dense only,2,top-50 (pooled),DEV029,applicability,applicability / transition,2,2,1.0
+DEV,pooled:Dense only,2,top-50 (pooled),DEV030,procedural_multi_evidence,procedural_multi_evidence,2,2,1.0
+DEV,pooled:Dense only,2,top-50 (pooled),DEV031,procedural_multi_evidence,procedural_multi_evidence,0,4,0.0
+DEV,pooled:Dense only,2,top-50 (pooled),DEV034,procedural_multi_evidence,procedural_multi_evidence,0,2,0.0
+DEV,pooled:Dense only,2,top-50 (pooled),DEV035,authority,authority / source-role sensitive,1,1,1.0
+DEV,pooled:Dense only,2,top-50 (pooled),DEV039,compound,compound / multi-requirement,0,3,0.0
+DEV,pooled:Dense only,2,top-50 (pooled),DEV040,compound,compound / multi-requirement,1,3,0.0
+DEV,pooled:Dense only,2,top-50 (pooled),TEST001,exact_anchor,direct legal anchor,1,1,1.0
+DEV,pooled:Dense only,2,top-50 (pooled),TEST003,exact_anchor,direct legal anchor,0,2,0.0
+DEV,pooled:Dense only,2,top-50 (pooled),TEST004,semantic,semantic / practitioner phrasing,1,2,0.0
+DEV,pooled:Dense only,2,top-50 (pooled),TEST005,semantic,semantic / practitioner phrasing,0,1,0.0
+DEV,pooled:Dense only,2,top-50 (pooled),TEST009,vocabulary_mismatch,vocabulary mismatch,0,2,0.0
+DEV,pooled:Dense only,2,top-50 (pooled),TEST011,cross_reference_multi_instrument,cross_reference_multi_instrument,0,2,0.0
+DEV,pooled:Dense only,2,top-50 (pooled),TEST012,cross_reference_multi_instrument,cross_reference_multi_instrument,1,2,0.0
+DEV,pooled:Dense only,2,top-50 (pooled),TEST013,applicability,applicability / transition,1,2,0.0
+DEV,pooled:Dense only,2,top-50 (pooled),TEST015,applicability,applicability / transition,2,2,1.0
+DEV,pooled:Dense only,2,top-50 (pooled),TEST017,procedural_multi_evidence,procedural_multi_evidence,0,3,0.0
+DEV,pooled:Dense only,2,top-50 (pooled),TEST019,authority,authority / source-role sensitive,1,1,1.0
+DEV,pooled:Dense only,2,top-50 (pooled),FAQ003,semantic,semantic / practitioner phrasing,1,1,1.0
+DEV,pooled:Dense only,2,top-50 (pooled),FAQ006,semantic,semantic / practitioner phrasing,1,1,1.0
+DEV,pooled:Dense only,2,top-50 (pooled),FAQ008,semantic,semantic / practitioner phrasing,0,1,0.0
+DEV,pooled:Dense only,2,top-50 (pooled),FAQ009,semantic,semantic / practitioner phrasing,1,1,1.0
+DEV,pooled:Dense only,2,top-50 (pooled),FAQ011,semantic,semantic / practitioner phrasing,1,1,1.0
+DEV,pooled:Dense only,2,top-50 (pooled),FAQ012,semantic,semantic / practitioner phrasing,1,1,1.0
+DEV,pooled:Dense only,2,top-50 (pooled),FAQ014,semantic,semantic / practitioner phrasing,0,2,0.0
+DEV,pooled:Dense only,2,top-50 (pooled),FAQ023,exact_anchor,direct legal anchor,1,1,1.0
+DEV,pooled:Dense only,2,top-50 (pooled),FAQ025,semantic,semantic / practitioner phrasing,1,1,1.0
+DEV,pooled:Dense only,2,top-50 (pooled),FAQ028,exact_anchor,direct legal anchor,0,1,0.0
+DEV,pooled:Dense only,2,top-50 (pooled),FAQ031,semantic,semantic / practitioner phrasing,0,1,0.0
+DEV,pooled:Dense only,2,top-50 (pooled),FAQ033,exact_anchor,direct legal anchor,0,1,0.0
+DEV,pooled:Dense only,2,top-50 (pooled),FAQ036,semantic,semantic / practitioner phrasing,0,1,0.0
+DEV,pooled:Dense only,2,top-50 (pooled),FAQ038,exact_anchor,direct legal anchor,0,1,0.0
+DEV,pooled:Dense only,2,top-50 (pooled),FAQ040,exact_anchor,direct legal anchor,1,1,1.0
+DEV,pooled:Dense only,2,top-50 (pooled),FAQ042,cross_reference_multi_instrument,cross_reference_multi_instrument,1,1,1.0
+DEV,pooled:Dense only,2,top-50 (pooled),FAQ043,cross_reference_multi_instrument,cross_reference_multi_instrument,0,1,0.0
+DEV,pooled:Dense only,2,top-50 (pooled),FAQ045,semantic,semantic / practitioner phrasing,1,1,1.0
+DEV,pooled:Dense only,2,top-50 (pooled),FAQ046,exact_anchor,direct legal anchor,1,1,1.0
+DEV,pooled:Dense only,2,top-50 (pooled),FAQ051,cross_reference_multi_instrument,cross_reference_multi_instrument,0,1,0.0
+DEV,pooled:Dense only,2,top-50 (pooled),FAQ052,exact_anchor,direct legal anchor,1,1,1.0
+DEV,pooled:Dense only,2,top-50 (pooled),FAQ053,exact_anchor,direct legal anchor,1,1,1.0
+DEV,pooled:Dense only,2,top-50 (pooled),FAQ054,exact_anchor,direct legal anchor,1,1,1.0
+DEV,pooled:Dense only,2,top-50 (pooled),FAQ055,exact_anchor,direct legal anchor,0,1,0.0
+DEV,pooled:Dense only,2,top-50 (pooled),FAQ058,exact_anchor,direct legal anchor,0,1,0.0
+DEV,pooled:Dense only,2,top-50 (pooled),FAQ059,exact_anchor,direct legal anchor,1,1,1.0
+DEV,pooled:Dense only,2,top-50 (pooled),FAQ063,exact_anchor,direct legal anchor,0,1,0.0
+DEV,pooled:Dense only,2,top-50 (pooled),FAQ070,exact_anchor,direct legal anchor,0,1,0.0
+DEV,pooled:Dense only,2,top-50 (pooled),FAQ071,exact_anchor,direct legal anchor,0,1,0.0
+DEV,pooled:Dense only,2,top-50 (pooled),FAQ075,semantic,semantic / practitioner phrasing,0,1,0.0
+DEV,pooled:Dense only,2,top-50 (pooled),FAQ078,exact_anchor,direct legal anchor,0,1,0.0
+DEV,pooled:Dense only,2,top-50 (pooled),FAQ080,exact_anchor,direct legal anchor,1,1,1.0
+DEV,pooled:Dense only,2,top-50 (pooled),FAQ081,exact_anchor,direct legal anchor,1,1,1.0
+DEV,pooled:Dense only,2,top-50 (pooled),EXP_PPN002,procedural_multi_evidence,procedural_multi_evidence,1,2,0.0
+DEV,pooled:Dense only,2,top-50 (pooled),EXP_PPN004,semantic,semantic / practitioner phrasing,1,1,1.0
+DEV,pooled:Dense only,2,top-50 (pooled),EXP_PPN005,applicability,applicability / transition,1,1,1.0
+DEV,pooled:Dense only,2,top-50 (pooled),EXP_PPN008,cross_reference_multi_instrument,cross_reference_multi_instrument,2,2,1.0
+DEV,pooled:Dense only,2,top-50 (pooled),EXP_REG001,procedural_multi_evidence,procedural_multi_evidence,1,2,0.0
+DEV,pooled:Dense only,2,top-50 (pooled),EXP_REG002,procedural_multi_evidence,procedural_multi_evidence,1,2,0.0
+DEV,pooled:Dense only,2,top-50 (pooled),EXP_REG003,compound,compound / multi-requirement,2,2,1.0
+DEV,pooled:Dense only,2,top-50 (pooled),EXP_REG004,procedural_multi_evidence,procedural_multi_evidence,1,2,0.0
+DEV,pooled:Dense only,2,top-50 (pooled),EXP_GUID005,expansion_v2_official_guidance,expansion_v2_official_guidance,2,2,1.0
+DEV,pooled:Dense only,2,top-50 (pooled),EXP_GUID006,expansion_v2_official_guidance,expansion_v2_official_guidance,1,2,0.0
+DEV,pooled:Dense only,2,top-50 (pooled),EXP_GUID007,expansion_v2_official_guidance,expansion_v2_official_guidance,1,2,0.0
+DEV,pooled:Dense only,2,top-50 (pooled),EXP_GUID009,expansion_v2_official_guidance,expansion_v2_official_guidance,1,2,0.0
+DEV,pooled:Dense only,2,top-50 (pooled),EXP_GUID010,expansion_v2_official_guidance,expansion_v2_official_guidance,2,2,1.0
+DEV,pooled:Dense only,2,top-50 (pooled),EXP_GUID011,expansion_v2_official_guidance,expansion_v2_official_guidance,1,1,1.0
+DEV,pooled:Dense only,2,top-50 (pooled),EXP_WORK002,official_workflow_expansion_v2,official_workflow_expansion_v2,2,2,1.0
+DEV,pooled:Dense only,2,top-50 (pooled),EXP_WORK003,official_workflow_expansion_v2,official_workflow_expansion_v2,1,2,0.0
+DEV,pooled:Dense only,2,top-50 (pooled),EXP_WORK004,official_workflow_expansion_v2,official_workflow_expansion_v2,2,2,1.0
+DEV,pooled:Dense only,2,top-50 (pooled),EXP_WORK008,official_workflow_expansion_v2,official_workflow_expansion_v2,1,1,1.0
+DEV,pooled:Dense only,2,top-50 (pooled),EXP_TRANS001,procedural_multi_evidence,procedural_multi_evidence,2,2,1.0
+DEV,pooled:Dense only,2,top-50 (pooled),EXP_TRANS005,applicability,applicability / transition,1,1,1.0
+DEV,pooled:Dense only,2,top-50 (pooled),EXP_TRANS006,applicability,applicability / transition,1,1,1.0
+DEV,pooled:Dense only,2,top-50 (pooled),EXP_TRANS007,procedural_multi_evidence,procedural_multi_evidence,2,2,1.0
+DEV,pooled:Dense only,2,top-50 (pooled),EXP_SEC002,faq90,faq90,3,3,1.0
+DEV,pooled:Dense only,2,top-50 (pooled),EXP_SEC003,faq90,faq90,2,3,0.0
+DEV,pooled:Dense only,2,top-50 (pooled),EXP_SEC005,faq90,faq90,2,3,0.0
+DEV,pooled:Dense only,2,top-50 (pooled),EXP_SEC008,faq90,faq90,1,2,0.0
+DEV,pooled:Dense only,2,top-50 (pooled),EXP_SEC009,faq90,faq90,1,2,0.0
+DEV,pooled:Dense only,2,top-50 (pooled),EXP_SEC013,faq90,faq90,1,1,1.0
+DEV,pooled:Dense only,2,top-50 (pooled),EXP_SEC015,faq90,faq90,0,1,0.0
+DEV,pooled:Dense only,2,top-50 (pooled),EXP_SEC017,faq90,faq90,1,1,1.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),DEV001,exact_anchor,direct legal anchor,1,2,0.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),DEV004,exact_anchor,direct legal anchor,1,2,0.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),DEV005,exact_anchor,direct legal anchor,1,2,0.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),DEV007,semantic,semantic / practitioner phrasing,0,2,0.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),DEV011,semantic,semantic / practitioner phrasing,2,2,1.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),DEV012,semantic,semantic / practitioner phrasing,2,2,1.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),DEV013,vocabulary_mismatch,vocabulary mismatch,1,2,0.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),DEV014,vocabulary_mismatch,vocabulary mismatch,1,3,0.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),DEV017,vocabulary_mismatch,vocabulary mismatch,2,2,1.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),DEV018,cross_reference_multi_instrument,cross_reference_multi_instrument,2,3,0.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),DEV020,cross_reference_multi_instrument,cross_reference_multi_instrument,2,2,1.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),DEV023,cross_reference_multi_instrument,cross_reference_multi_instrument,0,2,0.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),DEV026,applicability,applicability / transition,1,2,0.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),DEV027,applicability,applicability / transition,1,2,0.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),DEV029,applicability,applicability / transition,1,2,0.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),DEV030,procedural_multi_evidence,procedural_multi_evidence,2,2,1.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),DEV031,procedural_multi_evidence,procedural_multi_evidence,0,4,0.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),DEV034,procedural_multi_evidence,procedural_multi_evidence,0,2,0.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),DEV035,authority,authority / source-role sensitive,0,1,0.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),DEV039,compound,compound / multi-requirement,0,3,0.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),DEV040,compound,compound / multi-requirement,1,3,0.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),TEST001,exact_anchor,direct legal anchor,1,1,1.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),TEST003,exact_anchor,direct legal anchor,0,2,0.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),TEST004,semantic,semantic / practitioner phrasing,0,2,0.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),TEST005,semantic,semantic / practitioner phrasing,0,1,0.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),TEST009,vocabulary_mismatch,vocabulary mismatch,0,2,0.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),TEST011,cross_reference_multi_instrument,cross_reference_multi_instrument,0,2,0.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),TEST012,cross_reference_multi_instrument,cross_reference_multi_instrument,2,2,1.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),TEST013,applicability,applicability / transition,1,2,0.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),TEST015,applicability,applicability / transition,2,2,1.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),TEST017,procedural_multi_evidence,procedural_multi_evidence,0,3,0.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),TEST019,authority,authority / source-role sensitive,0,1,0.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),FAQ003,semantic,semantic / practitioner phrasing,1,1,1.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),FAQ006,semantic,semantic / practitioner phrasing,1,1,1.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),FAQ008,semantic,semantic / practitioner phrasing,0,1,0.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),FAQ009,semantic,semantic / practitioner phrasing,1,1,1.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),FAQ011,semantic,semantic / practitioner phrasing,1,1,1.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),FAQ012,semantic,semantic / practitioner phrasing,0,1,0.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),FAQ014,semantic,semantic / practitioner phrasing,0,2,0.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),FAQ023,exact_anchor,direct legal anchor,1,1,1.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),FAQ025,semantic,semantic / practitioner phrasing,0,1,0.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),FAQ028,exact_anchor,direct legal anchor,0,1,0.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),FAQ031,semantic,semantic / practitioner phrasing,0,1,0.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),FAQ033,exact_anchor,direct legal anchor,0,1,0.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),FAQ036,semantic,semantic / practitioner phrasing,0,1,0.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),FAQ038,exact_anchor,direct legal anchor,1,1,1.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),FAQ040,exact_anchor,direct legal anchor,1,1,1.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),FAQ042,cross_reference_multi_instrument,cross_reference_multi_instrument,1,1,1.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),FAQ043,cross_reference_multi_instrument,cross_reference_multi_instrument,0,1,0.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),FAQ045,semantic,semantic / practitioner phrasing,0,1,0.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),FAQ046,exact_anchor,direct legal anchor,1,1,1.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),FAQ051,cross_reference_multi_instrument,cross_reference_multi_instrument,0,1,0.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),FAQ052,exact_anchor,direct legal anchor,1,1,1.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),FAQ053,exact_anchor,direct legal anchor,0,1,0.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),FAQ054,exact_anchor,direct legal anchor,0,1,0.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),FAQ055,exact_anchor,direct legal anchor,0,1,0.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),FAQ058,exact_anchor,direct legal anchor,0,1,0.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),FAQ059,exact_anchor,direct legal anchor,1,1,1.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),FAQ063,exact_anchor,direct legal anchor,0,1,0.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),FAQ070,exact_anchor,direct legal anchor,0,1,0.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),FAQ071,exact_anchor,direct legal anchor,0,1,0.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),FAQ075,semantic,semantic / practitioner phrasing,0,1,0.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),FAQ078,exact_anchor,direct legal anchor,0,1,0.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),FAQ080,exact_anchor,direct legal anchor,1,1,1.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),FAQ081,exact_anchor,direct legal anchor,0,1,0.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),EXP_PPN002,procedural_multi_evidence,procedural_multi_evidence,1,2,0.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),EXP_PPN004,semantic,semantic / practitioner phrasing,1,1,1.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),EXP_PPN005,applicability,applicability / transition,1,1,1.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),EXP_PPN008,cross_reference_multi_instrument,cross_reference_multi_instrument,1,2,0.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),EXP_REG001,procedural_multi_evidence,procedural_multi_evidence,1,2,0.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),EXP_REG002,procedural_multi_evidence,procedural_multi_evidence,1,2,0.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),EXP_REG003,compound,compound / multi-requirement,2,2,1.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),EXP_REG004,procedural_multi_evidence,procedural_multi_evidence,0,2,0.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),EXP_GUID005,expansion_v2_official_guidance,expansion_v2_official_guidance,2,2,1.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),EXP_GUID006,expansion_v2_official_guidance,expansion_v2_official_guidance,1,2,0.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),EXP_GUID007,expansion_v2_official_guidance,expansion_v2_official_guidance,2,2,1.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),EXP_GUID009,expansion_v2_official_guidance,expansion_v2_official_guidance,1,2,0.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),EXP_GUID010,expansion_v2_official_guidance,expansion_v2_official_guidance,2,2,1.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),EXP_GUID011,expansion_v2_official_guidance,expansion_v2_official_guidance,1,1,1.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),EXP_WORK002,official_workflow_expansion_v2,official_workflow_expansion_v2,2,2,1.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),EXP_WORK003,official_workflow_expansion_v2,official_workflow_expansion_v2,0,2,0.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),EXP_WORK004,official_workflow_expansion_v2,official_workflow_expansion_v2,2,2,1.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),EXP_WORK008,official_workflow_expansion_v2,official_workflow_expansion_v2,1,1,1.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),EXP_TRANS001,procedural_multi_evidence,procedural_multi_evidence,2,2,1.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),EXP_TRANS005,applicability,applicability / transition,1,1,1.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),EXP_TRANS006,applicability,applicability / transition,1,1,1.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),EXP_TRANS007,procedural_multi_evidence,procedural_multi_evidence,2,2,1.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),EXP_SEC002,faq90,faq90,2,3,0.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),EXP_SEC003,faq90,faq90,2,3,0.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),EXP_SEC005,faq90,faq90,2,3,0.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),EXP_SEC008,faq90,faq90,0,2,0.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),EXP_SEC009,faq90,faq90,1,2,0.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),EXP_SEC013,faq90,faq90,1,1,1.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),EXP_SEC015,faq90,faq90,0,1,0.0
+DEV,pooled:BM25+Dense hybrid,3,top-50 (pooled),EXP_SEC017,faq90,faq90,1,1,1.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),DEV001,exact_anchor,direct legal anchor,1,2,0.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),DEV004,exact_anchor,direct legal anchor,1,2,0.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),DEV005,exact_anchor,direct legal anchor,1,2,0.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),DEV007,semantic,semantic / practitioner phrasing,0,2,0.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),DEV011,semantic,semantic / practitioner phrasing,2,2,1.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),DEV012,semantic,semantic / practitioner phrasing,2,2,1.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),DEV013,vocabulary_mismatch,vocabulary mismatch,2,2,1.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),DEV014,vocabulary_mismatch,vocabulary mismatch,1,3,0.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),DEV017,vocabulary_mismatch,vocabulary mismatch,2,2,1.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),DEV018,cross_reference_multi_instrument,cross_reference_multi_instrument,2,3,0.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),DEV020,cross_reference_multi_instrument,cross_reference_multi_instrument,2,2,1.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),DEV023,cross_reference_multi_instrument,cross_reference_multi_instrument,1,2,0.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),DEV026,applicability,applicability / transition,1,2,0.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),DEV027,applicability,applicability / transition,1,2,0.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),DEV029,applicability,applicability / transition,1,2,0.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),DEV030,procedural_multi_evidence,procedural_multi_evidence,2,2,1.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),DEV031,procedural_multi_evidence,procedural_multi_evidence,0,4,0.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),DEV034,procedural_multi_evidence,procedural_multi_evidence,0,2,0.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),DEV035,authority,authority / source-role sensitive,0,1,0.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),DEV039,compound,compound / multi-requirement,1,3,0.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),DEV040,compound,compound / multi-requirement,2,3,0.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),TEST001,exact_anchor,direct legal anchor,1,1,1.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),TEST003,exact_anchor,direct legal anchor,0,2,0.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),TEST004,semantic,semantic / practitioner phrasing,0,2,0.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),TEST005,semantic,semantic / practitioner phrasing,0,1,0.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),TEST009,vocabulary_mismatch,vocabulary mismatch,0,2,0.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),TEST011,cross_reference_multi_instrument,cross_reference_multi_instrument,2,2,1.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),TEST012,cross_reference_multi_instrument,cross_reference_multi_instrument,2,2,1.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),TEST013,applicability,applicability / transition,2,2,1.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),TEST015,applicability,applicability / transition,2,2,1.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),TEST017,procedural_multi_evidence,procedural_multi_evidence,0,3,0.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),TEST019,authority,authority / source-role sensitive,0,1,0.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),FAQ003,semantic,semantic / practitioner phrasing,1,1,1.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),FAQ006,semantic,semantic / practitioner phrasing,1,1,1.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),FAQ008,semantic,semantic / practitioner phrasing,0,1,0.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),FAQ009,semantic,semantic / practitioner phrasing,1,1,1.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),FAQ011,semantic,semantic / practitioner phrasing,1,1,1.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),FAQ012,semantic,semantic / practitioner phrasing,1,1,1.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),FAQ014,semantic,semantic / practitioner phrasing,0,2,0.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),FAQ023,exact_anchor,direct legal anchor,1,1,1.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),FAQ025,semantic,semantic / practitioner phrasing,1,1,1.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),FAQ028,exact_anchor,direct legal anchor,0,1,0.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),FAQ031,semantic,semantic / practitioner phrasing,0,1,0.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),FAQ033,exact_anchor,direct legal anchor,0,1,0.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),FAQ036,semantic,semantic / practitioner phrasing,0,1,0.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),FAQ038,exact_anchor,direct legal anchor,1,1,1.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),FAQ040,exact_anchor,direct legal anchor,1,1,1.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),FAQ042,cross_reference_multi_instrument,cross_reference_multi_instrument,1,1,1.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),FAQ043,cross_reference_multi_instrument,cross_reference_multi_instrument,0,1,0.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),FAQ045,semantic,semantic / practitioner phrasing,1,1,1.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),FAQ046,exact_anchor,direct legal anchor,1,1,1.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),FAQ051,cross_reference_multi_instrument,cross_reference_multi_instrument,0,1,0.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),FAQ052,exact_anchor,direct legal anchor,1,1,1.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),FAQ053,exact_anchor,direct legal anchor,0,1,0.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),FAQ054,exact_anchor,direct legal anchor,0,1,0.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),FAQ055,exact_anchor,direct legal anchor,0,1,0.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),FAQ058,exact_anchor,direct legal anchor,0,1,0.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),FAQ059,exact_anchor,direct legal anchor,1,1,1.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),FAQ063,exact_anchor,direct legal anchor,1,1,1.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),FAQ070,exact_anchor,direct legal anchor,0,1,0.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),FAQ071,exact_anchor,direct legal anchor,0,1,0.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),FAQ075,semantic,semantic / practitioner phrasing,0,1,0.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),FAQ078,exact_anchor,direct legal anchor,0,1,0.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),FAQ080,exact_anchor,direct legal anchor,1,1,1.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),FAQ081,exact_anchor,direct legal anchor,1,1,1.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),EXP_PPN002,procedural_multi_evidence,procedural_multi_evidence,0,2,0.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),EXP_PPN004,semantic,semantic / practitioner phrasing,1,1,1.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),EXP_PPN005,applicability,applicability / transition,1,1,1.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),EXP_PPN008,cross_reference_multi_instrument,cross_reference_multi_instrument,1,2,0.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),EXP_REG001,procedural_multi_evidence,procedural_multi_evidence,1,2,0.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),EXP_REG002,procedural_multi_evidence,procedural_multi_evidence,2,2,1.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),EXP_REG003,compound,compound / multi-requirement,2,2,1.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),EXP_REG004,procedural_multi_evidence,procedural_multi_evidence,0,2,0.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),EXP_GUID005,expansion_v2_official_guidance,expansion_v2_official_guidance,2,2,1.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),EXP_GUID006,expansion_v2_official_guidance,expansion_v2_official_guidance,1,2,0.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),EXP_GUID007,expansion_v2_official_guidance,expansion_v2_official_guidance,2,2,1.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),EXP_GUID009,expansion_v2_official_guidance,expansion_v2_official_guidance,1,2,0.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),EXP_GUID010,expansion_v2_official_guidance,expansion_v2_official_guidance,2,2,1.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),EXP_GUID011,expansion_v2_official_guidance,expansion_v2_official_guidance,1,1,1.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),EXP_WORK002,official_workflow_expansion_v2,official_workflow_expansion_v2,2,2,1.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),EXP_WORK003,official_workflow_expansion_v2,official_workflow_expansion_v2,1,2,0.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),EXP_WORK004,official_workflow_expansion_v2,official_workflow_expansion_v2,2,2,1.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),EXP_WORK008,official_workflow_expansion_v2,official_workflow_expansion_v2,1,1,1.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),EXP_TRANS001,procedural_multi_evidence,procedural_multi_evidence,2,2,1.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),EXP_TRANS005,applicability,applicability / transition,1,1,1.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),EXP_TRANS006,applicability,applicability / transition,1,1,1.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),EXP_TRANS007,procedural_multi_evidence,procedural_multi_evidence,2,2,1.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),EXP_SEC002,faq90,faq90,3,3,1.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),EXP_SEC003,faq90,faq90,2,3,0.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),EXP_SEC005,faq90,faq90,2,3,0.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),EXP_SEC008,faq90,faq90,0,2,0.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),EXP_SEC009,faq90,faq90,1,2,0.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),EXP_SEC013,faq90,faq90,1,1,1.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),EXP_SEC015,faq90,faq90,0,1,0.0
+DEV,pooled:Hybrid + authority,4,top-50 (pooled),EXP_SEC017,faq90,faq90,1,1,1.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),DEV001,exact_anchor,direct legal anchor,1,2,0.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),DEV004,exact_anchor,direct legal anchor,1,2,0.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),DEV005,exact_anchor,direct legal anchor,1,2,0.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),DEV007,semantic,semantic / practitioner phrasing,0,2,0.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),DEV011,semantic,semantic / practitioner phrasing,2,2,1.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),DEV012,semantic,semantic / practitioner phrasing,2,2,1.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),DEV013,vocabulary_mismatch,vocabulary mismatch,1,2,0.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),DEV014,vocabulary_mismatch,vocabulary mismatch,1,3,0.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),DEV017,vocabulary_mismatch,vocabulary mismatch,2,2,1.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),DEV018,cross_reference_multi_instrument,cross_reference_multi_instrument,2,3,0.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),DEV020,cross_reference_multi_instrument,cross_reference_multi_instrument,2,2,1.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),DEV023,cross_reference_multi_instrument,cross_reference_multi_instrument,0,2,0.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),DEV026,applicability,applicability / transition,1,2,0.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),DEV027,applicability,applicability / transition,1,2,0.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),DEV029,applicability,applicability / transition,1,2,0.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),DEV030,procedural_multi_evidence,procedural_multi_evidence,2,2,1.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),DEV031,procedural_multi_evidence,procedural_multi_evidence,0,4,0.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),DEV034,procedural_multi_evidence,procedural_multi_evidence,0,2,0.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),DEV035,authority,authority / source-role sensitive,0,1,0.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),DEV039,compound,compound / multi-requirement,0,3,0.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),DEV040,compound,compound / multi-requirement,1,3,0.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),TEST001,exact_anchor,direct legal anchor,1,1,1.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),TEST003,exact_anchor,direct legal anchor,0,2,0.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),TEST004,semantic,semantic / practitioner phrasing,0,2,0.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),TEST005,semantic,semantic / practitioner phrasing,0,1,0.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),TEST009,vocabulary_mismatch,vocabulary mismatch,0,2,0.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),TEST011,cross_reference_multi_instrument,cross_reference_multi_instrument,0,2,0.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),TEST012,cross_reference_multi_instrument,cross_reference_multi_instrument,2,2,1.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),TEST013,applicability,applicability / transition,1,2,0.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),TEST015,applicability,applicability / transition,2,2,1.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),TEST017,procedural_multi_evidence,procedural_multi_evidence,0,3,0.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),TEST019,authority,authority / source-role sensitive,0,1,0.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),FAQ003,semantic,semantic / practitioner phrasing,1,1,1.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),FAQ006,semantic,semantic / practitioner phrasing,1,1,1.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),FAQ008,semantic,semantic / practitioner phrasing,0,1,0.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),FAQ009,semantic,semantic / practitioner phrasing,1,1,1.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),FAQ011,semantic,semantic / practitioner phrasing,1,1,1.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),FAQ012,semantic,semantic / practitioner phrasing,0,1,0.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),FAQ014,semantic,semantic / practitioner phrasing,0,2,0.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),FAQ023,exact_anchor,direct legal anchor,1,1,1.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),FAQ025,semantic,semantic / practitioner phrasing,0,1,0.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),FAQ028,exact_anchor,direct legal anchor,0,1,0.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),FAQ031,semantic,semantic / practitioner phrasing,0,1,0.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),FAQ033,exact_anchor,direct legal anchor,0,1,0.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),FAQ036,semantic,semantic / practitioner phrasing,0,1,0.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),FAQ038,exact_anchor,direct legal anchor,1,1,1.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),FAQ040,exact_anchor,direct legal anchor,1,1,1.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),FAQ042,cross_reference_multi_instrument,cross_reference_multi_instrument,1,1,1.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),FAQ043,cross_reference_multi_instrument,cross_reference_multi_instrument,0,1,0.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),FAQ045,semantic,semantic / practitioner phrasing,0,1,0.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),FAQ046,exact_anchor,direct legal anchor,1,1,1.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),FAQ051,cross_reference_multi_instrument,cross_reference_multi_instrument,0,1,0.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),FAQ052,exact_anchor,direct legal anchor,1,1,1.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),FAQ053,exact_anchor,direct legal anchor,0,1,0.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),FAQ054,exact_anchor,direct legal anchor,0,1,0.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),FAQ055,exact_anchor,direct legal anchor,0,1,0.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),FAQ058,exact_anchor,direct legal anchor,0,1,0.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),FAQ059,exact_anchor,direct legal anchor,1,1,1.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),FAQ063,exact_anchor,direct legal anchor,0,1,0.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),FAQ070,exact_anchor,direct legal anchor,0,1,0.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),FAQ071,exact_anchor,direct legal anchor,0,1,0.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),FAQ075,semantic,semantic / practitioner phrasing,0,1,0.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),FAQ078,exact_anchor,direct legal anchor,0,1,0.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),FAQ080,exact_anchor,direct legal anchor,1,1,1.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),FAQ081,exact_anchor,direct legal anchor,0,1,0.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),EXP_PPN002,procedural_multi_evidence,procedural_multi_evidence,1,2,0.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),EXP_PPN004,semantic,semantic / practitioner phrasing,1,1,1.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),EXP_PPN005,applicability,applicability / transition,1,1,1.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),EXP_PPN008,cross_reference_multi_instrument,cross_reference_multi_instrument,1,2,0.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),EXP_REG001,procedural_multi_evidence,procedural_multi_evidence,1,2,0.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),EXP_REG002,procedural_multi_evidence,procedural_multi_evidence,1,2,0.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),EXP_REG003,compound,compound / multi-requirement,2,2,1.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),EXP_REG004,procedural_multi_evidence,procedural_multi_evidence,0,2,0.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),EXP_GUID005,expansion_v2_official_guidance,expansion_v2_official_guidance,2,2,1.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),EXP_GUID006,expansion_v2_official_guidance,expansion_v2_official_guidance,1,2,0.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),EXP_GUID007,expansion_v2_official_guidance,expansion_v2_official_guidance,2,2,1.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),EXP_GUID009,expansion_v2_official_guidance,expansion_v2_official_guidance,1,2,0.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),EXP_GUID010,expansion_v2_official_guidance,expansion_v2_official_guidance,2,2,1.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),EXP_GUID011,expansion_v2_official_guidance,expansion_v2_official_guidance,1,1,1.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),EXP_WORK002,official_workflow_expansion_v2,official_workflow_expansion_v2,2,2,1.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),EXP_WORK003,official_workflow_expansion_v2,official_workflow_expansion_v2,0,2,0.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),EXP_WORK004,official_workflow_expansion_v2,official_workflow_expansion_v2,2,2,1.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),EXP_WORK008,official_workflow_expansion_v2,official_workflow_expansion_v2,1,1,1.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),EXP_TRANS001,procedural_multi_evidence,procedural_multi_evidence,2,2,1.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),EXP_TRANS005,applicability,applicability / transition,1,1,1.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),EXP_TRANS006,applicability,applicability / transition,1,1,1.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),EXP_TRANS007,procedural_multi_evidence,procedural_multi_evidence,2,2,1.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),EXP_SEC002,faq90,faq90,2,3,0.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),EXP_SEC003,faq90,faq90,2,3,0.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),EXP_SEC005,faq90,faq90,2,3,0.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),EXP_SEC008,faq90,faq90,0,2,0.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),EXP_SEC009,faq90,faq90,1,2,0.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),EXP_SEC013,faq90,faq90,1,1,1.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),EXP_SEC015,faq90,faq90,0,1,0.0
+DEV,pooled:Hybrid + jurisdiction,5,top-50 (pooled),EXP_SEC017,faq90,faq90,1,1,1.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),DEV001,exact_anchor,direct legal anchor,1,2,0.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),DEV004,exact_anchor,direct legal anchor,1,2,0.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),DEV005,exact_anchor,direct legal anchor,1,2,0.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),DEV007,semantic,semantic / practitioner phrasing,0,2,0.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),DEV011,semantic,semantic / practitioner phrasing,2,2,1.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),DEV012,semantic,semantic / practitioner phrasing,2,2,1.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),DEV013,vocabulary_mismatch,vocabulary mismatch,2,2,1.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),DEV014,vocabulary_mismatch,vocabulary mismatch,1,3,0.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),DEV017,vocabulary_mismatch,vocabulary mismatch,2,2,1.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),DEV018,cross_reference_multi_instrument,cross_reference_multi_instrument,2,3,0.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),DEV020,cross_reference_multi_instrument,cross_reference_multi_instrument,2,2,1.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),DEV023,cross_reference_multi_instrument,cross_reference_multi_instrument,1,2,0.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),DEV026,applicability,applicability / transition,1,2,0.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),DEV027,applicability,applicability / transition,1,2,0.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),DEV029,applicability,applicability / transition,1,2,0.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),DEV030,procedural_multi_evidence,procedural_multi_evidence,2,2,1.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),DEV031,procedural_multi_evidence,procedural_multi_evidence,0,4,0.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),DEV034,procedural_multi_evidence,procedural_multi_evidence,0,2,0.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),DEV035,authority,authority / source-role sensitive,0,1,0.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),DEV039,compound,compound / multi-requirement,1,3,0.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),DEV040,compound,compound / multi-requirement,2,3,0.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),TEST001,exact_anchor,direct legal anchor,1,1,1.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),TEST003,exact_anchor,direct legal anchor,0,2,0.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),TEST004,semantic,semantic / practitioner phrasing,0,2,0.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),TEST005,semantic,semantic / practitioner phrasing,0,1,0.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),TEST009,vocabulary_mismatch,vocabulary mismatch,0,2,0.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),TEST011,cross_reference_multi_instrument,cross_reference_multi_instrument,2,2,1.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),TEST012,cross_reference_multi_instrument,cross_reference_multi_instrument,2,2,1.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),TEST013,applicability,applicability / transition,2,2,1.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),TEST015,applicability,applicability / transition,2,2,1.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),TEST017,procedural_multi_evidence,procedural_multi_evidence,0,3,0.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),TEST019,authority,authority / source-role sensitive,0,1,0.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),FAQ003,semantic,semantic / practitioner phrasing,1,1,1.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),FAQ006,semantic,semantic / practitioner phrasing,1,1,1.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),FAQ008,semantic,semantic / practitioner phrasing,0,1,0.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),FAQ009,semantic,semantic / practitioner phrasing,1,1,1.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),FAQ011,semantic,semantic / practitioner phrasing,1,1,1.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),FAQ012,semantic,semantic / practitioner phrasing,1,1,1.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),FAQ014,semantic,semantic / practitioner phrasing,0,2,0.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),FAQ023,exact_anchor,direct legal anchor,1,1,1.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),FAQ025,semantic,semantic / practitioner phrasing,1,1,1.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),FAQ028,exact_anchor,direct legal anchor,0,1,0.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),FAQ031,semantic,semantic / practitioner phrasing,0,1,0.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),FAQ033,exact_anchor,direct legal anchor,0,1,0.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),FAQ036,semantic,semantic / practitioner phrasing,0,1,0.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),FAQ038,exact_anchor,direct legal anchor,1,1,1.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),FAQ040,exact_anchor,direct legal anchor,1,1,1.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),FAQ042,cross_reference_multi_instrument,cross_reference_multi_instrument,1,1,1.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),FAQ043,cross_reference_multi_instrument,cross_reference_multi_instrument,0,1,0.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),FAQ045,semantic,semantic / practitioner phrasing,1,1,1.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),FAQ046,exact_anchor,direct legal anchor,1,1,1.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),FAQ051,cross_reference_multi_instrument,cross_reference_multi_instrument,0,1,0.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),FAQ052,exact_anchor,direct legal anchor,1,1,1.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),FAQ053,exact_anchor,direct legal anchor,0,1,0.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),FAQ054,exact_anchor,direct legal anchor,0,1,0.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),FAQ055,exact_anchor,direct legal anchor,0,1,0.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),FAQ058,exact_anchor,direct legal anchor,0,1,0.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),FAQ059,exact_anchor,direct legal anchor,1,1,1.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),FAQ063,exact_anchor,direct legal anchor,1,1,1.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),FAQ070,exact_anchor,direct legal anchor,0,1,0.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),FAQ071,exact_anchor,direct legal anchor,0,1,0.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),FAQ075,semantic,semantic / practitioner phrasing,0,1,0.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),FAQ078,exact_anchor,direct legal anchor,0,1,0.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),FAQ080,exact_anchor,direct legal anchor,1,1,1.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),FAQ081,exact_anchor,direct legal anchor,1,1,1.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),EXP_PPN002,procedural_multi_evidence,procedural_multi_evidence,0,2,0.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),EXP_PPN004,semantic,semantic / practitioner phrasing,1,1,1.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),EXP_PPN005,applicability,applicability / transition,1,1,1.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),EXP_PPN008,cross_reference_multi_instrument,cross_reference_multi_instrument,1,2,0.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),EXP_REG001,procedural_multi_evidence,procedural_multi_evidence,1,2,0.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),EXP_REG002,procedural_multi_evidence,procedural_multi_evidence,2,2,1.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),EXP_REG003,compound,compound / multi-requirement,2,2,1.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),EXP_REG004,procedural_multi_evidence,procedural_multi_evidence,0,2,0.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),EXP_GUID005,expansion_v2_official_guidance,expansion_v2_official_guidance,2,2,1.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),EXP_GUID006,expansion_v2_official_guidance,expansion_v2_official_guidance,1,2,0.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),EXP_GUID007,expansion_v2_official_guidance,expansion_v2_official_guidance,2,2,1.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),EXP_GUID009,expansion_v2_official_guidance,expansion_v2_official_guidance,1,2,0.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),EXP_GUID010,expansion_v2_official_guidance,expansion_v2_official_guidance,2,2,1.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),EXP_GUID011,expansion_v2_official_guidance,expansion_v2_official_guidance,1,1,1.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),EXP_WORK002,official_workflow_expansion_v2,official_workflow_expansion_v2,2,2,1.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),EXP_WORK003,official_workflow_expansion_v2,official_workflow_expansion_v2,1,2,0.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),EXP_WORK004,official_workflow_expansion_v2,official_workflow_expansion_v2,2,2,1.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),EXP_WORK008,official_workflow_expansion_v2,official_workflow_expansion_v2,1,1,1.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),EXP_TRANS001,procedural_multi_evidence,procedural_multi_evidence,2,2,1.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),EXP_TRANS005,applicability,applicability / transition,1,1,1.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),EXP_TRANS006,applicability,applicability / transition,1,1,1.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),EXP_TRANS007,procedural_multi_evidence,procedural_multi_evidence,2,2,1.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),EXP_SEC002,faq90,faq90,3,3,1.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),EXP_SEC003,faq90,faq90,2,3,0.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),EXP_SEC005,faq90,faq90,2,3,0.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),EXP_SEC008,faq90,faq90,0,2,0.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),EXP_SEC009,faq90,faq90,1,2,0.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),EXP_SEC013,faq90,faq90,1,1,1.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),EXP_SEC015,faq90,faq90,0,1,0.0
+DEV,pooled:Hybrid + authority + jurisdiction,6,top-50 (pooled),EXP_SEC017,faq90,faq90,1,1,1.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),DEV001,exact_anchor,direct legal anchor,2,2,1.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),DEV004,exact_anchor,direct legal anchor,1,2,0.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),DEV005,exact_anchor,direct legal anchor,2,2,1.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),DEV007,semantic,semantic / practitioner phrasing,1,2,0.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),DEV011,semantic,semantic / practitioner phrasing,2,2,1.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),DEV012,semantic,semantic / practitioner phrasing,2,2,1.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),DEV013,vocabulary_mismatch,vocabulary mismatch,2,2,1.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),DEV014,vocabulary_mismatch,vocabulary mismatch,2,3,0.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),DEV017,vocabulary_mismatch,vocabulary mismatch,2,2,1.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),DEV018,cross_reference_multi_instrument,cross_reference_multi_instrument,2,3,0.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),DEV020,cross_reference_multi_instrument,cross_reference_multi_instrument,2,2,1.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),DEV023,cross_reference_multi_instrument,cross_reference_multi_instrument,1,2,0.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),DEV026,applicability,applicability / transition,1,2,0.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),DEV027,applicability,applicability / transition,2,2,1.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),DEV029,applicability,applicability / transition,2,2,1.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),DEV030,procedural_multi_evidence,procedural_multi_evidence,2,2,1.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),DEV031,procedural_multi_evidence,procedural_multi_evidence,1,4,0.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),DEV034,procedural_multi_evidence,procedural_multi_evidence,1,2,0.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),DEV035,authority,authority / source-role sensitive,1,1,1.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),DEV039,compound,compound / multi-requirement,2,3,0.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),DEV040,compound,compound / multi-requirement,3,3,1.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),TEST001,exact_anchor,direct legal anchor,1,1,1.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),TEST003,exact_anchor,direct legal anchor,2,2,1.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),TEST004,semantic,semantic / practitioner phrasing,0,2,0.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),TEST005,semantic,semantic / practitioner phrasing,1,1,1.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),TEST009,vocabulary_mismatch,vocabulary mismatch,0,2,0.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),TEST011,cross_reference_multi_instrument,cross_reference_multi_instrument,2,2,1.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),TEST012,cross_reference_multi_instrument,cross_reference_multi_instrument,2,2,1.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),TEST013,applicability,applicability / transition,2,2,1.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),TEST015,applicability,applicability / transition,2,2,1.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),TEST017,procedural_multi_evidence,procedural_multi_evidence,2,3,0.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),TEST019,authority,authority / source-role sensitive,1,1,1.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),FAQ003,semantic,semantic / practitioner phrasing,1,1,1.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),FAQ006,semantic,semantic / practitioner phrasing,1,1,1.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),FAQ008,semantic,semantic / practitioner phrasing,0,1,0.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),FAQ009,semantic,semantic / practitioner phrasing,1,1,1.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),FAQ011,semantic,semantic / practitioner phrasing,1,1,1.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),FAQ012,semantic,semantic / practitioner phrasing,1,1,1.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),FAQ014,semantic,semantic / practitioner phrasing,2,2,1.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),FAQ023,exact_anchor,direct legal anchor,1,1,1.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),FAQ025,semantic,semantic / practitioner phrasing,1,1,1.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),FAQ028,exact_anchor,direct legal anchor,0,1,0.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),FAQ031,semantic,semantic / practitioner phrasing,1,1,1.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),FAQ033,exact_anchor,direct legal anchor,0,1,0.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),FAQ036,semantic,semantic / practitioner phrasing,1,1,1.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),FAQ038,exact_anchor,direct legal anchor,1,1,1.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),FAQ040,exact_anchor,direct legal anchor,1,1,1.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),FAQ042,cross_reference_multi_instrument,cross_reference_multi_instrument,1,1,1.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),FAQ043,cross_reference_multi_instrument,cross_reference_multi_instrument,1,1,1.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),FAQ045,semantic,semantic / practitioner phrasing,1,1,1.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),FAQ046,exact_anchor,direct legal anchor,1,1,1.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),FAQ051,cross_reference_multi_instrument,cross_reference_multi_instrument,0,1,0.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),FAQ052,exact_anchor,direct legal anchor,1,1,1.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),FAQ053,exact_anchor,direct legal anchor,1,1,1.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),FAQ054,exact_anchor,direct legal anchor,0,1,0.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),FAQ055,exact_anchor,direct legal anchor,0,1,0.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),FAQ058,exact_anchor,direct legal anchor,0,1,0.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),FAQ059,exact_anchor,direct legal anchor,1,1,1.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),FAQ063,exact_anchor,direct legal anchor,1,1,1.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),FAQ070,exact_anchor,direct legal anchor,1,1,1.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),FAQ071,exact_anchor,direct legal anchor,0,1,0.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),FAQ075,semantic,semantic / practitioner phrasing,1,1,1.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),FAQ078,exact_anchor,direct legal anchor,1,1,1.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),FAQ080,exact_anchor,direct legal anchor,1,1,1.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),FAQ081,exact_anchor,direct legal anchor,1,1,1.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),EXP_PPN002,procedural_multi_evidence,procedural_multi_evidence,1,2,0.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),EXP_PPN004,semantic,semantic / practitioner phrasing,1,1,1.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),EXP_PPN005,applicability,applicability / transition,1,1,1.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),EXP_PPN008,cross_reference_multi_instrument,cross_reference_multi_instrument,0,2,0.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),EXP_REG001,procedural_multi_evidence,procedural_multi_evidence,2,2,1.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),EXP_REG002,procedural_multi_evidence,procedural_multi_evidence,2,2,1.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),EXP_REG003,compound,compound / multi-requirement,2,2,1.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),EXP_REG004,procedural_multi_evidence,procedural_multi_evidence,0,2,0.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),EXP_GUID005,expansion_v2_official_guidance,expansion_v2_official_guidance,1,2,0.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),EXP_GUID006,expansion_v2_official_guidance,expansion_v2_official_guidance,1,2,0.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),EXP_GUID007,expansion_v2_official_guidance,expansion_v2_official_guidance,2,2,1.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),EXP_GUID009,expansion_v2_official_guidance,expansion_v2_official_guidance,2,2,1.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),EXP_GUID010,expansion_v2_official_guidance,expansion_v2_official_guidance,2,2,1.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),EXP_GUID011,expansion_v2_official_guidance,expansion_v2_official_guidance,1,1,1.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),EXP_WORK002,official_workflow_expansion_v2,official_workflow_expansion_v2,2,2,1.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),EXP_WORK003,official_workflow_expansion_v2,official_workflow_expansion_v2,1,2,0.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),EXP_WORK004,official_workflow_expansion_v2,official_workflow_expansion_v2,2,2,1.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),EXP_WORK008,official_workflow_expansion_v2,official_workflow_expansion_v2,1,1,1.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),EXP_TRANS001,procedural_multi_evidence,procedural_multi_evidence,2,2,1.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),EXP_TRANS005,applicability,applicability / transition,1,1,1.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),EXP_TRANS006,applicability,applicability / transition,1,1,1.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),EXP_TRANS007,procedural_multi_evidence,procedural_multi_evidence,2,2,1.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),EXP_SEC002,faq90,faq90,3,3,1.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),EXP_SEC003,faq90,faq90,2,3,0.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),EXP_SEC005,faq90,faq90,2,3,0.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),EXP_SEC008,faq90,faq90,0,2,0.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),EXP_SEC009,faq90,faq90,2,2,1.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),EXP_SEC013,faq90,faq90,1,1,1.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),EXP_SEC015,faq90,faq90,0,1,0.0
+DEV,two_lane:no_authority,7,25+25 (two-lane),EXP_SEC017,faq90,faq90,1,1,1.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),DEV001,exact_anchor,direct legal anchor,2,2,1.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),DEV001,exact_anchor,direct legal anchor,2,2,1.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),DEV004,exact_anchor,direct legal anchor,2,2,1.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),DEV004,exact_anchor,direct legal anchor,2,2,1.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),DEV005,exact_anchor,direct legal anchor,2,2,1.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),DEV005,exact_anchor,direct legal anchor,2,2,1.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),DEV007,semantic,semantic / practitioner phrasing,1,2,0.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),DEV007,semantic,semantic / practitioner phrasing,0,2,0.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),DEV011,semantic,semantic / practitioner phrasing,2,2,1.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),DEV011,semantic,semantic / practitioner phrasing,2,2,1.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),DEV012,semantic,semantic / practitioner phrasing,2,2,1.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),DEV012,semantic,semantic / practitioner phrasing,2,2,1.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),DEV013,vocabulary_mismatch,vocabulary mismatch,2,2,1.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),DEV013,vocabulary_mismatch,vocabulary mismatch,2,2,1.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),DEV014,vocabulary_mismatch,vocabulary mismatch,2,3,0.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),DEV014,vocabulary_mismatch,vocabulary mismatch,2,3,0.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),DEV017,vocabulary_mismatch,vocabulary mismatch,2,2,1.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),DEV017,vocabulary_mismatch,vocabulary mismatch,2,2,1.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),DEV018,cross_reference_multi_instrument,cross_reference_multi_instrument,2,3,0.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),DEV018,cross_reference_multi_instrument,cross_reference_multi_instrument,2,3,0.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),DEV020,cross_reference_multi_instrument,cross_reference_multi_instrument,2,2,1.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),DEV020,cross_reference_multi_instrument,cross_reference_multi_instrument,2,2,1.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),DEV023,cross_reference_multi_instrument,cross_reference_multi_instrument,1,2,0.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),DEV023,cross_reference_multi_instrument,cross_reference_multi_instrument,1,2,0.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),DEV026,applicability,applicability / transition,1,2,0.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),DEV026,applicability,applicability / transition,1,2,0.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),DEV027,applicability,applicability / transition,2,2,1.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),DEV027,applicability,applicability / transition,2,2,1.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),DEV029,applicability,applicability / transition,2,2,1.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),DEV029,applicability,applicability / transition,1,2,0.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),DEV030,procedural_multi_evidence,procedural_multi_evidence,2,2,1.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),DEV030,procedural_multi_evidence,procedural_multi_evidence,2,2,1.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),DEV031,procedural_multi_evidence,procedural_multi_evidence,1,4,0.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),DEV031,procedural_multi_evidence,procedural_multi_evidence,2,4,0.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),DEV034,procedural_multi_evidence,procedural_multi_evidence,1,2,0.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),DEV034,procedural_multi_evidence,procedural_multi_evidence,0,2,0.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),DEV035,authority,authority / source-role sensitive,1,1,1.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),DEV035,authority,authority / source-role sensitive,1,1,1.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),DEV039,compound,compound / multi-requirement,2,3,0.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),DEV039,compound,compound / multi-requirement,3,3,1.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),DEV040,compound,compound / multi-requirement,3,3,1.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),DEV040,compound,compound / multi-requirement,3,3,1.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),TEST001,exact_anchor,direct legal anchor,1,1,1.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),TEST001,exact_anchor,direct legal anchor,1,1,1.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),TEST003,exact_anchor,direct legal anchor,2,2,1.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),TEST003,exact_anchor,direct legal anchor,2,2,1.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),TEST004,semantic,semantic / practitioner phrasing,0,2,0.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),TEST004,semantic,semantic / practitioner phrasing,2,2,1.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),TEST005,semantic,semantic / practitioner phrasing,1,1,1.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),TEST005,semantic,semantic / practitioner phrasing,1,1,1.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),TEST009,vocabulary_mismatch,vocabulary mismatch,0,2,0.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),TEST009,vocabulary_mismatch,vocabulary mismatch,1,2,0.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),TEST011,cross_reference_multi_instrument,cross_reference_multi_instrument,2,2,1.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),TEST011,cross_reference_multi_instrument,cross_reference_multi_instrument,2,2,1.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),TEST012,cross_reference_multi_instrument,cross_reference_multi_instrument,2,2,1.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),TEST012,cross_reference_multi_instrument,cross_reference_multi_instrument,2,2,1.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),TEST013,applicability,applicability / transition,2,2,1.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),TEST013,applicability,applicability / transition,2,2,1.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),TEST015,applicability,applicability / transition,2,2,1.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),TEST015,applicability,applicability / transition,2,2,1.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),TEST017,procedural_multi_evidence,procedural_multi_evidence,2,3,0.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),TEST017,procedural_multi_evidence,procedural_multi_evidence,0,3,0.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),TEST019,authority,authority / source-role sensitive,1,1,1.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),TEST019,authority,authority / source-role sensitive,1,1,1.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),FAQ003,semantic,semantic / practitioner phrasing,1,1,1.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),FAQ003,semantic,semantic / practitioner phrasing,1,1,1.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),FAQ006,semantic,semantic / practitioner phrasing,1,1,1.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),FAQ006,semantic,semantic / practitioner phrasing,1,1,1.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),FAQ008,semantic,semantic / practitioner phrasing,1,1,1.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),FAQ008,semantic,semantic / practitioner phrasing,0,1,0.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),FAQ009,semantic,semantic / practitioner phrasing,1,1,1.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),FAQ009,semantic,semantic / practitioner phrasing,1,1,1.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),FAQ011,semantic,semantic / practitioner phrasing,1,1,1.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),FAQ011,semantic,semantic / practitioner phrasing,1,1,1.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),FAQ012,semantic,semantic / practitioner phrasing,1,1,1.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),FAQ012,semantic,semantic / practitioner phrasing,1,1,1.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),FAQ014,semantic,semantic / practitioner phrasing,2,2,1.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),FAQ014,semantic,semantic / practitioner phrasing,2,2,1.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),FAQ023,exact_anchor,direct legal anchor,1,1,1.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),FAQ023,exact_anchor,direct legal anchor,1,1,1.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),FAQ025,semantic,semantic / practitioner phrasing,1,1,1.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),FAQ025,semantic,semantic / practitioner phrasing,1,1,1.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),FAQ028,exact_anchor,direct legal anchor,0,1,0.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),FAQ028,exact_anchor,direct legal anchor,0,1,0.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),FAQ031,semantic,semantic / practitioner phrasing,1,1,1.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),FAQ031,semantic,semantic / practitioner phrasing,1,1,1.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),FAQ033,exact_anchor,direct legal anchor,0,1,0.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),FAQ033,exact_anchor,direct legal anchor,0,1,0.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),FAQ036,semantic,semantic / practitioner phrasing,1,1,1.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),FAQ036,semantic,semantic / practitioner phrasing,1,1,1.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),FAQ038,exact_anchor,direct legal anchor,1,1,1.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),FAQ038,exact_anchor,direct legal anchor,1,1,1.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),FAQ040,exact_anchor,direct legal anchor,1,1,1.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),FAQ040,exact_anchor,direct legal anchor,1,1,1.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),FAQ042,cross_reference_multi_instrument,cross_reference_multi_instrument,1,1,1.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),FAQ042,cross_reference_multi_instrument,cross_reference_multi_instrument,1,1,1.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),FAQ043,cross_reference_multi_instrument,cross_reference_multi_instrument,1,1,1.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),FAQ043,cross_reference_multi_instrument,cross_reference_multi_instrument,1,1,1.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),FAQ045,semantic,semantic / practitioner phrasing,1,1,1.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),FAQ045,semantic,semantic / practitioner phrasing,1,1,1.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),FAQ046,exact_anchor,direct legal anchor,1,1,1.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),FAQ046,exact_anchor,direct legal anchor,1,1,1.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),FAQ051,cross_reference_multi_instrument,cross_reference_multi_instrument,0,1,0.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),FAQ051,cross_reference_multi_instrument,cross_reference_multi_instrument,1,1,1.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),FAQ052,exact_anchor,direct legal anchor,1,1,1.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),FAQ052,exact_anchor,direct legal anchor,1,1,1.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),FAQ053,exact_anchor,direct legal anchor,1,1,1.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),FAQ053,exact_anchor,direct legal anchor,1,1,1.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),FAQ054,exact_anchor,direct legal anchor,0,1,0.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),FAQ054,exact_anchor,direct legal anchor,1,1,1.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),FAQ055,exact_anchor,direct legal anchor,0,1,0.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),FAQ055,exact_anchor,direct legal anchor,0,1,0.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),FAQ058,exact_anchor,direct legal anchor,0,1,0.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),FAQ058,exact_anchor,direct legal anchor,0,1,0.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),FAQ059,exact_anchor,direct legal anchor,1,1,1.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),FAQ059,exact_anchor,direct legal anchor,0,1,0.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),FAQ063,exact_anchor,direct legal anchor,1,1,1.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),FAQ063,exact_anchor,direct legal anchor,0,1,0.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),FAQ070,exact_anchor,direct legal anchor,1,1,1.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),FAQ070,exact_anchor,direct legal anchor,1,1,1.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),FAQ071,exact_anchor,direct legal anchor,0,1,0.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),FAQ071,exact_anchor,direct legal anchor,0,1,0.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),FAQ075,semantic,semantic / practitioner phrasing,1,1,1.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),FAQ075,semantic,semantic / practitioner phrasing,1,1,1.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),FAQ078,exact_anchor,direct legal anchor,1,1,1.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),FAQ078,exact_anchor,direct legal anchor,1,1,1.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),FAQ080,exact_anchor,direct legal anchor,1,1,1.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),FAQ080,exact_anchor,direct legal anchor,1,1,1.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),FAQ081,exact_anchor,direct legal anchor,1,1,1.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),FAQ081,exact_anchor,direct legal anchor,1,1,1.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),EXP_PPN002,procedural_multi_evidence,procedural_multi_evidence,1,2,0.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),EXP_PPN002,procedural_multi_evidence,procedural_multi_evidence,2,2,1.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),EXP_PPN004,semantic,semantic / practitioner phrasing,1,1,1.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),EXP_PPN004,semantic,semantic / practitioner phrasing,1,1,1.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),EXP_PPN005,applicability,applicability / transition,1,1,1.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),EXP_PPN005,applicability,applicability / transition,1,1,1.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),EXP_PPN008,cross_reference_multi_instrument,cross_reference_multi_instrument,0,2,0.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),EXP_PPN008,cross_reference_multi_instrument,cross_reference_multi_instrument,2,2,1.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),EXP_REG001,procedural_multi_evidence,procedural_multi_evidence,2,2,1.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),EXP_REG001,procedural_multi_evidence,procedural_multi_evidence,2,2,1.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),EXP_REG002,procedural_multi_evidence,procedural_multi_evidence,2,2,1.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),EXP_REG002,procedural_multi_evidence,procedural_multi_evidence,2,2,1.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),EXP_REG003,compound,compound / multi-requirement,2,2,1.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),EXP_REG003,compound,compound / multi-requirement,2,2,1.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),EXP_REG004,procedural_multi_evidence,procedural_multi_evidence,0,2,0.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),EXP_REG004,procedural_multi_evidence,procedural_multi_evidence,1,2,0.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),EXP_GUID005,expansion_v2_official_guidance,expansion_v2_official_guidance,1,2,0.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),EXP_GUID005,expansion_v2_official_guidance,expansion_v2_official_guidance,2,2,1.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),EXP_GUID006,expansion_v2_official_guidance,expansion_v2_official_guidance,1,2,0.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),EXP_GUID006,expansion_v2_official_guidance,expansion_v2_official_guidance,1,2,0.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),EXP_GUID007,expansion_v2_official_guidance,expansion_v2_official_guidance,2,2,1.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),EXP_GUID007,expansion_v2_official_guidance,expansion_v2_official_guidance,2,2,1.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),EXP_GUID009,expansion_v2_official_guidance,expansion_v2_official_guidance,2,2,1.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),EXP_GUID009,expansion_v2_official_guidance,expansion_v2_official_guidance,2,2,1.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),EXP_GUID010,expansion_v2_official_guidance,expansion_v2_official_guidance,2,2,1.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),EXP_GUID010,expansion_v2_official_guidance,expansion_v2_official_guidance,2,2,1.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),EXP_GUID011,expansion_v2_official_guidance,expansion_v2_official_guidance,1,1,1.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),EXP_GUID011,expansion_v2_official_guidance,expansion_v2_official_guidance,1,1,1.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),EXP_WORK002,official_workflow_expansion_v2,official_workflow_expansion_v2,2,2,1.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),EXP_WORK002,official_workflow_expansion_v2,official_workflow_expansion_v2,1,2,0.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),EXP_WORK003,official_workflow_expansion_v2,official_workflow_expansion_v2,1,2,0.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),EXP_WORK003,official_workflow_expansion_v2,official_workflow_expansion_v2,1,2,0.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),EXP_WORK004,official_workflow_expansion_v2,official_workflow_expansion_v2,2,2,1.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),EXP_WORK004,official_workflow_expansion_v2,official_workflow_expansion_v2,2,2,1.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),EXP_WORK008,official_workflow_expansion_v2,official_workflow_expansion_v2,1,1,1.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),EXP_WORK008,official_workflow_expansion_v2,official_workflow_expansion_v2,1,1,1.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),EXP_TRANS001,procedural_multi_evidence,procedural_multi_evidence,2,2,1.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),EXP_TRANS001,procedural_multi_evidence,procedural_multi_evidence,2,2,1.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),EXP_TRANS005,applicability,applicability / transition,1,1,1.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),EXP_TRANS005,applicability,applicability / transition,1,1,1.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),EXP_TRANS006,applicability,applicability / transition,1,1,1.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),EXP_TRANS006,applicability,applicability / transition,1,1,1.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),EXP_TRANS007,procedural_multi_evidence,procedural_multi_evidence,2,2,1.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),EXP_TRANS007,procedural_multi_evidence,procedural_multi_evidence,2,2,1.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),EXP_SEC002,faq90,faq90,3,3,1.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),EXP_SEC002,faq90,faq90,3,3,1.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),EXP_SEC003,faq90,faq90,2,3,0.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),EXP_SEC003,faq90,faq90,3,3,1.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),EXP_SEC005,faq90,faq90,2,3,0.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),EXP_SEC005,faq90,faq90,3,3,1.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),EXP_SEC008,faq90,faq90,0,2,0.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),EXP_SEC008,faq90,faq90,1,2,0.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),EXP_SEC009,faq90,faq90,1,2,0.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),EXP_SEC009,faq90,faq90,2,2,1.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),EXP_SEC013,faq90,faq90,1,1,1.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),EXP_SEC013,faq90,faq90,1,1,1.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),EXP_SEC015,faq90,faq90,0,1,0.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),EXP_SEC015,faq90,faq90,0,1,0.0
+DEV,two_lane:full_pre_CE,8,25+25 (two-lane),EXP_SEC017,faq90,faq90,1,1,1.0
+DEV,two_lane:full_post_CE,9,25+25 (two-lane),EXP_SEC017,faq90,faq90,1,1,1.0

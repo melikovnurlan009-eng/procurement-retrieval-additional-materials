@@ -1,0 +1,462 @@
+[
+  {
+    "variant": "1_baseline_raw_text_CE",
+    "n_scenarios": 95,
+    "essential_gold_coverage_at_5": 0.5929824561403508,
+    "essential_gold_coverage_at_10": 0.7,
+    "essential_gold_coverage_at_25": 0.8140350877192982,
+    "requirement_recall_at_10": 0.5929824561403508,
+    "complete_coverage_at_10": 0.4631578947368421,
+    "dual_evidence_coverage_at_10": 0.17647058823529413,
+    "n_dual_evidence_scenarios": 17,
+    "mean_rank_movement": 3.010989010989011,
+    "median_rank_movement": 0.0,
+    "n_essential_gold_moved_into_top25": 21,
+    "n_essential_gold_moved_out_of_top25": 12,
+    "harmful_demotion_rate_P_post_gt25_given_pre_le25": 0.09375,
+    "n_was_in_top25_pre": 128,
+    "by_authority_class_group": {
+      "guidance_workflow": {
+        "count": 38,
+        "mean": 2.3684210526315788,
+        "median": 0.0
+      },
+      "primary_legislation": {
+        "count": 105,
+        "mean": 1.6285714285714286,
+        "median": 0.0
+      },
+      "secondary_legislation": {
+        "count": 39,
+        "mean": 7.358974358974359,
+        "median": 5.0
+      }
+    },
+    "by_lane": {
+      "legislation": {
+        "count": 144,
+        "mean": 3.1805555555555554,
+        "median": 0.0
+      },
+      "other": {
+        "count": 38,
+        "mean": 2.3684210526315788,
+        "median": 0.0
+      }
+    }
+  },
+  {
+    "variant": "3_CE_plus_fusion_lambda0.25",
+    "n_scenarios": 95,
+    "essential_gold_coverage_at_5": 0.6114035087719297,
+    "essential_gold_coverage_at_10": 0.6587719298245613,
+    "essential_gold_coverage_at_25": 0.8114035087719298,
+    "requirement_recall_at_10": 0.6114035087719297,
+    "complete_coverage_at_10": 0.47368421052631576,
+    "dual_evidence_coverage_at_10": 0.35294117647058826,
+    "n_dual_evidence_scenarios": 17,
+    "mean_rank_movement": 1.945054945054945,
+    "median_rank_movement": 0.0,
+    "n_essential_gold_moved_into_top25": 8,
+    "n_essential_gold_moved_out_of_top25": 1,
+    "harmful_demotion_rate_P_post_gt25_given_pre_le25": 0.0078125,
+    "n_was_in_top25_pre": 128,
+    "by_authority_class_group": {
+      "guidance_workflow": {
+        "count": 38,
+        "mean": 1.2105263157894737,
+        "median": 0.0
+      },
+      "primary_legislation": {
+        "count": 105,
+        "mean": 1.0952380952380953,
+        "median": 0.0
+      },
+      "secondary_legislation": {
+        "count": 39,
+        "mean": 4.948717948717949,
+        "median": 3.0
+      }
+    },
+    "by_lane": {
+      "legislation": {
+        "count": 144,
+        "mean": 2.138888888888889,
+        "median": 0.0
+      },
+      "other": {
+        "count": 38,
+        "mean": 1.2105263157894737,
+        "median": 0.0
+      }
+    }
+  },
+  {
+    "variant": "3_CE_plus_fusion_lambda0.5",
+    "n_scenarios": 95,
+    "essential_gold_coverage_at_5": 0.6412280701754385,
+    "essential_gold_coverage_at_10": 0.706140350877193,
+    "essential_gold_coverage_at_25": 0.8403508771929824,
+    "requirement_recall_at_10": 0.6412280701754385,
+    "complete_coverage_at_10": 0.5263157894736842,
+    "dual_evidence_coverage_at_10": 0.4117647058823529,
+    "n_dual_evidence_scenarios": 17,
+    "mean_rank_movement": 2.934065934065934,
+    "median_rank_movement": 0.0,
+    "n_essential_gold_moved_into_top25": 12,
+    "n_essential_gold_moved_out_of_top25": 2,
+    "harmful_demotion_rate_P_post_gt25_given_pre_le25": 0.015625,
+    "n_was_in_top25_pre": 128,
+    "by_authority_class_group": {
+      "guidance_workflow": {
+        "count": 38,
+        "mean": 2.3684210526315788,
+        "median": 0.0
+      },
+      "primary_legislation": {
+        "count": 105,
+        "mean": 1.5333333333333334,
+        "median": 0.0
+      },
+      "secondary_legislation": {
+        "count": 39,
+        "mean": 7.256410256410256,
+        "median": 4.0
+      }
+    },
+    "by_lane": {
+      "legislation": {
+        "count": 144,
+        "mean": 3.0833333333333335,
+        "median": 0.0
+      },
+      "other": {
+        "count": 38,
+        "mean": 2.3684210526315788,
+        "median": 0.0
+      }
+    }
+  },
+  {
+    "variant": "3_CE_plus_fusion_lambda0.75",
+    "n_scenarios": 95,
+    "essential_gold_coverage_at_5": 0.6149122807017543,
+    "essential_gold_coverage_at_10": 0.7210526315789474,
+    "essential_gold_coverage_at_25": 0.8403508771929824,
+    "requirement_recall_at_10": 0.6149122807017543,
+    "complete_coverage_at_10": 0.49473684210526314,
+    "dual_evidence_coverage_at_10": 0.4117647058823529,
+    "n_dual_evidence_scenarios": 17,
+    "mean_rank_movement": 3.3626373626373627,
+    "median_rank_movement": 0.0,
+    "n_essential_gold_moved_into_top25": 14,
+    "n_essential_gold_moved_out_of_top25": 3,
+    "harmful_demotion_rate_P_post_gt25_given_pre_le25": 0.0234375,
+    "n_was_in_top25_pre": 128,
+    "by_authority_class_group": {
+      "guidance_workflow": {
+        "count": 38,
+        "mean": 2.8947368421052633,
+        "median": 0.0
+      },
+      "primary_legislation": {
+        "count": 105,
+        "mean": 1.6285714285714286,
+        "median": 0.0
+      },
+      "secondary_legislation": {
+        "count": 39,
+        "mean": 8.487179487179487,
+        "median": 6.0
+      }
+    },
+    "by_lane": {
+      "legislation": {
+        "count": 144,
+        "mean": 3.486111111111111,
+        "median": 0.0
+      },
+      "other": {
+        "count": 38,
+        "mean": 2.8947368421052633,
+        "median": 0.0
+      }
+    }
+  },
+  {
+    "variant": "3_CE_plus_fusion_lambda1.0",
+    "n_scenarios": 95,
+    "essential_gold_coverage_at_5": 0.5929824561403508,
+    "essential_gold_coverage_at_10": 0.7,
+    "essential_gold_coverage_at_25": 0.8140350877192982,
+    "requirement_recall_at_10": 0.5929824561403508,
+    "complete_coverage_at_10": 0.4631578947368421,
+    "dual_evidence_coverage_at_10": 0.17647058823529413,
+    "n_dual_evidence_scenarios": 17,
+    "mean_rank_movement": 3.010989010989011,
+    "median_rank_movement": 0.0,
+    "n_essential_gold_moved_into_top25": 21,
+    "n_essential_gold_moved_out_of_top25": 12,
+    "harmful_demotion_rate_P_post_gt25_given_pre_le25": 0.09375,
+    "n_was_in_top25_pre": 128,
+    "by_authority_class_group": {
+      "guidance_workflow": {
+        "count": 38,
+        "mean": 2.3684210526315788,
+        "median": 0.0
+      },
+      "primary_legislation": {
+        "count": 105,
+        "mean": 1.6285714285714286,
+        "median": 0.0
+      },
+      "secondary_legislation": {
+        "count": 39,
+        "mean": 7.358974358974359,
+        "median": 5.0
+      }
+    },
+    "by_lane": {
+      "legislation": {
+        "count": 144,
+        "mean": 3.1805555555555554,
+        "median": 0.0
+      },
+      "other": {
+        "count": 38,
+        "mean": 2.3684210526315788,
+        "median": 0.0
+      }
+    }
+  },
+  {
+    "variant": "2_metadata_enriched_CE",
+    "n_scenarios": 95,
+    "essential_gold_coverage_at_5": 0.6517543859649123,
+    "essential_gold_coverage_at_10": 0.7385964912280703,
+    "essential_gold_coverage_at_25": 0.8421052631578947,
+    "requirement_recall_at_10": 0.6517543859649123,
+    "complete_coverage_at_10": 0.5157894736842106,
+    "dual_evidence_coverage_at_10": 0.35294117647058826,
+    "n_dual_evidence_scenarios": 17,
+    "mean_rank_movement": 4.6208791208791204,
+    "median_rank_movement": 0.0,
+    "n_essential_gold_moved_into_top25": 21,
+    "n_essential_gold_moved_out_of_top25": 6,
+    "harmful_demotion_rate_P_post_gt25_given_pre_le25": 0.046875,
+    "n_was_in_top25_pre": 128,
+    "by_authority_class_group": {
+      "guidance_workflow": {
+        "count": 38,
+        "mean": 2.4210526315789473,
+        "median": 0.0
+      },
+      "primary_legislation": {
+        "count": 105,
+        "mean": 3.5904761904761906,
+        "median": 0.0
+      },
+      "secondary_legislation": {
+        "count": 39,
+        "mean": 9.538461538461538,
+        "median": 5.0
+      }
+    },
+    "by_lane": {
+      "legislation": {
+        "count": 144,
+        "mean": 5.201388888888889,
+        "median": 0.0
+      },
+      "other": {
+        "count": 38,
+        "mean": 2.4210526315789473,
+        "median": 0.0
+      }
+    }
+  },
+  {
+    "variant": "4_metadata_enriched_CE_plus_fusion_lambda0.25",
+    "n_scenarios": 95,
+    "essential_gold_coverage_at_5": 0.6219298245614034,
+    "essential_gold_coverage_at_10": 0.6587719298245613,
+    "essential_gold_coverage_at_25": 0.8114035087719298,
+    "requirement_recall_at_10": 0.6219298245614034,
+    "complete_coverage_at_10": 0.5052631578947369,
+    "dual_evidence_coverage_at_10": 0.35294117647058826,
+    "n_dual_evidence_scenarios": 17,
+    "mean_rank_movement": 2.2857142857142856,
+    "median_rank_movement": 0.0,
+    "n_essential_gold_moved_into_top25": 8,
+    "n_essential_gold_moved_out_of_top25": 0,
+    "harmful_demotion_rate_P_post_gt25_given_pre_le25": 0.0,
+    "n_was_in_top25_pre": 128,
+    "by_authority_class_group": {
+      "guidance_workflow": {
+        "count": 38,
+        "mean": 1.5263157894736843,
+        "median": 0.0
+      },
+      "primary_legislation": {
+        "count": 105,
+        "mean": 1.276190476190476,
+        "median": 0.0
+      },
+      "secondary_legislation": {
+        "count": 39,
+        "mean": 5.743589743589744,
+        "median": 4.0
+      }
+    },
+    "by_lane": {
+      "legislation": {
+        "count": 144,
+        "mean": 2.486111111111111,
+        "median": 0.0
+      },
+      "other": {
+        "count": 38,
+        "mean": 1.5263157894736843,
+        "median": 0.0
+      }
+    }
+  },
+  {
+    "variant": "4_metadata_enriched_CE_plus_fusion_lambda0.5",
+    "n_scenarios": 95,
+    "essential_gold_coverage_at_5": 0.6552631578947368,
+    "essential_gold_coverage_at_10": 0.7236842105263158,
+    "essential_gold_coverage_at_25": 0.8324561403508771,
+    "requirement_recall_at_10": 0.6552631578947368,
+    "complete_coverage_at_10": 0.5263157894736842,
+    "dual_evidence_coverage_at_10": 0.29411764705882354,
+    "n_dual_evidence_scenarios": 17,
+    "mean_rank_movement": 3.3956043956043955,
+    "median_rank_movement": 0.0,
+    "n_essential_gold_moved_into_top25": 11,
+    "n_essential_gold_moved_out_of_top25": 0,
+    "harmful_demotion_rate_P_post_gt25_given_pre_le25": 0.0,
+    "n_was_in_top25_pre": 128,
+    "by_authority_class_group": {
+      "guidance_workflow": {
+        "count": 38,
+        "mean": 2.289473684210526,
+        "median": 0.0
+      },
+      "primary_legislation": {
+        "count": 105,
+        "mean": 1.8571428571428572,
+        "median": 0.0
+      },
+      "secondary_legislation": {
+        "count": 39,
+        "mean": 8.615384615384615,
+        "median": 5.0
+      }
+    },
+    "by_lane": {
+      "legislation": {
+        "count": 144,
+        "mean": 3.6875,
+        "median": 0.0
+      },
+      "other": {
+        "count": 38,
+        "mean": 2.289473684210526,
+        "median": 0.0
+      }
+    }
+  },
+  {
+    "variant": "4_metadata_enriched_CE_plus_fusion_lambda0.75",
+    "n_scenarios": 95,
+    "essential_gold_coverage_at_5": 0.6552631578947369,
+    "essential_gold_coverage_at_10": 0.7359649122807018,
+    "essential_gold_coverage_at_25": 0.8385964912280702,
+    "requirement_recall_at_10": 0.6552631578947369,
+    "complete_coverage_at_10": 0.5157894736842106,
+    "dual_evidence_coverage_at_10": 0.29411764705882354,
+    "n_dual_evidence_scenarios": 17,
+    "mean_rank_movement": 4.142857142857143,
+    "median_rank_movement": 0.0,
+    "n_essential_gold_moved_into_top25": 16,
+    "n_essential_gold_moved_out_of_top25": 2,
+    "harmful_demotion_rate_P_post_gt25_given_pre_le25": 0.015625,
+    "n_was_in_top25_pre": 128,
+    "by_authority_class_group": {
+      "guidance_workflow": {
+        "count": 38,
+        "mean": 2.8684210526315788,
+        "median": 0.0
+      },
+      "primary_legislation": {
+        "count": 105,
+        "mean": 2.5047619047619047,
+        "median": 0.0
+      },
+      "secondary_legislation": {
+        "count": 39,
+        "mean": 9.794871794871796,
+        "median": 5.0
+      }
+    },
+    "by_lane": {
+      "legislation": {
+        "count": 144,
+        "mean": 4.479166666666667,
+        "median": 0.0
+      },
+      "other": {
+        "count": 38,
+        "mean": 2.8684210526315788,
+        "median": 0.0
+      }
+    }
+  },
+  {
+    "variant": "4_metadata_enriched_CE_plus_fusion_lambda1.0",
+    "n_scenarios": 95,
+    "essential_gold_coverage_at_5": 0.6517543859649123,
+    "essential_gold_coverage_at_10": 0.7385964912280703,
+    "essential_gold_coverage_at_25": 0.8421052631578947,
+    "requirement_recall_at_10": 0.6517543859649123,
+    "complete_coverage_at_10": 0.5157894736842106,
+    "dual_evidence_coverage_at_10": 0.35294117647058826,
+    "n_dual_evidence_scenarios": 17,
+    "mean_rank_movement": 4.6208791208791204,
+    "median_rank_movement": 0.0,
+    "n_essential_gold_moved_into_top25": 21,
+    "n_essential_gold_moved_out_of_top25": 6,
+    "harmful_demotion_rate_P_post_gt25_given_pre_le25": 0.046875,
+    "n_was_in_top25_pre": 128,
+    "by_authority_class_group": {
+      "guidance_workflow": {
+        "count": 38,
+        "mean": 2.4210526315789473,
+        "median": 0.0
+      },
+      "primary_legislation": {
+        "count": 105,
+        "mean": 3.5904761904761906,
+        "median": 0.0
+      },
+      "secondary_legislation": {
+        "count": 39,
+        "mean": 9.538461538461538,
+        "median": 5.0
+      }
+    },
+    "by_lane": {
+      "legislation": {
+        "count": 144,
+        "mean": 5.201388888888889,
+        "median": 0.0
+      },
+      "other": {
+        "count": 38,
+        "mean": 2.4210526315789473,
+        "median": 0.0
+      }
+    }
+  }
+]

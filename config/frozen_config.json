@@ -1,0 +1,68 @@
+{
+  "version": "v2_rebalanced_split",
+  "supersedes": "frozen_config_v1_source_split.json (kept for provenance/comparison, NOT deleted)",
+  "frozen_at_utc": "2026-09-20T11:20:00Z",
+  "frozen_by": "DEV-only analysis on the REBALANCED split, per Section 6 protocol - none of these values were chosen or adjusted using TEST split results",
+  "split_change": {
+    "reason": "User-requested: the original source-based split (dev=current60 60 scenarios, test=faq90 90 scenarios) gave DEV and TEST systematically different category/regime compositions (TEST had only 4/8 categories populated, e.g. TEST had almost no PCR2015 in DEV). Redistributed into a category+regime-STRATIFIED 75/75 split so both splits are representative and comparable, especially for RQ2 category-level analysis.",
+    "method": "Grouped all 150 scenarios by (suite, regime_context), deterministically shuffled within each group (seed=20260920), split each group as close to 50/50 as integer counts allow, alternating rounding direction across groups to hit exactly 75/75 overall.",
+    "result": "dev=75, test=75. Category counts identical or near-identical between splits (e.g. semantic 26/26, exact_anchor 23/23, cross_reference 9/9). Regime counts near-identical (PA2023 49/49, PCR2015 23/22).",
+    "disclosed_limitation": "TEST is NO LONGER a pure 'never touched during development' set - 25 of the new TEST's 75 scenarios come from current60, which was extensively audited/hand-corrected earlier in this same project. This is an explicit, accepted trade-off (user confirmed: 'rebalance anyway, redo everything') in exchange for category/regime comparability between splits. The original source-based split is preserved per-scenario under scenarios[i]['split_by_source'] for anyone who wants to reproduce the OLD held-out guarantee.",
+    "old_split_sha256_scenarios": "30aa84bcabad7caaf8955817c98358d29f12f046d37a6f4e2165acb7dba01017",
+    "new_split_sha256_scenarios": "0727ae108b244a1af77703cc5ff0b586fdf63636dd16f19960efe5c2d448a4b9"
+  },
+  "corpus": {
+    "db_path": "frozen_snapshots/pre_final_eval_2026-09-20/corpus/chunk_index.sqlite3",
+    "db_sha256": "7d1f9067719fabcf9680c0a4ce632b14440233633642ab7211ba6b3ac17b2156",
+    "qdrant_collection": "chunks__bge_m3__v2b_sum2",
+    "n_chunks": 19087,
+    "n_documents": 1370
+  },
+  "retriever_module": "csdi-14322782-additional-materials/code/chunk_retrieval.py",
+  "benchmark": {
+    "scenarios_path": "ukpa_benchmark_v1/faq90/scenarios_all_150.jsonl",
+    "gold_path": "ukpa_benchmark_v1/faq90/gold_evidence_150.jsonl",
+    "scenarios_sha256": "0727ae108b244a1af77703cc5ff0b586fdf63636dd16f19960efe5c2d448a4b9",
+    "gold_sha256": "fc9058d5b54ad642feea556143149b7742bebcf155a8598b3349c9e2fcfb17d8",
+    "n_total": 150, "n_dev": 75, "n_test": 75,
+    "benchmark_integrity_result": "0 CRITICAL, 0 WARNING, 3 INFO (rerun against the rebalanced split; integrity checker's dev/test count expectation updated to 75/75)"
+  },
+  "alpha": 0.10,
+  "beta": 0.40,
+  "alpha_CHANGED_from_v1": "v1 froze alpha=0.30. On the rebalanced (more representative) DEV, the alpha sweep ROBUSTLY REVERSES: RequirementRecall@10 falls monotonically as alpha rises (0.565 at alpha=0.00 -> 0.513 at 0.10 -> 0.469 at 0.20 -> 0.455 at 0.30/0.40), consistent across the WHOLE beta grid (not a fragile single-point tie like the old alpha sweep was). The effect is driven mainly by 'direct legal anchor' (the largest DEV category, n=23): RR falls from 0.630 (alpha=0) to 0.304 (alpha=0.30) in that category alone. This is a real, DEV-composition-dependent finding, not noise - the OLD DEV (current60 only) was itself skewed toward exactly the query style that authority-weighting helps most, which overstated authority's aggregate value.",
+  "alpha_dev_justification": "Chose 0.10, NOT the aggregate-best 0.00, after checking the 'other'-lane authority-CLASS composition at each candidate alpha (not just RequirementRecall): at alpha=0.00, PROFESSIONAL_INTERPRETATION (unofficial commentary) fills 1.49/5 of the other-lane top-5 and NON_AUTHORITATIVE_PROFESSIONAL fills 0.19/5 - meaningful non-authoritative content with real estate. At alpha=0.10, this collapses to 0.12/5 and 0.00/5 respectively (OFFICIAL_GOVERNMENT_GUIDANCE rises to 4.52/5, nearly matching alpha=0.30's 4.95/5) while RequirementRecall stays much closer to the alpha=0.00 optimum (0.513 vs 0.565) than to alpha=0.30's 0.455. alpha=0.10 was verified to retain almost all of alpha=0.30's quality-composition benefit while recovering most of the recall alpha=0.30 was costing - a genuine trade-off resolution, not a maximized single metric.",
+  "beta_dev_justification": "Re-verified on the rebalanced split (unchanged from v1): beta=0.40 remains the single best cell in the full alpha x beta grid at alpha=0.00 (0.565, beating beta=0.20's 0.543 and beta=0.60's 0.543). Kept at 0.40.",
+  "use_jurisdiction": true,
+  "jurisdiction_justification": "Unchanged from v1: jurisdiction_weight is non-degenerate (EU-sourced content 0.35 vs 1.0 elsewhere). Kept ON.",
+  "lane_budget": [5, 5],
+  "lane_budget_dev_justification": "Re-verified on the rebalanced split at the NEW alpha=0.10 (true stored final_score): the same monotonic legislation-favouring pattern as v1 persists (0.513 at 5+5 rising to 0.594 at 8+2). Kept at 5+5 for the same reason as v1 - not chasing DEV's specific composition, symmetric hedge against per-query unpredictability - this reasoning is unaffected by the alpha change.",
+  "use_graph": false,
+  "graph_dev_justification": "Re-verified on the rebalanced split at the NEW alpha=0.10: graph ON still scores worse than graph OFF (0.4914 vs 0.5135, -2.2pp; true stored final_score, real graph-off cache rebuild at the same alpha, not an approximation). The graph-negative finding is NOT an artifact of the old alpha=0.30 or the old DEV composition - it replicates at the new alpha and the new, more representative split. Frozen OFF, same as v1.",
+  "ce_depth": 75,
+  "rerank_depth": 75,
+  "ce_model": "BAAI/bge-reranker-v2-m3",
+  "ce_depth_justification": "Fixed a priori, unchanged from v1.",
+  "candidates_per_channel_per_lane": 300,
+  "candidates": 300,
+  "rq3_regime_classifier": {
+    "type": "query-text-only keyword classifier, no gold label ever used at inference time (unchanged from v1)",
+    "keywords_module": "analysis/rq3_regime_constraint.py (PA2023_KEYWORDS, PCR2015_KEYWORDS)",
+    "output_labels": ["PA2023", "PCR2015", "UNKNOWN"],
+    "unknown_on_tie_or_zero_hits": true,
+    "note": "Classifier definition unchanged; DEV diagnostic numbers (coverage/accuracy) re-measured on the rebalanced split and reported in the final report, not re-tuned."
+  },
+  "rq3_theta": 0.7,
+  "rq3_theta_dev_justification": "Re-verified on the rebalanced split at the new alpha=0.10: theta grid {1.0,0.7,0.5,0.3,0.1,0.0} shows broad regime-incompatible-in-top-10 collapses from 0.397/query (no constraint) to 0.000 already at theta=0.7 (same plateau shape as v1). Unlike v1, there is now ZERO recall cost - RequirementRecall actually rises slightly (0.5882->0.6029, +1.47pp) and CompleteCoverage too (0.5147->0.5294). Classifier coverage on the rebalanced DEV: 12/65 confident (18.5%, up from v1's 14.8%), 12/12 correct (100% precision maintained). theta=0.7 refrozen, same value as v1, now with a cleaner (strictly non-negative) trade-off.",
+  "random_seed": 20260920,
+  "environment": {
+    "python": "3.9 (.venv at repository root)",
+    "sentence_transformers": "5.1.2",
+    "torch": "2.8.0",
+    "torch_device_for_ce": "mps"
+  },
+  "caches": {
+    "graph_off_FROZEN_PRIMARY": "analysis/results/graph_off_150_a010/candidate_cache.parquet (alpha=0.10, beta=0.40, use_graph=0)",
+    "graph_on_comparison": "analysis/results/final150_a010/candidate_cache.parquet (alpha=0.10, beta=0.40, use_graph=1)",
+    "ce_output": "analysis/results/graph_off_150_a010/reranked_top75_output_150_graphoff_a010_bge-reranker-v2-m3.json (in progress)"
+  }
+}

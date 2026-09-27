@@ -1,0 +1,31 @@
+{
+  "generated_at_utc": "2026-09-20T14:08:07.608384+00:00",
+  "git_commit": "36a560f67c6878e71e7e0acfbbc7e06fd320f735",
+  "code_dir": "/Users/nurlanmalikov7294/Documents/uom_thesis_26/csdi-14322782-additional-materials/code",
+  "retriever_module": "/Users/nurlanmalikov7294/Documents/uom_thesis_26/csdi-14322782-additional-materials/code/chunk_retrieval.py",
+  "corpus_sqlite_path": "/Users/nurlanmalikov7294/Documents/uom_thesis_26/csdi-14322782-additional-materials/code/frozen_snapshots/pre_final_eval_2026-09-20/corpus/chunk_index.sqlite3",
+  "corpus_sqlite_sha256": "7d1f9067719fabcf9680c0a4ce632b14440233633642ab7211ba6b3ac17b2156",
+  "qdrant_collection": "chunks__bge_m3__v2b_sum2",
+  "scenarios_path": "/Users/nurlanmalikov7294/Documents/uom_thesis_26/ukpa_benchmark_v1/combined218/scenarios_all_218.jsonl",
+  "scenarios_sha256": "8e1a005eef53003072eea5bbaf38907203a99828751b2a4d503c27fd3d7eeb18",
+  "gold_path": "/Users/nurlanmalikov7294/Documents/uom_thesis_26/ukpa_benchmark_v1/combined218/gold_evidence_218.jsonl",
+  "gold_sha256": "c97bf4d4a70eeb28c33401a2c01e17f1b1567d9d29a422677162d1635067da22",
+  "split": "ALL",
+  "alpha": 0.1,
+  "beta": 0.4,
+  "candidates_per_channel_per_lane": 300,
+  "rerank_depth": 75,
+  "lane_budget_K_leg_K_other": [
+    5,
+    5
+  ],
+  "use_graph": false,
+  "use_jurisdiction": true,
+  "keyword_expansion": false,
+  "embedding_model": "BAAI/bge-m3",
+  "reranker_model": "BAAI/bge-reranker-v2-m3",
+  "random_seed": 20260920,
+  "frozen_config_path": null,
+  "corpus_total_chunks": 19087,
+  "corpus_total_documents": 1370
+}

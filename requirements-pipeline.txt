@@ -1,0 +1,20 @@
+# Additional packages needed only to rebuild the pipeline from source: re-running first-stage
+# retrieval (build_candidate_cache.py), cross-encoder inference (run_ce_rerank.py,
+# ce_experiment_variant2_rerank.py), or the corpus build in src/. Install on top of
+# requirements.txt.
+#
+#     pip install -r requirements.txt -r requirements-pipeline.txt
+#
+# This tier also needs a running Qdrant instance holding the collection
+# chunks__bge_m3__v2b_sum2, and downloads BAAI/bge-m3 and BAAI/bge-reranker-v2-m3 from
+# Hugging Face on first use.
+-r requirements.txt
+sentence-transformers==5.1.2
+torch==2.8.0
+transformers==4.57.6
+qdrant-client==1.16.1
+rapidfuzz==3.13.0
+lxml==6.1.2
+requests==2.32.5
+beautifulsoup4==4.15.0
+openai>=1.68,<3

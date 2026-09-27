@@ -1,0 +1,58 @@
+{
+  "RQ1_source_aware_vs_conventional_TEST": {
+    "n_scenarios": 94,
+    "n_requirements": 139,
+    "requirement_recall": {
+      "mean_diff": 0.15107913669064754,
+      "ci_low": 0.07970414627123527,
+      "ci_high": 0.22535211267605637,
+      "n_scenarios": 94,
+      "permutation_p": 0.0,
+      "cohens_d_paired_per_scenario": 0.44388500572229816,
+      "mean_two_lane_weighted": 0.762589928057554,
+      "mean_pooled_weighted": 0.6115107913669064
+    },
+    "complete_coverage": {
+      "mean_diff": 0.19148936170212766,
+      "ci_low": 0.10638297872340426,
+      "ci_high": 0.2765957446808511,
+      "n": 94,
+      "permutation_p": 0.0001,
+      "cohens_d_paired": 0.453884399946742,
+      "n_improved": 19,
+      "n_worsened": 1,
+      "n_discordant": 20,
+      "mcnemar_exact_p": 4.00543212890625e-05,
+      "mean_two_lane": 0.7127659574468085,
+      "mean_pooled": 0.5212765957446809
+    }
+  },
+  "RQ3_post_CE_vs_pre_CE_TEST_25perlane": {
+    "n_scenarios": 94,
+    "n_requirements": 139,
+    "requirement_recall": {
+      "mean_diff": 0.043165467625899234,
+      "ci_low": -0.007575757575757572,
+      "ci_high": 0.09999999999999998,
+      "n_scenarios": 94,
+      "permutation_p": 0.2146,
+      "cohens_d_paired_per_scenario": 0.15398114591461196,
+      "mean_post_CE_weighted": 0.8057553956834532,
+      "mean_pre_CE_weighted": 0.762589928057554
+    },
+    "complete_coverage": {
+      "mean_diff": 0.0425531914893617,
+      "ci_low": -0.02127659574468085,
+      "ci_high": 0.10638297872340426,
+      "n": 94,
+      "permutation_p": 0.3422,
+      "cohens_d_paired": 0.13088851884656239,
+      "n_improved": 7,
+      "n_worsened": 3,
+      "n_discordant": 10,
+      "mcnemar_exact_p": 0.34375,
+      "mean_post_CE": 0.7553191489361702,
+      "mean_pre_CE": 0.7127659574468085
+    }
+  }
+}

@@ -1,0 +1,45 @@
+split,config,category,n_scenarios,n_requirements,requirement_recall_weighted,requirement_recall_scenario_macro_avg,complete_coverage_mean
+DEV,pooled:Hybrid + authority + jurisdiction,applicability / transition,8.0,13.0,0.7692307692307693,0.8125,0.625
+DEV,pooled:Hybrid + authority + jurisdiction,authority / source-role sensitive,2.0,2.0,0.0,0.0,0.0
+DEV,pooled:Hybrid + authority + jurisdiction,compound / multi-requirement,3.0,8.0,0.625,0.6666666666666666,0.3333333333333333
+DEV,pooled:Hybrid + authority + jurisdiction,cross_reference_multi_instrument,9.0,16.0,0.6875,0.6296296296296295,0.4444444444444444
+DEV,pooled:Hybrid + authority + jurisdiction,direct legal anchor,23.0,27.0,0.48148148148148145,0.5,0.43478260869565216
+DEV,pooled:Hybrid + authority + jurisdiction,expansion_v2_official_guidance,6.0,11.0,0.8181818181818182,0.8333333333333334,0.6666666666666666
+DEV,pooled:Hybrid + authority + jurisdiction,faq90,8.0,16.0,0.625,0.6041666666666666,0.375
+DEV,pooled:Hybrid + authority + jurisdiction,official_workflow_expansion_v2,4.0,7.0,0.8571428571428571,0.875,0.75
+DEV,pooled:Hybrid + authority + jurisdiction,procedural_multi_evidence,10.0,23.0,0.391304347826087,0.45,0.4
+DEV,pooled:Hybrid + authority + jurisdiction,semantic / practitioner phrasing,18.0,23.0,0.5217391304347826,0.5555555555555556,0.5555555555555556
+DEV,pooled:Hybrid + authority + jurisdiction,vocabulary mismatch,4.0,9.0,0.5555555555555556,0.5833333333333333,0.5
+DEV,two_lane:full_pre_CE,applicability / transition,8.0,13.0,0.9230769230769231,0.9375,0.875
+DEV,two_lane:full_pre_CE,authority / source-role sensitive,2.0,2.0,1.0,1.0,1.0
+DEV,two_lane:full_pre_CE,compound / multi-requirement,3.0,8.0,0.875,0.8888888888888888,0.6666666666666666
+DEV,two_lane:full_pre_CE,cross_reference_multi_instrument,9.0,16.0,0.6875,0.6851851851851851,0.5555555555555556
+DEV,two_lane:full_pre_CE,direct legal anchor,23.0,27.0,0.7777777777777778,0.7391304347826086,0.7391304347826086
+DEV,two_lane:full_pre_CE,expansion_v2_official_guidance,6.0,11.0,0.8181818181818182,0.8333333333333334,0.6666666666666666
+DEV,two_lane:full_pre_CE,faq90,8.0,16.0,0.625,0.6041666666666666,0.375
+DEV,two_lane:full_pre_CE,official_workflow_expansion_v2,4.0,7.0,0.8571428571428571,0.875,0.75
+DEV,two_lane:full_pre_CE,procedural_multi_evidence,10.0,23.0,0.6521739130434783,0.6916666666666667,0.5
+DEV,two_lane:full_pre_CE,semantic / practitioner phrasing,18.0,23.0,0.8695652173913043,0.9166666666666666,0.8888888888888888
+DEV,two_lane:full_pre_CE,vocabulary mismatch,4.0,9.0,0.6666666666666666,0.6666666666666666,0.5
+TEST,pooled:Hybrid + authority + jurisdiction,applicability / transition,8.0,12.0,0.5833333333333334,0.5625,0.5
+TEST,pooled:Hybrid + authority + jurisdiction,authority / source-role sensitive,2.0,2.0,0.0,0.0,0.0
+TEST,pooled:Hybrid + authority + jurisdiction,compound / multi-requirement,2.0,5.0,0.4,0.41666666666666663,0.0
+TEST,pooled:Hybrid + authority + jurisdiction,cross_reference_multi_instrument,10.0,16.0,0.5625,0.55,0.4
+TEST,pooled:Hybrid + authority + jurisdiction,direct legal anchor,22.0,23.0,0.6521739130434783,0.6590909090909091,0.6363636363636364
+TEST,pooled:Hybrid + authority + jurisdiction,expansion_v2_official_guidance,6.0,11.0,0.7272727272727273,0.75,0.5
+TEST,pooled:Hybrid + authority + jurisdiction,faq90,7.0,12.0,0.75,0.8571428571428571,0.7142857142857143
+TEST,pooled:Hybrid + authority + jurisdiction,official_workflow_expansion_v2,5.0,9.0,0.8888888888888888,0.9333333333333332,0.8
+TEST,pooled:Hybrid + authority + jurisdiction,procedural_multi_evidence,10.0,20.0,0.6,0.6,0.4
+TEST,pooled:Hybrid + authority + jurisdiction,semantic / practitioner phrasing,18.0,21.0,0.6190476190476191,0.6388888888888888,0.6111111111111112
+TEST,pooled:Hybrid + authority + jurisdiction,vocabulary mismatch,4.0,8.0,0.25,0.25,0.0
+TEST,two_lane:full_pre_CE,applicability / transition,8.0,12.0,0.5,0.5,0.375
+TEST,two_lane:full_pre_CE,authority / source-role sensitive,2.0,2.0,1.0,1.0,1.0
+TEST,two_lane:full_pre_CE,compound / multi-requirement,2.0,5.0,0.6,0.5833333333333333,0.0
+TEST,two_lane:full_pre_CE,cross_reference_multi_instrument,10.0,16.0,0.6875,0.7,0.6
+TEST,two_lane:full_pre_CE,direct legal anchor,22.0,23.0,0.9130434782608695,0.9090909090909091,0.9090909090909091
+TEST,two_lane:full_pre_CE,expansion_v2_official_guidance,6.0,11.0,0.7272727272727273,0.75,0.6666666666666666
+TEST,two_lane:full_pre_CE,faq90,7.0,12.0,0.8333333333333334,0.9047619047619048,0.7142857142857143
+TEST,two_lane:full_pre_CE,official_workflow_expansion_v2,5.0,9.0,0.8888888888888888,0.9333333333333332,0.8
+TEST,two_lane:full_pre_CE,procedural_multi_evidence,10.0,20.0,0.7,0.7,0.6
+TEST,two_lane:full_pre_CE,semantic / practitioner phrasing,18.0,21.0,0.8571428571428571,0.8611111111111112,0.8333333333333334
+TEST,two_lane:full_pre_CE,vocabulary mismatch,4.0,8.0,0.625,0.625,0.5

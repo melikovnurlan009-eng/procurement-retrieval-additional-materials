@@ -1,0 +1,85 @@
+{
+  "total_documents": 1370,
+  "total_chunks": 19087,
+  "documents_by_authority_class": {
+    "OFFICIAL_WORKFLOW": 662,
+    "OFFICIAL_GOVERNMENT_GUIDANCE": 552,
+    "PROFESSIONAL_INTERPRETATION": 110,
+    "NON_AUTHORITATIVE_PROFESSIONAL": 16,
+    "PRIMARY_LEGISLATION": 14,
+    "SECONDARY_LEGISLATION": 9,
+    "OFFICIAL_REGULATOR_GUIDANCE": 6,
+    "OFFICIAL_TECHNICAL_GUIDANCE": 1
+  },
+  "chunks_by_authority_class": {
+    "PRIMARY_LEGISLATION": 7485,
+    "OFFICIAL_GOVERNMENT_GUIDANCE": 7458,
+    "OFFICIAL_WORKFLOW": 1559,
+    "PROFESSIONAL_INTERPRETATION": 1075,
+    "SECONDARY_LEGISLATION": 802,
+    "OFFICIAL_REGULATOR_GUIDANCE": 466,
+    "NON_AUTHORITATIVE_PROFESSIONAL": 123,
+    "OFFICIAL_TECHNICAL_GUIDANCE": 119
+  },
+  "chunks_by_legal_regime": {
+    "null": 16048,
+    "PA2023": 1705,
+    "PCR2015": 1272,
+    "PR2024": 62
+  },
+  "lane_split_documents": {
+    "legislation_lane": 23,
+    "other_evidence_lane": 1347
+  },
+  "graph_total_edges": 23785,
+  "graph_edges_by_relation": {
+    "HAS_CHUNK": 9140,
+    "CONTAINS": 6489,
+    "REFERENCES": 6065,
+    "CROSS_REFERS_TO": 2091
+  },
+  "chunks_by_chunking_method": {
+    "LLM_PDF_TEXT_V2": 7876,
+    "LLM_LEG_TEXT_V2": 7579,
+    "LLM_SEMANTIC_BOUNDARY_V1": 3268,
+    "STRUCTURAL_NODE_V1": 364
+  },
+  "chunks_by_corpus_role": {
+    "OFFICIAL_SUPPORT": 7987,
+    "CITED_SUPPORTING_LEGISLATION": 7579,
+    "OPERATIONAL_GUIDANCE": 1559,
+    "COMMENTARY": 1075,
+    "CORE_PRIMARY_LEGISLATION": 292,
+    "LEGACY_PROCUREMENT_LEGISLATION": 227,
+    "CORE_LEGAL": 117,
+    "PROFESSIONAL_SUPPORTING_DOCUMENT": 94,
+    "CORE_SECONDARY_LEGISLATION": 61,
+    "PROFESSIONAL_INTERPRETATION": 23,
+    "OFFICIAL_PA23_TECHNICAL_GUIDANCE": 17,
+    "OFFICIAL_SPECIALIST_GUIDANCE": 16,
+    "OFFICIAL_REGULATOR_GUIDANCE": 16,
+    "PA2023_COMMENCEMENT": 11,
+    "OFFICIAL_PRACTICE_GUIDANCE": 5,
+    "PROFESSIONAL_REFERENCE_TOOL": 4,
+    "PROFESSIONAL_CASE_ANALYSIS": 2,
+    "OFFICIAL_OVERSIGHT_GUIDANCE": 2
+  },
+  "documents_by_source_host": {
+    "gov.uk (other)": 558,
+    "procurementjourney.scot": 450,
+    "procurementpathway.civilservice.gov.uk": 212,
+    "other publishers": 130,
+    "legislation.gov.uk": 20
+  },
+  "index_manifest": {
+    "index_version": "1.0.0",
+    "built_at": "2026-09-18T10:59:25.002720+00:00",
+    "corpus_dir": "/private/tmp/claude-501/-Users-nurlanmalikov7294-Documents-uom-thesis-26/fa062860-26c8-4d88-a3e2-6be6c24211b4/scratchpad/graph_fix/versions/v2b_sum2/corpus",
+    "chunks_indexed": 19087,
+    "chunks_sha256": "0736d85768a8a8f5770f3663aa95288366daaf57ea40502d173353a46aba38c5",
+    "edges_indexed": 23785,
+    "fts_tokenizer": "porter",
+    "lexical_fields": "text, retrieval_title, retrieval_summary, keywords, citation",
+    "python": "3.9.6"
+  }
+}

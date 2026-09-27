@@ -1,0 +1,350 @@
+[
+  {
+    "variant": "0_pre_CE_first_stage",
+    "cutoff_label": "DualEvidenceCoverage@25-per-lane",
+    "k_leg": 25,
+    "k_oth": 25,
+    "numerator": 9,
+    "denominator": 17,
+    "value": 0.5294,
+    "legislation_side_coverage": 0.7647,
+    "nonlegislation_side_coverage": 0.6471,
+    "n_missing_legislation_only": 2,
+    "missing_legislation_only_ids": [
+      "EXP_SEC003",
+      "EXP_SEC005"
+    ],
+    "n_missing_nonlegislation_only": 4,
+    "missing_nonlegislation_only_ids": [
+      "EXP_GUID005",
+      "EXP_GUID006",
+      "EXP_PPN002",
+      "EXP_WORK003"
+    ],
+    "n_missing_both": 2,
+    "missing_both_ids": [
+      "EXP_PPN008",
+      "EXP_REG004"
+    ]
+  },
+  {
+    "variant": "1_baseline_raw_text_CE",
+    "cutoff_label": "DualEvidenceCoverage@25-per-lane",
+    "k_leg": 25,
+    "k_oth": 25,
+    "numerator": 13,
+    "denominator": 17,
+    "value": 0.7647,
+    "legislation_side_coverage": 1.0,
+    "nonlegislation_side_coverage": 0.7647,
+    "n_missing_legislation_only": 0,
+    "missing_legislation_only_ids": [],
+    "n_missing_nonlegislation_only": 4,
+    "missing_nonlegislation_only_ids": [
+      "EXP_GUID006",
+      "EXP_REG004",
+      "EXP_WORK002",
+      "EXP_WORK003"
+    ],
+    "n_missing_both": 0,
+    "missing_both_ids": []
+  },
+  {
+    "variant": "2_metadata_enriched_CE",
+    "cutoff_label": "DualEvidenceCoverage@25-per-lane",
+    "k_leg": 25,
+    "k_oth": 25,
+    "numerator": 13,
+    "denominator": 17,
+    "value": 0.7647,
+    "legislation_side_coverage": 1.0,
+    "nonlegislation_side_coverage": 0.7647,
+    "n_missing_legislation_only": 0,
+    "missing_legislation_only_ids": [],
+    "n_missing_nonlegislation_only": 4,
+    "missing_nonlegislation_only_ids": [
+      "EXP_GUID006",
+      "EXP_GUID007",
+      "EXP_REG004",
+      "EXP_WORK003"
+    ],
+    "n_missing_both": 0,
+    "missing_both_ids": []
+  },
+  {
+    "variant": "3_metadata_enriched_CE_fusion_lambda0.5",
+    "cutoff_label": "DualEvidenceCoverage@25-per-lane",
+    "k_leg": 25,
+    "k_oth": 25,
+    "numerator": 12,
+    "denominator": 17,
+    "value": 0.7059,
+    "legislation_side_coverage": 0.9412,
+    "nonlegislation_side_coverage": 0.7647,
+    "n_missing_legislation_only": 1,
+    "missing_legislation_only_ids": [
+      "EXP_SEC005"
+    ],
+    "n_missing_nonlegislation_only": 4,
+    "missing_nonlegislation_only_ids": [
+      "EXP_GUID006",
+      "EXP_PPN002",
+      "EXP_REG004",
+      "EXP_WORK003"
+    ],
+    "n_missing_both": 0,
+    "missing_both_ids": []
+  },
+  {
+    "variant": "0_pre_CE_first_stage",
+    "cutoff_label": "DualEvidenceCoverage@10-per-lane",
+    "k_leg": 10,
+    "k_oth": 10,
+    "numerator": 6,
+    "denominator": 17,
+    "value": 0.3529,
+    "legislation_side_coverage": 0.6471,
+    "nonlegislation_side_coverage": 0.4706,
+    "n_missing_legislation_only": 2,
+    "missing_legislation_only_ids": [
+      "EXP_SEC003",
+      "EXP_SEC005"
+    ],
+    "n_missing_nonlegislation_only": 5,
+    "missing_nonlegislation_only_ids": [
+      "EXP_GUID005",
+      "EXP_GUID006",
+      "EXP_SEC002",
+      "EXP_WORK002",
+      "EXP_WORK003"
+    ],
+    "n_missing_both": 4,
+    "missing_both_ids": [
+      "EXP_PPN002",
+      "EXP_PPN008",
+      "EXP_REG004",
+      "EXP_WORK004"
+    ]
+  },
+  {
+    "variant": "1_baseline_raw_text_CE",
+    "cutoff_label": "DualEvidenceCoverage@10-per-lane",
+    "k_leg": 10,
+    "k_oth": 10,
+    "numerator": 8,
+    "denominator": 17,
+    "value": 0.4706,
+    "legislation_side_coverage": 0.8235,
+    "nonlegislation_side_coverage": 0.6471,
+    "n_missing_legislation_only": 3,
+    "missing_legislation_only_ids": [
+      "EXP_PPN002",
+      "EXP_REG001",
+      "EXP_SEC005"
+    ],
+    "n_missing_nonlegislation_only": 6,
+    "missing_nonlegislation_only_ids": [
+      "EXP_GUID006",
+      "EXP_GUID009",
+      "EXP_REG004",
+      "EXP_SEC003",
+      "EXP_WORK002",
+      "EXP_WORK003"
+    ],
+    "n_missing_both": 0,
+    "missing_both_ids": []
+  },
+  {
+    "variant": "2_metadata_enriched_CE",
+    "cutoff_label": "DualEvidenceCoverage@10-per-lane",
+    "k_leg": 10,
+    "k_oth": 10,
+    "numerator": 8,
+    "denominator": 17,
+    "value": 0.4706,
+    "legislation_side_coverage": 0.8824,
+    "nonlegislation_side_coverage": 0.5882,
+    "n_missing_legislation_only": 2,
+    "missing_legislation_only_ids": [
+      "EXP_REG001",
+      "EXP_SEC005"
+    ],
+    "n_missing_nonlegislation_only": 7,
+    "missing_nonlegislation_only_ids": [
+      "EXP_GUID005",
+      "EXP_GUID006",
+      "EXP_GUID007",
+      "EXP_REG004",
+      "EXP_SEC003",
+      "EXP_WORK003",
+      "EXP_WORK004"
+    ],
+    "n_missing_both": 0,
+    "missing_both_ids": []
+  },
+  {
+    "variant": "3_metadata_enriched_CE_fusion_lambda0.5",
+    "cutoff_label": "DualEvidenceCoverage@10-per-lane",
+    "k_leg": 10,
+    "k_oth": 10,
+    "numerator": 7,
+    "denominator": 17,
+    "value": 0.4118,
+    "legislation_side_coverage": 0.8824,
+    "nonlegislation_side_coverage": 0.5294,
+    "n_missing_legislation_only": 2,
+    "missing_legislation_only_ids": [
+      "EXP_SEC003",
+      "EXP_SEC005"
+    ],
+    "n_missing_nonlegislation_only": 8,
+    "missing_nonlegislation_only_ids": [
+      "EXP_GUID005",
+      "EXP_GUID006",
+      "EXP_GUID007",
+      "EXP_PPN002",
+      "EXP_PPN008",
+      "EXP_REG004",
+      "EXP_WORK003",
+      "EXP_WORK004"
+    ],
+    "n_missing_both": 0,
+    "missing_both_ids": []
+  },
+  {
+    "variant": "0_pre_CE_first_stage",
+    "cutoff_label": "DualEvidenceCoverage@10-budget-5+5",
+    "k_leg": 5,
+    "k_oth": 5,
+    "numerator": 2,
+    "denominator": 17,
+    "value": 0.1176,
+    "legislation_side_coverage": 0.4118,
+    "nonlegislation_side_coverage": 0.2941,
+    "n_missing_legislation_only": 3,
+    "missing_legislation_only_ids": [
+      "EXP_REG001",
+      "EXP_SEC003",
+      "EXP_SEC005"
+    ],
+    "n_missing_nonlegislation_only": 5,
+    "missing_nonlegislation_only_ids": [
+      "EXP_GUID005",
+      "EXP_GUID006",
+      "EXP_GUID007",
+      "EXP_WORK002",
+      "EXP_WORK003"
+    ],
+    "n_missing_both": 7,
+    "missing_both_ids": [
+      "EXP_GUID010",
+      "EXP_PPN002",
+      "EXP_PPN008",
+      "EXP_REG004",
+      "EXP_SEC002",
+      "EXP_TRANS001",
+      "EXP_WORK004"
+    ]
+  },
+  {
+    "variant": "1_baseline_raw_text_CE",
+    "cutoff_label": "DualEvidenceCoverage@10-budget-5+5",
+    "k_leg": 5,
+    "k_oth": 5,
+    "numerator": 2,
+    "denominator": 17,
+    "value": 0.1176,
+    "legislation_side_coverage": 0.6471,
+    "nonlegislation_side_coverage": 0.3529,
+    "n_missing_legislation_only": 4,
+    "missing_legislation_only_ids": [
+      "EXP_GUID007",
+      "EXP_PPN002",
+      "EXP_REG001",
+      "EXP_SEC005"
+    ],
+    "n_missing_nonlegislation_only": 9,
+    "missing_nonlegislation_only_ids": [
+      "EXP_GUID005",
+      "EXP_GUID006",
+      "EXP_PPN008",
+      "EXP_REG002",
+      "EXP_REG004",
+      "EXP_SEC002",
+      "EXP_WORK002",
+      "EXP_WORK003",
+      "EXP_WORK004"
+    ],
+    "n_missing_both": 2,
+    "missing_both_ids": [
+      "EXP_GUID009",
+      "EXP_SEC003"
+    ]
+  },
+  {
+    "variant": "2_metadata_enriched_CE",
+    "cutoff_label": "DualEvidenceCoverage@10-budget-5+5",
+    "k_leg": 5,
+    "k_oth": 5,
+    "numerator": 5,
+    "denominator": 17,
+    "value": 0.2941,
+    "legislation_side_coverage": 0.8235,
+    "nonlegislation_side_coverage": 0.4118,
+    "n_missing_legislation_only": 2,
+    "missing_legislation_only_ids": [
+      "EXP_REG001",
+      "EXP_SEC005"
+    ],
+    "n_missing_nonlegislation_only": 9,
+    "missing_nonlegislation_only_ids": [
+      "EXP_GUID005",
+      "EXP_GUID006",
+      "EXP_GUID007",
+      "EXP_GUID009",
+      "EXP_PPN008",
+      "EXP_REG004",
+      "EXP_SEC002",
+      "EXP_WORK003",
+      "EXP_WORK004"
+    ],
+    "n_missing_both": 1,
+    "missing_both_ids": [
+      "EXP_SEC003"
+    ]
+  },
+  {
+    "variant": "3_metadata_enriched_CE_fusion_lambda0.5",
+    "cutoff_label": "DualEvidenceCoverage@10-budget-5+5",
+    "k_leg": 5,
+    "k_oth": 5,
+    "numerator": 3,
+    "denominator": 17,
+    "value": 0.1765,
+    "legislation_side_coverage": 0.7059,
+    "nonlegislation_side_coverage": 0.3529,
+    "n_missing_legislation_only": 3,
+    "missing_legislation_only_ids": [
+      "EXP_REG001",
+      "EXP_SEC003",
+      "EXP_SEC005"
+    ],
+    "n_missing_nonlegislation_only": 9,
+    "missing_nonlegislation_only_ids": [
+      "EXP_GUID005",
+      "EXP_GUID006",
+      "EXP_GUID007",
+      "EXP_GUID009",
+      "EXP_REG004",
+      "EXP_SEC002",
+      "EXP_WORK002",
+      "EXP_WORK003",
+      "EXP_WORK004"
+    ],
+    "n_missing_both": 2,
+    "missing_both_ids": [
+      "EXP_PPN002",
+      "EXP_PPN008"
+    ]
+  }
+]

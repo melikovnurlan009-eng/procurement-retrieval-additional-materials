@@ -1,0 +1,33 @@
+check,report,reported,recomputed,status
+DEV N scenarios (scoreable),Table 5,95,95,PASS
+DEV N requirements (mandatory),Table 5,155,155,PASS
+DEV RequirementRecall@25-per-lane,Table 5 / Fig 7,0.813,0.8129,PASS
+DEV CompleteCoverage@25-per-lane,Table 5 / Fig 7,0.747,0.7474,PASS
+DEV DualEvidenceCoverage@25-per-lane,Table 5 / Fig 7,0.765,0.7647,PASS
+DEV N mixed-evidence scenarios,Table 5,17,17,PASS
+TEST N scenarios (scoreable),Table 5,94,94,PASS
+TEST N requirements (mandatory),Table 5,139,139,PASS
+TEST RequirementRecall@25-per-lane,Table 5 / Fig 7,0.806,0.8058,PASS
+TEST CompleteCoverage@25-per-lane,Table 5 / Fig 7,0.755,0.7553,PASS
+TEST DualEvidenceCoverage@25-per-lane,Table 5 / Fig 7,0.6,0.6,PASS
+TEST N mixed-evidence scenarios,Table 5,15,15,PASS
+DEV CandidateRequirementRecall@75 (ceiling),Sec 6.3,0.916,0.9161,PASS
+DEV ceiling numerator/denominator,Sec 6.3,142/155,142/155,PASS
+DEV DualEvidenceCoverage pre-CE,Fig 6 / Sec 6.3,0.529,0.5294,PASS
+DEV DualEvidenceCoverage post-CE,Fig 6 / Sec 6.3,0.765,0.7647,PASS
+DEV BM25 ROC AUC (essential gold vs rest),Fig 4 / Sec 6.1,0.728,0.7283,PASS
+DEV dense ROC AUC (essential gold vs rest),Fig 4 / Sec 6.1,0.847,0.8469,PASS
+DEV candidate rows analysed,Sec 4.3 / 6.2,105823,105823,PASS
+Score reconstruction max abs error,Sec 4.3,0.0,0.0,PASS
+Primary legislation mean normalised authority,Sec 6.2 / Fig 5,0.751,0.7509,PASS
+Secondary legislation mean normalised authority,Sec 6.2 / Fig 5,0.038,0.038,PASS
+Authority amplification factor (x),Sec 6.2 / Fig 5,23.76,23.7628,PASS
+DEV EU-jurisdiction candidate rows,Sec 6.2,5088,5088,PASS
+EU-jurisdiction essential-gold rows,Sec 6.2,0,0,PASS
+DEV essential-gold candidate rows,Sec 6.2,187,187,PASS
+DEV CE AUC within reranked top-75 pool,Sec 6.3,0.688,0.688,PASS
+DEV essential-gold mean rank movement,Sec 6.3,3.59,3.5928,PASS
+DEV essential-gold median rank movement,Sec 6.3,1.0,1.0,PASS
+DEV essential gold moved INTO top-25,Sec 6.3,22,22,PASS
+DEV essential gold moved OUT of top-25,Sec 6.3,12,12,PASS
+DEV harmful demotion rate,Sec 6.3,0.091,0.0909,PASS

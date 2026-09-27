@@ -1,0 +1,16 @@
+# Verification and analysis from the shipped artifacts. This tier alone is enough to
+# reproduce every number, table and figure in the report; it needs no GPU, no Qdrant
+# instance and no corpus database.
+#
+#     python -m venv .venv && . .venv/bin/activate
+#     pip install -r requirements.txt
+#
+# Versions are the ones the reported results were produced with (Python 3.9.6, macOS 14
+# on Apple silicon). Later minor versions work; they are pinned so a future run can tell
+# an environment difference from a real difference.
+pandas==2.3.3
+numpy==2.0.2
+scipy==1.13.1
+pyarrow==21.0.0
+matplotlib==3.9.4
+scikit-learn==1.6.1
