@@ -54,19 +54,19 @@ The run ends with:
 ```
   1  corpus         Corpus composition                           10/10  PASS
   2  artifacts      Frozen artifact integrity and provenance     23/23  PASS
-  3  rq1            RQ1: matched-budget comparison               33/33  PASS
+  3  rq1            RQ1: matched-budget comparison               71/71  PASS
   4  signals        Signal behaviour and authority calibration   16/16  PASS
-  5  graph          RQ2: graph edge quality and retrieval effect  11/11  PASS
+  5  graph          RQ2: graph edge quality and retrieval effect  19/19  PASS
   6  regime         RQ2: regime-compatibility constraint           8/8  PASS
-  7  reranking      RQ3: cross-encoder variants and completeness  30/30  PASS
-  8  performance    Final fixed-configuration performance         20/20  PASS
+  7  reranking      RQ3: cross-encoder variants and completeness  34/34  PASS
+  8  performance    Final fixed-configuration performance         24/24  PASS
   9  ir-metrics     Secondary IR diagnostics                      11/11  PASS
  10  tokens         Token distributions and the 512-token window  13/13  PASS
  11  figures        Figure regeneration                           11/11  PASS
  12  cross-check    Independent cross-check of headline numbers   34/34  PASS
   ------------------------------------------------------------------------
-  12/12 parts reproduced   220/220 checks passed
-  46 artifacts regenerated under results/ and figures/ — 46 identical to the shipped copy
+  12/12 parts reproduced   282/282 checks passed
+  48 artifacts regenerated under results/ and figures/ — 48 identical to the shipped copy
 ```
 
 Check-by-check detail goes to `results/reproduction_report.csv`. Exit status is 0 only if
@@ -133,7 +133,7 @@ export RESULTS_DIR=/somewhere/else                # to avoid writing into the ch
 ## Where things are documented
 
 [`TECHNICAL_APPENDIX.md`](TECHNICAL_APPENDIX.md) covers the system, every parameter, the
-end-to-end workflow, what each of the 148 files is for, and where each reported number comes
+end-to-end workflow, what each of the 154 files is for, and where each reported number comes
 from, mapped to the report's own table and figure numbers.
 
 [`benchmark/BENCHMARK.md`](benchmark/BENCHMARK.md) documents the evaluation set and

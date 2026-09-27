@@ -243,9 +243,16 @@ def check_rq1(c: Checker) -> None:
         (9, "Two-lane, post-CE (25+25)", 0.806),
     ]:
         c.num(f"Table 3 - {label}", value, test.loc[cfg, "requirement_recall_weighted"])
-    c.num("Table 3 - pooled best, complete coverage", 0.521, test.loc[6, "complete_coverage_mean"])
-    c.num("Table 3 - two-lane pre-CE, complete coverage", 0.713,
-          test.loc[8, "complete_coverage_mean"])
+    for cfg, label, value in [
+        (1, "BM25 only (pooled @50)", 0.255),
+        (2, "Dense only (pooled @50)", 0.415),
+        (3, "BM25 + dense hybrid (pooled @50)", 0.404),
+        (6, "Pooled hybrid + authority + jurisdiction", 0.521),
+        (7, "Two-lane, no authority (25+25)", 0.691),
+        (8, "Two-lane, pre-CE (25+25)", 0.713),
+        (9, "Two-lane, post-CE (25+25)", 0.755),
+    ]:
+        c.num(f"Table 3 CC - {label}", value, test.loc[cfg, "complete_coverage_mean"])
     c.true("Every configuration retrieves the same 50-result budget",
            set(test.budget) == {"top-50 (pooled)", "25+25 (two-lane)"},
            ", ".join(sorted(set(test.budget))))
@@ -254,17 +261,26 @@ def check_rq1(c: Checker) -> None:
     cat = pd.read_csv(sub / "rq1_per_category.csv").query("split == 'TEST'")
     pooled = cat[cat.config.str.startswith("pooled")].set_index("category")
     twolane = cat[cat.config.str.startswith("two_lane")].set_index("category")
-    for name, n_req, p_val, t_val in [
-        ("direct legal anchor", 23, 0.652, 0.913),
-        ("semantic / practitioner phrasing", 21, 0.619, 0.857),
-        ("applicability / transition", 12, 0.583, 0.500),
-        ("vocabulary mismatch", 8, 0.250, 0.625),
+    for name, n_req, p_val, t_val, delta in [
+        ("direct legal anchor", 23, 0.652, 0.913, +0.261),
+        ("semantic / practitioner phrasing", 21, 0.619, 0.857, +0.238),
+        ("procedural_multi_evidence", 20, 0.600, 0.700, +0.100),
+        ("cross_reference_multi_instrument", 16, 0.562, 0.688, +0.125),
+        ("applicability / transition", 12, 0.583, 0.500, -0.083),
+        ("faq90", 12, 0.750, 0.833, +0.083),
+        ("expansion_v2_official_guidance", 11, 0.727, 0.727, 0.000),
+        ("official_workflow_expansion_v2", 9, 0.889, 0.889, 0.000),
+        ("vocabulary mismatch", 8, 0.250, 0.625, +0.375),
+        ("compound / multi-requirement", 5, 0.400, 0.600, +0.200),
+        ("authority / source-role sensitive", 2, 0.000, 1.000, +1.000),
     ]:
+        pv = pooled.loc[name, "requirement_recall_weighted"]
+        tv = twolane.loc[name, "requirement_recall_weighted"]
         c.exact(f"Table 4 - {name}, N req", n_req, int(pooled.loc[name, "n_requirements"]))
-        c.num(f"Table 4 - {name}, pooled", p_val,
-              pooled.loc[name, "requirement_recall_weighted"])
-        c.num(f"Table 4 - {name}, two-lane", t_val,
-              twolane.loc[name, "requirement_recall_weighted"])
+        c.num(f"Table 4 - {name}, pooled", p_val, pv)
+        c.num(f"Table 4 - {name}, two-lane", t_val, tv)
+        c.num(f"Table 4 - {name}, difference", delta, tv - pv)
+    c.exact("Table 4 covers every TEST category", 11, len(pooled))
 
     # Statistics behind the headline RQ1 claim.
     stats = json.loads((sub / "statistical_tests_TEST.json").read_text())
@@ -346,6 +362,30 @@ def check_graph(c: Checker) -> None:
            f"{abl.loc[8, 'requirement_recall_mean']:.4f} < "
            f"{abl.loc[9, 'requirement_recall_mean']:.4f}")
 
+    tst = _csv("benchmark150/test/rq1_ablation_summary.csv").set_index("config_id")
+    c.exact("Graph comparison TEST scenarios", 63, int(tst.loc[8, "n_scenarios"]))
+    c.num("TEST recall, graph ON", 0.468, tst.loc[8, "requirement_recall_mean"])
+    c.num("TEST recall, graph OFF", 0.468, tst.loc[9, "requirement_recall_mean"])
+    c.true("Graph expansion makes no difference on TEST",
+           tst.loc[8, "requirement_recall_mean"] == tst.loc[9, "requirement_recall_mean"],
+           f"both {tst.loc[9, 'requirement_recall_mean']:.4f}")
+
+    # Section 6.2.3's scenario-level claim, over both splits of the 150-scenario view:
+    # improved for none, decreased for two, neutral for the rest of the 131 scoreable.
+    moved = {"better": 0, "worse": 0, "same": 0}
+    for sub in ("", "test/"):
+        lvl = _csv(f"benchmark150/{sub}rq1_ablation_scenario_level.csv")
+        on = lvl[lvl.config_id == 8].set_index("scenario_id").requirement_recall_10
+        off = lvl[lvl.config_id == 9].set_index("scenario_id").requirement_recall_10
+        for sid in on.index:
+            d = on[sid] - off[sid]
+            moved["better" if d > 0 else "worse" if d < 0 else "same"] += 1
+    total = sum(moved.values())
+    c.exact("Scenarios compared across both splits", 131, total)
+    c.exact("Scenarios graph expansion improved", 0, moved["better"])
+    c.exact("Scenarios graph expansion decreased", 2, moved["worse"])
+    c.exact("Scenarios unaffected", 129, moved["same"])
+
 
 def check_regime(c: Checker) -> None:
     """Section 6.2.2: the exploratory regime-compatibility constraint at theta = 0.7."""
@@ -409,6 +449,18 @@ def check_reranking(c: Checker) -> None:
     c.exact("TEST essential gold moved out of top 25", 9, diag["n_moved_out_of_top25"])
     c.num("TEST harmful demotion rate", 0.073, diag["harmful_demotion_rate"])
 
+    # Section 6.3.3: the DEV-selected configuration against the one that scores higher on TEST.
+    tv = _csv("test_confirmation/comparison_TEST.csv").set_index("variant")
+    c.exact("TEST variants compared", 10, len(tv))
+    c.num("TEST plain fusion lambda=0.50, recall@10", 0.670,
+          tv.loc["3_CE_plus_fusion_lambda0.5_TEST", "requirement_recall_at_10"])
+    c.num("TEST metadata+fusion lambda=0.50, recall@10", 0.649,
+          tv.loc["4_metadata_enriched_CE_plus_fusion_lambda0.5_TEST", "requirement_recall_at_10"])
+    c.true("Plain fusion scores higher on TEST than the DEV-selected configuration",
+           tv.loc["3_CE_plus_fusion_lambda0.5_TEST", "requirement_recall_at_10"]
+           > tv.loc["4_metadata_enriched_CE_plus_fusion_lambda0.5_TEST", "requirement_recall_at_10"],
+           "reported, and still not re-selected")
+
     boost = _csv("test_confirmation/test_category_boost_reflection.csv").set_index("config")
     c.num("TEST category boost - baseline", 0.556,
           boost.loc["baseline (no boost)", "recall@25_other_lane"])
@@ -435,6 +487,11 @@ def check_performance(c: Checker) -> None:
         c.exact(f"Table 8 - {label} mixed-evidence scenarios", n_mixed,
                 int(row.n_mixed_evidence_scenarios))
 
+    c.num("TEST legislation-side coverage", 0.867, test.legislation_side_coverage)
+    c.num("TEST non-legislation-side coverage", 0.667, test.nonlegislation_side_coverage)
+    c.num("DEV legislation-side coverage", 1.0, dev.legislation_side_coverage)
+    c.num("DEV non-legislation-side coverage", 0.765, dev.nonlegislation_side_coverage)
+
     audit = _csv("metric_audit_table.csv")
     ceiling = audit[audit.metric.str.startswith("CandidateRequirementRecall@75")].iloc[0]
     c.num("DEV candidate-pool ceiling @75", 0.916, ceiling.value)
@@ -451,10 +508,20 @@ def check_performance(c: Checker) -> None:
           rq3["requirement_recall"]["mean_post_CE_weighted"])
     c.num("Table 6 - difference", 0.043, rq3["requirement_recall"]["mean_diff"])
     c.num("Reranking permutation p", 0.215, rq3["requirement_recall"]["permutation_p"])
+    c.num("Reranking CI lower bound", -0.008, rq3["requirement_recall"]["ci_low"])
+    c.num("Reranking CI upper bound", 0.100, rq3["requirement_recall"]["ci_high"])
     c.true("Reranking CI spans zero, as reported",
            rq3["requirement_recall"]["ci_low"] < 0 < rq3["requirement_recall"]["ci_high"],
            f"[{rq3['requirement_recall']['ci_low']:.3f}, "
            f"{rq3['requirement_recall']['ci_high']:.3f}]")
+
+    cc3 = stats["RQ3_post_CE_vs_pre_CE_TEST_25perlane"]["complete_coverage"]
+    c.num("Table 6 - pre-CE complete coverage", 0.713, cc3["mean_pre_CE"])
+    c.num("Table 6 - post-CE complete coverage", 0.755, cc3["mean_post_CE"])
+    c.num("Reranking complete-coverage difference", 0.043, cc3["mean_diff"])
+    c.num("Reranking complete-coverage CI lower bound", -0.021, cc3["ci_low"])
+    c.num("Reranking complete-coverage CI upper bound", 0.106, cc3["ci_high"])
+    c.num("Reranking complete-coverage permutation p", 0.342, cc3["permutation_p"])
 
 
 def check_ir_metrics(c: Checker) -> None:
@@ -617,7 +684,13 @@ PARTS: list[Part] = [
         steps=[
             _py("graph_edge_audit.py"),
             _py("make_benchmark150.py"),
-            _py("rq1_ablations.py") + ["--split", "DEV"] + ['--scenarios', 'benchmark/derived/scenarios_all_150.jsonl', '--gold', 'benchmark/derived/gold_evidence_150.jsonl', '--results-dir', 'results/benchmark150'] + [
+            _py("rq1_ablations.py") + ["--split", "DEV"] + ['--scenarios', 'benchmark/derived/scenarios_all_150.jsonl', '--gold', 'benchmark/derived/gold_evidence_150.jsonl'] + [
+                "--results-dir", "results/benchmark150",
+                "--cache", "data/benchmark150/candidate_cache_graph_on.parquet",
+                "--graph-off-cache", "data/benchmark150/candidate_cache_graph_off.parquet"],
+            _py("rq1_ablations.py") + ["--split", "TEST"] + ['--scenarios', 'benchmark/derived/scenarios_all_150.jsonl', '--gold', 'benchmark/derived/gold_evidence_150.jsonl'] + [
+                "--results-dir", "results/benchmark150/test",
+                "--frozen-config", "config/frozen_config.json",
                 "--cache", "data/benchmark150/candidate_cache_graph_on.parquet",
                 "--graph-off-cache", "data/benchmark150/candidate_cache_graph_off.parquet"],
         ],
@@ -627,7 +700,8 @@ PARTS: list[Part] = [
              "reconstructed by make_benchmark150.py, against the graph-on and graph-off caches "
              "in data/benchmark150/.",
         produces=["results/graph_edge_audit.json", "results/graph_edge_audit_by_stratum.csv",
-                  "results/benchmark150/rq1_ablation_summary.csv"],
+                  "results/benchmark150/rq1_ablation_summary.csv",
+                  "results/benchmark150/test/rq1_ablation_summary.csv"],
     ),
     Part(
         key="regime",
@@ -657,6 +731,7 @@ PARTS: list[Part] = [
             _py("ce_experiment_metrics2.py"),
             _py("dual_evidence_strict.py"),
             _py("test_confirmation.py"),
+            _py("ce_variants_test.py"),
         ],
         check=check_reranking,
         note="Four steps. ce_experiment_metrics.py must precede ce_experiment_metrics2.py, "

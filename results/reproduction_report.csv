@@ -41,21 +41,59 @@ part_number,part,report,check,reported,recomputed,status
 3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5","Table 3 - Two-lane, no authority (25+25)",0.734,0.7338,PASS
 3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5","Table 3 - Two-lane, pre-CE (25+25)",0.763,0.7626,PASS
 3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5","Table 3 - Two-lane, post-CE (25+25)",0.806,0.8058,PASS
-3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5","Table 3 - pooled best, complete coverage",0.521,0.5213,PASS
-3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5","Table 3 - two-lane pre-CE, complete coverage",0.713,0.7128,PASS
+3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5",Table 3 CC - BM25 only (pooled @50),0.255,0.2553,PASS
+3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5",Table 3 CC - Dense only (pooled @50),0.415,0.4149,PASS
+3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5",Table 3 CC - BM25 + dense hybrid (pooled @50),0.404,0.4043,PASS
+3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5",Table 3 CC - Pooled hybrid + authority + jurisdiction,0.521,0.5213,PASS
+3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5","Table 3 CC - Two-lane, no authority (25+25)",0.691,0.6915,PASS
+3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5","Table 3 CC - Two-lane, pre-CE (25+25)",0.713,0.7128,PASS
+3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5","Table 3 CC - Two-lane, post-CE (25+25)",0.755,0.7553,PASS
 3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5",Every configuration retrieves the same 50-result budget,yes,"25+25 (two-lane), top-50 (pooled)",PASS
 3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5","Table 4 - direct legal anchor, N req",23,23,PASS
 3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5","Table 4 - direct legal anchor, pooled",0.652,0.6522,PASS
 3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5","Table 4 - direct legal anchor, two-lane",0.913,0.913,PASS
+3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5","Table 4 - direct legal anchor, difference",0.261,0.2609,PASS
 3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5","Table 4 - semantic / practitioner phrasing, N req",21,21,PASS
 3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5","Table 4 - semantic / practitioner phrasing, pooled",0.619,0.619,PASS
 3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5","Table 4 - semantic / practitioner phrasing, two-lane",0.857,0.8571,PASS
+3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5","Table 4 - semantic / practitioner phrasing, difference",0.238,0.2381,PASS
+3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5","Table 4 - procedural_multi_evidence, N req",20,20,PASS
+3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5","Table 4 - procedural_multi_evidence, pooled",0.6,0.6,PASS
+3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5","Table 4 - procedural_multi_evidence, two-lane",0.7,0.7,PASS
+3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5","Table 4 - procedural_multi_evidence, difference",0.1,0.1,PASS
+3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5","Table 4 - cross_reference_multi_instrument, N req",16,16,PASS
+3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5","Table 4 - cross_reference_multi_instrument, pooled",0.562,0.5625,PASS
+3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5","Table 4 - cross_reference_multi_instrument, two-lane",0.688,0.6875,PASS
+3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5","Table 4 - cross_reference_multi_instrument, difference",0.125,0.125,PASS
 3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5","Table 4 - applicability / transition, N req",12,12,PASS
 3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5","Table 4 - applicability / transition, pooled",0.583,0.5833,PASS
 3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5","Table 4 - applicability / transition, two-lane",0.5,0.5,PASS
+3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5","Table 4 - applicability / transition, difference",-0.083,-0.0833,PASS
+3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5","Table 4 - faq90, N req",12,12,PASS
+3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5","Table 4 - faq90, pooled",0.75,0.75,PASS
+3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5","Table 4 - faq90, two-lane",0.833,0.8333,PASS
+3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5","Table 4 - faq90, difference",0.083,0.0833,PASS
+3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5","Table 4 - expansion_v2_official_guidance, N req",11,11,PASS
+3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5","Table 4 - expansion_v2_official_guidance, pooled",0.727,0.7273,PASS
+3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5","Table 4 - expansion_v2_official_guidance, two-lane",0.727,0.7273,PASS
+3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5","Table 4 - expansion_v2_official_guidance, difference",0.0,0.0,PASS
+3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5","Table 4 - official_workflow_expansion_v2, N req",9,9,PASS
+3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5","Table 4 - official_workflow_expansion_v2, pooled",0.889,0.8889,PASS
+3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5","Table 4 - official_workflow_expansion_v2, two-lane",0.889,0.8889,PASS
+3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5","Table 4 - official_workflow_expansion_v2, difference",0.0,0.0,PASS
 3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5","Table 4 - vocabulary mismatch, N req",8,8,PASS
 3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5","Table 4 - vocabulary mismatch, pooled",0.25,0.25,PASS
 3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5","Table 4 - vocabulary mismatch, two-lane",0.625,0.625,PASS
+3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5","Table 4 - vocabulary mismatch, difference",0.375,0.375,PASS
+3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5","Table 4 - compound / multi-requirement, N req",5,5,PASS
+3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5","Table 4 - compound / multi-requirement, pooled",0.4,0.4,PASS
+3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5","Table 4 - compound / multi-requirement, two-lane",0.6,0.6,PASS
+3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5","Table 4 - compound / multi-requirement, difference",0.2,0.2,PASS
+3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5","Table 4 - authority / source-role sensitive, N req",2,2,PASS
+3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5","Table 4 - authority / source-role sensitive, pooled",0.0,0.0,PASS
+3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5","Table 4 - authority / source-role sensitive, two-lane",1.0,1.0,PASS
+3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5","Table 4 - authority / source-role sensitive, difference",1.0,1.0,PASS
+3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5",Table 4 covers every TEST category,11,11,PASS
 3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5",RQ1 RequirementRecall difference,0.151,0.1511,PASS
 3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5",RQ1 95% CI lower bound,0.08,0.0797,PASS
 3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5",RQ1 95% CI upper bound,0.225,0.2254,PASS
@@ -92,6 +130,14 @@ part_number,part,report,check,reported,recomputed,status
 5,graph,Section 6.2.3,"DEV recall, graph ON",0.491,0.4914,PASS
 5,graph,Section 6.2.3,"DEV recall, graph OFF",0.5135,0.5135,PASS
 5,graph,Section 6.2.3,Graph expansion lowers DEV recall,yes,0.4914 < 0.5135,PASS
+5,graph,Section 6.2.3,Graph comparison TEST scenarios,63,63,PASS
+5,graph,Section 6.2.3,"TEST recall, graph ON",0.468,0.4683,PASS
+5,graph,Section 6.2.3,"TEST recall, graph OFF",0.468,0.4683,PASS
+5,graph,Section 6.2.3,Graph expansion makes no difference on TEST,yes,both 0.4683,PASS
+5,graph,Section 6.2.3,Scenarios compared across both splits,131,131,PASS
+5,graph,Section 6.2.3,Scenarios graph expansion improved,0,0,PASS
+5,graph,Section 6.2.3,Scenarios graph expansion decreased,2,2,PASS
+5,graph,Section 6.2.3,Scenarios unaffected,129,129,PASS
 6,regime,Section 6.2.2,TEST scenarios (150-scenario view),63,63,PASS
 6,regime,Section 6.2.2,Post-CE requirement recall,0.577,0.5767,PASS
 6,regime,Section 6.2.2,Constrained requirement recall,0.553,0.5529,PASS
@@ -127,6 +173,10 @@ part_number,part,report,check,reported,recomputed,status
 7,reranking,"Section 6.3, Table 7, Figure 8",TEST essential gold moved into top 25,15,15,PASS
 7,reranking,"Section 6.3, Table 7, Figure 8",TEST essential gold moved out of top 25,9,9,PASS
 7,reranking,"Section 6.3, Table 7, Figure 8",TEST harmful demotion rate,0.073,0.0732,PASS
+7,reranking,"Section 6.3, Table 7, Figure 8",TEST variants compared,10,10,PASS
+7,reranking,"Section 6.3, Table 7, Figure 8","TEST plain fusion lambda=0.50, recall@10",0.67,0.6702,PASS
+7,reranking,"Section 6.3, Table 7, Figure 8","TEST metadata+fusion lambda=0.50, recall@10",0.649,0.6489,PASS
+7,reranking,"Section 6.3, Table 7, Figure 8",Plain fusion scores higher on TEST than the DEV-selected configuration,yes,"reported, and still not re-selected",PASS
 7,reranking,"Section 6.3, Table 7, Figure 8",TEST category boost - baseline,0.556,0.5556,PASS
 7,reranking,"Section 6.3, Table 7, Figure 8",TEST category boost - real classifier,0.583,0.5833,PASS
 7,reranking,"Section 6.3, Table 7, Figure 8",TEST category boost - oracle ceiling,0.694,0.6944,PASS
@@ -142,6 +192,10 @@ part_number,part,report,check,reported,recomputed,status
 8,performance,"Section 6.4, Table 8, Figure 9 (and Table 6)",Table 8 - TEST complete coverage,0.755,0.7553,PASS
 8,performance,"Section 6.4, Table 8, Figure 9 (and Table 6)",Table 8 - TEST dual evidence,0.6,0.6,PASS
 8,performance,"Section 6.4, Table 8, Figure 9 (and Table 6)",Table 8 - TEST mixed-evidence scenarios,15,15,PASS
+8,performance,"Section 6.4, Table 8, Figure 9 (and Table 6)",TEST legislation-side coverage,0.867,0.8667,PASS
+8,performance,"Section 6.4, Table 8, Figure 9 (and Table 6)",TEST non-legislation-side coverage,0.667,0.6667,PASS
+8,performance,"Section 6.4, Table 8, Figure 9 (and Table 6)",DEV legislation-side coverage,1.0,1.0,PASS
+8,performance,"Section 6.4, Table 8, Figure 9 (and Table 6)",DEV non-legislation-side coverage,0.765,0.7647,PASS
 8,performance,"Section 6.4, Table 8, Figure 9 (and Table 6)",DEV candidate-pool ceiling @75,0.916,0.9161,PASS
 8,performance,"Section 6.4, Table 8, Figure 9 (and Table 6)",DEV ceiling numerator,142,142,PASS
 8,performance,"Section 6.4, Table 8, Figure 9 (and Table 6)",DEV ceiling denominator,155,155,PASS
@@ -149,7 +203,15 @@ part_number,part,report,check,reported,recomputed,status
 8,performance,"Section 6.4, Table 8, Figure 9 (and Table 6)",Table 6 - post-CE requirement recall,0.806,0.8058,PASS
 8,performance,"Section 6.4, Table 8, Figure 9 (and Table 6)",Table 6 - difference,0.043,0.0432,PASS
 8,performance,"Section 6.4, Table 8, Figure 9 (and Table 6)",Reranking permutation p,0.215,0.2146,PASS
+8,performance,"Section 6.4, Table 8, Figure 9 (and Table 6)",Reranking CI lower bound,-0.008,-0.0076,PASS
+8,performance,"Section 6.4, Table 8, Figure 9 (and Table 6)",Reranking CI upper bound,0.1,0.1,PASS
 8,performance,"Section 6.4, Table 8, Figure 9 (and Table 6)","Reranking CI spans zero, as reported",yes,"[-0.008, 0.100]",PASS
+8,performance,"Section 6.4, Table 8, Figure 9 (and Table 6)",Table 6 - pre-CE complete coverage,0.713,0.7128,PASS
+8,performance,"Section 6.4, Table 8, Figure 9 (and Table 6)",Table 6 - post-CE complete coverage,0.755,0.7553,PASS
+8,performance,"Section 6.4, Table 8, Figure 9 (and Table 6)",Reranking complete-coverage difference,0.043,0.0426,PASS
+8,performance,"Section 6.4, Table 8, Figure 9 (and Table 6)",Reranking complete-coverage CI lower bound,-0.021,-0.0213,PASS
+8,performance,"Section 6.4, Table 8, Figure 9 (and Table 6)",Reranking complete-coverage CI upper bound,0.106,0.1064,PASS
+8,performance,"Section 6.4, Table 8, Figure 9 (and Table 6)",Reranking complete-coverage permutation p,0.342,0.3422,PASS
 9,ir-metrics,"Appendix A, Figures 10 and 11",Depths evaluated,"[10, 20, 30, 40, 50, 60, 70, 75]","[10, 20, 30, 40, 50, 60, 70, 75]",PASS
 9,ir-metrics,"Appendix A, Figures 10 and 11",DEV post-CE recall at k=10,0.69,0.6903,PASS
 9,ir-metrics,"Appendix A, Figures 10 and 11",DEV pre-CE recall at k=10,0.626,0.6258,PASS

@@ -329,9 +329,9 @@ python evaluation/reproduce.py 3 8             # or by number
 | 2 | `artifacts` | Sections 4 and 5.3, Appendix A | *(none — checks only)* |
 | 3 | `rq1` | Section 6.1, Tables 3–4, Figures 4–5 | `rq1_rq3_same_budget.py` |
 | 4 | `signals` | Sections 6.1.1, 6.2.1–6.2.2, Figures 6–7 | `score_signal_analysis.py` |
-| 5 | `graph` | Section 6.2.3 | `graph_edge_audit.py`, `make_benchmark150.py`, `rq1_ablations.py` |
+| 5 | `graph` | Section 6.2.3 | `graph_edge_audit.py`, `make_benchmark150.py`, `rq1_ablations.py` (DEV and TEST) |
 | 6 | `regime` | Section 6.2.2 | `make_benchmark150.py`, `rq3_regime_constraint.py` |
-| 7 | `reranking` | Section 6.3, Table 7, Figure 8 | `ce_experiment_metrics.py`, `ce_experiment_metrics2.py`, `dual_evidence_strict.py`, `test_confirmation.py` |
+| 7 | `reranking` | Section 6.3, Table 7, Figure 8 | `ce_experiment_metrics.py`, `ce_experiment_metrics2.py`, `dual_evidence_strict.py`, `test_confirmation.py`, `ce_variants_test.py` |
 | 8 | `performance` | Section 6.4, Tables 6 and 8, Figure 9 | `final_performance.py`, `ce_metrics_audit.py` |
 | 9 | `ir-metrics` | Appendix A, Figures 10–11 | `ir_metrics.py` |
 | 10 | `tokens` | Appendix A, Section 7.3 | `corpus_token_distribution.py` |
@@ -353,25 +353,25 @@ read first.
 A final summary gives one row per part plus the artifact tally, and every check is written to
 `results/reproduction_report.csv`. Exit status is 0 only if every selected part passed.
 
-**Current state: 12/12 parts, 220/220 checks, 46 artifacts regenerated and all 46 identical
+**Current state: 12/12 parts, 282/282 checks, 48 artifacts regenerated and all 48 identical
 to the shipped copies.**
 
 ```
   1  corpus         Corpus composition                           10/10  PASS
   2  artifacts      Frozen artifact integrity and provenance     23/23  PASS
-  3  rq1            RQ1: matched-budget comparison               33/33  PASS
+  3  rq1            RQ1: matched-budget comparison               71/71  PASS
   4  signals        Signal behaviour and authority calibration   16/16  PASS
-  5  graph          RQ2: graph edge quality and retrieval effect  11/11  PASS
+  5  graph          RQ2: graph edge quality and retrieval effect  19/19  PASS
   6  regime         RQ2: regime-compatibility constraint           8/8  PASS
-  7  reranking      RQ3: cross-encoder variants and completeness  30/30  PASS
-  8  performance    Final fixed-configuration performance         20/20  PASS
+  7  reranking      RQ3: cross-encoder variants and completeness  34/34  PASS
+  8  performance    Final fixed-configuration performance         24/24  PASS
   9  ir-metrics     Secondary IR diagnostics                      11/11  PASS
  10  tokens         Token distributions and the 512-token window  13/13  PASS
  11  figures        Figure regeneration                           11/11  PASS
  12  cross-check    Independent cross-check of headline numbers   34/34  PASS
   ------------------------------------------------------------------------
-  12/12 parts reproduced   220/220 checks passed
-  46 artifacts regenerated under results/ and figures/ — 46 identical to the shipped copy
+  12/12 parts reproduced   282/282 checks passed
+  48 artifacts regenerated under results/ and figures/ — 48 identical to the shipped copy
 ```
 
 **Why parts 2 and 12 exist.** Part 2 checks nothing about retrieval quality; it establishes
@@ -580,6 +580,7 @@ The retriever and the corpus-construction chain. These are the code under test, 
 | `rq1_ablations.py` | The nine-configuration ablation, including the graph-on against graph-off comparison in Section 6.2.3. |
 | `rq3_regime_constraint.py` | Section 6.2.2's exploratory regime-compatibility constraint. Refuses to run on TEST without a frozen config, so it cannot be tuned there. |
 | `category_boost.py` | The query-category classifier and boost rule that `test_confirmation.py` evaluates in Section 6.3.3. Imported, not run directly. |
+| `ce_variants_test.py` | The cross-encoder variants re-measured on TEST, so the DEV selection can be checked against a split nothing was tuned on. |
 | `test_confirmation.py` | Section 6.3.1 and 6.3.3's TEST-side confirmation: authority-alpha sensitivity, cross-encoder diagnostics, and the category-boost reflection against an oracle. Reporting only; nothing is selected from TEST. |
 | `make_benchmark150.py` | Materialises the earlier 150-scenario benchmark view from the shipped 208-scenario file, for the two experiments that used it. |
 | `rq1_rq3_same_budget.py` | The same-budget ablation: six conventional pooled configurations at top-50 against three two-lane configurations at 25+25, so no comparison is confounded by budget. Adds bootstrap CIs, permutation p-values, Cohen's *d* and McNemar. |
