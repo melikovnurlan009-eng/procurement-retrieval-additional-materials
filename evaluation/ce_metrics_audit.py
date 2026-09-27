@@ -17,7 +17,7 @@ import pandas as pd
 
 from evaluation.paths import (BENCHMARK_DIR, CANDIDATE_CACHE, CE_OUTPUT_VARIANT2_DEV, RESULTS_DIR)
 
-FAQ218 = str(BENCHMARK_DIR)          # scenarios_all_208.jsonl / gold_evidence_208.jsonl live here
+FAQ218 = str(BENCHMARK_DIR)          # scenarios_all_208.jsonl / gold_evidence_218.jsonl live here
 CACHE_PATH = str(CANDIDATE_CACHE)    # frozen first-stage candidate cache (shipped in data/)
 V2_PATH = str(CE_OUTPUT_VARIANT2_DEV)
 RD = str(RESULTS_DIR)
@@ -128,7 +128,7 @@ def main():
     scen_all = load_jsonl(f"{FAQ218}/scenarios_all_208.jsonl")
     dev_scen = [s for s in scen_all if str(s.get("split", "")).lower() == "dev"]
     dev_ids = {s["scenario_id"] for s in dev_scen}
-    gold_all = {r["scenario_id"]: r for r in load_jsonl(f"{FAQ218}/gold_evidence_208.jsonl")}
+    gold_all = {r["scenario_id"]: r for r in load_jsonl(f"{FAQ218}/gold_evidence_218.jsonl")}
     cache = cache[cache.scenario_id.isin(dev_ids)]
     lane_rank_idx = build_lane_rank_index(cache)
     scen_by_id = {s["scenario_id"]: s for s in dev_scen}

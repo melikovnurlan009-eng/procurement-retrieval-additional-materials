@@ -165,7 +165,7 @@ def compute_metrics(variant_name, cache, scenarios, gold, ce_scores_fn):
 if __name__ == "__main__":
     cache = pd.read_parquet(CANDIDATE_CACHE)
     scenarios = load_scenarios(f"{FAQ218}/scenarios_all_208.jsonl", "DEV")
-    gold = load_gold(f"{FAQ218}/gold_evidence_208.jsonl")
+    gold = load_gold(f"{FAQ218}/gold_evidence_218.jsonl")
     want = {s["scenario_id"] for s in scenarios}
     cache = cache[cache.scenario_id.isin(want)]
 

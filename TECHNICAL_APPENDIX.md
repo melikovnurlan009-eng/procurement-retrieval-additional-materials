@@ -302,46 +302,76 @@ Qdrant and no corpus database, and takes about a minute.
 Path B is the one to run first: it establishes that the shipped artifacts are the ones the
 report was written from, before any question of rebuilding arises.
 
-### Path B — verify the reported results (no corpus needed)
+### Path B — reproduce the reported results (no corpus needed)
+
+The report is not one result, so reproduction is not one script. It is **nine parts**, each
+corresponding to a section, table or figure. A part re-runs the scripts that produce its own
+outputs and then checks those outputs against the values the report prints. **A part passes
+only when every one of its checks passes** — a script exiting cleanly is not treated as
+success.
 
 ```bash
 python -m venv .venv && . .venv/bin/activate
 pip install -r requirements.txt
 
-# 1. Recompute 32 reported numbers from the shipped artifacts and compare to the report.
-python evaluation/verify_reported_numbers.py       # → results/verification_report.csv
-
-# 2. Regenerate the report's data-driven figures.
-python evaluation/make_report_figures.py           # → figures/
-python evaluation/score_signal_figures.py          # → figures/signal_diagnostics/
-
-# 3. Regenerate the analysis tables the report draws on.
-python evaluation/ce_metrics_audit.py              # → metric_audit_table.csv, top25_per_lane_final_metrics.csv
-python evaluation/dual_evidence_strict.py          # → dual_evidence_strict{,_summary}.{json,csv}
-python evaluation/score_signal_analysis.py         # → score_signal_stats_summary.json + 6 CSVs
-python evaluation/ce_experiment_metrics.py         # → summaries_v1_v3.json   (run before the next line)
-python evaluation/ce_experiment_metrics2.py        # → table4_dev_ce_variants.csv, summaries_all.json
-python evaluation/rq1_rq3_same_budget.py           # → results/rq1_rq3_same_budget/
+python evaluation/reproduce.py --list          # what the parts are
+python evaluation/reproduce.py --all           # run all nine
+python evaluation/reproduce.py performance     # run one part
+python evaluation/reproduce.py 3 5 7           # run parts by number
 ```
 
-Or run all of it at once:
+`bash scripts/reproduce.sh` is a wrapper over the same driver and takes the same arguments.
 
-```bash
-bash scripts/reproduce.sh
+| # | Part | Reproduces | Scripts it runs |
+|---|---|---|---|
+| 1 | `corpus` | Section 3.1, Figure 1 | `corpus_stats.py` |
+| 2 | `artifacts` | Frozen input integrity and provenance | *(none — checks only)* |
+| 3 | `performance` | Table 5, Figure 7 | `final_performance.py`, `ce_metrics_audit.py` |
+| 4 | `dual-evidence` | Figure 6, Section 6.3 | `dual_evidence_strict.py` |
+| 5 | `signals` | Section 6.2, Figures 4 and 5 | `score_signal_analysis.py` |
+| 6 | `ce-variants` | Table 4, truncation diagnostic | `ce_experiment_metrics.py`, then `ce_experiment_metrics2.py` |
+| 7 | `rq1-rq3` | RQ1/RQ3 tables and statistics | `rq1_rq3_same_budget.py` |
+| 8 | `figures` | Figures 1, 4, 5, 6, 7 and diagnostics | `make_report_figures.py`, `score_signal_figures.py` |
+| 9 | `cross-check` | Every headline number, independently | `verify_reported_numbers.py` |
+
+Each part prints a line per step and a line per check — reported value, recomputed value,
+verdict — then its own verdict. A final summary gives one row per part, and every check is
+written to `results/reproduction_report.csv`. Exit status is 0 only if every selected part
+passed.
+
+**Current state: 9/9 parts, 157/157 checks.**
+
+```
+  1  corpus         Corpus composition                           10/10  PASS
+  2  artifacts      Frozen artifact integrity and provenance     26/26  PASS
+  3  performance    Final retrieval performance                  15/15  PASS
+  4  dual-evidence  Strict mixed-evidence completeness             8/8  PASS
+  5  signals        Score and signal analysis                    16/16  PASS
+  6  ce-variants    Cross-encoder input variants and truncation   14/14  PASS
+  7  rq1-rq3        Same-budget ablations and statistical tests   25/25  PASS
+  8  figures        Figure regeneration                            9/9  PASS
+  9  cross-check    Independent cross-check of headline numbers   34/34  PASS
+  ------------------------------------------------------------------------
+  9/9 parts reproduced   157/157 checks passed
 ```
 
-`verify_reported_numbers.py` is the centrepiece. It recomputes 32 numbers quoted in the report —
-every cell of the final performance table, the candidate-pool ceiling, both first-stage ROC
-AUCs, the authority amplification factor, the reranker's rank-movement statistics and harmful
-demotion rate, and the score reconstruction check — and compares each to the reported value at a
-tolerance of half a unit in the last decimal place the report prints. It currently reports
-**32/32 PASS**.
+**Why parts 2 and 9 exist.** Part 2 checks nothing about retrieval quality; it establishes
+that the inputs are the ones the frozen run used — the gold file's SHA-256 against the frozen
+manifest, the frozen parameters against what the report states, and that every cached
+`final_score` reconstructs through the documented formula. Every other number is conditional
+on that. Part 9 then recomputes 32 reported numbers from the benchmark and the candidate
+cache **directly**, without reading any other part's output, so a bug in a producing script
+cannot hide behind its own output.
 
-Two things in the list above need the corpus database and will say so if it is missing: the
-`corpus_stats.py` numbers behind Figure 1, and the truncation diagnostic inside
-`ce_experiment_metrics2.py`. Both degrade gracefully; everything else still runs. Their outputs
-are shipped (`results/corpus_stats.json`, `results/truncation_diagnostic.csv`) so their numbers
-remain checkable without the database.
+**Independence.** Each part regenerates its own artifacts before checking them, so a part can
+be run alone and still mean something. Two exceptions, both stated by the part's own
+description: part 8 plots Table 5 and the corpus statistics, so it wants parts 1 and 3 first
+or `--all`; and within part 6, `ce_experiment_metrics2.py` reads a file the first step writes.
+
+**The corpus database.** Only part 1 needs it. With `CORPUS_DB` set, part 1 regenerates its
+numbers from the index; without it, part 1 checks the shipped `results/corpus_stats.json`
+without regenerating it and says so, marking the step skipped while still running its checks.
+The truncation diagnostic in part 6 behaves the same way.
 
 ### Path A — rebuild from source
 
@@ -406,7 +436,7 @@ python evaluation/ce_experiment_variant2_rerank.py --split DEV  --db "$CORPUS_DB
 python evaluation/ce_experiment_variant2_rerank.py --split TEST --db "$CORPUS_DB"
 ```
 
-**Stage 5 onwards** is exactly Path B above.
+**Stage 5 onwards** is exactly Path B above: `python evaluation/reproduce.py --all`.
 
 ### Order dependencies
 
@@ -424,9 +454,11 @@ corpus build ──► build_candidate_cache ──► run_ce_rerank ──► m
                           ce_experiment_metrics2                     score_signal_figures
 ```
 
-The only ordering constraint inside Path B is that `ce_experiment_metrics.py` must run before
-`ce_experiment_metrics2.py`, because the second reads `summaries_v1_v3.json` written by the
-first. Everything else in the right-hand column is independent and can run in any order.
+Inside Path B there are two ordering constraints, and `evaluation/reproduce.py` encodes both:
+`ce_experiment_metrics.py` must run before `ce_experiment_metrics2.py`, which reads
+`summaries_v1_v3.json` from it; and `make_report_figures.py` plots `corpus_stats.json` and
+Table 5, so it wants parts 1 and 3 first. Everything else is independent and can run in any
+order, which is what makes the parts individually meaningful.
 
 ---
 
@@ -447,7 +479,7 @@ first. Everything else in the right-hand column is independent and can run in an
 | File | What it is |
 |---|---|
 | `scenarios_all_208.jsonl` | 208 scenarios: query, context, suite, split. |
-| `gold_evidence_208.jsonl` | Requirement-level gold evidence, resolved to corpus chunk ids. |
+| `gold_evidence_218.jsonl` | Requirement-level gold evidence, resolved to corpus chunk ids. |
 | `BENCHMARK.md` | Field-by-field schema, composition, split protocol, construction method, and one recorded defect. |
 
 ### `config/` — the freeze record
@@ -507,7 +539,9 @@ The retriever and the corpus-construction chain. These are the code under test, 
 
 | File | What it is |
 |---|---|
-| `verify_reported_numbers.py` | **Start here.** Recomputes 32 reported numbers from shipped artifacts and compares each to the report. Writes `results/verification_report.csv`. |
+| `reproduce.py` | **Start here.** The part-wise reproduction driver: defines the nine parts, runs each part's scripts, checks each part's outputs against the report, and writes `results/reproduction_report.csv`. `--list`, `--all`, or part names/numbers. |
+| `verify_reported_numbers.py` | Part 9. Recomputes 32 reported numbers from the benchmark and the candidate cache directly, reading no other part's output, and compares each to the report. Writes `results/verification_report.csv`. |
+| `final_performance.py` | Part 3. Computes Table 5 / Figure 7 for both splits. The single producer of `results/top25_per_lane_final_metrics.csv`; `make_report_figures.py` plots that file rather than recomputing it, so the table and the figure cannot diverge. |
 | `ce_metrics_audit.py` | The from-scratch metric recomputation, and home of the authoritative evaluator `mandatory_requirements_with_targets()` plus the lane-ranking helpers most other scripts import. Produces the final performance table and the full audit table. |
 | `dual_evidence_strict.py` | Strict DualEvidenceCoverage at three cutoffs for four reranker variants, with per-scenario diagnosis of which side failed. |
 | `score_signal_analysis.py` | Signal-by-signal behaviour: ROC AUCs, effective ranges, saturation, authority amplification, jurisdiction effects, reranker rank movement, and the exact score reconstruction check. |
@@ -532,9 +566,10 @@ Every file here is regenerated by a script in `evaluation/`; none is hand-made.
 
 | File | Produced by | What it holds |
 |---|---|---|
+| `reproduction_report.csv` | `reproduce.py` | Every check from the last reproduction run: part, report location, reported value, recomputed value, verdict. |
 | `verification_report.csv` | `verify_reported_numbers.py` | 32 reported numbers vs. recomputed, with PASS/FAIL. |
 | `corpus_stats.json` | `corpus_stats.py` | Corpus counts by class, regime, host, chunking method; graph edges; the index's own build manifest. |
-| `top25_per_lane_final_metrics.csv` | `ce_metrics_audit.py` | Final performance on DEV and TEST at 25 per lane. |
+| `top25_per_lane_final_metrics.csv` | `final_performance.py` | Table 5: final performance on DEV and TEST at 25 per lane. Also the input to Figure 7. |
 | `metric_audit_table.csv` | `ce_metrics_audit.py` | Every metric with explicit numerator, denominator, cutoff and lane logic. |
 | `audit_key_numbers.json` | `ce_metrics_audit.py` | Scoreable scenario, requirement and essential-chunk counts as structured data (95 / 155 / 279). |
 | `dual_evidence_strict.json` | `dual_evidence_strict.py` | Full strict dual-evidence results including the scenario ids that failed on each side. |
@@ -581,7 +616,7 @@ hand, not computed from data, and so are not reproduced by any script here.
 
 | File | What it is |
 |---|---|
-| `reproduce.sh` | Runs all of Path B in dependency order and reports what passed. |
+| `reproduce.sh` | Wrapper over `evaluation/reproduce.py`, taking the same arguments. `bash scripts/reproduce.sh` runs all nine parts. |
 
 ---
 
@@ -656,11 +691,16 @@ permutation tests are seeded. The corpus build is **not** deterministic, for the
 
 Recorded here rather than left for a reader to discover.
 
-1. **The gold file has ten orphan records.** `gold_evidence_208.jsonl` holds 218 records; ten
-   (`EXP_GRAPH001`–`EXP_GRAPH010`) belong to a removed graph-contextual evaluation and match no
-   scenario. Every script joins on `scenario_id`, so they are never read. The file is shipped
-   unmodified to keep the hash trail in `config/frozen_cache_manifest.json` intact.
-   `benchmark/BENCHMARK.md` gives a command to confirm this.
+1. **The frozen run covered 218 scenarios; the benchmark is the 208 that survived.** Ten
+   `EXP_GRAPH*` scenarios belonged to a graph-contextual evaluation that was dropped. The
+   scenario file was re-emitted with 208; the gold file and the candidate cache were not
+   re-pruned and still carry all 218. Nothing is affected, because every script drives from
+   the scenario file — the ten are never read. Both files are shipped unmodified so the gold
+   file still hashes to what `config/frozen_cache_manifest.json` recorded, which is how you
+   can tell it is the same gold the frozen run scored. Part 2 of the reproduction checks all
+   of this explicitly: that the gold hash matches, that gold-minus-scenarios and
+   cache-minus-scenarios are each exactly those ten ids, and that every one of the 208 has
+   both gold and cache coverage.
 
 2. **TEST is a confirmation set, not a pristine held-out set.** The stratified split superseded
    an earlier split by source, so part of TEST comes from material audited earlier in the

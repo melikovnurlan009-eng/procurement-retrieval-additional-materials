@@ -183,7 +183,7 @@ def mcnemar_exact(pre_binary, post_binary):
 def main():
     cache_full = pd.read_parquet(CACHE_PATH)
     scen_all = load_jsonl(f"{FAQ218}/scenarios_all_208.jsonl")
-    gold_all = {r["scenario_id"]: r for r in load_jsonl(f"{FAQ218}/gold_evidence_208.jsonl")}
+    gold_all = {r["scenario_id"]: r for r in load_jsonl(f"{FAQ218}/gold_evidence_218.jsonl")}
     scen_by_id = {s["scenario_id"]: s for s in scen_all}
 
     scen_targets_all = {}

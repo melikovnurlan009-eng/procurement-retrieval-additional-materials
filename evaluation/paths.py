@@ -26,7 +26,7 @@ REPO_ROOT = Path(os.environ.get("REPO_ROOT", Path(__file__).resolve().parents[1]
 
 BENCHMARK_DIR = Path(os.environ.get("BENCHMARK_DIR", REPO_ROOT / "benchmark"))
 SCENARIOS_PATH = BENCHMARK_DIR / "scenarios_all_208.jsonl"
-GOLD_PATH = BENCHMARK_DIR / "gold_evidence_208.jsonl"
+GOLD_PATH = BENCHMARK_DIR / "gold_evidence_218.jsonl"
 
 DATA_DIR = REPO_ROOT / "data"
 CANDIDATE_CACHE = Path(os.environ.get("CANDIDATE_CACHE", DATA_DIR / "candidate_cache.parquet"))

@@ -94,7 +94,7 @@ def describe(vals, prefix=""):
 def main():
     cache_full = pd.read_parquet(CACHE_PATH)
     scen_all = load_jsonl(f"{FAQ218}/scenarios_all_208.jsonl")
-    gold_all = {r["scenario_id"]: r for r in load_jsonl(f"{FAQ218}/gold_evidence_208.jsonl")}
+    gold_all = {r["scenario_id"]: r for r in load_jsonl(f"{FAQ218}/gold_evidence_218.jsonl")}
     scen_by_id = {s["scenario_id"]: s for s in scen_all}
 
     dev_scen = [s for s in scen_all if str(s.get("split", "")).lower() == "dev"]
@@ -412,7 +412,9 @@ def main():
         })
     pd.DataFrame(qc_rows).to_csv(f"{RD}/query_category_score_analysis.csv", index=False)
 
-    pd.DataFrame([top25_dev, top25_test]).to_csv(f"{RD}/top25_per_lane_final_metrics.csv", index=False)
+    # Table 5 itself is written by evaluation/final_performance.py, which owns it, so the
+    # headline table has exactly one producer. The values are still computed here because
+    # the signal narrative refers to them.
 
     stats_summary = {
         "reconstruction_error_mean": float(recon_err.mean()), "reconstruction_error_max": float(recon_err.max()),

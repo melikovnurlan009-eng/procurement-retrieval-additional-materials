@@ -1,0 +1,9 @@
+part_number,part,report,check,reported,recomputed,status
+4,dual-evidence,"Figure 6, Section 6.3","DEV dual-evidence coverage, pre-CE",0.529,0.5294,PASS
+4,dual-evidence,"Figure 6, Section 6.3","DEV dual-evidence coverage, post-CE",0.765,0.7647,PASS
+4,dual-evidence,"Figure 6, Section 6.3",Pre-CE numerator / denominator,9/17,9/17,PASS
+4,dual-evidence,"Figure 6, Section 6.3",Post-CE numerator / denominator,13/17,13/17,PASS
+4,dual-evidence,"Figure 6, Section 6.3",Post-CE legislation-side coverage,1.0,1.0,PASS
+4,dual-evidence,"Figure 6, Section 6.3",Post-CE non-legislation-side coverage,0.765,0.7647,PASS
+4,dual-evidence,"Figure 6, Section 6.3",Reranking improves strict dual-evidence coverage,yes,0.5294 -> 0.7647,PASS
+4,dual-evidence,"Figure 6, Section 6.3",Per-scenario failure diagnosis is recorded,yes,12 variant/cutoff rows,PASS

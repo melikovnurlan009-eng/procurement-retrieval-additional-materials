@@ -3,7 +3,7 @@
 Two files, one JSON object per line:
 
 - `scenarios_all_208.jsonl` — 208 scenarios: the query, its context, and its split.
-- `gold_evidence_208.jsonl` — the evidence each scenario's answer must rest on, broken down
+- `gold_evidence_218.jsonl` — the evidence each scenario's answer must rest on, broken down
   into individually-checkable requirements.
 
 The unit of evaluation is the **requirement**, not the query. A procurement question such as
@@ -145,7 +145,7 @@ sources, then resolved to chunks; chunks were never selected because the system 
 
 ## A known defect, recorded rather than hidden
 
-`gold_evidence_208.jsonl` contains **218 records, not 208**. Ten of them
+`gold_evidence_218.jsonl` contains **218 records, not 208**. Ten of them
 (`EXP_GRAPH001`–`EXP_GRAPH010`) are orphans: they belong to a graph-contextual evaluation that
 was removed from the benchmark, and no scenario with those ids exists in
 `scenarios_all_208.jsonl`.
@@ -159,7 +159,7 @@ would break the hash trail in `config/frozen_cache_manifest.json`. Confirm it fo
 python - <<'PY'
 import json
 S = {json.loads(l)["scenario_id"] for l in open("benchmark/scenarios_all_208.jsonl")}
-G = {json.loads(l)["scenario_id"] for l in open("benchmark/gold_evidence_208.jsonl")}
+G = {json.loads(l)["scenario_id"] for l in open("benchmark/gold_evidence_218.jsonl")}
 print(f"scenarios {len(S)}, gold records {len(G)}")
 print("gold with no scenario:", sorted(G - S))
 print("scenarios with no gold:", sorted(S - G))

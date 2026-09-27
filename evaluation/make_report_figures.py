@@ -225,61 +225,30 @@ def figure6_dual_evidence(cache_dev, scen_by_id, targets):
     print(f"  Figure 6 written (pre-CE {vals[0]:.3f} -> post-CE {vals[1]:.3f}, N={n})")
 
 
-def figure7_final_performance(cache, scenarios, scen_by_id):
-    """Figure 7 / Table 5: final top-25-per-lane performance on both splits."""
-    gold = {r["scenario_id"]: r for r in load_jsonl(GOLD_PATH)}
-    ce = {}
-    for (sid, lane), grp in cache[cache.ce_rank.notna()].groupby(["scenario_id", "lane"]):
-        ce[(sid, lane)] = dict(zip(grp.chunk_id, grp.ce_score))
+def figure7_final_performance():
+    """Figure 7: final top-25-per-lane performance on both splits.
 
-    rows = []
-    for split in ("dev", "test"):
-        ids = {s["scenario_id"] for s in scenarios if str(s.get("split", "")).lower() == split}
-        sub = cache[cache.scenario_id.isin(ids)]
-        targets = {}
-        for sid in ids:
-            t = mandatory_requirements_with_targets(gold.get(sid, {}))
-            if t:
-                targets[sid] = t
-
-        n_sat = n_tot = cc = 0
-        for sid, treqs in targets.items():
-            L = ranked_lane_post(sub, sid, "legislation", ce.get((sid, "legislation")))[:25]
-            O = ranked_lane_post(sub, sid, "other", ce.get((sid, "other")))[:25]
-            ok_all = True
-            for t in treqs.values():
-                n_tot += 1
-                if req_satisfied(t["chunk_ids"], L, O, 25, 25):
-                    n_sat += 1
-                else:
-                    ok_all = False
-            cc += int(ok_all)
-        d_hit, d_n = _dual_evidence(sub, scen_by_id, targets, ce, use_ce=True)
-        rows.append(
-            {
-                "split": split.upper(),
-                "n_scenarios": len(targets),
-                "n_requirements": n_tot,
-                "requirement_recall": round(n_sat / n_tot, 4),
-                "complete_coverage": round(cc / len(targets), 4),
-                "dual_evidence_coverage": round(d_hit / d_n, 4),
-                "n_mixed_evidence_scenarios": d_n,
-            }
-        )
-
-    df = pd.DataFrame(rows)
+    Plots results/top25_per_lane_final_metrics.csv rather than recomputing it, so the figure
+    and Table 5 cannot disagree. Run evaluation/final_performance.py first.
+    """
+    table = RESULTS_DIR / "top25_per_lane_final_metrics.csv"
+    if not table.exists():
+        print("  Figure 7 skipped: run evaluation/final_performance.py first")
+        return
+    df = pd.read_csv(table)
+    df["split"] = ["DEV" if str(s).startswith("DEV") else "TEST" for s in df["split"]]
 
     metrics = [
-        ("requirement_recall", "Requirement recall"),
-        ("complete_coverage", "Complete coverage"),
-        ("dual_evidence_coverage", "Dual-evidence coverage"),
+        ("RequirementRecall@25-per-lane", "Requirement recall"),
+        ("CompleteCoverage@25-per-lane", "Complete coverage"),
+        ("DualEvidenceCoverage@25-per-lane", "Dual-evidence coverage"),
     ]
     fig, ax = plt.subplots(figsize=(7.4, 4.4))
     x = range(len(metrics))
     w = 0.36
     for off, (split, color) in enumerate([("DEV", BLUE), ("TEST", "#e8a33d")]):
-        r = df[df.split == split].iloc[0]
-        vals = [r[m] for m, _ in metrics]
+        row = df[df.split == split].iloc[0]
+        vals = [row[col] for col, _ in metrics]
         pos = [i + (off - 0.5) * w for i in x]
         ax.bar(pos, vals, width=w, label=split, color=color)
         for p, v in zip(pos, vals):
@@ -305,7 +274,7 @@ def main() -> None:
     figure4_first_stage_auc(cache_dev)
     figure5_authority_normalisation(cache_dev)
     figure6_dual_evidence(cache_dev, scen_by_id, targets)
-    figure7_final_performance(cache, scenarios, scen_by_id)
+    figure7_final_performance()
     print(f"\nFigures written to {FIGURES_DIR}")
     print("Figures 2 and 3 are schematic diagrams (architecture; benchmark protocol) and are "
           "not generated from data.")

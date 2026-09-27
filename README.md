@@ -9,33 +9,46 @@ is for. This README is just the fastest way in.
 
 ---
 
-## The one-minute version
+## Reproduce it, part by part
+
+The report is not one result, so reproduction is not one script. It is **nine parts**, each
+matching a section, table or figure. A part re-runs the scripts that produce its own outputs
+and then checks those outputs against the values the report prints. **A part passes only when
+every one of its checks passes** — a script exiting cleanly is not treated as success.
 
 ```bash
 python -m venv .venv && . .venv/bin/activate
 pip install -r requirements.txt
-python evaluation/verify_reported_numbers.py
+
+python evaluation/reproduce.py --list          # what the parts are
+python evaluation/reproduce.py --all           # run all nine (about three minutes)
+python evaluation/reproduce.py performance     # run just one
+python evaluation/reproduce.py 3 5 7           # or several, by number
 ```
 
-That recomputes 32 numbers quoted in the report — the whole final performance table, the
-candidate-pool ceiling, both first-stage ROC AUCs, the authority amplification factor, the
-reranker's rank movement and harmful demotion rate, and an exact score-reconstruction check —
-directly from the artifacts in this repository, and compares each against the reported value.
-It writes `results/verification_report.csv` and prints a pass/fail line per check.
-
-Expected output ends with:
+Every part prints its steps, then a line per check with the reported value, the recomputed
+value and a verdict, then its own verdict. The run ends with:
 
 ```
-32/32 checks passed.
+  1  corpus         Corpus composition                           10/10  PASS
+  2  artifacts      Frozen artifact integrity and provenance     26/26  PASS
+  3  performance    Final retrieval performance                  15/15  PASS
+  4  dual-evidence  Strict mixed-evidence completeness             8/8  PASS
+  5  signals        Score and signal analysis                    16/16  PASS
+  6  ce-variants    Cross-encoder input variants and truncation   14/14  PASS
+  7  rq1-rq3        Same-budget ablations and statistical tests   25/25  PASS
+  8  figures        Figure regeneration                            9/9  PASS
+  9  cross-check    Independent cross-check of headline numbers   34/34  PASS
+  ------------------------------------------------------------------------
+  9/9 parts reproduced   157/157 checks passed
 ```
 
-No GPU, no Qdrant, no corpus database, no model downloads. About a minute.
+Check-by-check detail goes to `results/reproduction_report.csv`. Exit status is 0 only if
+every selected part passed. `bash scripts/reproduce.sh` is a wrapper taking the same
+arguments.
 
-To regenerate everything else — figures, tables, statistical tests:
-
-```bash
-bash scripts/reproduce.sh
-```
+No GPU, no vector database, no model downloads. Only part 1 wants the corpus database, and it
+says so and checks the shipped copy of its output when that is absent.
 
 ## What the system does, in a paragraph
 
@@ -66,12 +79,12 @@ configuration reaches a requirement recall of 0.612; the two-lane architecture r
 | [`data/`](data/) | Frozen artifacts: the candidate cache and the cross-encoder outputs. This is what makes verification possible without the corpus. |
 | [`results/`](results/) | Generated tables and statistics. Every file is produced by a script in `evaluation/`. |
 | [`figures/`](figures/) | Generated figures. |
-| [`scripts/`](scripts/) | `reproduce.sh`. |
+| [`scripts/`](scripts/) | `reproduce.sh`, a wrapper over the part-wise driver. |
 
 ## Two routes
 
-**Verify** (default) — recompute every reported number from the artifacts here. Needs
-`requirements.txt` and nothing else.
+**Reproduce** (default) — the nine parts above, recomputing every reported number from the
+artifacts here. Needs `requirements.txt` and nothing else.
 
 **Rebuild** — re-run first-stage retrieval and cross-encoder inference from the corpus. Needs
 `requirements-pipeline.txt`, the corpus SQLite index (see

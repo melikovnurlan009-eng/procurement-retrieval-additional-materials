@@ -18,7 +18,7 @@ def main() -> None:
     scen_all = load_jsonl(f"{FAQ218}/scenarios_all_208.jsonl")
     dev_scen = [s for s in scen_all if str(s.get("split", "")).lower() == "dev"]
     dev_ids = {s["scenario_id"] for s in dev_scen}
-    gold_all = {r["scenario_id"]: r for r in load_jsonl(f"{FAQ218}/gold_evidence_208.jsonl")}
+    gold_all = {r["scenario_id"]: r for r in load_jsonl(f"{FAQ218}/gold_evidence_218.jsonl")}
     cache = cache[cache.scenario_id.isin(dev_ids)]
     scen_by_id = {s["scenario_id"]: s for s in dev_scen}
 
