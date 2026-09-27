@@ -1,0 +1,13 @@
+{
+  "n_scenarios": 94,
+  "n_requirements": 139,
+  "candidate_requirement_recall_at_75_ceiling": 0.8848920863309353,
+  "ce_auc_essential_vs_rest": 0.6800975994931411,
+  "n_essential_gold_rows_with_ce_score": 151,
+  "mean_rank_movement": 3.370860927152318,
+  "median_rank_movement": 1.0,
+  "n_moved_into_top25": 15,
+  "n_moved_out_of_top25": 9,
+  "n_was_in_top25_pre": 123,
+  "harmful_demotion_rate": 0.07317073170731707
+}

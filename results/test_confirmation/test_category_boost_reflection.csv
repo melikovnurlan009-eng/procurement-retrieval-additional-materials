@@ -1,0 +1,6 @@
+config,numerator,denominator,recall@25_other_lane,classifier_coverage
+baseline (no boost),20,36,0.5555555555555556,
+"real classifier, boost=1.5x",21,36,0.5833333333333334,0.125
+"real classifier, boost=2.0x",21,36,0.5833333333333334,0.125
+"oracle (true gold class), boost=1.5x",25,36,0.6944444444444444,
+"oracle (true gold class), boost=2.0x",25,36,0.6944444444444444,

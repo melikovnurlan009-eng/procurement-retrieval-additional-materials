@@ -112,7 +112,7 @@ class AnalysisConfig:
     embedding_model: str = "BAAI/bge-m3"
     reranker_model: str = "BAAI/bge-reranker-v2-m3"
     random_seed: int = 20260920
-    results_dir: Path = RESULTS_ROOT / "current60_exploratory"
+    results_dir: Path = RESULTS_ROOT
     frozen_config_path: Path | None = None  # if set in TEST mode, tuning is refused
 
     def __post_init__(self):

@@ -1,9 +1,223 @@
 part_number,part,report,check,reported,recomputed,status
-4,dual-evidence,"Figure 6, Section 6.3","DEV dual-evidence coverage, pre-CE",0.529,0.5294,PASS
-4,dual-evidence,"Figure 6, Section 6.3","DEV dual-evidence coverage, post-CE",0.765,0.7647,PASS
-4,dual-evidence,"Figure 6, Section 6.3",Pre-CE numerator / denominator,9/17,9/17,PASS
-4,dual-evidence,"Figure 6, Section 6.3",Post-CE numerator / denominator,13/17,13/17,PASS
-4,dual-evidence,"Figure 6, Section 6.3",Post-CE legislation-side coverage,1.0,1.0,PASS
-4,dual-evidence,"Figure 6, Section 6.3",Post-CE non-legislation-side coverage,0.765,0.7647,PASS
-4,dual-evidence,"Figure 6, Section 6.3",Reranking improves strict dual-evidence coverage,yes,0.5294 -> 0.7647,PASS
-4,dual-evidence,"Figure 6, Section 6.3",Per-scenario failure diagnosis is recorded,yes,12 variant/cutoff rows,PASS
+1,corpus,"Section 3.1, Figure 1",Total source documents,1370,1370,PASS
+1,corpus,"Section 3.1, Figure 1",Total chunks,19087,19087,PASS
+1,corpus,"Section 3.1, Figure 1",Legislation-lane documents,23,23,PASS
+1,corpus,"Section 3.1, Figure 1",Other-evidence-lane documents,1347,1347,PASS
+1,corpus,"Section 3.1, Figure 1",Citation-graph edges,23785,23785,PASS
+1,corpus,"Section 3.1, Figure 1",PRIMARY_LEGISLATION documents,14,14,PASS
+1,corpus,"Section 3.1, Figure 1",SECONDARY_LEGISLATION documents,9,9,PASS
+1,corpus,"Section 3.1, Figure 1",OFFICIAL_WORKFLOW documents,662,662,PASS
+1,corpus,"Section 3.1, Figure 1",Index manifest: chunks indexed,19087,19087,PASS
+1,corpus,"Section 3.1, Figure 1",Index manifest: FTS tokenizer,porter,porter,PASS
+2,artifacts,"Sections 4 and 5.3, Appendix A",Gold evidence SHA-256 matches the frozen manifest,c97bf4d4a70eeb28c33401a2c01e17f1b1567d9d29a422677162d1635067da22,c97bf4d4a70eeb28c33401a2c01e17f1b1567d9d29a422677162d1635067da22,PASS
+2,artifacts,"Sections 4 and 5.3, Appendix A",Benchmark scenarios,208,208,PASS
+2,artifacts,"Sections 4 and 5.3, Appendix A",Gold records (frozen 218-set),218,218,PASS
+2,artifacts,"Sections 4 and 5.3, Appendix A",Candidate cache scenarios (frozen 218-set),218,218,PASS
+2,artifacts,"Sections 4 and 5.3, Appendix A",Gold minus scenarios = ten dropped EXP_GRAPH,"['EXP_GRAPH001', 'EXP_GRAPH002', 'EXP_GRAPH003', 'EXP_GRAPH004', 'EXP_GRAPH005', 'EXP_GRAPH006', 'EXP_GRAPH007', 'EXP_GRAPH008', 'EXP_GRAPH009', 'EXP_GRAPH010']","['EXP_GRAPH001', 'EXP_GRAPH002', 'EXP_GRAPH003', 'EXP_GRAPH004', 'EXP_GRAPH005', 'EXP_GRAPH006', 'EXP_GRAPH007', 'EXP_GRAPH008', 'EXP_GRAPH009', 'EXP_GRAPH010']",PASS
+2,artifacts,"Sections 4 and 5.3, Appendix A",Cache minus scenarios = the same ten,"['EXP_GRAPH001', 'EXP_GRAPH002', 'EXP_GRAPH003', 'EXP_GRAPH004', 'EXP_GRAPH005', 'EXP_GRAPH006', 'EXP_GRAPH007', 'EXP_GRAPH008', 'EXP_GRAPH009', 'EXP_GRAPH010']","['EXP_GRAPH001', 'EXP_GRAPH002', 'EXP_GRAPH003', 'EXP_GRAPH004', 'EXP_GRAPH005', 'EXP_GRAPH006', 'EXP_GRAPH007', 'EXP_GRAPH008', 'EXP_GRAPH009', 'EXP_GRAPH010']",PASS
+2,artifacts,"Sections 4 and 5.3, Appendix A",Every benchmark scenario has gold,set(),set(),PASS
+2,artifacts,"Sections 4 and 5.3, Appendix A",Every benchmark scenario is in the cache,set(),set(),PASS
+2,artifacts,"Sections 4 and 5.3, Appendix A",Frozen alpha (authority blend),0.1,0.1,PASS
+2,artifacts,"Sections 4 and 5.3, Appendix A",Frozen beta (BM25 share),0.4,0.4,PASS
+2,artifacts,"Sections 4 and 5.3, Appendix A",Frozen graph expansion,False,False,PASS
+2,artifacts,"Sections 4 and 5.3, Appendix A",Frozen jurisdiction weighting,True,True,PASS
+2,artifacts,"Sections 4 and 5.3, Appendix A",Frozen candidates per channel per lane,300,300,PASS
+2,artifacts,"Sections 4 and 5.3, Appendix A",Frozen rerank depth,75,75,PASS
+2,artifacts,"Sections 4 and 5.3, Appendix A",Frozen embedding model,BAAI/bge-m3,BAAI/bge-m3,PASS
+2,artifacts,"Sections 4 and 5.3, Appendix A",Frozen reranker model,BAAI/bge-reranker-v2-m3,BAAI/bge-reranker-v2-m3,PASS
+2,artifacts,"Sections 4 and 5.3, Appendix A",Frozen random seed,20260920,20260920,PASS
+2,artifacts,"Sections 4 and 5.3, Appendix A",Freeze record agrees on alpha,0.1,0.1,PASS
+2,artifacts,"Sections 4 and 5.3, Appendix A",Freeze record agrees on beta,0.4,0.4,PASS
+2,artifacts,"Sections 4 and 5.3, Appendix A",Freeze record agrees on graph off,False,False,PASS
+2,artifacts,"Sections 4 and 5.3, Appendix A",Candidate cache lanes,"['legislation', 'other']","['legislation', 'other']",PASS
+2,artifacts,"Sections 4 and 5.3, Appendix A",Cross-encoder depth never exceeds 75 per lane,yes,max ce_rank = 75,PASS
+2,artifacts,"Sections 4 and 5.3, Appendix A",Score reconstruction max abs error (all rows),0.0,0.0,PASS
+3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5",TEST scenarios in every configuration,{94},{94},PASS
+3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5",TEST requirements in every configuration,{139},{139},PASS
+3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5",Table 3 - BM25 only (pooled @50),0.345,0.3453,PASS
+3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5",Table 3 - Dense only (pooled @50),0.496,0.4964,PASS
+3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5",Table 3 - BM25 + dense hybrid (pooled @50),0.475,0.4748,PASS
+3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5",Table 3 - Pooled hybrid + authority + jurisdiction,0.612,0.6115,PASS
+3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5","Table 3 - Two-lane, no authority (25+25)",0.734,0.7338,PASS
+3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5","Table 3 - Two-lane, pre-CE (25+25)",0.763,0.7626,PASS
+3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5","Table 3 - Two-lane, post-CE (25+25)",0.806,0.8058,PASS
+3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5","Table 3 - pooled best, complete coverage",0.521,0.5213,PASS
+3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5","Table 3 - two-lane pre-CE, complete coverage",0.713,0.7128,PASS
+3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5",Every configuration retrieves the same 50-result budget,yes,"25+25 (two-lane), top-50 (pooled)",PASS
+3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5","Table 4 - direct legal anchor, N req",23,23,PASS
+3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5","Table 4 - direct legal anchor, pooled",0.652,0.6522,PASS
+3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5","Table 4 - direct legal anchor, two-lane",0.913,0.913,PASS
+3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5","Table 4 - semantic / practitioner phrasing, N req",21,21,PASS
+3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5","Table 4 - semantic / practitioner phrasing, pooled",0.619,0.619,PASS
+3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5","Table 4 - semantic / practitioner phrasing, two-lane",0.857,0.8571,PASS
+3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5","Table 4 - applicability / transition, N req",12,12,PASS
+3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5","Table 4 - applicability / transition, pooled",0.583,0.5833,PASS
+3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5","Table 4 - applicability / transition, two-lane",0.5,0.5,PASS
+3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5","Table 4 - vocabulary mismatch, N req",8,8,PASS
+3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5","Table 4 - vocabulary mismatch, pooled",0.25,0.25,PASS
+3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5","Table 4 - vocabulary mismatch, two-lane",0.625,0.625,PASS
+3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5",RQ1 RequirementRecall difference,0.151,0.1511,PASS
+3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5",RQ1 95% CI lower bound,0.08,0.0797,PASS
+3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5",RQ1 95% CI upper bound,0.225,0.2254,PASS
+3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5",RQ1 permutation p < 0.0001,yes,p = 0.0,PASS
+3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5",RQ1 CompleteCoverage difference,0.191,0.1915,PASS
+3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5",RQ1 CompleteCoverage CI lower bound,0.106,0.1064,PASS
+3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5",RQ1 CompleteCoverage CI upper bound,0.277,0.2766,PASS
+3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5",RQ1 McNemar scenarios improved,19,19,PASS
+3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5",RQ1 McNemar scenarios worsened,1,1,PASS
+4,signals,"Sections 6.1.1 and 6.2.1-6.2.2, Figures 6 and 7","BM25 ROC AUC (essential gold vs rest, DEV)",0.728,0.7283,PASS
+4,signals,"Sections 6.1.1 and 6.2.1-6.2.2, Figures 6 and 7","Dense ROC AUC (essential gold vs rest, DEV)",0.847,0.8469,PASS
+4,signals,"Sections 6.1.1 and 6.2.1-6.2.2, Figures 6 and 7",BM25 mean weighted contribution (the report's 0.201),0.2019,0.2019,PASS
+4,signals,"Sections 6.1.1 and 6.2.1-6.2.2, Figures 6 and 7",BM25 actual p10-p90 spread,0.339,0.3392,PASS
+4,signals,"Sections 6.1.1 and 6.2.1-6.2.2, Figures 6 and 7",Dense p10-p90 spread (the report's 0.504),0.504,0.5042,PASS
+4,signals,"Sections 6.1.1 and 6.2.1-6.2.2, Figures 6 and 7",The report's two 'p10-p90' figures are not the same quantity,yes,BM25's 0.201 is a mean; dense's 0.504 is a spread,PASS
+4,signals,"Sections 6.1.1 and 6.2.1-6.2.2, Figures 6 and 7",Score reconstruction max error,0.0,0.0,PASS
+4,signals,"Sections 6.1.1 and 6.2.1-6.2.2, Figures 6 and 7",Authority amplification factor,23.76,23.7628,PASS
+4,signals,"Sections 6.1.1 and 6.2.1-6.2.2, Figures 6 and 7",Primary-secondary pairs compared,4892223,4892223,PASS
+4,signals,"Sections 6.1.1 and 6.2.1-6.2.2, Figures 6 and 7",Authority reorders this share of pairs,0.193,0.1928,PASS
+4,signals,"Sections 6.1.1 and 6.2.1-6.2.2, Figures 6 and 7",Primary legislation mean normalised authority,0.751,0.7509,PASS
+4,signals,"Sections 6.1.1 and 6.2.1-6.2.2, Figures 6 and 7",Secondary legislation mean normalised authority,0.038,0.038,PASS
+4,signals,"Sections 6.1.1 and 6.2.1-6.2.2, Figures 6 and 7",Nominal primary-secondary gap,0.03,0.03,PASS
+4,signals,"Sections 6.1.1 and 6.2.1-6.2.2, Figures 6 and 7","Dense gap, essential gold vs non-gold",0.101,0.1006,PASS
+4,signals,"Sections 6.1.1 and 6.2.1-6.2.2, Figures 6 and 7","Dense gap, essential gold vs wrong-regime",0.024,0.024,PASS
+4,signals,"Sections 6.1.1 and 6.2.1-6.2.2, Figures 6 and 7",DEV EU-jurisdiction candidate rows,5088,5088,PASS
+4,signals,"Sections 6.1.1 and 6.2.1-6.2.2, Figures 6 and 7",EU-jurisdiction essential-gold rows,0,0,PASS
+5,graph,Section 6.2.3,Edges reviewed,122,122,PASS
+5,graph,Section 6.2.3,Strata sampled,14,14,PASS
+5,graph,Section 6.2.3,Strict meaningful rate (~60% in the report),0.598,0.5984,PASS
+5,graph,Section 6.2.3,Not-wrong rate (~82% in the report),0.82,0.8197,PASS
+5,graph,Section 6.2.3,Every reviewed edge carries a verdict,yes,122/122,PASS
+5,graph,Section 6.2.3,Structured cross-reference strata reach 80-100%,yes,"100%, 100%",PASS
+5,graph,Section 6.2.3,Inferred and hub strata sit at 10-20%,yes,"20%, 10%",PASS
+5,graph,Section 6.2.3,Graph comparison DEV scenarios,68,68,PASS
+5,graph,Section 6.2.3,"DEV recall, graph ON",0.491,0.4914,PASS
+5,graph,Section 6.2.3,"DEV recall, graph OFF (report prints 0.514)",0.5135,0.5135,PASS
+5,graph,Section 6.2.3,Graph expansion lowers DEV recall,yes,0.4914 < 0.5135,PASS
+6,regime,Section 6.2.2,TEST scenarios (earlier benchmark),63,63,PASS
+6,regime,Section 6.2.2,Post-CE requirement recall,0.577,0.5767,PASS
+6,regime,Section 6.2.2,Constrained requirement recall,0.553,0.5529,PASS
+6,regime,Section 6.2.2,Requirement recall cost of the constraint (-2.4 points),-0.024,-0.0238,PASS
+6,regime,Section 6.2.2,Post-CE complete coverage,0.508,0.5079,PASS
+6,regime,Section 6.2.2,Constrained complete coverage,0.476,0.4762,PASS
+6,regime,Section 6.2.2,Complete coverage cost of the constraint (-3.2 points),-0.032,-0.0317,PASS
+6,regime,Section 6.2.2,"A hard regime penalty costs recall, as reported",yes,the constraint suppresses some legitimate evidence,PASS
+7,reranking,"Section 6.3, Table 7, Figure 8","Table 7 - 1_baseline_raw_text_CE, recall@10",0.593,0.593,PASS
+7,reranking,"Section 6.3, Table 7, Figure 8","Table 7 - 1_baseline_raw_text_CE, complete coverage",0.463,0.4632,PASS
+7,reranking,"Section 6.3, Table 7, Figure 8","Table 7 - 1_baseline_raw_text_CE, harmful demotion",0.094,0.0938,PASS
+7,reranking,"Section 6.3, Table 7, Figure 8","Table 7 - 3_CE_plus_fusion_lambda0.5, recall@10",0.641,0.6412,PASS
+7,reranking,"Section 6.3, Table 7, Figure 8","Table 7 - 3_CE_plus_fusion_lambda0.5, complete coverage",0.526,0.5263,PASS
+7,reranking,"Section 6.3, Table 7, Figure 8","Table 7 - 3_CE_plus_fusion_lambda0.5, harmful demotion",0.016,0.0156,PASS
+7,reranking,"Section 6.3, Table 7, Figure 8","Table 7 - 2_metadata_enriched_CE, recall@10",0.652,0.6518,PASS
+7,reranking,"Section 6.3, Table 7, Figure 8","Table 7 - 2_metadata_enriched_CE, complete coverage",0.516,0.5158,PASS
+7,reranking,"Section 6.3, Table 7, Figure 8","Table 7 - 2_metadata_enriched_CE, harmful demotion",0.047,0.0469,PASS
+7,reranking,"Section 6.3, Table 7, Figure 8","Table 7 - 4_metadata_enriched_CE_plus_fusion_lambda0.5, recall@10",0.655,0.6553,PASS
+7,reranking,"Section 6.3, Table 7, Figure 8","Table 7 - 4_metadata_enriched_CE_plus_fusion_lambda0.5, complete coverage",0.526,0.5263,PASS
+7,reranking,"Section 6.3, Table 7, Figure 8","Table 7 - 4_metadata_enriched_CE_plus_fusion_lambda0.5, harmful demotion",0.0,0.0,PASS
+7,reranking,"Section 6.3, Table 7, Figure 8",Every variant scored on the same 95 DEV scenarios,yes,[95],PASS
+7,reranking,"Section 6.3, Table 7, Figure 8",DEV pre-CE dual evidence (9/17),9/17,9/17,PASS
+7,reranking,"Section 6.3, Table 7, Figure 8",DEV post-CE dual evidence (13/17),13/17,13/17,PASS
+7,reranking,"Section 6.3, Table 7, Figure 8",DEV pre-CE dual-evidence coverage,0.529,0.5294,PASS
+7,reranking,"Section 6.3, Table 7, Figure 8",DEV post-CE dual-evidence coverage,0.765,0.7647,PASS
+7,reranking,"Section 6.3, Table 7, Figure 8",Post-CE legislation-side coverage,1.0,1.0,PASS
+7,reranking,"Section 6.3, Table 7, Figure 8",Post-CE non-legislation-side coverage,0.765,0.7647,PASS
+7,reranking,"Section 6.3, Table 7, Figure 8",TEST scenarios,94,94,PASS
+7,reranking,"Section 6.3, Table 7, Figure 8",TEST candidate ceiling @75,0.885,0.8849,PASS
+7,reranking,"Section 6.3, Table 7, Figure 8",TEST cross-encoder AUC within the top-75 pool,0.68,0.6801,PASS
+7,reranking,"Section 6.3, Table 7, Figure 8",TEST mean essential-gold rank movement,3.37,3.3709,PASS
+7,reranking,"Section 6.3, Table 7, Figure 8",TEST median essential-gold rank movement,1.0,1.0,PASS
+7,reranking,"Section 6.3, Table 7, Figure 8",TEST essential gold moved into top 25,15,15,PASS
+7,reranking,"Section 6.3, Table 7, Figure 8",TEST essential gold moved out of top 25,9,9,PASS
+7,reranking,"Section 6.3, Table 7, Figure 8",TEST harmful demotion rate (7.3%),0.073,0.0732,PASS
+7,reranking,"Section 6.3, Table 7, Figure 8",TEST category boost - baseline,0.556,0.5556,PASS
+7,reranking,"Section 6.3, Table 7, Figure 8",TEST category boost - real classifier,0.583,0.5833,PASS
+7,reranking,"Section 6.3, Table 7, Figure 8",TEST category boost - oracle ceiling,0.694,0.6944,PASS
+8,performance,"Section 6.4, Table 8, Figure 9 (and Table 6)",Table 8 - DEV scenarios,95,95,PASS
+8,performance,"Section 6.4, Table 8, Figure 9 (and Table 6)",Table 8 - DEV requirements,155,155,PASS
+8,performance,"Section 6.4, Table 8, Figure 9 (and Table 6)",Table 8 - DEV requirement recall,0.813,0.8129,PASS
+8,performance,"Section 6.4, Table 8, Figure 9 (and Table 6)",Table 8 - DEV complete coverage,0.747,0.7474,PASS
+8,performance,"Section 6.4, Table 8, Figure 9 (and Table 6)",Table 8 - DEV dual evidence,0.765,0.7647,PASS
+8,performance,"Section 6.4, Table 8, Figure 9 (and Table 6)",Table 8 - DEV mixed-evidence scenarios,17,17,PASS
+8,performance,"Section 6.4, Table 8, Figure 9 (and Table 6)",Table 8 - TEST scenarios,94,94,PASS
+8,performance,"Section 6.4, Table 8, Figure 9 (and Table 6)",Table 8 - TEST requirements,139,139,PASS
+8,performance,"Section 6.4, Table 8, Figure 9 (and Table 6)",Table 8 - TEST requirement recall,0.806,0.8058,PASS
+8,performance,"Section 6.4, Table 8, Figure 9 (and Table 6)",Table 8 - TEST complete coverage,0.755,0.7553,PASS
+8,performance,"Section 6.4, Table 8, Figure 9 (and Table 6)",Table 8 - TEST dual evidence,0.6,0.6,PASS
+8,performance,"Section 6.4, Table 8, Figure 9 (and Table 6)",Table 8 - TEST mixed-evidence scenarios,15,15,PASS
+8,performance,"Section 6.4, Table 8, Figure 9 (and Table 6)",DEV candidate-pool ceiling @75,0.916,0.9161,PASS
+8,performance,"Section 6.4, Table 8, Figure 9 (and Table 6)",DEV ceiling numerator,142,142,PASS
+8,performance,"Section 6.4, Table 8, Figure 9 (and Table 6)",DEV ceiling denominator,155,155,PASS
+8,performance,"Section 6.4, Table 8, Figure 9 (and Table 6)",Table 6 - pre-CE requirement recall,0.763,0.7626,PASS
+8,performance,"Section 6.4, Table 8, Figure 9 (and Table 6)",Table 6 - post-CE requirement recall,0.806,0.8058,PASS
+8,performance,"Section 6.4, Table 8, Figure 9 (and Table 6)",Table 6 - difference,0.043,0.0432,PASS
+8,performance,"Section 6.4, Table 8, Figure 9 (and Table 6)",Reranking permutation p,0.215,0.2146,PASS
+8,performance,"Section 6.4, Table 8, Figure 9 (and Table 6)","Reranking CI spans zero, as reported",yes,"[-0.008, 0.100]",PASS
+9,ir-metrics,"Appendix A, Figures 10 and 11",Depths evaluated,"[10, 20, 30, 40, 50, 60, 70, 75]","[10, 20, 30, 40, 50, 60, 70, 75]",PASS
+9,ir-metrics,"Appendix A, Figures 10 and 11",DEV post-CE recall at k=10 (~0.69),0.69,0.6903,PASS
+9,ir-metrics,"Appendix A, Figures 10 and 11",DEV pre-CE recall at k=10 (~0.63),0.626,0.6258,PASS
+9,ir-metrics,"Appendix A, Figures 10 and 11",TEST post-CE recall at k=10 (~0.73),0.727,0.7266,PASS
+9,ir-metrics,"Appendix A, Figures 10 and 11",TEST pre-CE recall at k=10 (~0.66),0.662,0.6619,PASS
+9,ir-metrics,"Appendix A, Figures 10 and 11",TEST recall at k=50 (~0.885),0.885,0.8849,PASS
+9,ir-metrics,"Appendix A, Figures 10 and 11",TEST recall is flat beyond k=50,yes,k=50 and k=75 both 0.8849,PASS
+9,ir-metrics,"Appendix A, Figures 10 and 11","The curves converge at k=75, because reranking reorders one pool",yes,DEV pre and post both 0.9161,PASS
+9,ir-metrics,"Appendix A, Figures 10 and 11",Legislation-lane NDCG sits in 0.54-0.63,yes,0.544 to 0.626,PASS
+9,ir-metrics,"Appendix A, Figures 10 and 11",Other-evidence-lane NDCG sits in 0.29-0.39,yes,0.294 to 0.391,PASS
+9,ir-metrics,"Appendix A, Figures 10 and 11",Every lane-level NDCG is below its legislation counterpart,yes,other max 0.391 < legislation min 0.544,PASS
+10,tokens,"Appendix A, Section 7.3",Chunks measured,19087,19087,PASS
+10,tokens,"Appendix A, Section 7.3",Metadata preamble mean tokens,103.1,103.1022,PASS
+10,tokens,"Appendix A, Section 7.3",Metadata preamble median,101,101.0,PASS
+10,tokens,"Appendix A, Section 7.3",Metadata preamble P90,144,144.0,PASS
+10,tokens,"Appendix A, Section 7.3",Metadata preamble P95,157,157.0,PASS
+10,tokens,"Appendix A, Section 7.3",Metadata preamble max,380,380,PASS
+10,tokens,"Appendix A, Section 7.3",Metadata preamble over 512 tokens,0.0,0.0,PASS
+10,tokens,"Appendix A, Section 7.3",retrieval_summary mean tokens,71.7,71.6738,PASS
+10,tokens,"Appendix A, Section 7.3",retrieval_summary over 512 tokens,0.0,0.0,PASS
+10,tokens,"Appendix A, Section 7.3",Raw chunk text mean tokens,305.1,305.1204,PASS
+10,tokens,"Appendix A, Section 7.3",Raw chunk text over 512 tokens (14.2%),14.2,14.1667,PASS
+10,tokens,"Appendix A, Section 7.3",Only the raw text overflows the reranker window,yes,the metadata preamble and the summary never reach it,PASS
+10,tokens,"Appendix A, Section 7.3",Essential gold left below rank 25 on DEV,48,48,PASS
+10,tokens,"Appendix A, Section 7.3","Of those, over the 512-token window",23,23,PASS
+11,figures,"Figures 1, 4-11",Figure 1: figure01_corpus_composition.png,yes,"55,640 bytes",PASS
+11,figures,"Figures 1, 4-11",Figure 4: figure04_configuration_comparison_test.png,yes,"70,809 bytes",PASS
+11,figures,"Figures 1, 4-11",Figure 5: figure05_category_comparison_test.png,yes,"100,683 bytes",PASS
+11,figures,"Figures 1, 4-11",Figure 6: figure06_first_stage_auc.png,yes,"36,862 bytes",PASS
+11,figures,"Figures 1, 4-11",Figure 7: figure07_authority_calibration.png,yes,"50,413 bytes",PASS
+11,figures,"Figures 1, 4-11",Figure 8: figure08_mixed_evidence_dev.png,yes,"42,670 bytes",PASS
+11,figures,"Figures 1, 4-11",Figure 9: figure09_final_performance.png,yes,"41,649 bytes",PASS
+11,figures,"Figures 1, 4-11",Figure 10: figure10_cumulative_recall.png,yes,"89,417 bytes",PASS
+11,figures,"Figures 1, 4-11",Figure 11: figure11_ndcg_by_lane.png,yes,"63,286 bytes",PASS
+11,figures,"Figures 1, 4-11","Figure 2 is a schematic, not generated",yes,two-lane architecture,PASS
+11,figures,"Figures 1, 4-11","Figure 3 is a schematic, not generated",yes,benchmark construction protocol,PASS
+12,cross-check,all of the above,Headline numbers checked,32,32,PASS
+12,cross-check,all of the above,Checks failing,0,0,PASS
+12,cross-check,all of the above,DEV N scenarios (scoreable),yes,"reported 95, recomputed 95",PASS
+12,cross-check,all of the above,DEV N requirements (mandatory),yes,"reported 155, recomputed 155",PASS
+12,cross-check,all of the above,DEV RequirementRecall@25-per-lane,yes,"reported 0.813, recomputed 0.8129",PASS
+12,cross-check,all of the above,DEV CompleteCoverage@25-per-lane,yes,"reported 0.747, recomputed 0.7474",PASS
+12,cross-check,all of the above,DEV DualEvidenceCoverage@25-per-lane,yes,"reported 0.765, recomputed 0.7647",PASS
+12,cross-check,all of the above,DEV N mixed-evidence scenarios,yes,"reported 17, recomputed 17",PASS
+12,cross-check,all of the above,TEST N scenarios (scoreable),yes,"reported 94, recomputed 94",PASS
+12,cross-check,all of the above,TEST N requirements (mandatory),yes,"reported 139, recomputed 139",PASS
+12,cross-check,all of the above,TEST RequirementRecall@25-per-lane,yes,"reported 0.806, recomputed 0.8058",PASS
+12,cross-check,all of the above,TEST CompleteCoverage@25-per-lane,yes,"reported 0.755, recomputed 0.7553",PASS
+12,cross-check,all of the above,TEST DualEvidenceCoverage@25-per-lane,yes,"reported 0.6, recomputed 0.6",PASS
+12,cross-check,all of the above,TEST N mixed-evidence scenarios,yes,"reported 15, recomputed 15",PASS
+12,cross-check,all of the above,DEV CandidateRequirementRecall@75 (ceiling),yes,"reported 0.916, recomputed 0.9161",PASS
+12,cross-check,all of the above,DEV ceiling numerator/denominator,yes,"reported 142/155, recomputed 142/155",PASS
+12,cross-check,all of the above,DEV DualEvidenceCoverage pre-CE,yes,"reported 0.529, recomputed 0.5294",PASS
+12,cross-check,all of the above,DEV DualEvidenceCoverage post-CE,yes,"reported 0.765, recomputed 0.7647",PASS
+12,cross-check,all of the above,DEV BM25 ROC AUC (essential gold vs rest),yes,"reported 0.728, recomputed 0.7283",PASS
+12,cross-check,all of the above,DEV dense ROC AUC (essential gold vs rest),yes,"reported 0.847, recomputed 0.8469",PASS
+12,cross-check,all of the above,DEV candidate rows analysed,yes,"reported 105823, recomputed 105823",PASS
+12,cross-check,all of the above,Score reconstruction max abs error,yes,"reported 0.0, recomputed 0.0",PASS
+12,cross-check,all of the above,Primary legislation mean normalised authority,yes,"reported 0.751, recomputed 0.7509",PASS
+12,cross-check,all of the above,Secondary legislation mean normalised authority,yes,"reported 0.038, recomputed 0.038",PASS
+12,cross-check,all of the above,Authority amplification factor (x),yes,"reported 23.76, recomputed 23.7628",PASS
+12,cross-check,all of the above,DEV EU-jurisdiction candidate rows,yes,"reported 5088, recomputed 5088",PASS
+12,cross-check,all of the above,EU-jurisdiction essential-gold rows,yes,"reported 0, recomputed 0",PASS
+12,cross-check,all of the above,DEV essential-gold candidate rows,yes,"reported 187, recomputed 187",PASS
+12,cross-check,all of the above,DEV CE AUC within reranked top-75 pool,yes,"reported 0.688, recomputed 0.688",PASS
+12,cross-check,all of the above,DEV essential-gold mean rank movement,yes,"reported 3.59, recomputed 3.5928",PASS
+12,cross-check,all of the above,DEV essential-gold median rank movement,yes,"reported 1.0, recomputed 1.0",PASS
+12,cross-check,all of the above,DEV essential gold moved INTO top-25,yes,"reported 22, recomputed 22",PASS
+12,cross-check,all of the above,DEV essential gold moved OUT of top-25,yes,"reported 12, recomputed 12",PASS
+12,cross-check,all of the above,DEV harmful demotion rate,yes,"reported 0.091, recomputed 0.0909",PASS

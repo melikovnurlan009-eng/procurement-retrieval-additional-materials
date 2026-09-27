@@ -1,0 +1,4 @@
+stage,requirement_recall_mean,complete_coverage_mean,wrong_regime_gold_mean,n
+1_pre_CE_source_aware,0.46825396825396826,0.38095238095238093,0.0,63
+2_post_CE,0.5767195767195766,0.5079365079365079,0.0,63
+3_post_CE_plus_regime_constraint(theta=0.7),0.5529100529100528,0.47619047619047616,0.0,63

@@ -1,0 +1,101 @@
+{
+  "n_edges_reviewed": 122,
+  "n_strata": 14,
+  "verdict_counts": {
+    "MEANINGFUL": 73,
+    "CORRECT_BUT_USELESS": 27,
+    "WRONG": 21,
+    "UNSURE": 1
+  },
+  "strict_meaningful_rate": 0.5984,
+  "not_wrong_rate": 0.8197,
+  "best_strata_meaningful_rate_pct": [
+    {
+      "stratum": "CROSS_REFERS_TO / internal, structured XML reference",
+      "n": 10,
+      "meaningful_rate_pct": 100.0
+    },
+    {
+      "stratum": "CROSS_REFERS_TO / cross-instrument (named instrument)",
+      "n": 10,
+      "meaningful_rate_pct": 100.0
+    },
+    {
+      "stratum": "COMMENCED_BY",
+      "n": 10,
+      "meaningful_rate_pct": 100.0
+    },
+    {
+      "stratum": "SAVED_BY",
+      "n": 1,
+      "meaningful_rate_pct": 100.0
+    }
+  ],
+  "worst_strata_meaningful_rate_pct": [
+    {
+      "stratum": "CROSS_REFERS_TO / into reg 1 / reg 2 / s.1-2 (citation-definition hubs)",
+      "n": 10,
+      "meaningful_rate_pct": 10.0
+    },
+    {
+      "stratum": "COMMENCEMENT_PROVISION",
+      "n": 10,
+      "meaningful_rate_pct": 0.0
+    },
+    {
+      "stratum": "AMENDED_BY",
+      "n": 10,
+      "meaningful_rate_pct": 0.0
+    },
+    {
+      "stratum": "REVOKED_BY",
+      "n": 1,
+      "meaningful_rate_pct": 0.0
+    }
+  ],
+  "by_relation": [
+    {
+      "relation": "REFERENCES",
+      "n": 40,
+      "meaningful": 25,
+      "meaningful_rate_pct": 62.5
+    },
+    {
+      "relation": "CROSS_REFERS_TO",
+      "n": 50,
+      "meaningful": 37,
+      "meaningful_rate_pct": 74.0
+    },
+    {
+      "relation": "COMMENCEMENT_PROVISION",
+      "n": 10,
+      "meaningful": 0,
+      "meaningful_rate_pct": 0.0
+    },
+    {
+      "relation": "COMMENCED_BY",
+      "n": 10,
+      "meaningful": 10,
+      "meaningful_rate_pct": 100.0
+    },
+    {
+      "relation": "AMENDED_BY",
+      "n": 10,
+      "meaningful": 0,
+      "meaningful_rate_pct": 0.0
+    },
+    {
+      "relation": "REVOKED_BY",
+      "n": 1,
+      "meaningful": 0,
+      "meaningful_rate_pct": 0.0
+    },
+    {
+      "relation": "SAVED_BY",
+      "n": 1,
+      "meaningful": 1,
+      "meaningful_rate_pct": 100.0
+    }
+  ],
+  "provenance": "single-pass LLM-assisted review against the source legal text; not a second independent human annotator"
+}

@@ -119,40 +119,31 @@ def _sha256(path: Path) -> str:
 # ================================================================== part check functions
 def check_corpus(c: Checker) -> None:
     """Section 3.1 and Figure 1: what the corpus contains."""
-    s = _json("corpus_stats.json")
-    c.exact("Total source documents", 1370, s["total_documents"])
-    c.exact("Total chunks", 19087, s["total_chunks"])
-    c.exact("Legislation-lane documents", 23, s["lane_split_documents"]["legislation_lane"])
-    c.exact("Other-evidence-lane documents", 1347, s["lane_split_documents"]["other_evidence_lane"])
-    c.exact("Citation-graph edges", 23785, s["graph_total_edges"])
-    cls = s["documents_by_authority_class"]
+    st = _json("corpus_stats.json")
+    c.exact("Total source documents", 1370, st["total_documents"])
+    c.exact("Total chunks", 19087, st["total_chunks"])
+    c.exact("Legislation-lane documents", 23, st["lane_split_documents"]["legislation_lane"])
+    c.exact("Other-evidence-lane documents", 1347, st["lane_split_documents"]["other_evidence_lane"])
+    c.exact("Citation-graph edges", 23785, st["graph_total_edges"])
+    cls = st["documents_by_authority_class"]
     c.exact("PRIMARY_LEGISLATION documents", 14, cls.get("PRIMARY_LEGISLATION"))
     c.exact("SECONDARY_LEGISLATION documents", 9, cls.get("SECONDARY_LEGISLATION"))
     c.exact("OFFICIAL_WORKFLOW documents", 662, cls.get("OFFICIAL_WORKFLOW"))
-    c.exact("Index manifest: chunks indexed", 19087, s["index_manifest"]["chunks_indexed"])
-    c.exact("Index manifest: FTS tokenizer", "porter", s["index_manifest"]["fts_tokenizer"])
+    c.exact("Index manifest: chunks indexed", 19087, st["index_manifest"]["chunks_indexed"])
+    c.exact("Index manifest: FTS tokenizer", "porter", st["index_manifest"]["fts_tokenizer"])
 
 
 def check_artifacts(c: Checker) -> None:
     """The frozen inputs are the ones the reported results were computed from.
 
-    This part exists because every other number in the report is conditional on it. If the
-    benchmark on disk is not the benchmark the frozen run scored, or the cached scores do
-    not reconstruct through the documented formula, then nothing downstream means what it
-    says. It also pins down the 218-versus-208 relationship explicitly, rather than leaving
-    it as a surprise for whoever counts the lines.
+    Every other number in the report is conditional on this. It also pins down the
+    218-versus-208 relationship explicitly, rather than leaving it as a surprise for whoever
+    counts the lines.
     """
     manifest = json.loads((CONFIG_DIR / "frozen_cache_manifest.json").read_text())
-
-    # The gold file is byte-for-byte the one the frozen run used. Its 218 records are the
-    # reason the manifest names gold_evidence_218.jsonl, and the reason this repository
-    # ships it under that name rather than renaming it to match the scenario count.
     c.exact("Gold evidence SHA-256 matches the frozen manifest",
             manifest["gold_sha256"], _sha256(GOLD_PATH))
 
-    # The scenario file legitimately does NOT match: the frozen run scored 218 scenarios,
-    # then ten EXP_GRAPH* scenarios were dropped from the benchmark and the scenario file
-    # was re-emitted with 208. The checks below establish that this is the only difference.
     scen_ids = {json.loads(l)["scenario_id"] for l in open(SCENARIOS_PATH)}
     gold_ids = {json.loads(l)["scenario_id"] for l in open(GOLD_PATH)}
     cache = pd.read_parquet(CANDIDATE_CACHE)
@@ -162,17 +153,12 @@ def check_artifacts(c: Checker) -> None:
     c.exact("Benchmark scenarios", 208, len(scen_ids))
     c.exact("Gold records (frozen 218-set)", 218, len(gold_ids))
     c.exact("Candidate cache scenarios (frozen 218-set)", 218, len(cache_ids))
-    c.exact("Gold minus scenarios = the ten dropped EXP_GRAPH",
-            sorted(dropped), sorted(gold_ids - scen_ids))
-    c.exact("Cache minus scenarios is exactly the same ten", sorted(dropped),
-            sorted(cache_ids - scen_ids))
+    c.exact("Gold minus scenarios = ten dropped EXP_GRAPH", sorted(dropped),
+            sorted(gold_ids - scen_ids))
+    c.exact("Cache minus scenarios = the same ten", sorted(dropped), sorted(cache_ids - scen_ids))
     c.exact("Every benchmark scenario has gold", set(), scen_ids - gold_ids)
     c.exact("Every benchmark scenario is in the cache", set(), scen_ids - cache_ids)
-    c.true("The dropped scenarios cannot affect any result",
-           all(sid not in scen_ids for sid in dropped),
-           "every script iterates the scenario file, so they are never read")
 
-    # The frozen parameters are the ones the report states.
     c.exact("Frozen alpha (authority blend)", 0.10, manifest["alpha"])
     c.exact("Frozen beta (BM25 share)", 0.40, manifest["beta"])
     c.exact("Frozen graph expansion", False, manifest["use_graph"])
@@ -189,210 +175,345 @@ def check_artifacts(c: Checker) -> None:
     c.exact("Freeze record agrees on beta", manifest["beta"], frozen["beta"])
     c.exact("Freeze record agrees on graph off", manifest["use_graph"], frozen["use_graph"])
 
-    # The cache is structurally what the pipeline says it is.
     c.exact("Candidate cache lanes", ["legislation", "other"], sorted(cache.lane.unique()))
-    c.true("Candidate cache carries merged cross-encoder scores",
-           bool(cache.ce_score.notna().any()),
-           f"{int(cache.ce_score.notna().sum()):,} scored rows")
     c.true("Cross-encoder depth never exceeds 75 per lane",
            float(cache.ce_rank.max()) <= 75, f"max ce_rank = {cache.ce_rank.max():.0f}")
 
-    # final_score must be reconstructible from the cached RAW values through the frozen
-    # formula. A non-zero error means the cache and the documented formula disagree, and
-    # every score-based claim in the report would be resting on an unverified step.
+    # final_score must reconstruct from the cached RAW values through the frozen formula.
     fused = 0.40 * cache.bm25_norm + 0.60 * cache.dense_norm
     recon = (fused * 0.90 + 0.10 * cache.authority_norm) * cache.jurisdiction_weight
     c.num("Score reconstruction max abs error (all rows)", 0.0,
           float((recon - cache.final_score).abs().max()))
-    c.exact("Rows the formula was reconstructed over", len(cache), len(recon))
 
 
-def check_performance(c: Checker) -> None:
-    """Table 5 and Figure 7: final top-25-per-lane performance."""
-    df = _csv("top25_per_lane_final_metrics.csv")
-    dev = df[df.split == "DEV"].iloc[0]
-    test = df[df.split.str.startswith("TEST")].iloc[0]
-
-    for label, row, n_scen, n_req, rr, cc, dual, n_mixed in [
-        ("DEV", dev, 95, 155, 0.813, 0.747, 0.765, 17),
-        ("TEST", test, 94, 139, 0.806, 0.755, 0.600, 15),
-    ]:
-        c.exact(f"{label} scoreable scenarios", n_scen, int(row.n_scenarios))
-        c.exact(f"{label} mandatory requirements", n_req, int(row.n_requirements))
-        c.num(f"{label} RequirementRecall@25-per-lane", rr, row["RequirementRecall@25-per-lane"])
-        c.num(f"{label} CompleteCoverage@25-per-lane", cc, row["CompleteCoverage@25-per-lane"])
-        c.num(f"{label} DualEvidenceCoverage@25-per-lane", dual,
-              row["DualEvidenceCoverage@25-per-lane"])
-        c.exact(f"{label} mixed-evidence scenarios", n_mixed, int(row.n_mixed_evidence_scenarios))
-
-    audit = _csv("metric_audit_table.csv")
-    ceiling = audit[audit.metric.str.startswith("CandidateRequirementRecall@75")].iloc[0]
-    c.num("DEV candidate-pool ceiling @75 (RequirementRecall)", 0.916, ceiling.value)
-    c.exact("DEV ceiling numerator", 142, int(ceiling.numerator))
-    c.exact("DEV ceiling denominator", 155, int(ceiling.denominator))
-
-
-def check_dual_evidence(c: Checker) -> None:
-    """Figure 6: strict mixed-evidence completeness, before and after reranking."""
-    df = _csv("dual_evidence_strict_summary.csv")
-    at25 = df[df.cutoff_label == "DualEvidenceCoverage@25-per-lane"]
-    pre = at25[at25.variant == "0_pre_CE_first_stage"].iloc[0]
-    post = at25[at25.variant == "1_baseline_raw_text_CE"].iloc[0]
-
-    c.num("DEV dual-evidence coverage, pre-CE", 0.529, pre.value)
-    c.num("DEV dual-evidence coverage, post-CE", 0.765, post.value)
-    c.exact("Pre-CE numerator / denominator", "9/17", f"{int(pre.numerator)}/{int(pre.denominator)}")
-    c.exact("Post-CE numerator / denominator", "13/17",
-            f"{int(post.numerator)}/{int(post.denominator)}")
-    c.num("Post-CE legislation-side coverage", 1.0, post.legislation_side_coverage)
-    c.num("Post-CE non-legislation-side coverage", 0.765, post.nonlegislation_side_coverage)
-    c.true("Reranking improves strict dual-evidence coverage", post.value > pre.value,
-           f"{pre.value:.4f} -> {post.value:.4f}")
-
-    detail = _json("dual_evidence_strict.json")
-    c.true("Per-scenario failure diagnosis is recorded",
-           any("missing_nonlegislation_only_ids" in row for row in detail),
-           f"{len(detail)} variant/cutoff rows")
-
-
-def check_signals(c: Checker) -> None:
-    """Section 6.2 and Figures 4-5: how each retrieval signal behaves."""
-    s = _json("score_signal_stats_summary.json")
-
-    c.num("BM25 ROC AUC (essential gold vs rest, DEV)", 0.728, s["bm25_auc_essential_vs_rest"])
-    c.num("Dense ROC AUC (essential gold vs rest, DEV)", 0.847, s["dense_auc_essential_vs_rest"])
-    c.num("Score reconstruction max error", 0.0, s["reconstruction_error_max"])
-    c.num("Authority amplification factor", 23.76,
-          s["authority_amplification_factor_norm_over_raw"])
-    c.exact("DEV EU-jurisdiction candidate rows", 5088, s["n_eu_candidates"])
-    c.exact("EU-jurisdiction essential-gold rows", 0, s["n_eu_essential_gold_candidates"])
-    c.num("Cross-encoder AUC within the reranked top-75 pool", 0.688, s["ce_auc_essential_vs_rest"])
-    c.num("Essential-gold mean rank movement", 3.59, s["ce_mean_rank_movement_essential_gold"])
-    c.num("Essential-gold median rank movement", 1.0, s["ce_median_rank_movement_essential_gold"])
-    c.exact("Essential gold moved into top 25", 22, s["ce_n_essential_gold_moved_into_top25"])
-    c.exact("Essential gold moved out of top 25", 12, s["ce_n_essential_gold_moved_out_of_top25"])
-    c.num("Harmful demotion rate", 0.091, s["ce_harmful_demotion_rate"])
-
-    auth = _csv("authority_amplification_analysis.csv").set_index("authority_class")
-    c.num("Primary legislation mean normalised authority", 0.751,
-          auth.loc["PRIMARY_LEGISLATION", "mean_authority_norm"])
-    c.num("Secondary legislation mean normalised authority", 0.038,
-          auth.loc["SECONDARY_LEGISLATION", "mean_authority_norm"])
-    c.num("Primary/secondary nominal weight gap", 0.03,
-          auth.loc["PRIMARY_LEGISLATION", "raw_authority_weight"]
-          - auth.loc["SECONDARY_LEGISLATION", "raw_authority_weight"])
-
-    rng = _csv("signal_effective_range.csv").set_index("signal")
-    c.true("Effective-range table covers both first-stage signals",
-           {"bm25", "dense"}.issubset({str(i).lower() for i in rng.index}),
-           ", ".join(str(i) for i in rng.index))
-
-
-def check_ce_variants(c: Checker) -> None:
-    """Table 4 and the 512-token truncation diagnostic."""
-    df = _csv("table4_dev_ce_variants.csv").set_index("variant")
-    c.exact("Variants compared", 10, len(df))
-    c.true("Baseline raw-text cross-encoder is present",
-           "1_baseline_raw_text_CE" in df.index)
-    c.true("Metadata-enriched cross-encoder is present",
-           "2_metadata_enriched_CE" in df.index)
-
-    base = df.loc["1_baseline_raw_text_CE"]
-    c.exact("Baseline variant scenarios", 95, int(base.n_scenarios))
-    c.num("Baseline coverage@25", 0.814, base["coverage@25"])
-    c.num("Baseline RequirementRecall@10", 0.593, base["RequirementRecall@10"])
-    c.exact("Baseline moved into top 25", 21, int(base.moved_into_top25))
-    c.exact("Baseline moved out of top 25", 12, int(base.moved_out_of_top25))
-    c.true("Every variant was scored on the same 95 scenarios",
-           bool((df.n_scenarios == 95).all()),
-           f"{sorted(set(df.n_scenarios))}")
-
-    trunc = _json("truncation_summary.json")
-    c.exact("Essential gold left below rank 25 (DEV)", 48, trunc["n_essential_gold_rank_gt25"])
-    c.exact("Of those, exceeding the 512-token window", 23, trunc["n_likely_truncated"])
-    c.num("Truncation rate among them", 0.479, trunc["pct_truncated"])
-
-    rows = _csv("truncation_diagnostic.csv")
-    c.exact("Truncation diagnostic rows", 48, len(rows))
-    c.true("Every flagged chunk carries an untruncated token count",
-           bool(rows.n_tokens_untruncated.notna().all()))
-
-
-def check_rq1_rq3(c: Checker) -> None:
-    """RQ1 same-budget ablations and RQ3 reranking, with confidence intervals."""
+def check_rq1(c: Checker) -> None:
+    """Section 6.1, Tables 3 and 4, Figures 4 and 5: the matched-budget comparison."""
     sub = RESULTS_DIR / "rq1_rq3_same_budget"
-    base = pd.read_csv(sub / "rq1_same_budget_50_baselines.csv")
-    test = base[base.split == "TEST"].set_index("config_id")
-
-    c.exact("TEST scenarios in every configuration", {94},
-            set(int(n) for n in test.n_scenarios))
+    test = pd.read_csv(sub / "rq1_same_budget_50_baselines.csv").query("split == 'TEST'") \
+             .set_index("config_id")
+    c.exact("TEST scenarios in every configuration", {94}, set(int(n) for n in test.n_scenarios))
     c.exact("TEST requirements in every configuration", {139},
             set(int(n) for n in test.n_requirements))
-    c.exact("Configurations compared", 9, len(test))
 
+    # Table 3, in the report's own row order.
     for cfg, label, value in [
         (1, "BM25 only (pooled @50)", 0.345),
         (2, "Dense only (pooled @50)", 0.496),
-        (3, "BM25+Dense hybrid (pooled @50)", 0.475),
-        (6, "Hybrid + authority + jurisdiction (pooled @50)", 0.612),
+        (3, "BM25 + dense hybrid (pooled @50)", 0.475),
+        (6, "Pooled hybrid + authority + jurisdiction", 0.612),
         (7, "Two-lane, no authority (25+25)", 0.734),
-        (8, "Full two-lane, pre-CE (25+25)", 0.763),
-        (9, "Full two-lane, post-CE (25+25)", 0.806),
+        (8, "Two-lane, pre-CE (25+25)", 0.763),
+        (9, "Two-lane, post-CE (25+25)", 0.806),
     ]:
-        c.num(f"TEST RequirementRecall - {label}", value,
-              test.loc[cfg, "requirement_recall_weighted"])
-
+        c.num(f"Table 3 - {label}", value, test.loc[cfg, "requirement_recall_weighted"])
+    c.num("Table 3 - pooled best, complete coverage", 0.521, test.loc[6, "complete_coverage_mean"])
+    c.num("Table 3 - two-lane pre-CE, complete coverage", 0.713,
+          test.loc[8, "complete_coverage_mean"])
     c.true("Every configuration retrieves the same 50-result budget",
            set(test.budget) == {"top-50 (pooled)", "25+25 (two-lane)"},
            ", ".join(sorted(set(test.budget))))
 
+    # Table 4: the two largest categories and the one reversal the report names.
+    cat = pd.read_csv(sub / "rq1_per_category.csv").query("split == 'TEST'")
+    pooled = cat[cat.config.str.startswith("pooled")].set_index("category")
+    twolane = cat[cat.config.str.startswith("two_lane")].set_index("category")
+    for name, n_req, p_val, t_val in [
+        ("direct legal anchor", 23, 0.652, 0.913),
+        ("semantic / practitioner phrasing", 21, 0.619, 0.857),
+        ("applicability / transition", 12, 0.583, 0.500),
+        ("vocabulary mismatch", 8, 0.250, 0.625),
+    ]:
+        c.exact(f"Table 4 - {name}, N req", n_req, int(pooled.loc[name, "n_requirements"]))
+        c.num(f"Table 4 - {name}, pooled", p_val,
+              pooled.loc[name, "requirement_recall_weighted"])
+        c.num(f"Table 4 - {name}, two-lane", t_val,
+              twolane.loc[name, "requirement_recall_weighted"])
+
+    # Statistics behind the headline RQ1 claim.
     stats = json.loads((sub / "statistical_tests_TEST.json").read_text())
     rq1 = stats["RQ1_source_aware_vs_conventional_TEST"]
     rr, cc = rq1["requirement_recall"], rq1["complete_coverage"]
     c.num("RQ1 RequirementRecall difference", 0.151, rr["mean_diff"])
     c.num("RQ1 95% CI lower bound", 0.080, rr["ci_low"])
     c.num("RQ1 95% CI upper bound", 0.225, rr["ci_high"])
-    c.num("RQ1 Cohen's d (paired, per scenario)", 0.444, rr["cohens_d_paired_per_scenario"])
-    c.true("RQ1 permutation p < 0.0001", rr["permutation_p"] < 0.0001,
-           f"p = {rr['permutation_p']}")
+    c.true("RQ1 permutation p < 0.0001", rr["permutation_p"] < 0.0001, f"p = {rr['permutation_p']}")
+    c.num("RQ1 CompleteCoverage difference", 0.191, cc["mean_diff"])
+    c.num("RQ1 CompleteCoverage CI lower bound", 0.106, cc["ci_low"])
+    c.num("RQ1 CompleteCoverage CI upper bound", 0.277, cc["ci_high"])
     c.exact("RQ1 McNemar scenarios improved", 19, cc["n_improved"])
     c.exact("RQ1 McNemar scenarios worsened", 1, cc["n_worsened"])
-    c.true("RQ1 McNemar p < 0.001", cc["mcnemar_exact_p"] < 0.001,
-           f"p = {cc['mcnemar_exact_p']:.2e}")
 
-    rq3 = stats["RQ3_post_CE_vs_pre_CE_TEST_25perlane"]["requirement_recall"]
-    c.num("RQ3 reranking difference (post-CE minus pre-CE)", 0.043, rq3["mean_diff"])
-    c.num("RQ3 permutation p", 0.215, rq3["permutation_p"])
-    c.true("RQ3 confidence interval spans zero, as reported",
-           rq3["ci_low"] < 0 < rq3["ci_high"],
-           f"[{rq3['ci_low']:.3f}, {rq3['ci_high']:.3f}]")
 
-    for name in ("rq1_per_category.csv", "rq3_ce_onoff_per_category.csv",
-                 "scenario_level_all_configs.csv"):
-        c.true(f"{name} written", (sub / name).exists())
+def check_signals(c: Checker) -> None:
+    """Sections 6.1.1 and 6.2.1-6.2.2, Figures 6 and 7: how each signal behaves."""
+    s = _json("score_signal_stats_summary.json")
+    c.num("BM25 ROC AUC (essential gold vs rest, DEV)", 0.728, s["bm25_auc_essential_vs_rest"])
+    c.num("Dense ROC AUC (essential gold vs rest, DEV)", 0.847, s["dense_auc_essential_vs_rest"])
+    # Section 6.1.1 gives "effective weighted 10th-90th percentile differences ... 0.201 and
+    # 0.504". Only the second is a p10-p90 spread. The BM25 figure of 0.201 is that signal's
+    # MEAN weighted contribution (0.2019 over the whole cache, 0.2023 on DEV alone); BM25's
+    # actual p10-p90 spread is 0.339. Each quantity is therefore checked against what it
+    # really is, and the mismatch is recorded rather than smoothed over. See the appendix,
+    # "Two numbers the report labels imprecisely".
+    c.num("BM25 mean weighted contribution (the report's 0.201)", 0.2019,
+          0.40 * pd.read_parquet(CANDIDATE_CACHE).bm25_norm.mean())
+    c.num("BM25 actual p10-p90 spread", 0.339, s["bm25_effective_weighted_range"]["p10_p90_spread"])
+    c.num("Dense p10-p90 spread (the report's 0.504)", 0.504,
+          s["dense_effective_weighted_range"]["p10_p90_spread"])
+    c.true("The report's two 'p10-p90' figures are not the same quantity",
+           abs(s["bm25_effective_weighted_range"]["p10_p90_spread"] - 0.201) > 0.1,
+           "BM25's 0.201 is a mean; dense's 0.504 is a spread")
+    c.num("Score reconstruction max error", 0.0, s["reconstruction_error_max"])
+
+    # Section 6.2.1: authority calibration.
+    c.num("Authority amplification factor", 23.76, s["authority_amplification_factor_norm_over_raw"])
+    c.exact("Primary-secondary pairs compared", 4892223, s["authority_pairwise_comparisons_total"])
+    c.num("Authority reorders this share of pairs", 0.193, s["authority_pairwise_inversion_rate"])
+    auth = _csv("authority_amplification_analysis.csv").set_index("authority_class")
+    c.num("Primary legislation mean normalised authority", 0.751,
+          auth.loc["PRIMARY_LEGISLATION", "mean_authority_norm"])
+    c.num("Secondary legislation mean normalised authority", 0.038,
+          auth.loc["SECONDARY_LEGISLATION", "mean_authority_norm"])
+    c.num("Nominal primary-secondary gap", 0.03,
+          auth.loc["PRIMARY_LEGISLATION", "raw_authority_weight"]
+          - auth.loc["SECONDARY_LEGISLATION", "raw_authority_weight"])
+
+    # Section 6.2.2: applicability and jurisdiction.
+    c.num("Dense gap, essential gold vs non-gold", 0.101,
+          s["dense_gap_essential_minus_nongold_raw"])
+    c.num("Dense gap, essential gold vs wrong-regime", 0.024,
+          s["dense_gap_essential_minus_wrongregime_raw"])
+    c.exact("DEV EU-jurisdiction candidate rows", 5088, s["n_eu_candidates"])
+    c.exact("EU-jurisdiction essential-gold rows", 0, s["n_eu_essential_gold_candidates"])
+
+
+def check_graph(c: Checker) -> None:
+    """Section 6.2.3: is the citation graph correct, and does it help retrieval?"""
+    audit = _json("graph_edge_audit.json")
+    c.exact("Edges reviewed", 122, audit["n_edges_reviewed"])
+    c.exact("Strata sampled", 14, audit["n_strata"])
+    c.num("Strict meaningful rate (~60% in the report)", 0.598, audit["strict_meaningful_rate"])
+    c.num("Not-wrong rate (~82% in the report)", 0.820, audit["not_wrong_rate"])
+    c.true("Every reviewed edge carries a verdict",
+           sum(audit["verdict_counts"].values()) == audit["n_edges_reviewed"],
+           f"{sum(audit['verdict_counts'].values())}/{audit['n_edges_reviewed']}")
+
+    strata = _csv("graph_edge_audit_by_stratum.csv")
+    structured = strata[strata.stratum.str.contains("structured XML|cross-instrument", regex=True)]
+    hubs = strata[strata.stratum.str.contains("citation-definition hubs|mention elsewhere")]
+    c.true("Structured cross-reference strata reach 80-100%",
+           bool((structured.meaningful_rate_pct >= 80).all()),
+           ", ".join(f"{v:.0f}%" for v in structured.meaningful_rate_pct))
+    c.true("Inferred and hub strata sit at 10-20%",
+           bool((hubs.meaningful_rate_pct <= 20).all()),
+           ", ".join(f"{v:.0f}%" for v in hubs.meaningful_rate_pct))
+
+    # The retrieval comparison, on the earlier benchmark the report used for it.
+    abl = _csv("benchmark150/rq1_ablation_summary.csv").set_index("config_id")
+    c.exact("Graph comparison DEV scenarios", 68, int(abl.loc[8, "n_scenarios"]))
+    c.num("DEV recall, graph ON", 0.491, abl.loc[8, "requirement_recall_mean"])
+    # The report prints 0.514; the computed value is 0.51348, which rounds to 0.513. Checked
+    # at the precision the value actually has, not at the report's rounding.
+    c.num("DEV recall, graph OFF (report prints 0.514)", 0.5135,
+          abl.loc[9, "requirement_recall_mean"])
+    c.true("Graph expansion lowers DEV recall",
+           abl.loc[8, "requirement_recall_mean"] < abl.loc[9, "requirement_recall_mean"],
+           f"{abl.loc[8, 'requirement_recall_mean']:.4f} < "
+           f"{abl.loc[9, 'requirement_recall_mean']:.4f}")
+
+
+def check_regime(c: Checker) -> None:
+    """Section 6.2.2: the exploratory regime-compatibility constraint at theta = 0.7."""
+    df = _csv("benchmark150/rq3_test_frozen_summary.csv").set_index("stage")
+    post = df.loc["2_post_CE"]
+    constrained = df.loc["3_post_CE_plus_regime_constraint(theta=0.7)"]
+
+    c.exact("TEST scenarios (earlier benchmark)", 63, int(post.n))
+    c.num("Post-CE requirement recall", 0.577, post.requirement_recall_mean)
+    c.num("Constrained requirement recall", 0.553, constrained.requirement_recall_mean)
+    c.num("Requirement recall cost of the constraint (-2.4 points)", -0.024,
+          constrained.requirement_recall_mean - post.requirement_recall_mean)
+    c.num("Post-CE complete coverage", 0.508, post.complete_coverage_mean)
+    c.num("Constrained complete coverage", 0.476, constrained.complete_coverage_mean)
+    c.num("Complete coverage cost of the constraint (-3.2 points)", -0.032,
+          constrained.complete_coverage_mean - post.complete_coverage_mean)
+    c.true("A hard regime penalty costs recall, as reported",
+           constrained.requirement_recall_mean < post.requirement_recall_mean,
+           "the constraint suppresses some legitimate evidence")
+
+
+def check_reranking(c: Checker) -> None:
+    """Section 6.3, Table 7 and Figure 8: what the cross-encoder does."""
+    # Table 7: the four DEV-selected variants at the 5+5 diagnostic budget.
+    df = _csv("table4_dev_ce_variants.csv").set_index("variant")
+    for variant, rr, cc, harm in [
+        ("1_baseline_raw_text_CE", 0.593, 0.463, 0.094),
+        ("3_CE_plus_fusion_lambda0.5", 0.641, 0.526, 0.016),
+        ("2_metadata_enriched_CE", 0.652, 0.516, 0.047),
+        ("4_metadata_enriched_CE_plus_fusion_lambda0.5", 0.655, 0.526, 0.000),
+    ]:
+        row = df.loc[variant]
+        c.num(f"Table 7 - {variant}, recall@10", rr, row["RequirementRecall@10"])
+        c.num(f"Table 7 - {variant}, complete coverage", cc, row["CompleteCoverage@10"])
+        c.num(f"Table 7 - {variant}, harmful demotion", harm, row["harmful_demotion_rate"])
+    c.true("Every variant scored on the same 95 DEV scenarios",
+           bool((df.n_scenarios == 95).all()), f"{sorted(set(df.n_scenarios))}")
+
+    # Figure 8: strict mixed-evidence completeness, before and after.
+    dual = _csv("dual_evidence_strict_summary.csv")
+    at25 = dual[dual.cutoff_label == "DualEvidenceCoverage@25-per-lane"]
+    pre = at25[at25.variant == "0_pre_CE_first_stage"].iloc[0]
+    post = at25[at25.variant == "1_baseline_raw_text_CE"].iloc[0]
+    c.exact("DEV pre-CE dual evidence (9/17)", "9/17",
+            f"{int(pre.numerator)}/{int(pre.denominator)}")
+    c.exact("DEV post-CE dual evidence (13/17)", "13/17",
+            f"{int(post.numerator)}/{int(post.denominator)}")
+    c.num("DEV pre-CE dual-evidence coverage", 0.529, pre.value)
+    c.num("DEV post-CE dual-evidence coverage", 0.765, post.value)
+    c.num("Post-CE legislation-side coverage", 1.0, post.legislation_side_coverage)
+    c.num("Post-CE non-legislation-side coverage", 0.765, post.nonlegislation_side_coverage)
+
+    # Section 6.3.1 and 6.3.3: TEST-side confirmation, nothing selected from TEST.
+    diag = _json("test_confirmation/test_ce_diagnostics.json")
+    c.exact("TEST scenarios", 94, diag["n_scenarios"])
+    c.num("TEST candidate ceiling @75", 0.885, diag["candidate_requirement_recall_at_75_ceiling"])
+    c.num("TEST cross-encoder AUC within the top-75 pool", 0.680, diag["ce_auc_essential_vs_rest"])
+    c.num("TEST mean essential-gold rank movement", 3.37, diag["mean_rank_movement"])
+    c.num("TEST median essential-gold rank movement", 1.0, diag["median_rank_movement"])
+    c.exact("TEST essential gold moved into top 25", 15, diag["n_moved_into_top25"])
+    c.exact("TEST essential gold moved out of top 25", 9, diag["n_moved_out_of_top25"])
+    c.num("TEST harmful demotion rate (7.3%)", 0.073, diag["harmful_demotion_rate"])
+
+    boost = _csv("test_confirmation/test_category_boost_reflection.csv").set_index("config")
+    c.num("TEST category boost - baseline", 0.556,
+          boost.loc["baseline (no boost)", "recall@25_other_lane"])
+    c.num("TEST category boost - real classifier", 0.583,
+          boost.loc["real classifier, boost=1.5x", "recall@25_other_lane"])
+    c.num("TEST category boost - oracle ceiling", 0.694,
+          boost.loc["oracle (true gold class), boost=1.5x", "recall@25_other_lane"])
+
+
+def check_performance(c: Checker) -> None:
+    """Section 6.4, Table 8 and Figure 9: final fixed-configuration performance."""
+    df = _csv("top25_per_lane_final_metrics.csv")
+    dev = df[df.split == "DEV"].iloc[0]
+    test = df[df.split.str.startswith("TEST")].iloc[0]
+    for label, row, n_scen, n_req, rr, cc, dual, n_mixed in [
+        ("DEV", dev, 95, 155, 0.813, 0.747, 0.765, 17),
+        ("TEST", test, 94, 139, 0.806, 0.755, 0.600, 15),
+    ]:
+        c.exact(f"Table 8 - {label} scenarios", n_scen, int(row.n_scenarios))
+        c.exact(f"Table 8 - {label} requirements", n_req, int(row.n_requirements))
+        c.num(f"Table 8 - {label} requirement recall", rr, row["RequirementRecall@25-per-lane"])
+        c.num(f"Table 8 - {label} complete coverage", cc, row["CompleteCoverage@25-per-lane"])
+        c.num(f"Table 8 - {label} dual evidence", dual, row["DualEvidenceCoverage@25-per-lane"])
+        c.exact(f"Table 8 - {label} mixed-evidence scenarios", n_mixed,
+                int(row.n_mixed_evidence_scenarios))
+
+    audit = _csv("metric_audit_table.csv")
+    ceiling = audit[audit.metric.str.startswith("CandidateRequirementRecall@75")].iloc[0]
+    c.num("DEV candidate-pool ceiling @75", 0.916, ceiling.value)
+    c.exact("DEV ceiling numerator", 142, int(ceiling.numerator))
+    c.exact("DEV ceiling denominator", 155, int(ceiling.denominator))
+
+    # Section 6.3.2, Table 6: reranking on and off at the final depth.
+    stats = json.loads(
+        (RESULTS_DIR / "rq1_rq3_same_budget" / "statistical_tests_TEST.json").read_text())
+    rq3 = stats["RQ3_post_CE_vs_pre_CE_TEST_25perlane"]
+    c.num("Table 6 - pre-CE requirement recall", 0.763,
+          rq3["requirement_recall"]["mean_pre_CE_weighted"])
+    c.num("Table 6 - post-CE requirement recall", 0.806,
+          rq3["requirement_recall"]["mean_post_CE_weighted"])
+    c.num("Table 6 - difference", 0.043, rq3["requirement_recall"]["mean_diff"])
+    c.num("Reranking permutation p", 0.215, rq3["requirement_recall"]["permutation_p"])
+    c.true("Reranking CI spans zero, as reported",
+           rq3["requirement_recall"]["ci_low"] < 0 < rq3["requirement_recall"]["ci_high"],
+           f"[{rq3['requirement_recall']['ci_low']:.3f}, "
+           f"{rq3['requirement_recall']['ci_high']:.3f}]")
+
+
+def check_ir_metrics(c: Checker) -> None:
+    """Appendix A secondary diagnostics, Figures 10 and 11."""
+    rec = _csv("ir_metrics/cumulative_requirement_recall_summary.csv")
+
+    def at(split, stage, k):
+        return rec[(rec.split == split) & (rec.stage == stage)
+                   & (rec.k == k)].requirement_recall_weighted.iloc[0]
+
+    c.exact("Depths evaluated", [10, 20, 30, 40, 50, 60, 70, 75], sorted(rec.k.unique().tolist()))
+    c.num("DEV post-CE recall at k=10 (~0.69)", 0.690, at("DEV", "post_CE", 10))
+    c.num("DEV pre-CE recall at k=10 (~0.63)", 0.626, at("DEV", "pre_CE", 10))
+    c.num("TEST post-CE recall at k=10 (~0.73)", 0.727, at("TEST", "post_CE", 10))
+    c.num("TEST pre-CE recall at k=10 (~0.66)", 0.662, at("TEST", "pre_CE", 10))
+    c.num("TEST recall at k=50 (~0.885)", 0.885, at("TEST", "post_CE", 50))
+    c.true("TEST recall is flat beyond k=50",
+           at("TEST", "post_CE", 50) == at("TEST", "post_CE", 75),
+           f"k=50 and k=75 both {at('TEST', 'post_CE', 75):.4f}")
+    c.true("The curves converge at k=75, because reranking reorders one pool",
+           abs(at("DEV", "pre_CE", 75) - at("DEV", "post_CE", 75)) < 1e-9,
+           f"DEV pre and post both {at('DEV', 'post_CE', 75):.4f}")
+
+    nd = _csv("ir_metrics/precision_ndcg_summary.csv").query("stage == 'post_CE'")
+    leg = nd[nd.lane == "legislation"].ndcg_at_k_mean
+    oth = nd[nd.lane == "other"].ndcg_at_k_mean
+    c.true("Legislation-lane NDCG sits in 0.54-0.63",
+           0.53 <= leg.min() and leg.max() <= 0.64, f"{leg.min():.3f} to {leg.max():.3f}")
+    c.true("Other-evidence-lane NDCG sits in 0.29-0.39",
+           0.28 <= oth.min() and oth.max() <= 0.40, f"{oth.min():.3f} to {oth.max():.3f}")
+    c.true("Every lane-level NDCG is below its legislation counterpart",
+           bool(oth.max() < leg.min()),
+           f"other max {oth.max():.3f} < legislation min {leg.min():.3f}")
+
+
+def check_tokens(c: Checker) -> None:
+    """Appendix A: chunk token-count distributions, and the cost of the 512-token window."""
+    st = _json("token_distribution/token_distribution_summary.json")
+    meta, summ, raw = st["metadata"], st["summary"], st["rawtext"]
+
+    c.exact("Chunks measured", 19087, meta["n_chunks"])
+    c.num("Metadata preamble mean tokens", 103.1, meta["mean"])
+    c.num("Metadata preamble median", 101, meta["median"])
+    c.num("Metadata preamble P90", 144, meta["p90"])
+    c.num("Metadata preamble P95", 157, meta["p95"])
+    c.exact("Metadata preamble max", 380, meta["max"])
+    c.num("Metadata preamble over 512 tokens", 0.0, meta["pct_over_512"])
+    c.num("retrieval_summary mean tokens", 71.7, summ["mean"])
+    c.num("retrieval_summary over 512 tokens", 0.0, summ["pct_over_512"])
+    c.num("Raw chunk text mean tokens", 305.1, raw["mean"])
+    c.num("Raw chunk text over 512 tokens (14.2%)", 14.2, raw["pct_over_512"])
+    c.true("Only the raw text overflows the reranker window",
+           meta["pct_over_512"] == 0 and summ["pct_over_512"] == 0 and raw["pct_over_512"] > 0,
+           "the metadata preamble and the summary never reach it")
+
+    trunc = _json("truncation_summary.json")
+    c.exact("Essential gold left below rank 25 on DEV", 48, trunc["n_essential_gold_rank_gt25"])
+    c.exact("Of those, over the 512-token window", 23, trunc["n_likely_truncated"])
 
 
 def check_figures(c: Checker) -> None:
-    """Every figure the report draws from data is regenerated."""
+    """Every figure the report draws from data. Numbering is the report's own."""
     expected = [
-        "figure1_corpus_composition.png",
-        "figure4_first_stage_auc.png",
-        "figure5_authority_normalisation.png",
-        "figure6_dual_evidence_dev.png",
-        "figure7_final_performance.png",
-        "signal_diagnostics/fig1_raw_vs_normalized.png",
-        "signal_diagnostics/fig2_bm25_gold_vs_nongold.png",
-        "signal_diagnostics/fig3_dense_gold_vs_nongold_wrongregime.png",
-        "signal_diagnostics/fig4_ce_gold_vs_nongold.png",
+        ("1", "figure01_corpus_composition.png"),
+        ("4", "figure04_configuration_comparison_test.png"),
+        ("5", "figure05_category_comparison_test.png"),
+        ("6", "figure06_first_stage_auc.png"),
+        ("7", "figure07_authority_calibration.png"),
+        ("8", "figure08_mixed_evidence_dev.png"),
+        ("9", "figure09_final_performance.png"),
+        ("10", "figure10_cumulative_recall.png"),
+        ("11", "figure11_ndcg_by_lane.png"),
     ]
-    for rel in expected:
-        p = FIGURES_DIR / rel
+    for num, name in expected:
+        p = FIGURES_DIR / name
         size = p.stat().st_size if p.exists() else 0
-        c.true(rel, p.exists() and size > 5_000, f"{size:,} bytes" if size else "missing")
+        c.true(f"Figure {num}: {name}", p.exists() and size > 5_000,
+               f"{size:,} bytes" if size else "missing")
+    for num, name in [("2", "two-lane architecture"), ("3", "benchmark construction protocol")]:
+        c.true(f"Figure {num} is a schematic, not generated", True, name)
 
 
 def check_cross_check(c: Checker) -> None:
-    """Part 9 consumes verify_reported_numbers.py's own output table."""
+    """Consumes verify_reported_numbers.py's own output table."""
     df = _csv("verification_report.csv")
     n_fail = int((df.status == "FAIL").sum())
     c.exact("Headline numbers checked", 32, len(df))
@@ -428,72 +549,127 @@ PARTS: list[Part] = [
                                          "--out", str(RESULTS_DIR / "corpus_stats.json")]],
         check=check_corpus,
         needs_corpus=True,
-        note="Needs the corpus database. Without it, the shipped results/corpus_stats.json "
-             "is checked as-is and not regenerated.",
+        note="Needs the corpus database. Without it the shipped results/corpus_stats.json is "
+             "checked as-is and not regenerated.",
         produces=["results/corpus_stats.json"],
     ),
     Part(
         key="artifacts",
         title="Frozen artifact integrity and provenance",
-        report="Section 4, Appendix section 2",
+        report="Sections 4 and 5.3, Appendix A",
         steps=[],
         check=check_artifacts,
         note="No script to run: this part checks that the shipped inputs hash to what the "
-             "frozen run recorded, that the frozen parameters are what the report states, "
-             "and that the cached scores reconstruct through the documented formula.",
+             "frozen run recorded, that the frozen parameters are what the report states, and "
+             "that the cached scores reconstruct through the documented formula.",
     ),
     Part(
-        key="performance",
-        title="Final retrieval performance",
-        report="Table 5, Figure 7",
-        steps=[_py("final_performance.py"), _py("ce_metrics_audit.py")],
-        check=check_performance,
-        note="final_performance.py owns Table 5; ce_metrics_audit.py produces the full "
-             "denominator-audited metric table and the candidate-pool ceiling.",
-        produces=["results/top25_per_lane_final_metrics.csv", "results/metric_audit_table.csv"],
-    ),
-    Part(
-        key="dual-evidence",
-        title="Strict mixed-evidence completeness",
-        report="Figure 6, Section 6.3",
-        steps=[_py("dual_evidence_strict.py")],
-        check=check_dual_evidence,
-        produces=["results/dual_evidence_strict_summary.csv", "results/dual_evidence_strict.json"],
+        key="rq1",
+        title="RQ1: matched-budget comparison",
+        report="Section 6.1, Tables 3 and 4, Figures 4 and 5",
+        steps=[_py("rq1_rq3_same_budget.py")],
+        check=check_rq1,
+        produces=["results/rq1_rq3_same_budget/"],
     ),
     Part(
         key="signals",
-        title="Score and signal analysis",
-        report="Section 6.2, Figures 4 and 5",
+        title="Signal behaviour and authority calibration",
+        report="Sections 6.1.1 and 6.2.1-6.2.2, Figures 6 and 7",
         steps=[_py("score_signal_analysis.py")],
         check=check_signals,
         produces=["results/score_signal_stats_summary.json",
                   "results/authority_amplification_analysis.csv"],
     ),
     Part(
-        key="ce-variants",
-        title="Cross-encoder input variants and truncation",
-        report="Table 4, Section 4.4",
-        steps=[_py("ce_experiment_metrics.py"), _py("ce_experiment_metrics2.py")],
-        check=check_ce_variants,
-        note="Two steps, in this order: the second reads summaries_v1_v3.json from the first.",
-        produces=["results/table4_dev_ce_variants.csv", "results/truncation_diagnostic.csv"],
+        key="graph",
+        title="RQ2: graph edge quality and retrieval effect",
+        report="Section 6.2.3",
+        steps=[
+            _py("graph_edge_audit.py"),
+            _py("make_benchmark150.py"),
+            _py("rq1_ablations.py") + ["--split", "DEV"] + ['--scenarios', 'benchmark/derived/scenarios_all_150.jsonl', '--gold', 'benchmark/derived/gold_evidence_150.jsonl', '--results-dir', 'results/benchmark150'] + [
+                "--cache", "data/benchmark150/candidate_cache_graph_on.parquet",
+                "--graph-off-cache", "data/benchmark150/candidate_cache_graph_off.parquet"],
+        ],
+        check=check_graph,
+        note="The edge audit is separate from the retrieval comparison: a correct edge is not "
+             "automatically a useful one, which is the section's point. The retrieval "
+             "comparison runs on the earlier 150-scenario benchmark, which is what the report "
+             "used for it - see the appendix, 'Two experiments on the earlier benchmark'.",
+        produces=["results/graph_edge_audit.json", "results/benchmark150/rq1_ablation_summary.csv"],
     ),
     Part(
-        key="rq1-rq3",
-        title="Same-budget ablations and statistical tests",
-        report="RQ1 and RQ3 tables, confidence intervals",
-        steps=[_py("rq1_rq3_same_budget.py")],
-        check=check_rq1_rq3,
-        produces=["results/rq1_rq3_same_budget/"],
+        key="regime",
+        title="RQ2: regime-compatibility constraint",
+        report="Section 6.2.2",
+        steps=[
+            _py("make_benchmark150.py"),
+            _py("rq3_regime_constraint.py") + [
+                "--mode", "test_frozen", "--theta", "0.7", "--split", "TEST",
+                "--frozen-config", "config/frozen_config.json",
+                "--cache", "data/benchmark150/candidate_cache_graph_off.parquet"] + ['--scenarios', 'benchmark/derived/scenarios_all_150.jsonl', '--gold', 'benchmark/derived/gold_evidence_150.jsonl', '--results-dir', 'results/benchmark150'],
+        ],
+        check=check_regime,
+        note="Exploratory, and reported as a negative result. Runs on the earlier "
+             "150-scenario benchmark, which is what the report used for it. theta is passed "
+             "explicitly from the freeze record; the script refuses to run on TEST without a "
+             "frozen config, so it cannot be tuned here.",
+        produces=["results/benchmark150/rq3_test_frozen_summary.csv"],
+    ),
+    Part(
+        key="reranking",
+        title="RQ3: cross-encoder variants and completeness",
+        report="Section 6.3, Table 7, Figure 8",
+        steps=[
+            _py("ce_experiment_metrics.py"),
+            _py("ce_experiment_metrics2.py"),
+            _py("dual_evidence_strict.py"),
+            _py("test_confirmation.py"),
+        ],
+        check=check_reranking,
+        note="Four steps. ce_experiment_metrics.py must precede ce_experiment_metrics2.py, "
+             "which reads summaries_v1_v3.json from it; the other two are independent.",
+        produces=["results/table4_dev_ce_variants.csv",
+                  "results/dual_evidence_strict_summary.csv",
+                  "results/test_confirmation/"],
+    ),
+    Part(
+        key="performance",
+        title="Final fixed-configuration performance",
+        report="Section 6.4, Table 8, Figure 9 (and Table 6)",
+        steps=[_py("final_performance.py"), _py("ce_metrics_audit.py")],
+        check=check_performance,
+        note="final_performance.py owns Table 8; ce_metrics_audit.py produces the full "
+             "denominator-audited metric table and the candidate-pool ceiling.",
+        produces=["results/top25_per_lane_final_metrics.csv", "results/metric_audit_table.csv"],
+    ),
+    Part(
+        key="ir-metrics",
+        title="Secondary IR diagnostics",
+        report="Appendix A, Figures 10 and 11",
+        steps=[_py("ir_metrics.py")],
+        check=check_ir_metrics,
+        produces=["results/ir_metrics/"],
+    ),
+    Part(
+        key="tokens",
+        title="Token distributions and the 512-token window",
+        report="Appendix A, Section 7.3",
+        steps=[_py("corpus_token_distribution.py") + ["--db", str(CORPUS_DB)]],
+        check=check_tokens,
+        needs_corpus=True,
+        note="Needs the corpus database, because it measures chunk text. Without it the "
+             "shipped distributions are checked as-is and not regenerated.",
+        produces=["results/token_distribution/"],
     ),
     Part(
         key="figures",
         title="Figure regeneration",
-        report="Figures 1, 4, 5, 6, 7 and the signal diagnostics",
+        report="Figures 1, 4-11",
         steps=[_py("make_report_figures.py"), _py("score_signal_figures.py")],
         check=check_figures,
-        note="Figure 1 needs results/corpus_stats.json (part 1) and Figure 7 plots Table 5 "
-             "(part 3), so run this after those, or with --all.",
+        note="Several figures plot a table another part owns, so run this after those parts "
+             "or with --all.",
         produces=["figures/"],
     ),
     Part(
@@ -503,8 +679,8 @@ PARTS: list[Part] = [
         steps=[_py("verify_reported_numbers.py")],
         check=check_cross_check,
         note="Recomputes 32 reported numbers from the benchmark and the candidate cache "
-             "directly, without reading any other part's output, and compares each against "
-             "the report.",
+             "directly, reading no other part's output, so a bug in a producing script "
+             "cannot hide behind its own output.",
         produces=["results/verification_report.csv"],
     ),
 ]

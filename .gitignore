@@ -14,3 +14,6 @@ results/manifest.json
 results/config.json
 
 .DS_Store
+
+# Reconstructed by evaluation/make_benchmark150.py from the shipped 208-scenario file.
+benchmark/derived/

@@ -217,10 +217,13 @@ Two lexical fallbacks, both gated on sparsity:
 
 **The 512-token limit is a deliberate choice, not a model limit.** `bge-reranker-v2-m3` reports
 `max_position_embeddings = 8194` and supports inputs up to 8192 tokens. 512 was set for
-throughput. The cost is measurable and is reported rather than glossed: of the 48 essential-gold chunks the
-reranker left below rank 25 on DEV, **23 (47.9%) exceed 512 tokens** and were therefore scored
-on a truncated view of their own text. Each is listed in `results/truncation_diagnostic.csv`
-with its untruncated token count and a truncation flag.
+throughput. The cost is measured rather than glossed, in two ways. Corpus-wide, **14.2% of raw
+chunk texts exceed 512 tokens** (mean 305.1, P95 797, max 10,831), while the metadata preamble
+(mean 103.1, max 380) and the retrieval summary (mean 71.7, max 351) never reach the window —
+so it is the raw text alone that overflows. And among the 48 essential-gold chunks the reranker
+left below rank 25 on DEV, **23 exceed the window** and were therefore scored on a truncated
+view of their own text. See `results/token_distribution/` and
+`results/truncation_diagnostic.csv`.
 
 The baseline reranker sees the chunk's **raw text only**. Variant 2 in the cross-encoder
 experiment instead presents
@@ -302,22 +305,21 @@ Qdrant and no corpus database, and takes about a minute.
 Path B is the one to run first: it establishes that the shipped artifacts are the ones the
 report was written from, before any question of rebuilding arises.
 
-### Path B — reproduce the reported results (no corpus needed)
+### Path B — reproduce the reported results
 
-The report is not one result, so reproduction is not one script. It is **nine parts**, each
+The report is not one result, so reproduction is not one script. It is **twelve parts**, each
 corresponding to a section, table or figure. A part re-runs the scripts that produce its own
 outputs and then checks those outputs against the values the report prints. **A part passes
-only when every one of its checks passes** — a script exiting cleanly is not treated as
-success.
+only when every one of its checks passes** — a script exiting cleanly is not treated as success.
 
 ```bash
 python -m venv .venv && . .venv/bin/activate
 pip install -r requirements.txt
 
 python evaluation/reproduce.py --list          # what the parts are
-python evaluation/reproduce.py --all           # run all nine
-python evaluation/reproduce.py performance     # run one part
-python evaluation/reproduce.py 3 5 7           # run parts by number
+python evaluation/reproduce.py --all           # run all twelve
+python evaluation/reproduce.py rq1 reranking   # run named parts
+python evaluation/reproduce.py 3 8             # or by number
 ```
 
 `bash scripts/reproduce.sh` is a wrapper over the same driver and takes the same arguments.
@@ -325,53 +327,57 @@ python evaluation/reproduce.py 3 5 7           # run parts by number
 | # | Part | Reproduces | Scripts it runs |
 |---|---|---|---|
 | 1 | `corpus` | Section 3.1, Figure 1 | `corpus_stats.py` |
-| 2 | `artifacts` | Frozen input integrity and provenance | *(none — checks only)* |
-| 3 | `performance` | Table 5, Figure 7 | `final_performance.py`, `ce_metrics_audit.py` |
-| 4 | `dual-evidence` | Figure 6, Section 6.3 | `dual_evidence_strict.py` |
-| 5 | `signals` | Section 6.2, Figures 4 and 5 | `score_signal_analysis.py` |
-| 6 | `ce-variants` | Table 4, truncation diagnostic | `ce_experiment_metrics.py`, then `ce_experiment_metrics2.py` |
-| 7 | `rq1-rq3` | RQ1/RQ3 tables and statistics | `rq1_rq3_same_budget.py` |
-| 8 | `figures` | Figures 1, 4, 5, 6, 7 and diagnostics | `make_report_figures.py`, `score_signal_figures.py` |
-| 9 | `cross-check` | Every headline number, independently | `verify_reported_numbers.py` |
+| 2 | `artifacts` | Sections 4 and 5.3, Appendix A | *(none — checks only)* |
+| 3 | `rq1` | Section 6.1, Tables 3–4, Figures 4–5 | `rq1_rq3_same_budget.py` |
+| 4 | `signals` | Sections 6.1.1, 6.2.1–6.2.2, Figures 6–7 | `score_signal_analysis.py` |
+| 5 | `graph` | Section 6.2.3 | `graph_edge_audit.py`, `make_benchmark150.py`, `rq1_ablations.py` |
+| 6 | `regime` | Section 6.2.2 | `make_benchmark150.py`, `rq3_regime_constraint.py` |
+| 7 | `reranking` | Section 6.3, Table 7, Figure 8 | `ce_experiment_metrics.py`, `ce_experiment_metrics2.py`, `dual_evidence_strict.py`, `test_confirmation.py` |
+| 8 | `performance` | Section 6.4, Tables 6 and 8, Figure 9 | `final_performance.py`, `ce_metrics_audit.py` |
+| 9 | `ir-metrics` | Appendix A, Figures 10–11 | `ir_metrics.py` |
+| 10 | `tokens` | Appendix A, Section 7.3 | `corpus_token_distribution.py` |
+| 11 | `figures` | Figures 1 and 4–11 | `make_report_figures.py`, `score_signal_figures.py` |
+| 12 | `cross-check` | every headline number, independently | `verify_reported_numbers.py` |
 
 Each part prints a line per step and a line per check — reported value, recomputed value,
 verdict — then its own verdict. A final summary gives one row per part, and every check is
 written to `results/reproduction_report.csv`. Exit status is 0 only if every selected part
 passed.
 
-**Current state: 9/9 parts, 157/157 checks.**
+**Current state: 12/12 parts, 222/222 checks.**
 
 ```
   1  corpus         Corpus composition                           10/10  PASS
-  2  artifacts      Frozen artifact integrity and provenance     26/26  PASS
-  3  performance    Final retrieval performance                  15/15  PASS
-  4  dual-evidence  Strict mixed-evidence completeness             8/8  PASS
-  5  signals        Score and signal analysis                    16/16  PASS
-  6  ce-variants    Cross-encoder input variants and truncation   14/14  PASS
-  7  rq1-rq3        Same-budget ablations and statistical tests   25/25  PASS
-  8  figures        Figure regeneration                            9/9  PASS
-  9  cross-check    Independent cross-check of headline numbers   34/34  PASS
+  2  artifacts      Frozen artifact integrity and provenance     23/23  PASS
+  3  rq1            RQ1: matched-budget comparison               33/33  PASS
+  4  signals        Signal behaviour and authority calibration   17/17  PASS
+  5  graph          RQ2: graph edge quality and retrieval effect  11/11  PASS
+  6  regime         RQ2: regime-compatibility constraint           8/8  PASS
+  7  reranking      RQ3: cross-encoder variants and completeness  30/30  PASS
+  8  performance    Final fixed-configuration performance         20/20  PASS
+  9  ir-metrics     Secondary IR diagnostics                      11/11  PASS
+ 10  tokens         Token distributions and the 512-token window  14/14  PASS
+ 11  figures        Figure regeneration                           11/11  PASS
+ 12  cross-check    Independent cross-check of headline numbers   34/34  PASS
   ------------------------------------------------------------------------
-  9/9 parts reproduced   157/157 checks passed
+  12/12 parts reproduced   222/222 checks passed
 ```
 
-**Why parts 2 and 9 exist.** Part 2 checks nothing about retrieval quality; it establishes
+**Why parts 2 and 12 exist.** Part 2 checks nothing about retrieval quality; it establishes
 that the inputs are the ones the frozen run used — the gold file's SHA-256 against the frozen
 manifest, the frozen parameters against what the report states, and that every cached
 `final_score` reconstructs through the documented formula. Every other number is conditional
-on that. Part 9 then recomputes 32 reported numbers from the benchmark and the candidate
-cache **directly**, without reading any other part's output, so a bug in a producing script
-cannot hide behind its own output.
+on that. Part 12 then recomputes 32 reported numbers from the benchmark and the candidate
+cache **directly**, reading no other part's output, so a bug in a producing script cannot hide
+behind its own output.
 
-**Independence.** Each part regenerates its own artifacts before checking them, so a part can
-be run alone and still mean something. Two exceptions, both stated by the part's own
-description: part 8 plots Table 5 and the corpus statistics, so it wants parts 1 and 3 first
-or `--all`; and within part 6, `ce_experiment_metrics2.py` reads a file the first step writes.
+**Independence.** Each part regenerates its own artifacts before checking them, so a part run
+alone still means something. Part 11 is the one exception, and says so: several figures plot a
+table another part owns, so it wants those parts first, or `--all`.
 
-**The corpus database.** Only part 1 needs it. With `CORPUS_DB` set, part 1 regenerates its
-numbers from the index; without it, part 1 checks the shipped `results/corpus_stats.json`
-without regenerating it and says so, marking the step skipped while still running its checks.
-The truncation diagnostic in part 6 behaves the same way.
+**The corpus database.** Only parts 1 and 10 need it. With `CORPUS_DB` set they regenerate
+their numbers from the index; without it they check the shipped outputs without regenerating
+them, marking the step skipped while still running every check.
 
 ### Path A — rebuild from source
 
@@ -480,6 +486,9 @@ order, which is what makes the parts individually meaningful.
 |---|---|
 | `scenarios_all_208.jsonl` | 208 scenarios: query, context, suite, split. |
 | `gold_evidence_218.jsonl` | Requirement-level gold evidence, resolved to corpus chunk ids. |
+| `graph_edge_review/verdicts.csv` | The 122 per-edge verdicts behind Section 6.2.3, with the stratum each edge was sampled from. |
+| `graph_edge_review/review_items.jsonl` | The 122 sampled edges themselves: endpoints, relation, and the text each verdict was judged against. |
+| `derived/` | Written by `make_benchmark150.py`, not shipped: the earlier 150-scenario view of the benchmark. |
 | `BENCHMARK.md` | Field-by-field schema, composition, split protocol, construction method, and one recorded defect. |
 
 ### `config/` — the freeze record
@@ -545,10 +554,18 @@ The retriever and the corpus-construction chain. These are the code under test, 
 | `ce_metrics_audit.py` | The from-scratch metric recomputation, and home of the authoritative evaluator `mandatory_requirements_with_targets()` plus the lane-ranking helpers most other scripts import. Produces the final performance table and the full audit table. |
 | `dual_evidence_strict.py` | Strict DualEvidenceCoverage at three cutoffs for four reranker variants, with per-scenario diagnosis of which side failed. |
 | `score_signal_analysis.py` | Signal-by-signal behaviour: ROC AUCs, effective ranges, saturation, authority amplification, jurisdiction effects, reranker rank movement, and the exact score reconstruction check. |
+| `ir_metrics.py` | Appendix A's secondary diagnostics: cumulative RequirementRecall@k, Precision@k and NDCG@k at k = 10…75, per lane and OR-pooled, before and after reranking. Produces Figures 10 and 11's data. |
+| `graph_edge_audit.py` | Section 6.2.3's stratified edge-quality audit: 122 edges across 14 strata, scored strictly (meaningful) and permissively (not wrong). |
+| `rq1_ablations.py` | The nine-configuration ablation, including the graph-on against graph-off comparison in Section 6.2.3. |
+| `rq3_regime_constraint.py` | Section 6.2.2's exploratory regime-compatibility constraint. Refuses to run on TEST without a frozen config, so it cannot be tuned there. |
+| `category_boost.py` | The query-category classifier and boost rule that `test_confirmation.py` evaluates in Section 6.3.3. Imported, not run directly. |
+| `test_confirmation.py` | Section 6.3.1 and 6.3.3's TEST-side confirmation: authority-alpha sensitivity, cross-encoder diagnostics, and the category-boost reflection against an oracle. Reporting only; nothing is selected from TEST. |
+| `make_benchmark150.py` | Materialises the earlier 150-scenario benchmark view from the shipped 208-scenario file, for the two experiments that used it. |
 | `rq1_rq3_same_budget.py` | The same-budget ablation: six conventional pooled configurations at top-50 against three two-lane configurations at 25+25, so no comparison is confounded by budget. Adds bootstrap CIs, permutation p-values, Cohen's *d* and McNemar. |
 | `ce_experiment_metrics.py` | Cross-encoder variants 1 and 3. Writes `summaries_v1_v3.json`. **Run before `ce_experiment_metrics2.py`.** |
 | `ce_experiment_metrics2.py` | Variants 2, 4 and the truncation diagnostic, then the variant comparison table. |
-| `corpus_stats.py` | Corpus composition from the index. The only script whose primary purpose needs the corpus database. |
+| `corpus_stats.py` | Corpus composition from the index. Needs the corpus database. |
+| `corpus_token_distribution.py` | Appendix A's chunk token-count distributions for the metadata preamble, the retrieval summary and the raw text. Needs the corpus database. |
 | `make_report_figures.py` | Regenerates the report's data-driven figures. |
 | `score_signal_figures.py` | Four signal-diagnostic panels supporting the score analysis. |
 
@@ -559,6 +576,8 @@ The retriever and the corpus-construction chain. These are the code under test, 
 | `candidate_cache.parquet` | **The single most important file here.** One row per (scenario, lane, candidate) for all 208 scenarios: raw and normalised BM25, dense and authority values, jurisdiction weight, fused/blended/final scores, first-stage rank, merged cross-encoder score and rank, and gold flags. Everything in Path B reads this. |
 | `reranked_top75_output_COMBINED218_bge-reranker-v2-m3.json` | Raw baseline reranker output, top 75 per lane per scenario, with pre- and post-rerank positions. |
 | `variant2_ce_output_DEV.json`, `variant2_ce_output_TEST.json` | Metadata-enriched reranker output, same schema. |
+| `benchmark150/candidate_cache_graph_off.parquet` | The frozen graph-off cache over the earlier 150-scenario benchmark. Needed by Sections 6.2.2 and 6.2.3. |
+| `benchmark150/candidate_cache_graph_on.parquet` | The same retrieval pass with graph expansion **on**. The pair is what makes the graph comparison in Section 6.2.3 a real measurement rather than an estimate. |
 
 ### `results/` — generated outputs
 
@@ -567,6 +586,12 @@ Every file here is regenerated by a script in `evaluation/`; none is hand-made.
 | File | Produced by | What it holds |
 |---|---|---|
 | `reproduction_report.csv` | `reproduce.py` | Every check from the last reproduction run: part, report location, reported value, recomputed value, verdict. |
+| `graph_edge_audit.json` | `graph_edge_audit.py` | Verdict counts, the strict and permissive rates, and the best and worst strata. |
+| `graph_edge_audit_by_stratum.csv` | `graph_edge_audit.py` | Per-stratum verdict counts and meaningful rate. |
+| `ir_metrics/` | `ir_metrics.py` | Cumulative recall, Precision@k and NDCG@k, per scenario and summarised. |
+| `token_distribution/` | `corpus_token_distribution.py` | Per-field token summaries and per-chunk counts. |
+| `test_confirmation/` | `test_confirmation.py` | TEST alpha sensitivity, cross-encoder diagnostics, category-boost reflection. |
+| `benchmark150/` | `rq1_ablations.py`, `rq3_regime_constraint.py` | The two experiments that ran on the earlier benchmark. |
 | `verification_report.csv` | `verify_reported_numbers.py` | 32 reported numbers vs. recomputed, with PASS/FAIL. |
 | `corpus_stats.json` | `corpus_stats.py` | Corpus counts by class, regime, host, chunking method; graph edges; the index's own build manifest. |
 | `top25_per_lane_final_metrics.csv` | `final_performance.py` | Table 5: final performance on DEV and TEST at 25 per lane. Also the input to Figure 7. |
@@ -599,18 +624,27 @@ Every file here is regenerated by a script in `evaluation/`; none is hand-made.
 
 | File | Produced by |
 |---|---|
-| `figure1_corpus_composition.png` | `make_report_figures.py` (needs `results/corpus_stats.json`) |
-| `figure4_first_stage_auc.png` | `make_report_figures.py` |
-| `figure5_authority_normalisation.png` | `make_report_figures.py` |
-| `figure6_dual_evidence_dev.png` | `make_report_figures.py` |
-| `figure7_final_performance.png` | `make_report_figures.py` |
-| `signal_diagnostics/fig1_raw_vs_normalized.png` | `score_signal_figures.py` |
-| `signal_diagnostics/fig2_bm25_gold_vs_nongold.png` | `score_signal_figures.py` |
-| `signal_diagnostics/fig3_dense_gold_vs_nongold_wrongregime.png` | `score_signal_figures.py` |
-| `signal_diagnostics/fig4_ce_gold_vs_nongold.png` | `score_signal_figures.py` |
+| Figure | File | Produced by |
+|---|---|---|
+| 1 | `figure01_corpus_composition.png` | `make_report_figures.py` |
+| 4 | `figure04_configuration_comparison_test.png` | `make_report_figures.py` |
+| 5 | `figure05_category_comparison_test.png` | `make_report_figures.py` |
+| 6 | `figure06_first_stage_auc.png` | `make_report_figures.py` |
+| 7 | `figure07_authority_calibration.png` | `make_report_figures.py` |
+| 8 | `figure08_mixed_evidence_dev.png` | `make_report_figures.py` |
+| 9 | `figure09_final_performance.png` | `make_report_figures.py` |
+| 10 | `figure10_cumulative_recall.png` | `make_report_figures.py` |
+| 11 | `figure11_ndcg_by_lane.png` | `make_report_figures.py` |
+| — | `signal_diagnostics/fig1_raw_vs_normalized.png` | `score_signal_figures.py` |
+| — | `signal_diagnostics/fig2_bm25_gold_vs_nongold.png` | `score_signal_figures.py` |
+| — | `signal_diagnostics/fig3_dense_gold_vs_nongold_wrongregime.png` | `score_signal_figures.py` |
+| — | `signal_diagnostics/fig4_ce_gold_vs_nongold.png` | `score_signal_figures.py` |
 
-The report's architecture diagram and benchmark-construction diagram are schematics drawn by
-hand, not computed from data, and so are not reproduced by any script here.
+File names carry the report's own figure numbers. The four `signal_diagnostics/` panels are
+supporting material for Section 6.2 rather than numbered figures in the report.
+
+Figures 2 (two-lane architecture) and 3 (manual benchmark construction protocol) are
+schematic diagrams drawn by hand rather than computed from data, so no script reproduces them.
 
 ### `scripts/`
 
@@ -622,48 +656,93 @@ hand, not computed from data, and so are not reproduced by any script here.
 
 ## 6. Where each reported number comes from
 
-`results/verification_report.csv` is the machine-checked version of this table: run
-`python evaluation/verify_reported_numbers.py` and read it.
+`results/reproduction_report.csv` is the machine-checked version of this table: run
+`python evaluation/reproduce.py --all` and read it. Table and figure numbers below are the
+report's own.
 
-| Reported quantity | Value | Artifact |
-|---|---|---|
-| Corpus: documents / chunks / graph edges | 1,370 / 19,087 / 23,785 | `results/corpus_stats.json` |
-| Lane split (documents) | 23 / 1,347 | `results/corpus_stats.json` |
-| DEV final: scenarios / requirements | 95 / 155 | `results/top25_per_lane_final_metrics.csv` |
-| DEV RequirementRecall@25-per-lane | 0.813 | same |
-| DEV CompleteCoverage@25-per-lane | 0.747 | same |
-| DEV DualEvidenceCoverage@25-per-lane | 0.765 (17 mixed scenarios) | same |
-| TEST final: scenarios / requirements | 94 / 139 | same |
-| TEST RequirementRecall@25-per-lane | 0.806 | same |
-| TEST CompleteCoverage@25-per-lane | 0.755 | same |
-| TEST DualEvidenceCoverage@25-per-lane | 0.600 (15 mixed scenarios) | same |
-| Candidate-pool ceiling (DEV) | 0.916 = 142/155 | `results/metric_audit_table.csv` |
-| DualEvidenceCoverage pre-CE → post-CE (DEV) | 0.529 → 0.765 | `results/dual_evidence_strict_summary.csv` |
-| BM25 ROC AUC (essential gold vs rest, DEV) | 0.728 | `results/score_signal_stats_summary.json` |
-| Dense ROC AUC (essential gold vs rest, DEV) | 0.847 | same |
-| DEV candidate rows analysed | 105,823 | same |
-| Score reconstruction max abs error | 0.0 | same |
-| Authority: primary / secondary mean normalised | 0.751 / 0.038 | `results/authority_amplification_analysis.csv` |
-| Authority amplification factor | 23.76× | `results/score_signal_stats_summary.json` |
-| EU-jurisdiction candidate rows / essential gold among them | 5,088 / 0 | same |
-| Reranker AUC within the top-75 pool | 0.688 | same |
-| Essential-gold mean / median rank movement | +3.59 / +1.0 | same |
-| Essential gold moved into / out of top 25 | 22 / 12 | same |
-| Harmful demotion rate | 9.1% | same |
-| Same-budget RQ1, TEST (pooled best → two-lane) | 0.612 → 0.763 | `results/rq1_rq3_same_budget/rq1_same_budget_50_baselines.csv` |
-| RQ1 difference, CI, p, d | +0.151, [0.080, 0.225], p<0.0001, d=0.444 | `results/rq1_rq3_same_budget/statistical_tests_TEST.json` |
-| Reranker on/off at 25 per lane, TEST | 0.763 → 0.806 (+0.043, p=0.215) | same |
-| Cross-encoder variant comparison | — | `results/table4_dev_ce_variants.csv` |
+| Reported quantity | Value | Artifact | Part |
+|---|---|---|---|
+| Corpus: documents / chunks / graph edges | 1,370 / 19,087 / 23,785 | `results/corpus_stats.json` | 1 |
+| Lane split (documents) | 23 / 1,347 | same | 1 |
+| BM25 ROC AUC, essential gold vs rest (DEV) | 0.728 | `results/score_signal_stats_summary.json` | 4 |
+| Dense ROC AUC, essential gold vs rest (DEV) | 0.847 | same | 4 |
+| **Table 3** BM25 / dense / hybrid pooled @50 (TEST) | 0.345 / 0.496 / 0.475 | `results/rq1_rq3_same_budget/rq1_same_budget_50_baselines.csv` | 3 |
+| **Table 3** best pooled @50 → two-lane pre-CE @25+25 | 0.612 → 0.763 | same | 3 |
+| **Table 3** two-lane post-CE @25+25 | 0.806 | same | 3 |
+| RQ1 difference, CI, p, d | +0.151, [0.080, 0.225], p<0.0001, d=0.444 | `results/rq1_rq3_same_budget/statistical_tests_TEST.json` | 3 |
+| RQ1 CompleteCoverage difference | +0.191, [0.106, 0.277], McNemar 19/1 | same | 3 |
+| **Table 4** per-category, TEST | 11 categories | `results/rq1_rq3_same_budget/rq1_per_category.csv` | 3 |
+| Authority: primary / secondary mean normalised | 0.751 / 0.038 | `results/authority_amplification_analysis.csv` | 4 |
+| Authority amplification factor | 23.76× | `results/score_signal_stats_summary.json` | 4 |
+| Authority reorders this share of pairs | 19.3% of 4,892,223 | same | 4 |
+| Dense gap vs non-gold / vs wrong-regime | +0.101 / +0.024 | same | 4 |
+| EU candidate rows / essential gold among them | 5,088 / 0 | same | 4 |
+| Graph audit: strict / not-wrong rate | 59.8% / 82.0% of 122 edges | `results/graph_edge_audit.json` | 5 |
+| Graph audit: best / worst strata | 80–100% / 10–20% | `results/graph_edge_audit_by_stratum.csv` | 5 |
+| Graph expansion, DEV recall on/off | 0.491 / 0.513 | `results/benchmark150/rq1_ablation_summary.csv` | 5 |
+| Regime constraint, TEST cost | −2.4 / −3.2 points (n=63) | `results/benchmark150/rq3_test_frozen_summary.csv` | 6 |
+| Candidate-pool ceiling, DEV | 0.916 = 142/155 | `results/metric_audit_table.csv` | 8 |
+| Candidate-pool ceiling, TEST | 0.885 | `results/test_confirmation/test_ce_diagnostics.json` | 7 |
+| Reranker AUC within the top-75 pool, DEV / TEST | 0.688 / 0.680 | `score_signal_stats_summary.json`, `test_ce_diagnostics.json` | 4, 7 |
+| TEST rank movement, into / out of top 25 | +3.37 (+1), 15 / 9 | `results/test_confirmation/test_ce_diagnostics.json` | 7 |
+| Harmful demotion, DEV / TEST | 9.1% / 7.3% | `score_signal_stats_summary.json`, `test_ce_diagnostics.json` | 4, 7 |
+| **Table 7** four CE variants at the 5+5 budget | 0.593 / 0.641 / 0.652 / 0.655 | `results/table4_dev_ce_variants.csv` | 7 |
+| Category boost, TEST: baseline / real / oracle | 0.556 / 0.583 / 0.694 | `results/test_confirmation/test_category_boost_reflection.csv` | 7 |
+| **Figure 8** dual evidence pre-CE → post-CE (DEV) | 9/17 → 13/17 | `results/dual_evidence_strict_summary.csv` | 7 |
+| **Table 6** reranking on/off at 25/lane (TEST) | 0.763 → 0.806 (+0.043, p=0.215) | `results/rq1_rq3_same_budget/statistical_tests_TEST.json` | 8 |
+| **Table 8** DEV: scenarios / requirements | 95 / 155 | `results/top25_per_lane_final_metrics.csv` | 8 |
+| **Table 8** DEV recall / coverage / dual evidence | 0.813 / 0.747 / 0.765 (N=17) | same | 8 |
+| **Table 8** TEST: scenarios / requirements | 94 / 139 | same | 8 |
+| **Table 8** TEST recall / coverage / dual evidence | 0.806 / 0.755 / 0.600 (N=15) | same | 8 |
+| **Figure 10** cumulative recall at k=10, DEV / TEST | 0.690 / 0.727 post-CE | `results/ir_metrics/cumulative_requirement_recall_summary.csv` | 9 |
+| **Figure 11** NDCG@k, legislation / other lane | 0.54–0.63 / 0.29–0.39 | `results/ir_metrics/precision_ndcg_summary.csv` | 9 |
+| Token counts: metadata / summary / raw text | 103.1 / 71.7 / 305.1 mean | `results/token_distribution/token_distribution_summary.json` | 10 |
+| Raw chunk text over the 512-token window | 14.2% | same | 10 |
+| DEV candidate rows analysed | 105,823 | `results/score_signal_stats_summary.json` | 4 |
+| Score reconstruction max abs error | 0.0 | same | 2, 4 |
 
-**Which evaluator produced which number.** Everything in the table above uses the corrected
-evaluator, `mandatory_requirements_with_targets()`. The cross-encoder variant comparison
-(`table4_dev_ce_variants.csv`) is the exception: it was computed before the metric audit, using
-`common.py:essential_targets()`, and is reported as it was computed. Its variants are compared
-against each other under one consistent extractor, so the comparison is sound; its absolute
-levels are not directly comparable to the corrected numbers, which is why the report uses it for
-variant selection and not for headline performance.
+**Which evaluator produced which number.** Everything above uses the corrected evaluator,
+`mandatory_requirements_with_targets()`. The cross-encoder variant comparison (Table 7) is the
+exception: it was computed before the metric audit, using `common.py:essential_targets()`, and
+is reported as it was computed. Its variants are compared against each other under one
+consistent extractor, so the comparison is sound; its absolute levels are not directly
+comparable to the corrected numbers, which is why the report uses it for variant selection and
+not for headline performance.
 
----
+### Two experiments on the earlier benchmark
+
+Sections 6.2.2 (the regime-compatibility constraint) and 6.2.3 (the graph-expansion
+comparison) were computed on the **earlier 150-scenario benchmark**, under its own stratified
+split, before the 58-scenario expansion round. Everything else in the report is on the final
+208-scenario benchmark. The report does not say this, and the scenario counts are the giveaway:
+those two sections report n = 68 (DEV) and n = 63 (TEST), against 95 and 94 everywhere else.
+
+This is recorded here rather than left to be discovered, because it changes what a reproducer
+should expect. Running the regime-constraint experiment against the *final* benchmark gives
+−1.1 points rather than the reported −2.4, not because either number is wrong but because they
+are measured on different scenario sets.
+
+Both experiments are fully reproducible. `evaluation/make_benchmark150.py` reconstructs the
+earlier view from the shipped 208-scenario file — every scenario carries its collection round
+in `source_set` and its earlier split in `source_split_150rebalance` — and
+`data/benchmark150/` holds the two frozen caches those runs used, graph-off and graph-on.
+Parts 5 and 6 do this automatically and reproduce the reported numbers exactly.
+
+### Two numbers the report labels imprecisely
+
+Found while building the checks, and recorded because a reproducer would otherwise hit them:
+
+1. **Section 6.1.1** gives "effective weighted 10th–90th percentile differences" of **0.201**
+   for BM25 and **0.504** for dense. Only the second is a 10th–90th percentile spread. The
+   BM25 figure of 0.201 is that signal's *mean* weighted contribution (0.2019 across the cache,
+   0.2023 on DEV alone); BM25's actual p10–p90 spread is **0.339**. The two quoted numbers are
+   therefore not the same quantity, and the qualitative claim they support — that dense
+   retrieval has the wider practical influence on ranking — holds either way, since 0.504 > 0.339.
+   Part 4 checks all three values against what each one really is.
+
+2. **Section 6.2.3** prints the graph-off DEV recall as **0.514**. The computed value is
+   0.51348, which rounds to 0.513. The direction and size of the effect are unaffected. Part 5
+   checks against the value at its real precision.
 
 ## 7. Environment
 
@@ -717,17 +796,36 @@ Recorded here rather than left for a reader to discover.
    FTS5's ranking function.
 
 5. **The 512-token reranker window truncates some inputs.** Deliberate, for throughput; the
-   model supports 8192. The cost is quantified in `results/truncation_diagnostic.csv` rather
+   model supports 8192. Corpus-wide, **14.2% of raw chunk texts exceed 512 tokens**, while the
+   metadata preamble (mean 103.1) and the retrieval summary (mean 71.7) never reach it. Of the
+   48 essential-gold chunks the reranker left below rank 25 on DEV, 23 exceed the window.
+   Quantified in `results/token_distribution/` and `results/truncation_diagnostic.csv` rather
    than assumed away.
 
-6. **The corpus carries no per-document licence field.** Every source is UK public-sector
+6. **Two sections use the earlier 150-scenario benchmark.** Sections 6.2.2 and 6.2.3 predate
+   the 58-scenario expansion round, so they report n = 68 and n = 63 where the rest of the
+   report has 95 and 94. The report does not say so; §6 above does, and parts 5 and 6 of the
+   reproduction reconstruct that view and reproduce both results exactly.
+
+7. **Two reported numbers are labelled imprecisely.** BM25's "10th-90th percentile difference"
+   of 0.201 is a mean (the real spread is 0.339), and the graph-off recall printed as 0.514
+   computes to 0.5135. Neither changes a conclusion. Both are detailed in §6 and checked at
+   their real values.
+
+8. **The graph edge audit was not double-annotated.** The 122 verdicts come from a single-pass
+   LLM-assisted review against the source legal text, not a second independent human annotator;
+   `benchmark/graph_edge_review/verdicts.csv` records this per edge. The ~60% and ~82% rates
+   are an indicative quality audit, not an inter-annotator-validated measurement, which is why
+   the report describes them as approximate.
+
+9. **The corpus carries no per-document licence field.** Every source is UK public-sector
    material under the Open Government Licence or publicly accessible professional commentary,
    but the content filters in the (unshipped) acquisition layer treated licence notices as page
    footer furniture and dropped them, so the corpus does not carry licence as structured
    metadata and this repository does not claim it does.
 
-7. **The corpus build is not bit-reproducible.** Semantic chunking calls an LLM. The index is
+10. **The corpus build is not bit-reproducible.** Semantic chunking calls an LLM. The index is
    hash-pinned and all reported results are computed against that pinned copy.
 
-8. **`max_length=512` in the variant-2 reranker matches the baseline deliberately**, so the
+11. **`max_length=512` in the variant-2 reranker matches the baseline deliberately**, so the
    variant comparison isolates the input format and not the window size.

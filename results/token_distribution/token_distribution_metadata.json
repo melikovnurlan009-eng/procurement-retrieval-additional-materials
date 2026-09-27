@@ -1,0 +1,17 @@
+{
+  "field": "metadata-enriched CE input EXCLUDING raw chunk text: 'citation. retrieval_title. retrieval_summary. authority_class. legal_regime.'",
+  "tokenizer": "BAAI/bge-reranker-v2-m3",
+  "n_chunks": 19087,
+  "mean": 103.1021637763923,
+  "median": 101.0,
+  "p25": 77.0,
+  "p75": 124.0,
+  "p90": 144.0,
+  "p95": 157.0,
+  "min": 38,
+  "max": 380,
+  "pct_over_512": 0.0,
+  "pct_over_1024": 0.0,
+  "pct_over_2048": 0.0,
+  "note": "Chunk-side tokens only. The real cross-encoder pair also carries the query, so an actual input is longer than the count reported here."
+}

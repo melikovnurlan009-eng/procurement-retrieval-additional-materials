@@ -1,0 +1,53 @@
+{
+  "metadata": {
+    "field": "metadata-enriched CE input EXCLUDING raw chunk text: 'citation. retrieval_title. retrieval_summary. authority_class. legal_regime.'",
+    "tokenizer": "BAAI/bge-reranker-v2-m3",
+    "n_chunks": 19087,
+    "mean": 103.1021637763923,
+    "median": 101.0,
+    "p25": 77.0,
+    "p75": 124.0,
+    "p90": 144.0,
+    "p95": 157.0,
+    "min": 38,
+    "max": 380,
+    "pct_over_512": 0.0,
+    "pct_over_1024": 0.0,
+    "pct_over_2048": 0.0,
+    "note": "Chunk-side tokens only. The real cross-encoder pair also carries the query, so an actual input is longer than the count reported here."
+  },
+  "summary": {
+    "field": "retrieval_summary field only (not raw chunk text)",
+    "tokenizer": "BAAI/bge-reranker-v2-m3",
+    "n_chunks": 19087,
+    "mean": 71.67375700738722,
+    "median": 69.0,
+    "p25": 48.0,
+    "p75": 91.0,
+    "p90": 109.0,
+    "p95": 121.0,
+    "min": 16,
+    "max": 351,
+    "pct_over_512": 0.0,
+    "pct_over_1024": 0.0,
+    "pct_over_2048": 0.0,
+    "note": "Chunk-side tokens only. The real cross-encoder pair also carries the query, so an actual input is longer than the count reported here."
+  },
+  "rawtext": {
+    "field": "raw chunk text, i.e. what the baseline cross-encoder is fed",
+    "tokenizer": "BAAI/bge-reranker-v2-m3",
+    "n_chunks": 19087,
+    "mean": 305.12039608110234,
+    "median": 204.0,
+    "p25": 86.0,
+    "p75": 377.0,
+    "p90": 593.0,
+    "p95": 797.0,
+    "min": 11,
+    "max": 10831,
+    "pct_over_512": 14.166710326400167,
+    "pct_over_1024": 3.0858699638497407,
+    "pct_over_2048": 0.9116152355006025,
+    "note": "Chunk-side tokens only. The real cross-encoder pair also carries the query, so an actual input is longer than the count reported here."
+  }
+}

@@ -1,0 +1,15 @@
+stratum,n,MEANINGFUL,CORRECT_BUT_USELESS,WRONG,UNSURE,meaningful_rate_pct,not_wrong_rate_pct
+"CROSS_REFERS_TO / internal, structured XML reference",10,10,0,0,0,100.0,100.0
+CROSS_REFERS_TO / cross-instrument (named instrument),10,10,0,0,0,100.0,100.0
+COMMENCED_BY,10,10,0,0,0,100.0,100.0
+SAVED_BY,1,1,0,0,0,100.0,100.0
+CROSS_REFERS_TO / rolled up to ancestor provision,10,9,1,0,0,90.0,100.0
+REFERENCES / instrument named explicitly (0.90),10,8,1,1,0,80.0,90.0
+REFERENCES / rolled up to ancestor provision,10,8,1,1,0,80.0,90.0
+REFERENCES / instrument inferred from document regime (0.70),10,7,1,2,0,70.0,80.0
+"CROSS_REFERS_TO / internal, regex citation",10,7,0,2,1,70.0,70.0
+REFERENCES / instrument inferred from a mention elsewhere in document (0.65),10,2,0,8,0,20.0,20.0
+CROSS_REFERS_TO / into reg 1 / reg 2 / s.1-2 (citation-definition hubs),10,1,2,7,0,10.0,30.0
+COMMENCEMENT_PROVISION,10,0,10,0,0,0.0,100.0
+AMENDED_BY,10,0,10,0,0,0.0,100.0
+REVOKED_BY,1,0,1,0,0,0.0,100.0
