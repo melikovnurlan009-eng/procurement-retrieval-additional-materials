@@ -106,6 +106,43 @@ def _json(name: str):
     return json.loads((RESULTS_DIR / name).read_text())
 
 
+def _expand(spec: str) -> list[Path]:
+    """A `produces` entry names a file or a directory; return the concrete files."""
+    base = REPO_ROOT / spec
+    if base.is_dir():
+        return sorted(f for f in base.rglob("*") if f.is_file() and f.name != ".DS_Store")
+    return [base] if base.exists() else []
+
+
+def _snapshot(specs: list[str]) -> dict[Path, str]:
+    """sha256 of every file a part claims to produce, before it runs."""
+    out = {}
+    for spec in specs:
+        for f in _expand(spec):
+            out[f] = _sha256(f)
+    return out
+
+
+def _describe(path: Path) -> str:
+    """Row count for tabular output, otherwise a size - something to recognise it by."""
+    size = path.stat().st_size
+    human = f"{size / 1e6:.1f} MB" if size >= 1e6 else f"{size / 1e3:.1f} KB"
+    try:
+        if path.suffix == ".csv":
+            with path.open() as fh:
+                return f"{sum(1 for _ in fh) - 1} rows, {human}"
+        if path.suffix == ".jsonl":
+            with path.open() as fh:
+                return f"{sum(1 for _ in fh)} records, {human}"
+        if path.suffix == ".json":
+            obj = json.loads(path.read_text())
+            n = len(obj)
+            return f"{n} {'entries' if isinstance(obj, dict) else 'records'}, {human}"
+    except Exception:
+        pass
+    return human
+
+
 def _sha256(path: Path) -> str:
     import hashlib
 
@@ -518,6 +555,7 @@ class Part:
     check: object
     needs_corpus: bool = False
     note: str = ""
+    inputs: list[str] = field(default_factory=list)
     produces: list[str] = field(default_factory=list)
 
 
@@ -528,6 +566,7 @@ def _py(script: str) -> list[str]:
 PARTS: list[Part] = [
     Part(
         key="corpus",
+        inputs=['corpus/chunk_index.sqlite3'],
         title="Corpus composition",
         report="Section 3.1, Figure 1",
         steps=[_py("corpus_stats.py") + ["--db", str(CORPUS_DB),
@@ -540,6 +579,7 @@ PARTS: list[Part] = [
     ),
     Part(
         key="artifacts",
+        inputs=['benchmark/scenarios_all_208.jsonl', 'benchmark/gold_evidence_218.jsonl', 'data/candidate_cache.parquet', 'config/frozen_cache_manifest.json', 'config/frozen_config.json'],
         title="Frozen artifact integrity and provenance",
         report="Sections 4 and 5.3, Appendix A",
         steps=[],
@@ -550,6 +590,7 @@ PARTS: list[Part] = [
     ),
     Part(
         key="rq1",
+        inputs=['benchmark/scenarios_all_208.jsonl', 'benchmark/gold_evidence_218.jsonl', 'data/candidate_cache.parquet'],
         title="RQ1: matched-budget comparison",
         report="Section 6.1, Tables 3 and 4, Figures 4 and 5",
         steps=[_py("rq1_rq3_same_budget.py")],
@@ -558,15 +599,19 @@ PARTS: list[Part] = [
     ),
     Part(
         key="signals",
+        inputs=['benchmark/scenarios_all_208.jsonl', 'benchmark/gold_evidence_218.jsonl', 'data/candidate_cache.parquet'],
         title="Signal behaviour and authority calibration",
         report="Sections 6.1.1 and 6.2.1-6.2.2, Figures 6 and 7",
         steps=[_py("score_signal_analysis.py")],
         check=check_signals,
         produces=["results/score_signal_stats_summary.json",
-                  "results/authority_amplification_analysis.csv"],
+                  "results/authority_amplification_analysis.csv",
+                  "results/signal_effective_range.csv",
+                  "results/normalization_saturation_analysis.csv"],
     ),
     Part(
         key="graph",
+        inputs=['benchmark/graph_edge_review/edge_classifications.csv', 'benchmark/scenarios_all_208.jsonl', 'benchmark/gold_evidence_218.jsonl', 'data/benchmark150/candidate_cache_graph_on.parquet', 'data/benchmark150/candidate_cache_graph_off.parquet'],
         title="RQ2: graph edge quality and retrieval effect",
         report="Section 6.2.3",
         steps=[
@@ -581,10 +626,12 @@ PARTS: list[Part] = [
              "those edges. The retrieval comparison runs on the 150-scenario benchmark view, "
              "reconstructed by make_benchmark150.py, against the graph-on and graph-off caches "
              "in data/benchmark150/.",
-        produces=["results/graph_edge_audit.json", "results/benchmark150/rq1_ablation_summary.csv"],
+        produces=["results/graph_edge_audit.json", "results/graph_edge_audit_by_stratum.csv",
+                  "results/benchmark150/rq1_ablation_summary.csv"],
     ),
     Part(
         key="regime",
+        inputs=['benchmark/scenarios_all_208.jsonl', 'benchmark/gold_evidence_218.jsonl', 'data/benchmark150/candidate_cache_graph_off.parquet', 'config/frozen_config.json'],
         title="RQ2: regime-compatibility constraint",
         report="Section 6.2.2",
         steps=[
@@ -602,6 +649,7 @@ PARTS: list[Part] = [
     ),
     Part(
         key="reranking",
+        inputs=['benchmark/scenarios_all_208.jsonl', 'benchmark/gold_evidence_218.jsonl', 'data/candidate_cache.parquet', 'data/variant2_ce_output_DEV.json', 'data/variant2_ce_output_TEST.json'],
         title="RQ3: cross-encoder variants and completeness",
         report="Section 6.3, Table 7, Figure 8",
         steps=[
@@ -615,10 +663,12 @@ PARTS: list[Part] = [
              "which reads summaries_v1_v3.json from it; the other two are independent.",
         produces=["results/table4_dev_ce_variants.csv",
                   "results/dual_evidence_strict_summary.csv",
+                  "results/truncation_diagnostic.csv",
                   "results/test_confirmation/"],
     ),
     Part(
         key="performance",
+        inputs=['benchmark/scenarios_all_208.jsonl', 'benchmark/gold_evidence_218.jsonl', 'data/candidate_cache.parquet'],
         title="Final fixed-configuration performance",
         report="Section 6.4, Table 8, Figure 9 (and Table 6)",
         steps=[_py("final_performance.py"), _py("ce_metrics_audit.py")],
@@ -629,6 +679,7 @@ PARTS: list[Part] = [
     ),
     Part(
         key="ir-metrics",
+        inputs=['benchmark/scenarios_all_208.jsonl', 'benchmark/gold_evidence_218.jsonl', 'data/candidate_cache.parquet'],
         title="Secondary IR diagnostics",
         report="Appendix A, Figures 10 and 11",
         steps=[_py("ir_metrics.py")],
@@ -637,6 +688,7 @@ PARTS: list[Part] = [
     ),
     Part(
         key="tokens",
+        inputs=['corpus/chunk_index.sqlite3'],
         title="Token distributions and the 512-token window",
         report="Appendix A, Section 7.3",
         steps=[_py("corpus_token_distribution.py") + ["--db", str(CORPUS_DB)]],
@@ -648,6 +700,7 @@ PARTS: list[Part] = [
     ),
     Part(
         key="figures",
+        inputs=['results/corpus_stats.json', 'results/top25_per_lane_final_metrics.csv', 'results/rq1_rq3_same_budget/', 'results/ir_metrics/', 'data/candidate_cache.parquet'],
         title="Figure regeneration",
         report="Figures 1, 4-11",
         steps=[_py("make_report_figures.py"), _py("score_signal_figures.py")],
@@ -658,6 +711,7 @@ PARTS: list[Part] = [
     ),
     Part(
         key="cross-check",
+        inputs=['benchmark/scenarios_all_208.jsonl', 'benchmark/gold_evidence_218.jsonl', 'data/candidate_cache.parquet'],
         title="Independent cross-check of headline numbers",
         report="all of the above",
         steps=[_py("verify_reported_numbers.py")],
@@ -683,7 +737,19 @@ def run_part(part: Part) -> dict:
             print(f"{DIM} {line}{OFF}")
     print(f"{BOLD}{'=' * width}{OFF}")
 
+    if part.inputs:
+        print()
+        for i, spec in enumerate(part.inputs):
+            files = _expand(spec)
+            label = "  reads " if i == 0 else "        "
+            if files:
+                for f in files[:1]:
+                    print(f"{label}{DIM}{spec:<52}{OFF} {_describe(f)}")
+            else:
+                print(f"{label}{DIM}{spec:<52}{OFF} {YELLOW}not present{OFF}")
+
     t0 = time.time()
+    before = _snapshot(part.produces)
     steps, skipped = [], []
 
     for cmd in part.steps:
@@ -716,6 +782,32 @@ def run_part(part: Part) -> dict:
 
     step_failures = [s for s in steps if not s[1]]
 
+    # What the part actually produced, and whether a regenerated file still matches the copy
+    # that shipped. "identical to shipped" is the reproducibility statement: the part rebuilt
+    # the artifact from its inputs and got the same bytes back.
+    after = _snapshot(part.produces)
+    artifacts, n_identical, n_changed = [], 0, 0
+    for f in sorted(after):
+        old = before.get(f)
+        if old is None:
+            state, colour = "created", GREEN
+        elif old == after[f]:
+            state, colour = "identical to shipped", GREEN
+            n_identical += 1
+        else:
+            state, colour = "DIFFERS from shipped", RED
+            n_changed += 1
+        artifacts.append((f, state, colour))
+
+    if artifacts:
+        print()
+        for i, (f, state, colour) in enumerate(artifacts[:12]):
+            rel = str(f.relative_to(REPO_ROOT))
+            label = "  wrote " if i == 0 else "        "
+            print(f"{label}{rel:<52} {DIM}{_describe(f):<22}{OFF} {colour}{state}{OFF}")
+        if len(artifacts) > 12:
+            print(f"        {DIM}... and {len(artifacts) - 12} more under the same paths{OFF}")
+
     checker = Checker()
     check_error = None
     if step_failures:
@@ -744,6 +836,10 @@ def run_part(part: Part) -> dict:
 
     verdict = f"{GREEN}PASS{OFF}" if passed else f"{RED}FAIL{OFF}"
     detail = f"{n_ok}/{n_all} checks"
+    if artifacts:
+        detail += f", {len(artifacts)} artifact{'s' if len(artifacts) != 1 else ''}"
+        if n_identical:
+            detail += f" ({n_identical} identical to shipped)"
     if skipped:
         detail += f", {len(skipped)} step(s) skipped"
     print(f"\n  ──> {BOLD}PART {n} {part.key}: {verdict}{OFF}   ({detail}, {elapsed:.1f}s)")
@@ -759,6 +855,9 @@ def run_part(part: Part) -> dict:
         "steps_run": len(steps),
         "steps_skipped": len(skipped),
         "seconds": round(elapsed, 1),
+        "artifacts": len(artifacts),
+        "artifacts_identical": n_identical,
+        "artifacts_changed": n_changed,
         "error": check_error or ("step failed: " + step_failures[0][0] if step_failures else ""),
         "_checks": checker.checks,
     }
@@ -792,13 +891,21 @@ def _wrap(text: str, width: int) -> list[str]:
     return lines
 
 
-def list_parts() -> None:
+def list_parts(chain: bool = False) -> None:
     print(f"\n{BOLD}Reproduction parts{OFF}\n")
     for i, p in enumerate(PARTS, 1):
         corpus = f"  {YELLOW}[needs CORPUS_DB]{OFF}" if p.needs_corpus else ""
         print(f"  {BOLD}{i}{OFF}  {p.key:<14} {p.title}{corpus}")
         print(f"     {DIM}{p.report}{OFF}")
-    print(f"\n{DIM}  python evaluation/reproduce.py --all{OFF}")
+        if chain:
+            for spec in p.inputs:
+                print(f"        {DIM}reads  {spec}{OFF}")
+            for spec in p.produces:
+                print(f"        {GREEN}writes {spec}{OFF}")
+            print()
+    if not chain:
+        print(f"\n{DIM}  python evaluation/reproduce.py --chain   # what each part reads and writes{OFF}")
+    print(f"{DIM}  python evaluation/reproduce.py --all{OFF}")
     print(f"{DIM}  python evaluation/reproduce.py performance signals{OFF}")
     print(f"{DIM}  python evaluation/reproduce.py 4{OFF}\n")
 
@@ -827,8 +934,13 @@ def main() -> int:
     ap.add_argument("parts", nargs="*", help="part names or numbers; omit with --all")
     ap.add_argument("--all", action="store_true", help="run every part")
     ap.add_argument("--list", action="store_true", help="list the parts and exit")
+    ap.add_argument("--chain", action="store_true",
+                    help="list the parts with what each one reads and writes, and exit")
     args = ap.parse_args()
 
+    if args.chain:
+        list_parts(chain=True)
+        return 0
     if args.list or (not args.parts and not args.all):
         list_parts()
         return 0
@@ -852,8 +964,9 @@ def main() -> int:
         mark = f"{GREEN}PASS{OFF}" if r["status"] == "PASS" else f"{RED}FAIL{OFF}"
         checks = f'{r["checks_passed"]}/{r["checks_total"]}'
         skipped = f'  {YELLOW}({r["steps_skipped"]} step skipped){OFF}' if r["steps_skipped"] else ""
+        arts = f'{r["artifacts"]:>2} art' if r["artifacts"] else "     -"
         print(f'  {r["part_number"]}  {r["part"]:<14} {r["title"]:<42} '
-              f'{checks:>7}  {mark}{skipped}')
+              f'{checks:>7} {arts}  {mark}{skipped}')
 
     n_pass = sum(1 for r in results if r["status"] == "PASS")
     tot_ok = sum(r["checks_passed"] for r in results)
@@ -862,8 +975,15 @@ def main() -> int:
     headline = (f"{GREEN}{n_pass}/{len(results)} parts reproduced{OFF}"
                 if n_pass == len(results)
                 else f"{RED}{len(results) - n_pass} of {len(results)} parts FAILED{OFF}")
+    tot_art = sum(r["artifacts"] for r in results)
+    tot_same = sum(r["artifacts_identical"] for r in results)
+    tot_diff = sum(r["artifacts_changed"] for r in results)
     print(f"  {BOLD}{headline}{OFF}   {tot_ok}/{tot_all} checks passed   "
           f"({time.time() - t0:.1f}s)")
+    if tot_art:
+        same = (f"{GREEN}{tot_same} identical to the shipped copy{OFF}" if not tot_diff
+                else f"{GREEN}{tot_same} identical{OFF}, {RED}{tot_diff} differing{OFF}")
+        print(f"  {tot_art} artifacts regenerated under results/ and figures/ — {same}")
 
     # ------------------------------------------------------------------------- csv out
     rows = []

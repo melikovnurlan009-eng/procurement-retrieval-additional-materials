@@ -102,9 +102,11 @@ is documented because the graph ablation is reported, not because the adopted sy
 Each stage is a script in `src/`. The stages run in this order; each depends on the previous.
 Report Section 3.2 describes stages 1 to 4, and Section 3.3 stages 5 to 7.
 
-1. **Acquire legislation** — `group_a_legislation_scraper_v4.py` fetches the Procurement Act
-   2023, the Procurement Regulations 2024 and the Public Contracts Regulations 2015 as full
-   instruments from legislation.gov.uk, parsing the structure rather than scraping rendered text.
+1. **Acquire sources** — `group_a_legislation_scraper_v4.py` fetches the Procurement Act 2023,
+   the Procurement Regulations 2024 and the Public Contracts Regulations 2015 as full
+   instruments from legislation.gov.uk, parsing the structure rather than scraping rendered
+   text. `src/scrapers/` holds the acquisition scripts for the other source families, one per
+   publisher; see `src/scrapers/README.md` for which script covers which.
 2. **Chunk** — four chunkers, one per source shape:
    - `chunk_legislation_from_nodes.py` — core instruments, from the parsed structural tree.
    - `chunk_commencement_regs_from_xml.py` — the two commencement SIs (UKSI 2024/716 and
@@ -140,11 +142,13 @@ chunk set.
 The reported results are computed against the pinned index identified above. Obtain that index
 and verify it by hash; the build code in `src/` is included so the construction is inspectable.
 
-The HTML acquisition layer for the non-legislation sources — the site-specific scrapers —
-is not included. It produces the inputs to stage
-2, it is specific to page layouts that have since changed, and no reported result depends on
-re-running it. The legislation scraper is included, because it is self-contained and because
-the legislation lane is where the report's central architectural claim lives.
+The acquisition scripts in `src/scrapers/` fetch live pages. Published pages have changed
+since the corpus was built, so re-running them acquires today's versions of those sources
+rather than the versions the reported results were computed on, and some documents are no
+longer retrievable at their original URLs. They are included so the acquisition is
+inspectable, not as a route to rebuilding the frozen index. Coverage is most of the corpus by
+document count rather than all of it: the scripts for a small number of source families, and
+one intermediate version of the legislation scraper, are not retained.
 
 One consequence of the page-furniture filtering is worth recording for anyone reading the
 corpus metadata: Open Government Licence and Crown copyright notices were filtered with the
