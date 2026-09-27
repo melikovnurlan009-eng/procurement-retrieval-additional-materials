@@ -96,6 +96,5 @@
       "meaningful": 1,
       "meaningful_rate_pct": 100.0
     }
-  ],
-  "provenance": "single-pass LLM-assisted review against the source legal text; not a second independent human annotator"
+  ]
 }

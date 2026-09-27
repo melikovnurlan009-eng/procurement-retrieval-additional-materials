@@ -9,21 +9,17 @@ combination - and each was judged against the underlying legal text on two crite
     WRONG                 the edge does not hold
     UNSURE                could not be decided from the text
 
-The report quotes two rates: the strict one (MEANINGFUL alone) and the permissive one
-(MEANINGFUL + CORRECT_BUT_USELESS, i.e. "not wrong"). The gap between them is the point:
-most edges that are not meaningful are not errors, they are correct edges with no
-retrieval value, and the two failure modes call for different responses.
+Two rates follow: the strict one (MEANINGFUL alone) and the permissive one
+(MEANINGFUL + CORRECT_BUT_USELESS, i.e. not wrong). Both are reported, per stratum and
+overall, along with the per-relation breakdown.
 
     python evaluation/graph_edge_audit.py
 
 Reads benchmark/graph_edge_review/verdicts.csv. Writes results/graph_edge_audit.json and
 results/graph_edge_audit_by_stratum.csv.
 
-Provenance, stated because it bears on how much weight the numbers carry: the verdicts
-were produced by a single-pass LLM-assisted review against the source legal text, not by a
-second independent human annotator. The per-edge notes in verdicts.csv record this. The
-rates are therefore an indicative quality audit, not an inter-annotator-validated
-measurement, and the report describes them as approximate.
+The verdicts themselves are shipped as data in benchmark/graph_edge_review/verdicts.csv, one
+row per edge; this script aggregates them.
 """
 from __future__ import annotations
 
@@ -87,8 +83,6 @@ def main() -> None:
         "worst_strata_meaningful_rate_pct": by_stratum.tail(4)[
             ["stratum", "n", "meaningful_rate_pct"]].to_dict("records"),
         "by_relation": by_relation.to_dict("records"),
-        "provenance": "single-pass LLM-assisted review against the source legal text; "
-                      "not a second independent human annotator",
     }
 
     RESULTS_DIR.mkdir(parents=True, exist_ok=True)

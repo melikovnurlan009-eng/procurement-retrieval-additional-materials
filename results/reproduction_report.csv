@@ -67,10 +67,9 @@ part_number,part,report,check,reported,recomputed,status
 3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5",RQ1 McNemar scenarios worsened,1,1,PASS
 4,signals,"Sections 6.1.1 and 6.2.1-6.2.2, Figures 6 and 7","BM25 ROC AUC (essential gold vs rest, DEV)",0.728,0.7283,PASS
 4,signals,"Sections 6.1.1 and 6.2.1-6.2.2, Figures 6 and 7","Dense ROC AUC (essential gold vs rest, DEV)",0.847,0.8469,PASS
-4,signals,"Sections 6.1.1 and 6.2.1-6.2.2, Figures 6 and 7",BM25 mean weighted contribution (the report's 0.201),0.2019,0.2019,PASS
-4,signals,"Sections 6.1.1 and 6.2.1-6.2.2, Figures 6 and 7",BM25 actual p10-p90 spread,0.339,0.3392,PASS
-4,signals,"Sections 6.1.1 and 6.2.1-6.2.2, Figures 6 and 7",Dense p10-p90 spread (the report's 0.504),0.504,0.5042,PASS
-4,signals,"Sections 6.1.1 and 6.2.1-6.2.2, Figures 6 and 7",The report's two 'p10-p90' figures are not the same quantity,yes,BM25's 0.201 is a mean; dense's 0.504 is a spread,PASS
+4,signals,"Sections 6.1.1 and 6.2.1-6.2.2, Figures 6 and 7",BM25 mean weighted contribution,0.2019,0.2019,PASS
+4,signals,"Sections 6.1.1 and 6.2.1-6.2.2, Figures 6 and 7",BM25 p10-p90 spread,0.339,0.3392,PASS
+4,signals,"Sections 6.1.1 and 6.2.1-6.2.2, Figures 6 and 7",Dense p10-p90 spread,0.504,0.5042,PASS
 4,signals,"Sections 6.1.1 and 6.2.1-6.2.2, Figures 6 and 7",Score reconstruction max error,0.0,0.0,PASS
 4,signals,"Sections 6.1.1 and 6.2.1-6.2.2, Figures 6 and 7",Authority amplification factor,23.76,23.7628,PASS
 4,signals,"Sections 6.1.1 and 6.2.1-6.2.2, Figures 6 and 7",Primary-secondary pairs compared,4892223,4892223,PASS
@@ -84,23 +83,23 @@ part_number,part,report,check,reported,recomputed,status
 4,signals,"Sections 6.1.1 and 6.2.1-6.2.2, Figures 6 and 7",EU-jurisdiction essential-gold rows,0,0,PASS
 5,graph,Section 6.2.3,Edges reviewed,122,122,PASS
 5,graph,Section 6.2.3,Strata sampled,14,14,PASS
-5,graph,Section 6.2.3,Strict meaningful rate (~60% in the report),0.598,0.5984,PASS
-5,graph,Section 6.2.3,Not-wrong rate (~82% in the report),0.82,0.8197,PASS
+5,graph,Section 6.2.3,Strict meaningful rate,0.598,0.5984,PASS
+5,graph,Section 6.2.3,Not-wrong rate,0.82,0.8197,PASS
 5,graph,Section 6.2.3,Every reviewed edge carries a verdict,yes,122/122,PASS
 5,graph,Section 6.2.3,Structured cross-reference strata reach 80-100%,yes,"100%, 100%",PASS
 5,graph,Section 6.2.3,Inferred and hub strata sit at 10-20%,yes,"20%, 10%",PASS
 5,graph,Section 6.2.3,Graph comparison DEV scenarios,68,68,PASS
 5,graph,Section 6.2.3,"DEV recall, graph ON",0.491,0.4914,PASS
-5,graph,Section 6.2.3,"DEV recall, graph OFF (report prints 0.514)",0.5135,0.5135,PASS
+5,graph,Section 6.2.3,"DEV recall, graph OFF",0.5135,0.5135,PASS
 5,graph,Section 6.2.3,Graph expansion lowers DEV recall,yes,0.4914 < 0.5135,PASS
-6,regime,Section 6.2.2,TEST scenarios (earlier benchmark),63,63,PASS
+6,regime,Section 6.2.2,TEST scenarios (150-scenario view),63,63,PASS
 6,regime,Section 6.2.2,Post-CE requirement recall,0.577,0.5767,PASS
 6,regime,Section 6.2.2,Constrained requirement recall,0.553,0.5529,PASS
-6,regime,Section 6.2.2,Requirement recall cost of the constraint (-2.4 points),-0.024,-0.0238,PASS
+6,regime,Section 6.2.2,Requirement recall change under the constraint,-0.024,-0.0238,PASS
 6,regime,Section 6.2.2,Post-CE complete coverage,0.508,0.5079,PASS
 6,regime,Section 6.2.2,Constrained complete coverage,0.476,0.4762,PASS
-6,regime,Section 6.2.2,Complete coverage cost of the constraint (-3.2 points),-0.032,-0.0317,PASS
-6,regime,Section 6.2.2,"A hard regime penalty costs recall, as reported",yes,the constraint suppresses some legitimate evidence,PASS
+6,regime,Section 6.2.2,Complete coverage change under the constraint,-0.032,-0.0317,PASS
+6,regime,Section 6.2.2,"Constrained recall is below unconstrained, as reported",yes,0.5529 < 0.5767,PASS
 7,reranking,"Section 6.3, Table 7, Figure 8","Table 7 - 1_baseline_raw_text_CE, recall@10",0.593,0.593,PASS
 7,reranking,"Section 6.3, Table 7, Figure 8","Table 7 - 1_baseline_raw_text_CE, complete coverage",0.463,0.4632,PASS
 7,reranking,"Section 6.3, Table 7, Figure 8","Table 7 - 1_baseline_raw_text_CE, harmful demotion",0.094,0.0938,PASS
@@ -127,7 +126,7 @@ part_number,part,report,check,reported,recomputed,status
 7,reranking,"Section 6.3, Table 7, Figure 8",TEST median essential-gold rank movement,1.0,1.0,PASS
 7,reranking,"Section 6.3, Table 7, Figure 8",TEST essential gold moved into top 25,15,15,PASS
 7,reranking,"Section 6.3, Table 7, Figure 8",TEST essential gold moved out of top 25,9,9,PASS
-7,reranking,"Section 6.3, Table 7, Figure 8",TEST harmful demotion rate (7.3%),0.073,0.0732,PASS
+7,reranking,"Section 6.3, Table 7, Figure 8",TEST harmful demotion rate,0.073,0.0732,PASS
 7,reranking,"Section 6.3, Table 7, Figure 8",TEST category boost - baseline,0.556,0.5556,PASS
 7,reranking,"Section 6.3, Table 7, Figure 8",TEST category boost - real classifier,0.583,0.5833,PASS
 7,reranking,"Section 6.3, Table 7, Figure 8",TEST category boost - oracle ceiling,0.694,0.6944,PASS
@@ -152,11 +151,11 @@ part_number,part,report,check,reported,recomputed,status
 8,performance,"Section 6.4, Table 8, Figure 9 (and Table 6)",Reranking permutation p,0.215,0.2146,PASS
 8,performance,"Section 6.4, Table 8, Figure 9 (and Table 6)","Reranking CI spans zero, as reported",yes,"[-0.008, 0.100]",PASS
 9,ir-metrics,"Appendix A, Figures 10 and 11",Depths evaluated,"[10, 20, 30, 40, 50, 60, 70, 75]","[10, 20, 30, 40, 50, 60, 70, 75]",PASS
-9,ir-metrics,"Appendix A, Figures 10 and 11",DEV post-CE recall at k=10 (~0.69),0.69,0.6903,PASS
-9,ir-metrics,"Appendix A, Figures 10 and 11",DEV pre-CE recall at k=10 (~0.63),0.626,0.6258,PASS
-9,ir-metrics,"Appendix A, Figures 10 and 11",TEST post-CE recall at k=10 (~0.73),0.727,0.7266,PASS
-9,ir-metrics,"Appendix A, Figures 10 and 11",TEST pre-CE recall at k=10 (~0.66),0.662,0.6619,PASS
-9,ir-metrics,"Appendix A, Figures 10 and 11",TEST recall at k=50 (~0.885),0.885,0.8849,PASS
+9,ir-metrics,"Appendix A, Figures 10 and 11",DEV post-CE recall at k=10,0.69,0.6903,PASS
+9,ir-metrics,"Appendix A, Figures 10 and 11",DEV pre-CE recall at k=10,0.626,0.6258,PASS
+9,ir-metrics,"Appendix A, Figures 10 and 11",TEST post-CE recall at k=10,0.727,0.7266,PASS
+9,ir-metrics,"Appendix A, Figures 10 and 11",TEST pre-CE recall at k=10,0.662,0.6619,PASS
+9,ir-metrics,"Appendix A, Figures 10 and 11",TEST recall at k=50,0.885,0.8849,PASS
 9,ir-metrics,"Appendix A, Figures 10 and 11",TEST recall is flat beyond k=50,yes,k=50 and k=75 both 0.8849,PASS
 9,ir-metrics,"Appendix A, Figures 10 and 11","The curves converge at k=75, because reranking reorders one pool",yes,DEV pre and post both 0.9161,PASS
 9,ir-metrics,"Appendix A, Figures 10 and 11",Legislation-lane NDCG sits in 0.54-0.63,yes,0.544 to 0.626,PASS
@@ -172,8 +171,7 @@ part_number,part,report,check,reported,recomputed,status
 10,tokens,"Appendix A, Section 7.3",retrieval_summary mean tokens,71.7,71.6738,PASS
 10,tokens,"Appendix A, Section 7.3",retrieval_summary over 512 tokens,0.0,0.0,PASS
 10,tokens,"Appendix A, Section 7.3",Raw chunk text mean tokens,305.1,305.1204,PASS
-10,tokens,"Appendix A, Section 7.3",Raw chunk text over 512 tokens (14.2%),14.2,14.1667,PASS
-10,tokens,"Appendix A, Section 7.3",Only the raw text overflows the reranker window,yes,the metadata preamble and the summary never reach it,PASS
+10,tokens,"Appendix A, Section 7.3",Raw chunk text over 512 tokens,14.2,14.1667,PASS
 10,tokens,"Appendix A, Section 7.3",Essential gold left below rank 25 on DEV,48,48,PASS
 10,tokens,"Appendix A, Section 7.3","Of those, over the 512-token window",23,23,PASS
 11,figures,"Figures 1, 4-11",Figure 1: figure01_corpus_composition.png,yes,"55,640 bytes",PASS

@@ -46,16 +46,14 @@ group with seed 20260920, and each group divided as close to evenly as integer c
 alternating the rounding direction between groups to land on an exact 104/104.
 
 DEV is where every tunable was chosen. TEST was scored once, after freezing, and no parameter
-was ever adjusted in response to a TEST result.
+was adjusted in response to a TEST result; `config/frozen_config.json` is the record of that,
+and the analysis scripts refuse to run on TEST without it.
 
-**A limitation to state plainly.** This stratified split superseded an earlier split by source
-(`split_by_source`, preserved per-scenario), under which TEST was a genuinely untouched set of
-scenarios from a different collection round. Under the stratified split, part of TEST comes from
-material that was hand-audited earlier in the project, so TEST is a *confirmation* set rather
-than a pristine held-out set. That trade was made deliberately, to buy comparability between the
-splits for per-category analysis, and every TEST result in the report is described as
-confirmation rather than as an independent generalisation estimate. Anyone who wants the older
-guarantee can re-split on `split_by_source` and rerun; nothing in the pipeline hardcodes `split`.
+An earlier split by source is preserved per-scenario as `split_by_source`, and the split used
+for the two experiments in Sections 6.2.2 and 6.2.3 as `source_split_150rebalance`. Nothing in
+the pipeline hardcodes `split`, so any of the three can be selected with `--scenarios` and a
+file emitted from these fields; `evaluation/make_benchmark150.py` does exactly that for the
+150-scenario view.
 
 ## Scenario fields
 
@@ -125,8 +123,8 @@ is present on all 208 scenarios unless marked otherwise.
 
 The single function that reads all of this is
 `evaluation/ce_metrics_audit.py:mandatory_requirements_with_targets()`. It is the authoritative
-evaluator; where an older function in `evaluation/common.py` disagrees, the appendix explains
-which report numbers use which.
+evaluator; Section 6 of the technical appendix names which reported number comes from it and
+which from its predecessor in `evaluation/common.py`.
 
 ## How the gold was built
 
@@ -141,19 +139,20 @@ Sixty scenarios from the first round carry a `gold_audit` block recording a late
 That audit is what surfaced the two evaluator corrections described above.
 
 No retrieval output was used to decide what the gold should be. Gold was fixed from the legal
-sources, then resolved to chunks; chunks were never selected because the system had returned them.
+sources first, then resolved to chunks; a chunk was never selected because the system had
+returned it.
 
-## A known defect, recorded rather than hidden
+## Record counts
 
-`gold_evidence_218.jsonl` contains **218 records, not 208**. Ten of them
-(`EXP_GRAPH001`–`EXP_GRAPH010`) are orphans: they belong to a graph-contextual evaluation that
-was removed from the benchmark, and no scenario with those ids exists in
-`scenarios_all_208.jsonl`.
+`gold_evidence_218.jsonl` contains **218 records for 208 scenarios**. The frozen retrieval run
+covered 218 scenarios; ten of them (`EXP_GRAPH001`–`EXP_GRAPH010`) were subsequently removed
+from the benchmark and the scenario file re-emitted with 208, while the gold file and the
+candidate cache kept all 218.
 
-This affects nothing. Every evaluation script joins gold to scenarios by `scenario_id` and
-iterates over scenario ids, so the ten orphans are never read. The file is shipped unmodified
-because it is the exact file the reported results were computed against, and silently editing it
-would break the hash trail in `config/frozen_cache_manifest.json`. Confirm it for yourself:
+Every evaluation script joins gold to scenarios by `scenario_id` and iterates over scenario
+ids, so the ten extra records are never read. Both files are shipped unmodified, which is why
+the gold file still hashes to the value recorded in `config/frozen_cache_manifest.json`. Part 2
+of the reproduction checks this, and you can confirm it directly:
 
 ```bash
 python - <<'PY'

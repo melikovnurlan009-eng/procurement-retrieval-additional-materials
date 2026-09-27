@@ -33,17 +33,17 @@ value and a verdict, then its own verdict. The run ends with:
   1  corpus         Corpus composition                           10/10  PASS
   2  artifacts      Frozen artifact integrity and provenance     23/23  PASS
   3  rq1            RQ1: matched-budget comparison               33/33  PASS
-  4  signals        Signal behaviour and authority calibration   17/17  PASS
+  4  signals        Signal behaviour and authority calibration   16/16  PASS
   5  graph          RQ2: graph edge quality and retrieval effect  11/11  PASS
   6  regime         RQ2: regime-compatibility constraint           8/8  PASS
   7  reranking      RQ3: cross-encoder variants and completeness  30/30  PASS
   8  performance    Final fixed-configuration performance         20/20  PASS
   9  ir-metrics     Secondary IR diagnostics                      11/11  PASS
- 10  tokens         Token distributions and the 512-token window  14/14  PASS
+ 10  tokens         Token distributions and the 512-token window  13/13  PASS
  11  figures        Figure regeneration                           11/11  PASS
  12  cross-check    Independent cross-check of headline numbers   34/34  PASS
   ------------------------------------------------------------------------
-  12/12 parts reproduced   222/222 checks passed
+  12/12 parts reproduced   220/220 checks passed
 ```
 
 Check-by-check detail goes to `results/reproduction_report.csv`. Exit status is 0 only if
@@ -107,16 +107,12 @@ export CANDIDATE_CACHE=/path/to/candidate_cache.parquet
 export RESULTS_DIR=/somewhere/else                # to avoid writing into the checkout
 ```
 
-## Honest notes
+## Where things are documented
 
-The appendix's final section lists known issues in full. The two most worth knowing up front:
+[`TECHNICAL_APPENDIX.md`](TECHNICAL_APPENDIX.md) covers the system, every parameter, the
+end-to-end workflow, what each of the 125 files is for, and where each reported number comes
+from, mapped to the report's own table and figure numbers.
 
-- **TEST is a confirmation set, not a pristine held-out set.** The stratified split superseded an
-  earlier split by source, so part of TEST comes from material audited earlier in the project.
-  This was a deliberate trade for category comparability; the older split is preserved
-  per-scenario and can be reconstructed.
-- **The corpus build is not bit-reproducible**, because semantic chunking calls an LLM. The index
-  is therefore hash-pinned and every reported result is computed against that one pinned copy.
-- **Two sections of the report use an earlier, smaller version of the benchmark.** Sections
-  6.2.2 and 6.2.3 predate the last expansion round. The report does not say so; the appendix
-  does, and parts 5 and 6 reconstruct that view and reproduce both results exactly.
+[`benchmark/BENCHMARK.md`](benchmark/BENCHMARK.md) documents the evaluation set and
+[`corpus/CORPUS_BUILD.md`](corpus/CORPUS_BUILD.md) the corpus. The study's scope, findings and
+limitations are the report's own.

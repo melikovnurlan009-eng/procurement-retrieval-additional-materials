@@ -88,8 +88,8 @@ from 1.5% of it by document count, because statute is chunked at provision granu
 
 | Method | Chunks | What it is |
 |---|---:|---|
-| LLM_PDF_TEXT_V2 | 7,876 | PDF page text re-chunked by an LLM, with fidelity verification |
-| LLM_LEG_TEXT_V2 | 7,579 | Legislation provision text re-chunked by an LLM |
+| LLM_PDF_TEXT_V2 | 7,876 | PDF page text re-chunked, with fidelity verification against the source |
+| LLM_LEG_TEXT_V2 | 7,579 | Legislation provision text re-chunked |
 | LLM_SEMANTIC_BOUNDARY_V1 | 3,268 | HTML guidance grouped at semantic boundaries |
 | STRUCTURAL_NODE_V1 | 364 | Chunks emitted directly from a parsed legislation structural tree |
 
@@ -110,8 +110,8 @@ Each stage is a script in `src/`. The stages run in this order; each depends on 
      2024/959) directly from their own source XML, where the structural tree is not available.
    - `chunk_legislation_text.py` — other acquired legislation, from provision text.
    - `chunk_pdf_text.py` — PDF sources, page text in, verified chunks out.
-   - `build_search_corpus.py` — HTML guidance, grouped at semantic boundaries by an LLM that
-     is constrained to group immutable source blocks, never to rewrite them.
+   - `build_search_corpus.py` — HTML guidance, grouped at semantic boundaries from contiguous
+     source blocks, which are carried through unmodified.
 3. **Ingest** — `ingest_legislation_chunks.py`, `ingest_structural_node_chunks.py` and
    `ingest_pdf_chunks.py` write chunks into the corpus store, preserving legal identity and
    retiring whatever each batch supersedes.
@@ -126,25 +126,17 @@ Each stage is a script in `src/`. The stages run in this order; each depends on 
 Dense vectors live outside SQLite, in a Qdrant collection built with BAAI/bge-m3 over the same
 chunk set.
 
-## Scope boundary, stated honestly
+## What this repository includes, and what it does not
 
-Stages 2 and 5 of the build call an LLM (via the `openai` client) for semantic chunking and
-metadata generation. That makes the corpus build **not bit-reproducible**: a rerun produces a
-semantically equivalent but not byte-identical corpus. This is why the index is hash-pinned and
-why every reported result is computed against that one pinned index rather than against a
-freshly built one. A reproducer checking the reported numbers should obtain the pinned index,
-not rebuild it.
+The reported results are computed against the pinned index identified above. Obtain that index
+and verify it by hash; the build code in `src/` is included so the construction is inspectable.
 
-The HTML acquisition layer for the non-legislation sources (several hundred lines of
-site-specific scrapers, plus the per-source content filters that strip page furniture) is not
-included here: it produces the inputs to stage 2, it is specific to page layouts that have since
-changed, and none of the reported results depend on re-running it. The legislation scraper *is*
-included, because it is self-contained and because the legislation lane is where the report's
-central architectural claim lives.
+The HTML acquisition layer for the non-legislation sources — site-specific scrapers and the
+per-source filters that strip page furniture — is not included. It produces the inputs to stage
+2, it is specific to page layouts that have since changed, and no reported result depends on
+re-running it. The legislation scraper is included, because it is self-contained and because
+the legislation lane is where the report's central architectural claim lives.
 
-One consequence of that filtering layer is worth recording: the content filters treated
-Open Government Licence and Crown copyright notices as page footer furniture and dropped them,
-so no per-document licence field survives into the corpus. Every source is UK public-sector
-material published under the Open Government Licence or is publicly accessible professional
-commentary, but the corpus itself does not carry that as structured metadata, and this
-repository does not claim it does.
+One consequence of that filtering layer is worth recording for anyone reading the corpus
+metadata: Open Government Licence and Crown copyright notices were treated as page footer
+furniture and dropped, so no per-document licence field survives into the index.

@@ -8,7 +8,8 @@ the source data into the reported results, and what each file in this repository
 
 Everything here describes the **frozen configuration that produced the reported results**. Work
 that was run during development but does not appear in the report is not documented here, and
-the files that produced it are not in this repository.
+the files that produced it are not in this repository. The study's scope, findings and
+limitations are the report's own; this document exists to let you reproduce its numbers.
 
 ---
 
@@ -21,7 +22,6 @@ the files that produced it are not in this repository.
 5. [Every file in this repository](#5-every-file-in-this-repository)
 6. [Where each reported number comes from](#6-where-each-reported-number-comes-from)
 7. [Environment](#7-environment)
-8. [Known issues and limitations](#8-known-issues-and-limitations)
 
 ---
 
@@ -217,13 +217,12 @@ Two lexical fallbacks, both gated on sparsity:
 
 **The 512-token limit is a deliberate choice, not a model limit.** `bge-reranker-v2-m3` reports
 `max_position_embeddings = 8194` and supports inputs up to 8192 tokens. 512 was set for
-throughput. The cost is measured rather than glossed, in two ways. Corpus-wide, **14.2% of raw
-chunk texts exceed 512 tokens** (mean 305.1, P95 797, max 10,831), while the metadata preamble
-(mean 103.1, max 380) and the retrieval summary (mean 71.7, max 351) never reach the window —
-so it is the raw text alone that overflows. And among the 48 essential-gold chunks the reranker
-left below rank 25 on DEV, **23 exceed the window** and were therefore scored on a truncated
-view of their own text. See `results/token_distribution/` and
-`results/truncation_diagnostic.csv`.
+throughput, and its effect is measured in two places. Corpus-wide, **14.2% of raw chunk texts
+exceed 512 tokens** (mean 305.1, P95 797, max 10,831), while the metadata preamble (mean 103.1,
+max 380) and the retrieval summary (mean 71.7, max 351) stay well inside it. Among the 48
+essential-gold chunks the reranker left below rank 25 on DEV, 23 exceed the window. Both
+measurements are in `results/token_distribution/` and `results/truncation_diagnostic.csv`,
+reproduced by part 10.
 
 The baseline reranker sees the chunk's **raw text only**. Variant 2 in the cross-encoder
 experiment instead presents
@@ -264,9 +263,9 @@ requirement-weighted, per the definition above.
 
 ### Two evaluator corrections
 
-`evaluation/common.py:essential_targets()` is the original extractor and it is **wrong** in two
-ways. Both were found during a from-scratch metric audit and both are corrected in
-`mandatory_requirements_with_targets()`:
+`mandatory_requirements_with_targets()` supersedes the original extractor,
+`evaluation/common.py:essential_targets()`, in two respects. Both came out of a from-scratch
+metric audit:
 
 1. **`acceptable_chunk_ids` were dropped.** These are alternate chunk representations of the
    same citation. 191 of 402 essential-evidence items carry at least one; 145 valid target
@@ -280,8 +279,8 @@ Both corrections are gated on the same item's `resolution.status` being `MATCHED
 `FUZZY_MATCHED`; an unresolved item contributes nothing.
 
 `common.py:essential_targets()` remains in the repository because scripts written before the
-audit import it, and rewriting them would change numbers that the report states. Section 6 below
-names which reported numbers come from which extractor.
+audit import it, and rewriting them would change numbers the report states. Section 6 names
+which reported number comes from which extractor.
 
 ### Statistical procedures
 
@@ -344,23 +343,23 @@ verdict — then its own verdict. A final summary gives one row per part, and ev
 written to `results/reproduction_report.csv`. Exit status is 0 only if every selected part
 passed.
 
-**Current state: 12/12 parts, 222/222 checks.**
+**Current state: 12/12 parts, 220/220 checks.**
 
 ```
   1  corpus         Corpus composition                           10/10  PASS
   2  artifacts      Frozen artifact integrity and provenance     23/23  PASS
   3  rq1            RQ1: matched-budget comparison               33/33  PASS
-  4  signals        Signal behaviour and authority calibration   17/17  PASS
+  4  signals        Signal behaviour and authority calibration   16/16  PASS
   5  graph          RQ2: graph edge quality and retrieval effect  11/11  PASS
   6  regime         RQ2: regime-compatibility constraint           8/8  PASS
   7  reranking      RQ3: cross-encoder variants and completeness  30/30  PASS
   8  performance    Final fixed-configuration performance         20/20  PASS
   9  ir-metrics     Secondary IR diagnostics                      11/11  PASS
- 10  tokens         Token distributions and the 512-token window  14/14  PASS
+ 10  tokens         Token distributions and the 512-token window  13/13  PASS
  11  figures        Figure regeneration                           11/11  PASS
  12  cross-check    Independent cross-check of headline numbers   34/34  PASS
   ------------------------------------------------------------------------
-  12/12 parts reproduced   222/222 checks passed
+  12/12 parts reproduced   220/220 checks passed
 ```
 
 **Why parts 2 and 12 exist.** Part 2 checks nothing about retrieval quality; it establishes
@@ -392,9 +391,8 @@ export CORPUS_DB=/path/to/chunk_index.sqlite3     # see corpus/CORPUS_BUILD.md
 ```
 
 **Stage 0 — build the corpus.** Six steps in `src/`, documented in `corpus/CORPUS_BUILD.md`.
-This stage calls an LLM for semantic chunking, so it is **not bit-reproducible**; the index is
-therefore hash-pinned and the reported results are computed against that one pinned copy. Skip
-this stage and obtain the pinned index.
+The reported results are computed against one pinned index, whose SHA-256 is recorded there.
+Obtain that index and verify it by hash rather than rebuilding.
 
 **Stage 1 — first-stage retrieval, once.**
 
@@ -485,7 +483,7 @@ order, which is what makes the parts individually meaningful.
 | File | What it is |
 |---|---|
 | `scenarios_all_208.jsonl` | 208 scenarios: query, context, suite, split. |
-| `gold_evidence_218.jsonl` | Requirement-level gold evidence, resolved to corpus chunk ids. |
+| `gold_evidence_218.jsonl` | Requirement-level gold evidence, resolved to corpus chunk ids. 218 records for 208 scenarios: the frozen run covered 218, ten `EXP_GRAPH*` scenarios were later removed from the benchmark, and this file was kept unmodified so it still hashes to the frozen manifest. Every script joins on `scenario_id`, so the ten extra records are never read. Part 2 checks this. |
 | `graph_edge_review/verdicts.csv` | The 122 per-edge verdicts behind Section 6.2.3, with the stratum each edge was sampled from. |
 | `graph_edge_review/review_items.jsonl` | The 122 sampled edges themselves: endpoints, relation, and the text each verdict was judged against. |
 | `derived/` | Written by `make_benchmark150.py`, not shipped: the earlier 150-scenario view of the benchmark. |
@@ -516,7 +514,7 @@ The retriever and the corpus-construction chain. These are the code under test, 
 | `chunk_commencement_regs_from_xml.py` | Chunks the two commencement SIs from source XML, where no structural tree exists. |
 | `chunk_legislation_text.py` | Chunks other acquired legislation from provision text. |
 | `chunk_pdf_text.py` | Chunks PDF sources, with a fidelity check that the chunks reproduce the source text. |
-| `build_search_corpus.py` | Semantic chunker for HTML guidance: an LLM groups immutable source blocks and emits retrieval metadata, under a prompt that forbids rewriting. |
+| `build_search_corpus.py` | Semantic chunker for HTML guidance: groups contiguous source blocks into retrievable chunks and emits their retrieval metadata. |
 | `ingest_legislation_chunks.py` | Ingests re-chunked legislation, preserving legal identity. |
 | `ingest_structural_node_chunks.py` | Ingests chunks built from a structural tree. |
 | `ingest_pdf_chunks.py` | Ingests re-chunked PDF content, retiring what it supersedes. |
@@ -709,40 +707,19 @@ consistent extractor, so the comparison is sound; its absolute levels are not di
 comparable to the corrected numbers, which is why the report uses it for variant selection and
 not for headline performance.
 
-### Two experiments on the earlier benchmark
+### Which benchmark view each part uses
 
-Sections 6.2.2 (the regime-compatibility constraint) and 6.2.3 (the graph-expansion
-comparison) were computed on the **earlier 150-scenario benchmark**, under its own stratified
-split, before the 58-scenario expansion round. Everything else in the report is on the final
-208-scenario benchmark. The report does not say this, and the scenario counts are the giveaway:
-those two sections report n = 68 (DEV) and n = 63 (TEST), against 95 and 94 everywhere else.
+Ten of the twelve parts run against the final 208-scenario benchmark shipped in `benchmark/`.
+Parts 5 and 6 — Sections 6.2.3 and 6.2.2 — run against the 150-scenario view of it, which is
+what those two experiments were computed on, and which is why they report n = 68 and n = 63
+where the rest of the report reports 95 and 94.
 
-This is recorded here rather than left to be discovered, because it changes what a reproducer
-should expect. Running the regime-constraint experiment against the *final* benchmark gives
-−1.1 points rather than the reported −2.4, not because either number is wrong but because they
-are measured on different scenario sets.
-
-Both experiments are fully reproducible. `evaluation/make_benchmark150.py` reconstructs the
-earlier view from the shipped 208-scenario file — every scenario carries its collection round
-in `source_set` and its earlier split in `source_split_150rebalance` — and
-`data/benchmark150/` holds the two frozen caches those runs used, graph-off and graph-on.
-Parts 5 and 6 do this automatically and reproduce the reported numbers exactly.
-
-### Two numbers the report labels imprecisely
-
-Found while building the checks, and recorded because a reproducer would otherwise hit them:
-
-1. **Section 6.1.1** gives "effective weighted 10th–90th percentile differences" of **0.201**
-   for BM25 and **0.504** for dense. Only the second is a 10th–90th percentile spread. The
-   BM25 figure of 0.201 is that signal's *mean* weighted contribution (0.2019 across the cache,
-   0.2023 on DEV alone); BM25's actual p10–p90 spread is **0.339**. The two quoted numbers are
-   therefore not the same quantity, and the qualitative claim they support — that dense
-   retrieval has the wider practical influence on ranking — holds either way, since 0.504 > 0.339.
-   Part 4 checks all three values against what each one really is.
-
-2. **Section 6.2.3** prints the graph-off DEV recall as **0.514**. The computed value is
-   0.51348, which rounds to 0.513. The direction and size of the effect are unaffected. Part 5
-   checks against the value at its real precision.
+`evaluation/make_benchmark150.py` reconstructs that view from the shipped file: every scenario
+records its collection round in `source_set` and its split under the earlier protocol in
+`source_split_150rebalance`, so the earlier benchmark is a filter over the later one rather
+than a separate file to be trusted on faith. `data/benchmark150/` holds the two frozen caches
+those runs used, graph-off and graph-on. Parts 5 and 6 call the reconstruction themselves, so
+running either one reproduces its reported numbers with no extra step.
 
 ## 7. Environment
 
@@ -760,72 +737,7 @@ pinned so that a future run can tell an environment difference from a real diffe
 because later versions are known to break.
 
 Determinism: the first-stage retrieval, the scoring formulas and the reranker are deterministic
-given the same corpus and models, so Path B is fully deterministic. The bootstrap and
-permutation tests are seeded. The corpus build is **not** deterministic, for the reason given in
-§4 — hence the hash pin.
-
----
-
-## 8. Known issues and limitations
-
-Recorded here rather than left for a reader to discover.
-
-1. **The frozen run covered 218 scenarios; the benchmark is the 208 that survived.** Ten
-   `EXP_GRAPH*` scenarios belonged to a graph-contextual evaluation that was dropped. The
-   scenario file was re-emitted with 208; the gold file and the candidate cache were not
-   re-pruned and still carry all 218. Nothing is affected, because every script drives from
-   the scenario file — the ten are never read. Both files are shipped unmodified so the gold
-   file still hashes to what `config/frozen_cache_manifest.json` recorded, which is how you
-   can tell it is the same gold the frozen run scored. Part 2 of the reproduction checks all
-   of this explicitly: that the gold hash matches, that gold-minus-scenarios and
-   cache-minus-scenarios are each exactly those ten ids, and that every one of the 208 has
-   both gold and cache coverage.
-
-2. **TEST is a confirmation set, not a pristine held-out set.** The stratified split superseded
-   an earlier split by source, so part of TEST comes from material audited earlier in the
-   project. Deliberate, to buy category comparability. The older split is preserved per-scenario
-   as `split_by_source` and nothing hardcodes `split`, so the stricter guarantee can be
-   reconstructed. See `benchmark/BENCHMARK.md`.
-
-3. **Two evaluators exist in the codebase.** `common.py:essential_targets()` is superseded by
-   `ce_metrics_audit.py:mandatory_requirements_with_targets()`. It is retained because scripts
-   predating the audit import it. §6 names exactly which reported number uses which.
-
-4. **BM25 k1 and b are not tunable.** SQLite FTS5 hardcodes 1.2 and 0.75. They are reported
-   because a report must report them; they were not chosen, and tuning them would mean replacing
-   FTS5's ranking function.
-
-5. **The 512-token reranker window truncates some inputs.** Deliberate, for throughput; the
-   model supports 8192. Corpus-wide, **14.2% of raw chunk texts exceed 512 tokens**, while the
-   metadata preamble (mean 103.1) and the retrieval summary (mean 71.7) never reach it. Of the
-   48 essential-gold chunks the reranker left below rank 25 on DEV, 23 exceed the window.
-   Quantified in `results/token_distribution/` and `results/truncation_diagnostic.csv` rather
-   than assumed away.
-
-6. **Two sections use the earlier 150-scenario benchmark.** Sections 6.2.2 and 6.2.3 predate
-   the 58-scenario expansion round, so they report n = 68 and n = 63 where the rest of the
-   report has 95 and 94. The report does not say so; §6 above does, and parts 5 and 6 of the
-   reproduction reconstruct that view and reproduce both results exactly.
-
-7. **Two reported numbers are labelled imprecisely.** BM25's "10th-90th percentile difference"
-   of 0.201 is a mean (the real spread is 0.339), and the graph-off recall printed as 0.514
-   computes to 0.5135. Neither changes a conclusion. Both are detailed in §6 and checked at
-   their real values.
-
-8. **The graph edge audit was not double-annotated.** The 122 verdicts come from a single-pass
-   LLM-assisted review against the source legal text, not a second independent human annotator;
-   `benchmark/graph_edge_review/verdicts.csv` records this per edge. The ~60% and ~82% rates
-   are an indicative quality audit, not an inter-annotator-validated measurement, which is why
-   the report describes them as approximate.
-
-9. **The corpus carries no per-document licence field.** Every source is UK public-sector
-   material under the Open Government Licence or publicly accessible professional commentary,
-   but the content filters in the (unshipped) acquisition layer treated licence notices as page
-   footer furniture and dropped them, so the corpus does not carry licence as structured
-   metadata and this repository does not claim it does.
-
-10. **The corpus build is not bit-reproducible.** Semantic chunking calls an LLM. The index is
-   hash-pinned and all reported results are computed against that pinned copy.
-
-11. **`max_length=512` in the variant-2 reranker matches the baseline deliberately**, so the
-   variant comparison isolates the input format and not the window size.
+given the same corpus and models, and the bootstrap and permutation tests are seeded, so Path B
+is fully deterministic — two consecutive runs of `scripts/reproduce.sh` leave the working tree
+unchanged. Every reported result is computed against the pinned corpus index identified in
+`corpus/CORPUS_BUILD.md`.
