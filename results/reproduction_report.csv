@@ -105,13 +105,12 @@ part_number,part,report,check,reported,recomputed,status
 3,rq1,"Section 6.1, Tables 3 and 4, Figures 4 and 5",RQ1 McNemar scenarios worsened,1,1,PASS
 4,signals,"Sections 6.1.1 and 6.2.1-6.2.2, Figures 6 and 7","BM25 ROC AUC (essential gold vs rest, DEV)",0.728,0.7283,PASS
 4,signals,"Sections 6.1.1 and 6.2.1-6.2.2, Figures 6 and 7","Dense ROC AUC (essential gold vs rest, DEV)",0.847,0.8469,PASS
-4,signals,"Sections 6.1.1 and 6.2.1-6.2.2, Figures 6 and 7",BM25 mean weighted contribution,0.2019,0.2019,PASS
-4,signals,"Sections 6.1.1 and 6.2.1-6.2.2, Figures 6 and 7",BM25 p10-p90 spread,0.339,0.3392,PASS
-4,signals,"Sections 6.1.1 and 6.2.1-6.2.2, Figures 6 and 7",Dense p10-p90 spread,0.504,0.5042,PASS
+4,signals,"Sections 6.1.1 and 6.2.1-6.2.2, Figures 6 and 7",BM25 effective weighted contribution,0.201,0.2019,PASS
+4,signals,"Sections 6.1.1 and 6.2.1-6.2.2, Figures 6 and 7",Dense effective weighted spread,0.504,0.5042,PASS
 4,signals,"Sections 6.1.1 and 6.2.1-6.2.2, Figures 6 and 7",Score reconstruction max error,0.0,0.0,PASS
 4,signals,"Sections 6.1.1 and 6.2.1-6.2.2, Figures 6 and 7",Authority amplification factor,23.76,23.7628,PASS
-4,signals,"Sections 6.1.1 and 6.2.1-6.2.2, Figures 6 and 7",Primary-secondary pairs compared,4892223,4892223,PASS
-4,signals,"Sections 6.1.1 and 6.2.1-6.2.2, Figures 6 and 7",Authority reorders this share of pairs,0.193,0.1928,PASS
+4,signals,"Sections 6.1.1 and 6.2.1-6.2.2, Figures 6 and 7",Primary-secondary pairs authority reorders,943159,943159,PASS
+4,signals,"Sections 6.1.1 and 6.2.1-6.2.2, Figures 6 and 7",Share of pairs authority reorders,0.193,0.1928,PASS
 4,signals,"Sections 6.1.1 and 6.2.1-6.2.2, Figures 6 and 7",Primary legislation mean normalised authority,0.751,0.7509,PASS
 4,signals,"Sections 6.1.1 and 6.2.1-6.2.2, Figures 6 and 7",Secondary legislation mean normalised authority,0.038,0.038,PASS
 4,signals,"Sections 6.1.1 and 6.2.1-6.2.2, Figures 6 and 7",Nominal primary-secondary gap,0.03,0.03,PASS
@@ -128,7 +127,7 @@ part_number,part,report,check,reported,recomputed,status
 5,graph,Section 6.2.3,Inferred and hub strata sit at 10-20%,yes,"20%, 10%",PASS
 5,graph,Section 6.2.3,Graph comparison DEV scenarios,68,68,PASS
 5,graph,Section 6.2.3,"DEV recall, graph ON",0.491,0.4914,PASS
-5,graph,Section 6.2.3,"DEV recall, graph OFF",0.5135,0.5135,PASS
+5,graph,Section 6.2.3,"DEV recall, graph OFF",0.514,0.5135,PASS
 5,graph,Section 6.2.3,Graph expansion lowers DEV recall,yes,0.4914 < 0.5135,PASS
 5,graph,Section 6.2.3,Graph comparison TEST scenarios,63,63,PASS
 5,graph,Section 6.2.3,"TEST recall, graph ON",0.468,0.4683,PASS

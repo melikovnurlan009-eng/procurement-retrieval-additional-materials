@@ -279,8 +279,7 @@ Both corrections are gated on the same item's `resolution.status` being `MATCHED
 `FUZZY_MATCHED`; an unresolved item contributes nothing.
 
 `common.py:essential_targets()` remains in the repository because scripts written before the
-audit import it, and rewriting them would change numbers the report states. Section 6 names
-which reported number comes from which extractor.
+audit import it. Section 6 names which reported number comes from which extractor.
 
 ### Statistical procedures
 
@@ -353,14 +352,14 @@ read first.
 A final summary gives one row per part plus the artifact tally, and every check is written to
 `results/reproduction_report.csv`. Exit status is 0 only if every selected part passed.
 
-**Current state: 12/12 parts, 282/282 checks, 48 artifacts regenerated and all 48 identical
+**Current state: 12/12 parts, 281/281 checks, 48 artifacts regenerated and all 48 identical
 to the shipped copies.**
 
 ```
   1  corpus         Corpus composition                           10/10  PASS
   2  artifacts      Frozen artifact integrity and provenance     23/23  PASS
   3  rq1            RQ1: matched-budget comparison               71/71  PASS
-  4  signals        Signal behaviour and authority calibration   16/16  PASS
+  4  signals        Signal behaviour and authority calibration   15/15  PASS
   5  graph          RQ2: graph edge quality and retrieval effect  19/19  PASS
   6  regime         RQ2: regime-compatibility constraint           8/8  PASS
   7  reranking      RQ3: cross-encoder variants and completeness  34/34  PASS
@@ -370,7 +369,7 @@ to the shipped copies.**
  11  figures        Figure regeneration                           11/11  PASS
  12  cross-check    Independent cross-check of headline numbers   34/34  PASS
   ------------------------------------------------------------------------
-  12/12 parts reproduced   282/282 checks passed
+  12/12 parts reproduced   281/281 checks passed
   48 artifacts regenerated under results/ and figures/ — 48 identical to the shipped copy
 ```
 
@@ -495,7 +494,7 @@ order, which is what makes the parts individually meaningful.
 | File | What it is |
 |---|---|
 | `scenarios_all_208.jsonl` | 208 scenarios: query, context, suite, split. |
-| `gold_evidence_218.jsonl` | Requirement-level gold evidence, resolved to corpus chunk ids. 218 records for 208 scenarios: the frozen run covered 218, ten `EXP_GRAPH*` scenarios were later removed from the benchmark, and this file was kept unmodified so it still hashes to the frozen manifest. Every script joins on `scenario_id`, so the ten extra records are never read. Part 2 checks this. |
+| `gold_evidence_218.jsonl` | Requirement-level gold evidence, resolved to corpus chunk ids. 218 records covering the 208 benchmark scenarios plus ten `EXP_GRAPH*` records from the frozen run; the file is shipped unmodified, so it still hashes to the value in `config/frozen_cache_manifest.json`. Every script joins on `scenario_id`, so the ten extra records are never read. Part 2 checks this. |
 | `graph_edge_review/edge_classifications.csv` | The 122 sampled edges behind Section 6.2.3, each with its relation, stratum and classification. |
 | `graph_edge_review/review_items.jsonl` | The same 122 edges with their endpoints and the underlying provision text. |
 | `derived/` | Written by `make_benchmark150.py`, not shipped: the earlier 150-scenario view of the benchmark. |
@@ -696,7 +695,7 @@ report's own.
 | **Table 4** per-category, TEST | 11 categories | `results/rq1_rq3_same_budget/rq1_per_category.csv` | 3 |
 | Authority: primary / secondary mean normalised | 0.751 / 0.038 | `results/authority_amplification_analysis.csv` | 4 |
 | Authority amplification factor | 23.76× | `results/score_signal_stats_summary.json` | 4 |
-| Authority reorders this share of pairs | 19.3% of 4,892,223 | same | 4 |
+| Primary-secondary pairs authority reorders | 943,159 (19.3%) | same | 4 |
 | Dense gap vs non-gold / vs wrong-regime | +0.101 / +0.024 | same | 4 |
 | EU candidate rows / essential gold among them | 5,088 / 0 | same | 4 |
 | Graph audit: strict / not-wrong rate | 59.8% / 82.0% of 122 edges | `results/graph_edge_audit.json` | 5 |
@@ -733,17 +732,16 @@ not for headline performance.
 
 ### Which benchmark view each part uses
 
-Ten of the twelve parts run against the final 208-scenario benchmark shipped in `benchmark/`.
-Parts 5 and 6 — Sections 6.2.3 and 6.2.2 — run against the 150-scenario view of it, which is
-what those two experiments were computed on, and which is why they report n = 68 and n = 63
-where the rest of the report reports 95 and 94.
+Ten of the twelve parts run against the 208-scenario benchmark shipped in `benchmark/`. Parts 5
+and 6 — Sections 6.2.3 and 6.2.2 — run against the 150-scenario view of it, which is the set
+those two experiments were computed on, at n = 68 on DEV and n = 63 on TEST.
 
 `evaluation/make_benchmark150.py` reconstructs that view from the shipped file: every scenario
-records its collection round in `source_set` and its split under the earlier protocol in
-`source_split_150rebalance`, so the earlier benchmark is a filter over the later one rather
-than a separate file to be trusted on faith. `data/benchmark150/` holds the two frozen caches
-those runs used, graph-off and graph-on. Parts 5 and 6 call the reconstruction themselves, so
-running either one reproduces its reported numbers with no extra step.
+records its collection round in `source_set` and its split under that protocol in
+`source_split_150rebalance`, so the set is a filter over the shipped benchmark rather than a
+separate file to be trusted on its own. `data/benchmark150/` holds the two frozen caches those
+runs used, graph-off and graph-on. Parts 5 and 6 call the reconstruction themselves, so running
+either one reproduces its numbers with no extra step.
 
 ## 7. Environment
 

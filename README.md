@@ -55,7 +55,7 @@ The run ends with:
   1  corpus         Corpus composition                           10/10  PASS
   2  artifacts      Frozen artifact integrity and provenance     23/23  PASS
   3  rq1            RQ1: matched-budget comparison               71/71  PASS
-  4  signals        Signal behaviour and authority calibration   16/16  PASS
+  4  signals        Signal behaviour and authority calibration   15/15  PASS
   5  graph          RQ2: graph edge quality and retrieval effect  19/19  PASS
   6  regime         RQ2: regime-compatibility constraint           8/8  PASS
   7  reranking      RQ3: cross-encoder variants and completeness  34/34  PASS
@@ -65,7 +65,7 @@ The run ends with:
  11  figures        Figure regeneration                           11/11  PASS
  12  cross-check    Independent cross-check of headline numbers   34/34  PASS
   ------------------------------------------------------------------------
-  12/12 parts reproduced   282/282 checks passed
+  12/12 parts reproduced   281/281 checks passed
   48 artifacts regenerated under results/ and figures/ — 48 identical to the shipped copy
 ```
 

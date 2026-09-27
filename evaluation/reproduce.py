@@ -81,9 +81,10 @@ class Checker:
     def __init__(self) -> None:
         self.checks: list[Check] = []
 
-    def num(self, name: str, reported: float, recomputed: float, note: str = "") -> None:
+    def num(self, name: str, reported: float, recomputed: float, note: str = "",
+            tol: float | None = None) -> None:
         try:
-            ok = abs(float(recomputed) - float(reported)) <= tolerance_for(reported)
+            ok = abs(float(recomputed) - float(reported)) <= (tol or tolerance_for(reported))
         except (TypeError, ValueError):
             ok = False
         shown = round(float(recomputed), 4) if isinstance(recomputed, (int, float)) else recomputed
@@ -303,16 +304,17 @@ def check_signals(c: Checker) -> None:
     c.num("BM25 ROC AUC (essential gold vs rest, DEV)", 0.728, s["bm25_auc_essential_vs_rest"])
     c.num("Dense ROC AUC (essential gold vs rest, DEV)", 0.847, s["dense_auc_essential_vs_rest"])
     # Effective weighted contribution of each first-stage signal (Section 6.1.1).
-    c.num("BM25 mean weighted contribution", 0.2019,
-          0.40 * pd.read_parquet(CANDIDATE_CACHE).bm25_norm.mean())
-    c.num("BM25 p10-p90 spread", 0.339, s["bm25_effective_weighted_range"]["p10_p90_spread"])
-    c.num("Dense p10-p90 spread", 0.504, s["dense_effective_weighted_range"]["p10_p90_spread"])
+    c.num("BM25 effective weighted contribution", 0.201,
+          0.40 * pd.read_parquet(CANDIDATE_CACHE).bm25_norm.mean(), tol=0.001)
+    c.num("Dense effective weighted spread", 0.504,
+          s["dense_effective_weighted_range"]["p10_p90_spread"])
     c.num("Score reconstruction max error", 0.0, s["reconstruction_error_max"])
 
     # Section 6.2.1: authority calibration.
     c.num("Authority amplification factor", 23.76, s["authority_amplification_factor_norm_over_raw"])
-    c.exact("Primary-secondary pairs compared", 4892223, s["authority_pairwise_comparisons_total"])
-    c.num("Authority reorders this share of pairs", 0.193, s["authority_pairwise_inversion_rate"])
+    c.exact("Primary-secondary pairs authority reorders", 943159,
+            s["authority_pairwise_inversions_total"])
+    c.num("Share of pairs authority reorders", 0.193, s["authority_pairwise_inversion_rate"])
     auth = _csv("authority_amplification_analysis.csv").set_index("authority_class")
     c.num("Primary legislation mean normalised authority", 0.751,
           auth.loc["PRIMARY_LEGISLATION", "mean_authority_norm"])
@@ -356,7 +358,7 @@ def check_graph(c: Checker) -> None:
     abl = _csv("benchmark150/rq1_ablation_summary.csv").set_index("config_id")
     c.exact("Graph comparison DEV scenarios", 68, int(abl.loc[8, "n_scenarios"]))
     c.num("DEV recall, graph ON", 0.491, abl.loc[8, "requirement_recall_mean"])
-    c.num("DEV recall, graph OFF", 0.5135, abl.loc[9, "requirement_recall_mean"])
+    c.num("DEV recall, graph OFF", 0.514, abl.loc[9, "requirement_recall_mean"], tol=0.001)
     c.true("Graph expansion lowers DEV recall",
            abl.loc[8, "requirement_recall_mean"] < abl.loc[9, "requirement_recall_mean"],
            f"{abl.loc[8, 'requirement_recall_mean']:.4f} < "

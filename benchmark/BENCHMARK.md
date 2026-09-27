@@ -144,10 +144,9 @@ returned it.
 
 ## Record counts
 
-`gold_evidence_218.jsonl` contains **218 records for 208 scenarios**. The frozen retrieval run
-covered 218 scenarios; ten of them (`EXP_GRAPH001`–`EXP_GRAPH010`) were subsequently removed
-from the benchmark and the scenario file re-emitted with 208, while the gold file and the
-candidate cache kept all 218.
+`gold_evidence_218.jsonl` contains **218 records for 208 scenarios**: the 208 in the benchmark
+plus ten `EXP_GRAPH*` records carried over from the frozen retrieval run, which covered 218.
+The candidate cache covers the same 218.
 
 Every evaluation script joins gold to scenarios by `scenario_id` and iterates over scenario
 ids, so the ten extra records are never read. Both files are shipped unmodified, which is why
