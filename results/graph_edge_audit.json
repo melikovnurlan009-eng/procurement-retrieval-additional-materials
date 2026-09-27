@@ -1,7 +1,7 @@
 {
   "n_edges_reviewed": 122,
   "n_strata": 14,
-  "verdict_counts": {
+  "class_counts": {
     "MEANINGFUL": 73,
     "CORRECT_BUT_USELESS": 27,
     "WRONG": 21,

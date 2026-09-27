@@ -100,6 +100,7 @@ is documented because the graph ablation is reported, not because the adopted sy
 ## Build order
 
 Each stage is a script in `src/`. The stages run in this order; each depends on the previous.
+Report Section 3.2 describes stages 1 to 4, and Section 3.3 stages 5 to 7.
 
 1. **Acquire legislation** — `group_a_legislation_scraper_v4.py` fetches the Procurement Act
    2023, the Procurement Regulations 2024 and the Public Contracts Regulations 2015 as full
@@ -115,11 +116,19 @@ Each stage is a script in `src/`. The stages run in this order; each depends on 
 3. **Ingest** — `ingest_legislation_chunks.py`, `ingest_structural_node_chunks.py` and
    `ingest_pdf_chunks.py` write chunks into the corpus store, preserving legal identity and
    retiring whatever each batch supersedes.
-4. **Resolve references** — `resolve_references.py` turns citation strings inside chunk text
+4. **Clean and assess** — `deduplicate_instruments.py` suppresses instruments ingested twice
+   through different pipelines; `content_filters.py` drops per-source page furniture;
+   `evaluate_chunk_quality.py` runs the deterministic boundary checks (severed sentences,
+   broken enumerations, orphaned list stems) alongside a semantic pass from
+   `label_chunk_quality_llm.py`; and `rechunk_from_index.py` applies the resulting repair
+   decisions back to the index. This stage takes the pre-pruned 22,042-chunk index to the
+   21,521-chunk repaired index and then to the 19,087 chunks served, retaining chunks that
+   carry benchmark labels or are citation-graph targets.
+5. **Resolve references** — `resolve_references.py` turns citation strings inside chunk text
    into graph edges between the chunks they point at.
-5. **Densify edges** — `densify_graph_edges.py` re-points edges that resolved to a coarser
+6. **Densify edges** — `densify_graph_edges.py` re-points edges that resolved to a coarser
    granularity than the corpus was chunked at, so they are actually traversable.
-6. **Index** — `build_chunk_index.py` writes `chunk_index.sqlite3`: the `chunks` and
+7. **Index** — `build_chunk_index.py` writes `chunk_index.sqlite3`: the `chunks` and
    `documents` tables, the `edges` table, the FTS5 virtual table `chunks_fts`, and the
    `index_manifest` provenance record.
 
@@ -131,12 +140,12 @@ chunk set.
 The reported results are computed against the pinned index identified above. Obtain that index
 and verify it by hash; the build code in `src/` is included so the construction is inspectable.
 
-The HTML acquisition layer for the non-legislation sources — site-specific scrapers and the
-per-source filters that strip page furniture — is not included. It produces the inputs to stage
+The HTML acquisition layer for the non-legislation sources — the site-specific scrapers —
+is not included. It produces the inputs to stage
 2, it is specific to page layouts that have since changed, and no reported result depends on
 re-running it. The legislation scraper is included, because it is self-contained and because
 the legislation lane is where the report's central architectural claim lives.
 
-One consequence of that filtering layer is worth recording for anyone reading the corpus
-metadata: Open Government Licence and Crown copyright notices were treated as page footer
-furniture and dropped, so no per-document licence field survives into the index.
+One consequence of the page-furniture filtering is worth recording for anyone reading the
+corpus metadata: Open Government Licence and Crown copyright notices were filtered with the
+rest of the footer content, so no per-document licence field survives into the index.

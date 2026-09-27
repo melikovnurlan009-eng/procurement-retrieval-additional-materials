@@ -285,9 +285,9 @@ def check_graph(c: Checker) -> None:
     c.exact("Strata sampled", 14, audit["n_strata"])
     c.num("Strict meaningful rate", 0.598, audit["strict_meaningful_rate"])
     c.num("Not-wrong rate", 0.820, audit["not_wrong_rate"])
-    c.true("Every reviewed edge carries a verdict",
-           sum(audit["verdict_counts"].values()) == audit["n_edges_reviewed"],
-           f"{sum(audit['verdict_counts'].values())}/{audit['n_edges_reviewed']}")
+    c.true("Every sampled edge is classified",
+           sum(audit["class_counts"].values()) == audit["n_edges_reviewed"],
+           f"{sum(audit['class_counts'].values())}/{audit['n_edges_reviewed']}")
 
     strata = _csv("graph_edge_audit_by_stratum.csv")
     structured = strata[strata.stratum.str.contains("structured XML|cross-instrument", regex=True)]

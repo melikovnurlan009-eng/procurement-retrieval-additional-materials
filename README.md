@@ -110,7 +110,7 @@ export RESULTS_DIR=/somewhere/else                # to avoid writing into the ch
 ## Where things are documented
 
 [`TECHNICAL_APPENDIX.md`](TECHNICAL_APPENDIX.md) covers the system, every parameter, the
-end-to-end workflow, what each of the 125 files is for, and where each reported number comes
+end-to-end workflow, what each of the 130 files is for, and where each reported number comes
 from, mapped to the report's own table and figure numbers.
 
 [`benchmark/BENCHMARK.md`](benchmark/BENCHMARK.md) documents the evaluation set and

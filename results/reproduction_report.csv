@@ -85,7 +85,7 @@ part_number,part,report,check,reported,recomputed,status
 5,graph,Section 6.2.3,Strata sampled,14,14,PASS
 5,graph,Section 6.2.3,Strict meaningful rate,0.598,0.5984,PASS
 5,graph,Section 6.2.3,Not-wrong rate,0.82,0.8197,PASS
-5,graph,Section 6.2.3,Every reviewed edge carries a verdict,yes,122/122,PASS
+5,graph,Section 6.2.3,Every sampled edge is classified,yes,122/122,PASS
 5,graph,Section 6.2.3,Structured cross-reference strata reach 80-100%,yes,"100%, 100%",PASS
 5,graph,Section 6.2.3,Inferred and hub strata sit at 10-20%,yes,"20%, 10%",PASS
 5,graph,Section 6.2.3,Graph comparison DEV scenarios,68,68,PASS

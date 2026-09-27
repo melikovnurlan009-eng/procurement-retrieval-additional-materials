@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Stratified audit of the citation graph's edge quality (report Section 6.2.3).
 
-122 edges were sampled across 14 strata - one stratum per (relation, derivation method)
-combination - and each was judged against the underlying legal text on two criteria:
+122 edges were sampled across 14 strata, one stratum per (relation, derivation method)
+combination, and each was classified on two criteria:
 
     MEANINGFUL            the edge is legally correct AND carries retrieval value
     CORRECT_BUT_USELESS   the edge is legally correct but adds nothing to retrieval
@@ -15,11 +15,10 @@ overall, along with the per-relation breakdown.
 
     python evaluation/graph_edge_audit.py
 
-Reads benchmark/graph_edge_review/verdicts.csv. Writes results/graph_edge_audit.json and
+Reads benchmark/graph_edge_review/edge_classifications.csv. Writes results/graph_edge_audit.json and
 results/graph_edge_audit_by_stratum.csv.
 
-The verdicts themselves are shipped as data in benchmark/graph_edge_review/verdicts.csv, one
-row per edge; this script aggregates them.
+Input: benchmark/graph_edge_review/edge_classifications.csv, one row per edge.
 """
 from __future__ import annotations
 
@@ -33,28 +32,28 @@ import pandas as pd
 
 from evaluation.paths import BENCHMARK_DIR, RESULTS_DIR
 
-VERDICTS = ["MEANINGFUL", "CORRECT_BUT_USELESS", "WRONG", "UNSURE"]
+CLASSES = ["MEANINGFUL", "CORRECT_BUT_USELESS", "WRONG", "UNSURE"]
 
 
 def main() -> None:
-    src = BENCHMARK_DIR / "graph_edge_review" / "verdicts.csv"
+    src = BENCHMARK_DIR / "graph_edge_review" / "edge_classifications.csv"
     if not src.exists():
-        raise SystemExit(f"Edge verdicts not found at {src}")
+        raise SystemExit(f"Edge classifications not found at {src}")
     df = pd.read_csv(src)
 
-    unfilled = df[~df.verdict.isin(VERDICTS)]
+    unfilled = df[~df.verdict.isin(CLASSES)]
     if len(unfilled):
-        raise SystemExit(f"{len(unfilled)} rows carry no usable verdict; audit is incomplete")
+        raise SystemExit(f"{len(unfilled)} rows carry no usable class; the audit is incomplete")
 
-    counts = {v: int((df.verdict == v).sum()) for v in VERDICTS}
+    counts = {v: int((df.verdict == v).sum()) for v in CLASSES}
     n = len(df)
     strict = counts["MEANINGFUL"] / n
     not_wrong = (counts["MEANINGFUL"] + counts["CORRECT_BUT_USELESS"]) / n
 
     by_stratum = (
-        df.assign(**{v: (df.verdict == v).astype(int) for v in VERDICTS})
+        df.assign(**{v: (df.verdict == v).astype(int) for v in CLASSES})
           .groupby("stratum", sort=False)
-          .agg(n=("item", "count"), **{v: (v, "sum") for v in VERDICTS})
+          .agg(n=("item", "count"), **{v: (v, "sum") for v in CLASSES})
           .reset_index()
     )
     by_stratum["meaningful_rate_pct"] = (100 * by_stratum.MEANINGFUL / by_stratum.n).round(1)
@@ -64,7 +63,7 @@ def main() -> None:
     by_stratum = by_stratum.sort_values("meaningful_rate_pct", ascending=False)
 
     by_relation = (
-        df.assign(**{v: (df.verdict == v).astype(int) for v in VERDICTS})
+        df.assign(**{v: (df.verdict == v).astype(int) for v in CLASSES})
           .groupby("relation", sort=False)
           .agg(n=("item", "count"), meaningful=("MEANINGFUL", "sum"))
           .reset_index()
@@ -75,7 +74,7 @@ def main() -> None:
     summary = {
         "n_edges_reviewed": n,
         "n_strata": int(df.stratum.nunique()),
-        "verdict_counts": counts,
+        "class_counts": counts,
         "strict_meaningful_rate": round(strict, 4),
         "not_wrong_rate": round(not_wrong, 4),
         "best_strata_meaningful_rate_pct": by_stratum.head(4)[
@@ -90,7 +89,7 @@ def main() -> None:
     by_stratum.to_csv(RESULTS_DIR / "graph_edge_audit_by_stratum.csv", index=False)
 
     print(f"Stratified graph edge audit: {n} edges across {summary['n_strata']} strata\n")
-    for v in VERDICTS:
+    for v in CLASSES:
         print(f"  {v:22} {counts[v]:4}   {100 * counts[v] / n:5.1f}%")
     print(f"\n  strict (MEANINGFUL only)          {counts['MEANINGFUL']}/{n} = {strict:.3f}")
     print(f"  permissive (not WRONG)            "
