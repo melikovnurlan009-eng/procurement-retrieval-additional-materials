@@ -512,7 +512,12 @@ order, which is what makes the parts individually meaningful.
 
 | File | What it is |
 |---|---|
-| `CORPUS_BUILD.md` | What the corpus contains, how it was built, its SHA-256, and how to obtain and verify a copy. The 165 MB index itself is not shipped. |
+| `CORPUS_BUILD.md` | What the corpus contains, the three build stages from pre-cleaned to served, its SHA-256, and how to obtain and verify a copy. The 165 MB index itself is not shipped. |
+| `quality_review/CHUNK_QUALITY_WORK_NOTES.md` | The working record of the quality assessment: what each pass detected, the counts at every step, and how each decision was applied to the index. |
+| `quality_review/review_needed.json` | The 568 chunks the assessment could not settle automatically, sent to hand review. |
+| `quality_review/procurement_search_chunk_decisions.json` | The hand-review outcome, per chunk, under the six-way rubric, with the rubric itself and the summary counts. |
+| `quality_review/decisions_applied.json` | The log of how those decisions were applied to the live index. |
+| `quality_review/keep_rechunk_leftovers.json` | The KEEP_RECHUNK items still outstanding when the corpus was frozen. |
 
 ### `src/` — the system
 
@@ -533,8 +538,8 @@ The retriever and the corpus-construction chain. These are the code under test, 
 | `ingest_pdf_chunks.py` | Ingests re-chunked PDF content, retiring what it supersedes. |
 | `deduplicate_instruments.py` | Suppresses duplicate ingestions of the same legal instrument, where two pipelines derived different document ids for it. |
 | `content_filters.py` | Per-source content filters: keeps the substantive parts of a page and drops navigation, headers and footers. |
-| `evaluate_chunk_quality.py` | Chunk quality assessment: deterministic boundary checks (severed sentences, broken enumerations, orphaned list stems) plus a semantic pass over the same chunks. |
-| `label_chunk_quality_llm.py` | The semantic tier of that assessment, judging each chunk as a retrieval unit rather than as a syntactic object. |
+| `evaluate_chunk_quality.py` | Chunk quality assessment. Deterministic tier: severed sentences, broken enumerations, orphaned list stems, empty or too-small chunks, plus advisories on size and metadata. Judge tier: an anchored 1-5 rubric over `answer_backbone`, `boundary_correctness`, `semantic_coherence`, `self_containedness`, `retrieval_usefulness`, `title_accuracy` and `summary_faithfulness`. |
+| `label_chunk_quality_llm.py` | The judge tier's batch labeller, classifying each chunk GOOD, INCOMPLETE or LOW_VALUE — the completeness and cleanliness criteria that decide whether a chunk is re-segmented or filtered. |
 | `rechunk_from_index.py` | Applies the repair decisions back to the index, re-chunking the units the assessment flagged. |
 | `resolve_references.py` | Turns citation strings inside chunk text into graph edges. |
 | `densify_graph_edges.py` | Re-points edges that resolved coarser than the corpus was chunked, making them traversable. |

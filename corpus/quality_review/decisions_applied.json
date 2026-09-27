@@ -1,0 +1,4794 @@
+{
+ "held_benchmark_relevant": [],
+ "unresolved": [],
+ "applied": [
+  {
+   "chunk_id": "0fc74a11664334d196832392__PDFV2__CH_0275",
+   "reviewed_id": "0fc74a11664334d196832392__PDFV2__CH_0275",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_0322",
+   "reviewed_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_0322",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_1734",
+   "reviewed_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_1734",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_1776",
+   "reviewed_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_1776",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_1823",
+   "reviewed_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_1823",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_1822",
+   "reviewed_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_1822",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_1996_53__LEGV2__CH_00279",
+   "reviewed_id": "UKPGA_1996_53__LEGV2__CH_00279",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2000_36__LEGV2__CH_00126",
+   "reviewed_id": "UKPGA_2000_36__LEGV2__CH_00126",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2002_40__LEGV2__CH_00079",
+   "reviewed_id": "UKPGA_2002_40__LEGV2__CH_00079",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2002_40__LEGV2__CH_00288",
+   "reviewed_id": "UKPGA_2002_40__LEGV2__CH_00288",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2002_40__LEGV2__CH_01272",
+   "reviewed_id": "UKPGA_2002_40__LEGV2__CH_01272",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2002_40__LEGV2__CH_01419",
+   "reviewed_id": "UKPGA_2002_40__LEGV2__CH_01419",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2025_18__LEGV2__CH_00351",
+   "reviewed_id": "UKPGA_2025_18__LEGV2__CH_00351",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2025_18__LEGV2__CH_00368",
+   "reviewed_id": "UKPGA_2025_18__LEGV2__CH_00368",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2025_36__LEGV2__CH_00033",
+   "reviewed_id": "UKPGA_2025_36__LEGV2__CH_00033",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2025_36__LEGV2__CH_00106",
+   "reviewed_id": "UKPGA_2025_36__LEGV2__CH_00106",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2025_36__LEGV2__CH_00644",
+   "reviewed_id": "UKPGA_2025_36__LEGV2__CH_00644",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2025_36__LEGV2__CH_00383",
+   "reviewed_id": "UKPGA_2025_36__LEGV2__CH_00383",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_0167",
+   "reviewed_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_0167",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_0183",
+   "reviewed_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_0183__M",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_0184",
+   "reviewed_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_0183__M",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_0212",
+   "reviewed_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_0212",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_0246",
+   "reviewed_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_0246",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_0575",
+   "reviewed_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_0575__M",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_0576",
+   "reviewed_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_0575__M",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_0706",
+   "reviewed_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_0706",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_0808",
+   "reviewed_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_0808",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_1472",
+   "reviewed_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_1472",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_1477",
+   "reviewed_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_1477__M",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_1478",
+   "reviewed_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_1477__M",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_1562",
+   "reviewed_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_1562__M",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": "JUDGE_DROP_T2_COMMENTARY_NEWS",
+   "edge_target": false
+  },
+  {
+   "chunk_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_1563",
+   "reviewed_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_1562__M",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_1564",
+   "reviewed_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_1562__M",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_1648",
+   "reviewed_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_1648",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_2043",
+   "reviewed_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_2043__M",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_2044",
+   "reviewed_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_2043__M",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_2045",
+   "reviewed_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_2043__M",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_2264",
+   "reviewed_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_2264__M",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_2265",
+   "reviewed_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_2264__M",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_2266",
+   "reviewed_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_2266__M",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_2267",
+   "reviewed_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_2266__M",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_2268",
+   "reviewed_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_2266__M",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_2356",
+   "reviewed_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_2356",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": "JUDGE_DROP_T1_NAVIGATION_BOILERPLATE",
+   "edge_target": false
+  },
+  {
+   "chunk_id": "e6d5219e2182ae5178dc4291__PDFV2__CH_0009",
+   "reviewed_id": "e6d5219e2182ae5178dc4291__PDFV2__CH_0009",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "1cdc0644df7c7101ea1a119c__PDFV2__CH_0023",
+   "reviewed_id": "1cdc0644df7c7101ea1a119c__PDFV2__CH_0023",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": "JUDGE_DROP_T1_NAVIGATION_BOILERPLATE",
+   "edge_target": false
+  },
+  {
+   "chunk_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_2093",
+   "reviewed_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_2093__M",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_2094",
+   "reviewed_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_2093__M",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": "JUDGE_DROP_T1_NAVIGATION_BOILERPLATE",
+   "edge_target": false
+  },
+  {
+   "chunk_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_2095",
+   "reviewed_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_2093__M",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_2096",
+   "reviewed_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_2093__M",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": "JUDGE_DROP_T1_NAVIGATION_BOILERPLATE",
+   "edge_target": false
+  },
+  {
+   "chunk_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_2097",
+   "reviewed_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_2093__M",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_2098",
+   "reviewed_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_2093__M",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": "JUDGE_DROP_T1_NAVIGATION_BOILERPLATE",
+   "edge_target": false
+  },
+  {
+   "chunk_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_2099",
+   "reviewed_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_2099__M",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": "JUDGE_DROP_T1_NAVIGATION_BOILERPLATE",
+   "edge_target": false
+  },
+  {
+   "chunk_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_2100",
+   "reviewed_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_2099__M",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": "JUDGE_DROP_T1_NAVIGATION_BOILERPLATE",
+   "edge_target": false
+  },
+  {
+   "chunk_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_2101",
+   "reviewed_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_2099__M",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": "JUDGE_DROP_T1_NAVIGATION_BOILERPLATE",
+   "edge_target": false
+  },
+  {
+   "chunk_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_2102",
+   "reviewed_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_2099__M",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": "JUDGE_DROP_T1_NAVIGATION_BOILERPLATE",
+   "edge_target": false
+  },
+  {
+   "chunk_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_2103",
+   "reviewed_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_2099__M",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_2221",
+   "reviewed_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_2221__M",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": "JUDGE_DROP_T1_NAVIGATION_BOILERPLATE",
+   "edge_target": false
+  },
+  {
+   "chunk_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_2222",
+   "reviewed_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_2221__M",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_2223",
+   "reviewed_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_2221__M",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": "JUDGE_DROP_T1_NAVIGATION_BOILERPLATE",
+   "edge_target": false
+  },
+  {
+   "chunk_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_2224",
+   "reviewed_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_2221__M",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_2225",
+   "reviewed_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_2225__M",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_2226",
+   "reviewed_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_2225__M",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": "JUDGE_DROP_T1_NAVIGATION_BOILERPLATE",
+   "edge_target": false
+  },
+  {
+   "chunk_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_2227",
+   "reviewed_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_2225__M",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": "JUDGE_DROP_T1_NAVIGATION_BOILERPLATE",
+   "edge_target": false
+  },
+  {
+   "chunk_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_2233",
+   "reviewed_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_2233__M",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_2234",
+   "reviewed_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_2233__M",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "4419c3d916f9e92686517b73__PDFV2__CH_0010",
+   "reviewed_id": "4419c3d916f9e92686517b73__PDFV2__CH_0010__M",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "4419c3d916f9e92686517b73__PDFV2__CH_0011",
+   "reviewed_id": "4419c3d916f9e92686517b73__PDFV2__CH_0010__M",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "4419c3d916f9e92686517b73__PDFV2__CH_0040",
+   "reviewed_id": "4419c3d916f9e92686517b73__PDFV2__CH_0040",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "55e18ebbc13365ce5f8fa242__PDFV2__CH_0103",
+   "reviewed_id": "55e18ebbc13365ce5f8fa242__PDFV2__CH_0103",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "55e18ebbc13365ce5f8fa242__PDFV2__CH_0134",
+   "reviewed_id": "55e18ebbc13365ce5f8fa242__PDFV2__CH_0134",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "57d720e5d5930fa7396b8ecc__PDFV2__CH_0006",
+   "reviewed_id": "57d720e5d5930fa7396b8ecc__PDFV2__CH_0006",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "aa4a3b56cb2e2d69e1543db0__PDFV2__CH_0031",
+   "reviewed_id": "aa4a3b56cb2e2d69e1543db0__PDFV2__CH_0031",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "1de6217d5e663c289a1f0901__1de6217d5e663c289a1f0901__SEG_0001__CH_001",
+   "reviewed_id": "1de6217d5e663c289a1f0901__1de6217d5e663c289a1f0901__SEG_0001__CH_001__M",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": "JUDGE_DROP_T1_NAVIGATION_BOILERPLATE",
+   "edge_target": false
+  },
+  {
+   "chunk_id": "1de6217d5e663c289a1f0901__1de6217d5e663c289a1f0901__SEG_0001__CH_002",
+   "reviewed_id": "1de6217d5e663c289a1f0901__1de6217d5e663c289a1f0901__SEG_0001__CH_001__M",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": "JUDGE_DROP_T2_COMMENTARY_NEWS",
+   "edge_target": false
+  },
+  {
+   "chunk_id": "000bef7c524d3f68cea91ff4__000bef7c524d3f68cea91ff4__SEG_0001__CH_005",
+   "reviewed_id": "000bef7c524d3f68cea91ff4__000bef7c524d3f68cea91ff4__SEG_0001__CH_005",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": "JUDGE_DROP_T1_NAVIGATION_BOILERPLATE",
+   "edge_target": false
+  },
+  {
+   "chunk_id": "0413b97ffbfb0a2ad09a7418__0413b97ffbfb0a2ad09a7418__SEG_0001__CH_005",
+   "reviewed_id": "0413b97ffbfb0a2ad09a7418__0413b97ffbfb0a2ad09a7418__SEG_0001__CH_005",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": "JUDGE_DROP_T1_NAVIGATION_BOILERPLATE",
+   "edge_target": false
+  },
+  {
+   "chunk_id": "04ac92b43dde6ffc1a586639__04ac92b43dde6ffc1a586639__SEG_0001__CH_007",
+   "reviewed_id": "04ac92b43dde6ffc1a586639__04ac92b43dde6ffc1a586639__SEG_0001__CH_007",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": "JUDGE_DROP_T1_NAVIGATION_BOILERPLATE",
+   "edge_target": false
+  },
+  {
+   "chunk_id": "0644a75f15e70c1214628a77__0644a75f15e70c1214628a77__SEG_0001__CH_004",
+   "reviewed_id": "0644a75f15e70c1214628a77__0644a75f15e70c1214628a77__SEG_0001__CH_004",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": "JUDGE_DROP_T1_NAVIGATION_BOILERPLATE",
+   "edge_target": false
+  },
+  {
+   "chunk_id": "0b967853c6334ad3312d0a6a__0b967853c6334ad3312d0a6a__SEG_0001__CH_003",
+   "reviewed_id": "0b967853c6334ad3312d0a6a__0b967853c6334ad3312d0a6a__SEG_0001__CH_003",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": "JUDGE_DROP_T1_NAVIGATION_BOILERPLATE",
+   "edge_target": false
+  },
+  {
+   "chunk_id": "0ebd60291e46561ba7d85de5__PDFV2__CH_0007",
+   "reviewed_id": "0ebd60291e46561ba7d85de5__PDFV2__CH_0007",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": "JUDGE_DROP_T1_NAVIGATION_BOILERPLATE",
+   "edge_target": false
+  },
+  {
+   "chunk_id": "0f0eb853f854df3b03f49a8c__0f0eb853f854df3b03f49a8c__SEG_0001__CH_001",
+   "reviewed_id": "0f0eb853f854df3b03f49a8c__0f0eb853f854df3b03f49a8c__SEG_0001__CH_001",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": "JUDGE_DROP_T1_NAVIGATION_BOILERPLATE",
+   "edge_target": false
+  },
+  {
+   "chunk_id": "15b2dc4688fdb13b608d8fe6__PDFV2__CH_0054",
+   "reviewed_id": "15b2dc4688fdb13b608d8fe6__PDFV2__CH_0054",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": "JUDGE_DROP_T1_NAVIGATION_BOILERPLATE",
+   "edge_target": false
+  },
+  {
+   "chunk_id": "1be2d2cf9ea3ef0769c320b1__1be2d2cf9ea3ef0769c320b1__SEG_0001__CH_003",
+   "reviewed_id": "1be2d2cf9ea3ef0769c320b1__1be2d2cf9ea3ef0769c320b1__SEG_0001__CH_003",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": "JUDGE_DROP_T1_NAVIGATION_BOILERPLATE",
+   "edge_target": false
+  },
+  {
+   "chunk_id": "258bb7b2a7ca8b95ac777c0c__258bb7b2a7ca8b95ac777c0c__SEG_0001__CH_001",
+   "reviewed_id": "258bb7b2a7ca8b95ac777c0c__258bb7b2a7ca8b95ac777c0c__SEG_0001__CH_001",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": "JUDGE_DROP_T1_NAVIGATION_BOILERPLATE",
+   "edge_target": false
+  },
+  {
+   "chunk_id": "2b1d29c994e9270580758a4f__2b1d29c994e9270580758a4f__SEG_0001__CH_004",
+   "reviewed_id": "2b1d29c994e9270580758a4f__2b1d29c994e9270580758a4f__SEG_0001__CH_004",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": "JUDGE_DROP_T1_NAVIGATION_BOILERPLATE",
+   "edge_target": false
+  },
+  {
+   "chunk_id": "311caa23ea5bd82500915c59__311caa23ea5bd82500915c59__SEG_0001__CH_002",
+   "reviewed_id": "311caa23ea5bd82500915c59__311caa23ea5bd82500915c59__SEG_0001__CH_002",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": "JUDGE_DROP_T1_NAVIGATION_BOILERPLATE",
+   "edge_target": false
+  },
+  {
+   "chunk_id": "3c11b89ad731c6129498e07b__3c11b89ad731c6129498e07b__SEG_0001__CH_003",
+   "reviewed_id": "3c11b89ad731c6129498e07b__3c11b89ad731c6129498e07b__SEG_0001__CH_003",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": "JUDGE_DROP_T1_NAVIGATION_BOILERPLATE",
+   "edge_target": false
+  },
+  {
+   "chunk_id": "40a3c873d717bf63b7d3693d__40a3c873d717bf63b7d3693d__SEG_0001__CH_003",
+   "reviewed_id": "40a3c873d717bf63b7d3693d__40a3c873d717bf63b7d3693d__SEG_0001__CH_003",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": "JUDGE_DROP_T1_NAVIGATION_BOILERPLATE",
+   "edge_target": false
+  },
+  {
+   "chunk_id": "447639e6a1dfe52e2c7f1471__447639e6a1dfe52e2c7f1471__SEG_0001__CH_002",
+   "reviewed_id": "447639e6a1dfe52e2c7f1471__447639e6a1dfe52e2c7f1471__SEG_0001__CH_002",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": "JUDGE_DROP_T1_NAVIGATION_BOILERPLATE",
+   "edge_target": false
+  },
+  {
+   "chunk_id": "4de693a0a217c1b4d1ea4894__4de693a0a217c1b4d1ea4894__SEG_0001__CH_003",
+   "reviewed_id": "4de693a0a217c1b4d1ea4894__4de693a0a217c1b4d1ea4894__SEG_0001__CH_003",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": "JUDGE_DROP_T1_NAVIGATION_BOILERPLATE",
+   "edge_target": false
+  },
+  {
+   "chunk_id": "52e89b5941b6dc98d4dd04a5__52e89b5941b6dc98d4dd04a5__SEG_0001__CH_003",
+   "reviewed_id": "52e89b5941b6dc98d4dd04a5__52e89b5941b6dc98d4dd04a5__SEG_0001__CH_003",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": "JUDGE_DROP_T1_NAVIGATION_BOILERPLATE",
+   "edge_target": false
+  },
+  {
+   "chunk_id": "592bd9c1cb37465014606645__592bd9c1cb37465014606645__SEG_0001__CH_001",
+   "reviewed_id": "592bd9c1cb37465014606645__592bd9c1cb37465014606645__SEG_0001__CH_001",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": "JUDGE_DROP_T2_COMMENTARY_NEWS",
+   "edge_target": false
+  },
+  {
+   "chunk_id": "5a2aa1f8a7ecf3dafcd1f277__5a2aa1f8a7ecf3dafcd1f277__SEG_0001__CH_003",
+   "reviewed_id": "5a2aa1f8a7ecf3dafcd1f277__5a2aa1f8a7ecf3dafcd1f277__SEG_0001__CH_003",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": "JUDGE_DROP_T1_NAVIGATION_BOILERPLATE",
+   "edge_target": false
+  },
+  {
+   "chunk_id": "5c55d3e800a92ca418fc3cd8__PDFV2__CH_0001",
+   "reviewed_id": "5c55d3e800a92ca418fc3cd8__PDFV2__CH_0001",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": "JUDGE_DROP_T1_NAVIGATION_BOILERPLATE",
+   "edge_target": false
+  },
+  {
+   "chunk_id": "5c55d3e800a92ca418fc3cd8__PDFV2__CH_0009",
+   "reviewed_id": "5c55d3e800a92ca418fc3cd8__PDFV2__CH_0009",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": "JUDGE_DROP_T2_COMMENTARY_NEWS",
+   "edge_target": false
+  },
+  {
+   "chunk_id": "5d7aad23d357bf5b841b9c81__PDFV2__CH_0001",
+   "reviewed_id": "5d7aad23d357bf5b841b9c81__PDFV2__CH_0001",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": "JUDGE_DROP_T1_NAVIGATION_BOILERPLATE",
+   "edge_target": false
+  },
+  {
+   "chunk_id": "5d7aad23d357bf5b841b9c81__PDFV2__CH_0007",
+   "reviewed_id": "5d7aad23d357bf5b841b9c81__PDFV2__CH_0007",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": "JUDGE_DROP_T1_NAVIGATION_BOILERPLATE",
+   "edge_target": false
+  },
+  {
+   "chunk_id": "5d7aad23d357bf5b841b9c81__PDFV2__CH_0009",
+   "reviewed_id": "5d7aad23d357bf5b841b9c81__PDFV2__CH_0009",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": "JUDGE_DROP_T1_NAVIGATION_BOILERPLATE",
+   "edge_target": false
+  },
+  {
+   "chunk_id": "5d7aad23d357bf5b841b9c81__PDFV2__CH_0031",
+   "reviewed_id": "5d7aad23d357bf5b841b9c81__PDFV2__CH_0031",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": "JUDGE_DROP_T1_NAVIGATION_BOILERPLATE",
+   "edge_target": false
+  },
+  {
+   "chunk_id": "69c586f3e6e8563a49bfcdd6__69c586f3e6e8563a49bfcdd6__SEG_0001__CH_001",
+   "reviewed_id": "69c586f3e6e8563a49bfcdd6__69c586f3e6e8563a49bfcdd6__SEG_0001__CH_001",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": "JUDGE_DROP_T1_NAVIGATION_BOILERPLATE",
+   "edge_target": false
+  },
+  {
+   "chunk_id": "795130812b0276ada952b4f9__795130812b0276ada952b4f9__SEG_0001__CH_004",
+   "reviewed_id": "795130812b0276ada952b4f9__795130812b0276ada952b4f9__SEG_0001__CH_004",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": "JUDGE_DROP_T2_COMMENTARY_NEWS",
+   "edge_target": false
+  },
+  {
+   "chunk_id": "87db032268d79f8a7aee229f__87db032268d79f8a7aee229f__SEG_0001__CH_001",
+   "reviewed_id": "87db032268d79f8a7aee229f__87db032268d79f8a7aee229f__SEG_0001__CH_001",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": "JUDGE_DROP_T1_NAVIGATION_BOILERPLATE",
+   "edge_target": false
+  },
+  {
+   "chunk_id": "8a69ab114dc9b802b66c086a__8a69ab114dc9b802b66c086a__SEG_0001__CH_001",
+   "reviewed_id": "8a69ab114dc9b802b66c086a__8a69ab114dc9b802b66c086a__SEG_0001__CH_001",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": "JUDGE_DROP_T1_NAVIGATION_BOILERPLATE",
+   "edge_target": false
+  },
+  {
+   "chunk_id": "973b865e7e6436af76b79276__PDFV2__CH_0016",
+   "reviewed_id": "973b865e7e6436af76b79276__PDFV2__CH_0016",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": "JUDGE_DROP_T1_NAVIGATION_BOILERPLATE",
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKSI_2015_102__UKSI_2015_102__SEG_0056__CH_001",
+   "reviewed_id": "UKSI_2015_102__UKSI_2015_102__SEG_0056__CH_001",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": true
+  },
+  {
+   "chunk_id": "a17eb3e7efea9eea173d1d66__PDFV2__CH_0017",
+   "reviewed_id": "a17eb3e7efea9eea173d1d66__PDFV2__CH_0017",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": "JUDGE_DROP_T1_NAVIGATION_BOILERPLATE",
+   "edge_target": false
+  },
+  {
+   "chunk_id": "a4166f096aa6ff09ce49453b__a4166f096aa6ff09ce49453b__SEG_0001__CH_001",
+   "reviewed_id": "a4166f096aa6ff09ce49453b__a4166f096aa6ff09ce49453b__SEG_0001__CH_001",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": "JUDGE_DROP_T1_NAVIGATION_BOILERPLATE",
+   "edge_target": false
+  },
+  {
+   "chunk_id": "acc00d81097836d20a9dd13e__acc00d81097836d20a9dd13e__SEG_0001__CH_005",
+   "reviewed_id": "acc00d81097836d20a9dd13e__acc00d81097836d20a9dd13e__SEG_0001__CH_005",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": "JUDGE_DROP_T2_COMMENTARY_NEWS",
+   "edge_target": false
+  },
+  {
+   "chunk_id": "af62b9795ee8200904125d47__af62b9795ee8200904125d47__SEG_0001__CH_001",
+   "reviewed_id": "af62b9795ee8200904125d47__af62b9795ee8200904125d47__SEG_0001__CH_001",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": "JUDGE_DROP_T1_NAVIGATION_BOILERPLATE",
+   "edge_target": false
+  },
+  {
+   "chunk_id": "c35498efe38e6c659e035252__c35498efe38e6c659e035252__SEG_0001__CH_005",
+   "reviewed_id": "c35498efe38e6c659e035252__c35498efe38e6c659e035252__SEG_0001__CH_005",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": "JUDGE_DROP_T1_NAVIGATION_BOILERPLATE",
+   "edge_target": false
+  },
+  {
+   "chunk_id": "cef0faa1722e1095eb0e77b1__PDFV2__CH_0001",
+   "reviewed_id": "cef0faa1722e1095eb0e77b1__PDFV2__CH_0001",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": "JUDGE_DROP_T1_NAVIGATION_BOILERPLATE",
+   "edge_target": false
+  },
+  {
+   "chunk_id": "d9c90ba80645a911017ee558__PDFV2__CH_0001",
+   "reviewed_id": "d9c90ba80645a911017ee558__PDFV2__CH_0001",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": "JUDGE_DROP_T1_NAVIGATION_BOILERPLATE",
+   "edge_target": false
+  },
+  {
+   "chunk_id": "dc22f0e1ba0bb6cdb6bec76d__PDFV2__CH_0005",
+   "reviewed_id": "dc22f0e1ba0bb6cdb6bec76d__PDFV2__CH_0005",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": "JUDGE_DROP_T1_NAVIGATION_BOILERPLATE",
+   "edge_target": false
+  },
+  {
+   "chunk_id": "dc22f0e1ba0bb6cdb6bec76d__PDFV2__CH_0027",
+   "reviewed_id": "dc22f0e1ba0bb6cdb6bec76d__PDFV2__CH_0027",
+   "section": "rechunk_residue",
+   "decision": "DISCARD",
+   "previous_filtered_out": "JUDGE_DROP_T2_COMMENTARY_NEWS",
+   "edge_target": false
+  },
+  {
+   "chunk_id": "33806c9fc16f5ce6967863ce__PDFV2__CH_0011",
+   "reviewed_id": "33806c9fc16f5ce6967863ce__PDFV2__CH_0011",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_1031",
+   "reviewed_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_1031",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_1313",
+   "reviewed_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_1313",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_1448",
+   "reviewed_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_1448",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_1556",
+   "reviewed_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_1556",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_1564",
+   "reviewed_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_1564",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": "HUMAN_REVIEW_DISCARD",
+   "edge_target": false
+  },
+  {
+   "chunk_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_1916",
+   "reviewed_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_1916",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_1917",
+   "reviewed_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_1917",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_2037",
+   "reviewed_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_2037",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_2061",
+   "reviewed_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_2061",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_2193",
+   "reviewed_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_2193",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_2220",
+   "reviewed_id": "425fe6b4b1a88b4c3e5cd509__PDFV2__CH_2220",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "8463edfc2a6a9360ca13a4f7__PDFV2__CH_0012",
+   "reviewed_id": "8463edfc2a6a9360ca13a4f7__PDFV2__CH_0012",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "89d446e3b65fe9f252d99a70__89d446e3b65fe9f252d99a70__SEG_0001__CH_001",
+   "reviewed_id": "89d446e3b65fe9f252d99a70__89d446e3b65fe9f252d99a70__SEG_0001__CH_001",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "8dbb6385fa2a99172c88f33f__8dbb6385fa2a99172c88f33f__SEG_0001__CH_002",
+   "reviewed_id": "8dbb6385fa2a99172c88f33f__8dbb6385fa2a99172c88f33f__SEG_0001__CH_002",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "9a362649da0dbf27e711c1cb__PDFV2__CH_0012",
+   "reviewed_id": "9a362649da0dbf27e711c1cb__PDFV2__CH_0012",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "9d93a90995f2b8079a089276__PDFV2__CH_0242",
+   "reviewed_id": "9d93a90995f2b8079a089276__PDFV2__CH_0242",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_1996_53__LEGV2__CH_00217",
+   "reviewed_id": "UKPGA_1996_53__LEGV2__CH_00217",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_1996_53__LEGV2__CH_00299",
+   "reviewed_id": "UKPGA_1996_53__LEGV2__CH_00299",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_1996_53__LEGV2__CH_00364",
+   "reviewed_id": "UKPGA_1996_53__LEGV2__CH_00364",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2000_36__LEGV2__CH_00110",
+   "reviewed_id": "UKPGA_2000_36__LEGV2__CH_00110",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2000_36__LEGV2__CH_00115",
+   "reviewed_id": "UKPGA_2000_36__LEGV2__CH_00115",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2000_36__LEGV2__CH_00140",
+   "reviewed_id": "UKPGA_2000_36__LEGV2__CH_00140",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2000_36__LEGV2__CH_00151",
+   "reviewed_id": "UKPGA_2000_36__LEGV2__CH_00151",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2000_36__LEGV2__CH_00156",
+   "reviewed_id": "UKPGA_2000_36__LEGV2__CH_00156",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2000_36__LEGV2__CH_00159",
+   "reviewed_id": "UKPGA_2000_36__LEGV2__CH_00159",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2000_36__LEGV2__CH_00161",
+   "reviewed_id": "UKPGA_2000_36__LEGV2__CH_00161",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2000_36__LEGV2__CH_00163",
+   "reviewed_id": "UKPGA_2000_36__LEGV2__CH_00163",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2000_36__LEGV2__CH_00168",
+   "reviewed_id": "UKPGA_2000_36__LEGV2__CH_00168",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2000_36__LEGV2__CH_00169",
+   "reviewed_id": "UKPGA_2000_36__LEGV2__CH_00169",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2000_36__LEGV2__CH_00178",
+   "reviewed_id": "UKPGA_2000_36__LEGV2__CH_00178",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2000_36__LEGV2__CH_00225",
+   "reviewed_id": "UKPGA_2000_36__LEGV2__CH_00225",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2000_36__LEGV2__CH_00240",
+   "reviewed_id": "UKPGA_2000_36__LEGV2__CH_00240",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2000_36__LEGV2__CH_00340",
+   "reviewed_id": "UKPGA_2000_36__LEGV2__CH_00340",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2000_36__LEGV2__CH_00342",
+   "reviewed_id": "UKPGA_2000_36__LEGV2__CH_00342",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2000_36__LEGV2__CH_00344",
+   "reviewed_id": "UKPGA_2000_36__LEGV2__CH_00344",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2000_36__LEGV2__CH_00356",
+   "reviewed_id": "UKPGA_2000_36__LEGV2__CH_00356",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2000_36__LEGV2__CH_00358",
+   "reviewed_id": "UKPGA_2000_36__LEGV2__CH_00358",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2000_36__LEGV2__CH_00363",
+   "reviewed_id": "UKPGA_2000_36__LEGV2__CH_00363",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2002_40__LEGV2__CH_00023",
+   "reviewed_id": "UKPGA_2002_40__LEGV2__CH_00023",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2002_40__LEGV2__CH_00120",
+   "reviewed_id": "UKPGA_2002_40__LEGV2__CH_00120",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2002_40__LEGV2__CH_00162",
+   "reviewed_id": "UKPGA_2002_40__LEGV2__CH_00162",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2002_40__LEGV2__CH_00234",
+   "reviewed_id": "UKPGA_2002_40__LEGV2__CH_00234",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2002_40__LEGV2__CH_00298",
+   "reviewed_id": "UKPGA_2002_40__LEGV2__CH_00298",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2002_40__LEGV2__CH_00340",
+   "reviewed_id": "UKPGA_2002_40__LEGV2__CH_00340",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2002_40__LEGV2__CH_00367",
+   "reviewed_id": "UKPGA_2002_40__LEGV2__CH_00367",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2002_40__LEGV2__CH_00381",
+   "reviewed_id": "UKPGA_2002_40__LEGV2__CH_00381",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2002_40__LEGV2__CH_00556",
+   "reviewed_id": "UKPGA_2002_40__LEGV2__CH_00556",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2002_40__LEGV2__CH_00682",
+   "reviewed_id": "UKPGA_2002_40__LEGV2__CH_00682",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2002_40__LEGV2__CH_00741",
+   "reviewed_id": "UKPGA_2002_40__LEGV2__CH_00741",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2002_40__LEGV2__CH_00787",
+   "reviewed_id": "UKPGA_2002_40__LEGV2__CH_00787",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2002_40__LEGV2__CH_00826",
+   "reviewed_id": "UKPGA_2002_40__LEGV2__CH_00826",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2002_40__LEGV2__CH_00857",
+   "reviewed_id": "UKPGA_2002_40__LEGV2__CH_00857",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2002_40__LEGV2__CH_00862",
+   "reviewed_id": "UKPGA_2002_40__LEGV2__CH_00862",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2002_40__LEGV2__CH_00890",
+   "reviewed_id": "UKPGA_2002_40__LEGV2__CH_00890",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2002_40__LEGV2__CH_00898",
+   "reviewed_id": "UKPGA_2002_40__LEGV2__CH_00898",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2002_40__LEGV2__CH_00903",
+   "reviewed_id": "UKPGA_2002_40__LEGV2__CH_00903",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2002_40__LEGV2__CH_00954",
+   "reviewed_id": "UKPGA_2002_40__LEGV2__CH_00954",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2002_40__LEGV2__CH_00959",
+   "reviewed_id": "UKPGA_2002_40__LEGV2__CH_00959",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2002_40__LEGV2__CH_00967",
+   "reviewed_id": "UKPGA_2002_40__LEGV2__CH_00967",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2002_40__LEGV2__CH_00969",
+   "reviewed_id": "UKPGA_2002_40__LEGV2__CH_00969",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2002_40__LEGV2__CH_01002",
+   "reviewed_id": "UKPGA_2002_40__LEGV2__CH_01002",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2002_40__LEGV2__CH_01094",
+   "reviewed_id": "UKPGA_2002_40__LEGV2__CH_01094",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2002_40__LEGV2__CH_01124",
+   "reviewed_id": "UKPGA_2002_40__LEGV2__CH_01124",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2002_40__LEGV2__CH_01125",
+   "reviewed_id": "UKPGA_2002_40__LEGV2__CH_01125",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2002_40__LEGV2__CH_01162",
+   "reviewed_id": "UKPGA_2002_40__LEGV2__CH_01162",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2002_40__LEGV2__CH_01297",
+   "reviewed_id": "UKPGA_2002_40__LEGV2__CH_01297",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2002_40__LEGV2__CH_01305",
+   "reviewed_id": "UKPGA_2002_40__LEGV2__CH_01305",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2002_40__LEGV2__CH_01313",
+   "reviewed_id": "UKPGA_2002_40__LEGV2__CH_01313",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2002_40__LEGV2__CH_01324",
+   "reviewed_id": "UKPGA_2002_40__LEGV2__CH_01324",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2002_40__LEGV2__CH_01333",
+   "reviewed_id": "UKPGA_2002_40__LEGV2__CH_01333",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2002_40__LEGV2__CH_01334",
+   "reviewed_id": "UKPGA_2002_40__LEGV2__CH_01334",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2002_40__LEGV2__CH_01486",
+   "reviewed_id": "UKPGA_2002_40__LEGV2__CH_01486",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2002_40__LEGV2__CH_01546",
+   "reviewed_id": "UKPGA_2002_40__LEGV2__CH_01546",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2002_40__LEGV2__CH_01707",
+   "reviewed_id": "UKPGA_2002_40__LEGV2__CH_01707",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2002_40__LEGV2__CH_01766",
+   "reviewed_id": "UKPGA_2002_40__LEGV2__CH_01766",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2002_40__LEGV2__CH_01800",
+   "reviewed_id": "UKPGA_2002_40__LEGV2__CH_01800",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2002_40__LEGV2__CH_01806",
+   "reviewed_id": "UKPGA_2002_40__LEGV2__CH_01806",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2002_40__LEGV2__CH_01840",
+   "reviewed_id": "UKPGA_2002_40__LEGV2__CH_01840",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2002_40__LEGV2__CH_01873",
+   "reviewed_id": "UKPGA_2002_40__LEGV2__CH_01873",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2002_40__LEGV2__CH_01895",
+   "reviewed_id": "UKPGA_2002_40__LEGV2__CH_01895",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2002_40__LEGV2__CH_01945",
+   "reviewed_id": "UKPGA_2002_40__LEGV2__CH_01945",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2002_40__LEGV2__CH_01949",
+   "reviewed_id": "UKPGA_2002_40__LEGV2__CH_01949",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2002_40__LEGV2__CH_02001",
+   "reviewed_id": "UKPGA_2002_40__LEGV2__CH_02001",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2002_40__LEGV2__CH_02035",
+   "reviewed_id": "UKPGA_2002_40__LEGV2__CH_02035",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2002_40__LEGV2__CH_02081",
+   "reviewed_id": "UKPGA_2002_40__LEGV2__CH_02081",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2002_40__LEGV2__CH_02116",
+   "reviewed_id": "UKPGA_2002_40__LEGV2__CH_02116",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2002_40__LEGV2__CH_02119",
+   "reviewed_id": "UKPGA_2002_40__LEGV2__CH_02119",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2002_40__LEGV2__CH_02152",
+   "reviewed_id": "UKPGA_2002_40__LEGV2__CH_02152",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2002_40__LEGV2__CH_02155",
+   "reviewed_id": "UKPGA_2002_40__LEGV2__CH_02155",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2002_40__LEGV2__CH_02189",
+   "reviewed_id": "UKPGA_2002_40__LEGV2__CH_02189",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2006_35__LEGV2__CH_00020",
+   "reviewed_id": "UKPGA_2006_35__LEGV2__CH_00020",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2006_35__LEGV2__CH_00024",
+   "reviewed_id": "UKPGA_2006_35__LEGV2__CH_00024",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2006_35__LEGV2__CH_00051",
+   "reviewed_id": "UKPGA_2006_35__LEGV2__CH_00051",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2018_12__LEGV2__CH_00064",
+   "reviewed_id": "UKPGA_2018_12__LEGV2__CH_00064",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2018_12__LEGV2__CH_00097",
+   "reviewed_id": "UKPGA_2018_12__LEGV2__CH_00097",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2018_12__LEGV2__CH_00169",
+   "reviewed_id": "UKPGA_2018_12__LEGV2__CH_00169",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2018_12__LEGV2__CH_00189",
+   "reviewed_id": "UKPGA_2018_12__LEGV2__CH_00189",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2018_12__LEGV2__CH_00252",
+   "reviewed_id": "UKPGA_2018_12__LEGV2__CH_00252",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2018_12__LEGV2__CH_00330",
+   "reviewed_id": "UKPGA_2018_12__LEGV2__CH_00330",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2018_12__LEGV2__CH_00346",
+   "reviewed_id": "UKPGA_2018_12__LEGV2__CH_00346",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2018_12__LEGV2__CH_00458",
+   "reviewed_id": "UKPGA_2018_12__LEGV2__CH_00458",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2018_12__LEGV2__CH_00503",
+   "reviewed_id": "UKPGA_2018_12__LEGV2__CH_00503",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2018_12__LEGV2__CH_00530",
+   "reviewed_id": "UKPGA_2018_12__LEGV2__CH_00530",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2018_12__LEGV2__CH_00590",
+   "reviewed_id": "UKPGA_2018_12__LEGV2__CH_00590",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2018_12__LEGV2__CH_00596",
+   "reviewed_id": "UKPGA_2018_12__LEGV2__CH_00596",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2018_12__LEGV2__CH_00638",
+   "reviewed_id": "UKPGA_2018_12__LEGV2__CH_00638",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2018_12__LEGV2__CH_00693",
+   "reviewed_id": "UKPGA_2018_12__LEGV2__CH_00693",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2018_12__LEGV2__CH_00746",
+   "reviewed_id": "UKPGA_2018_12__LEGV2__CH_00746",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2018_12__LEGV2__CH_00747",
+   "reviewed_id": "UKPGA_2018_12__LEGV2__CH_00747",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2018_12__LEGV2__CH_00776",
+   "reviewed_id": "UKPGA_2018_12__LEGV2__CH_00776",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2018_12__LEGV2__CH_00777",
+   "reviewed_id": "UKPGA_2018_12__LEGV2__CH_00777",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2018_12__LEGV2__CH_00814",
+   "reviewed_id": "UKPGA_2018_12__LEGV2__CH_00814",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2018_12__LEGV2__CH_00819",
+   "reviewed_id": "UKPGA_2018_12__LEGV2__CH_00819",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2018_12__LEGV2__CH_00824",
+   "reviewed_id": "UKPGA_2018_12__LEGV2__CH_00824",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2018_12__LEGV2__CH_00825",
+   "reviewed_id": "UKPGA_2018_12__LEGV2__CH_00825",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2018_12__LEGV2__CH_00826",
+   "reviewed_id": "UKPGA_2018_12__LEGV2__CH_00826",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2018_12__LEGV2__CH_00837",
+   "reviewed_id": "UKPGA_2018_12__LEGV2__CH_00837",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2018_12__LEGV2__CH_00893",
+   "reviewed_id": "UKPGA_2018_12__LEGV2__CH_00893",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2018_12__LEGV2__CH_00901",
+   "reviewed_id": "UKPGA_2018_12__LEGV2__CH_00901",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2018_12__LEGV2__CH_00902",
+   "reviewed_id": "UKPGA_2018_12__LEGV2__CH_00902",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2018_12__LEGV2__CH_00908",
+   "reviewed_id": "UKPGA_2018_12__LEGV2__CH_00908",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2018_12__LEGV2__CH_00909",
+   "reviewed_id": "UKPGA_2018_12__LEGV2__CH_00909",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2018_12__LEGV2__CH_00910",
+   "reviewed_id": "UKPGA_2018_12__LEGV2__CH_00910",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2018_12__LEGV2__CH_00938",
+   "reviewed_id": "UKPGA_2018_12__LEGV2__CH_00938",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2018_12__LEGV2__CH_00954",
+   "reviewed_id": "UKPGA_2018_12__LEGV2__CH_00954",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2018_12__LEGV2__CH_00988",
+   "reviewed_id": "UKPGA_2018_12__LEGV2__CH_00988",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2018_12__LEGV2__CH_00991",
+   "reviewed_id": "UKPGA_2018_12__LEGV2__CH_00991",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2018_12__LEGV2__CH_00992",
+   "reviewed_id": "UKPGA_2018_12__LEGV2__CH_00992",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2018_12__LEGV2__CH_00993",
+   "reviewed_id": "UKPGA_2018_12__LEGV2__CH_00993",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2018_12__LEGV2__CH_00994",
+   "reviewed_id": "UKPGA_2018_12__LEGV2__CH_00994",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2018_12__LEGV2__CH_01048",
+   "reviewed_id": "UKPGA_2018_12__LEGV2__CH_01048",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2018_12__LEGV2__CH_01070",
+   "reviewed_id": "UKPGA_2018_12__LEGV2__CH_01070",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2018_12__LEGV2__CH_01080",
+   "reviewed_id": "UKPGA_2018_12__LEGV2__CH_01080",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2018_12__LEGV2__CH_01081",
+   "reviewed_id": "UKPGA_2018_12__LEGV2__CH_01081",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2018_12__LEGV2__CH_01151",
+   "reviewed_id": "UKPGA_2018_12__LEGV2__CH_01151",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2018_12__LEGV2__CH_01153",
+   "reviewed_id": "UKPGA_2018_12__LEGV2__CH_01153",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2018_12__LEGV2__CH_01231",
+   "reviewed_id": "UKPGA_2018_12__LEGV2__CH_01231",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2018_12__LEGV2__CH_01261",
+   "reviewed_id": "UKPGA_2018_12__LEGV2__CH_01261",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2018_12__LEGV2__CH_01283",
+   "reviewed_id": "UKPGA_2018_12__LEGV2__CH_01283",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2018_12__LEGV2__CH_01286",
+   "reviewed_id": "UKPGA_2018_12__LEGV2__CH_01286",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2018_12__LEGV2__CH_01287",
+   "reviewed_id": "UKPGA_2018_12__LEGV2__CH_01287",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2018_12__LEGV2__CH_01300",
+   "reviewed_id": "UKPGA_2018_12__LEGV2__CH_01300",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2018_12__LEGV2__CH_01301",
+   "reviewed_id": "UKPGA_2018_12__LEGV2__CH_01301",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2018_12__LEGV2__CH_01314",
+   "reviewed_id": "UKPGA_2018_12__LEGV2__CH_01314",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2018_12__LEGV2__CH_01333",
+   "reviewed_id": "UKPGA_2018_12__LEGV2__CH_01333",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2018_12__LEGV2__CH_01335",
+   "reviewed_id": "UKPGA_2018_12__LEGV2__CH_01335",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2018_12__LEGV2__CH_01337",
+   "reviewed_id": "UKPGA_2018_12__LEGV2__CH_01337",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2018_12__LEGV2__CH_01352",
+   "reviewed_id": "UKPGA_2018_12__LEGV2__CH_01352",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2018_12__LEGV2__CH_01353",
+   "reviewed_id": "UKPGA_2018_12__LEGV2__CH_01353",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2018_12__LEGV2__CH_01362",
+   "reviewed_id": "UKPGA_2018_12__LEGV2__CH_01362",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2018_12__LEGV2__CH_01365",
+   "reviewed_id": "UKPGA_2018_12__LEGV2__CH_01365",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2018_12__LEGV2__CH_01377",
+   "reviewed_id": "UKPGA_2018_12__LEGV2__CH_01377",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2018_12__LEGV2__CH_01378",
+   "reviewed_id": "UKPGA_2018_12__LEGV2__CH_01378",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2018_12__LEGV2__CH_01462",
+   "reviewed_id": "UKPGA_2018_12__LEGV2__CH_01462",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2018_12__LEGV2__CH_01465",
+   "reviewed_id": "UKPGA_2018_12__LEGV2__CH_01465",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2018_12__LEGV2__CH_01467",
+   "reviewed_id": "UKPGA_2018_12__LEGV2__CH_01467",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2018_12__LEGV2__CH_01481",
+   "reviewed_id": "UKPGA_2018_12__LEGV2__CH_01481",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2018_12__LEGV2__CH_01502",
+   "reviewed_id": "UKPGA_2018_12__LEGV2__CH_01502",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2018_12__LEGV2__CH_01517",
+   "reviewed_id": "UKPGA_2018_12__LEGV2__CH_01517",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2018_12__LEGV2__CH_01598",
+   "reviewed_id": "UKPGA_2018_12__LEGV2__CH_01598",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2018_12__LEGV2__CH_01702",
+   "reviewed_id": "UKPGA_2018_12__LEGV2__CH_01702",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2018_12__LEGV2__CH_01735",
+   "reviewed_id": "UKPGA_2018_12__LEGV2__CH_01735",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2018_12__LEGV2__CH_01819",
+   "reviewed_id": "UKPGA_2018_12__LEGV2__CH_01819",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2018_12__LEGV2__CH_01839",
+   "reviewed_id": "UKPGA_2018_12__LEGV2__CH_01839",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2018_12__LEGV2__CH_01843",
+   "reviewed_id": "UKPGA_2018_12__LEGV2__CH_01843",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2020_1__LEGV2__CH_00001",
+   "reviewed_id": "UKPGA_2020_1__LEGV2__CH_00001",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2020_1__LEGV2__CH_00027",
+   "reviewed_id": "UKPGA_2020_1__LEGV2__CH_00027",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2020_1__LEGV2__CH_00102",
+   "reviewed_id": "UKPGA_2020_1__LEGV2__CH_00102",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2020_1__LEGV2__CH_00159",
+   "reviewed_id": "UKPGA_2020_1__LEGV2__CH_00159",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2020_1__LEGV2__CH_00194",
+   "reviewed_id": "UKPGA_2020_1__LEGV2__CH_00194",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2020_1__LEGV2__CH_00223",
+   "reviewed_id": "UKPGA_2020_1__LEGV2__CH_00223",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2020_1__LEGV2__CH_00321",
+   "reviewed_id": "UKPGA_2020_1__LEGV2__CH_00321",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2020_1__LEGV2__CH_00348",
+   "reviewed_id": "UKPGA_2020_1__LEGV2__CH_00348",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2020_1__LEGV2__CH_00399",
+   "reviewed_id": "UKPGA_2020_1__LEGV2__CH_00399",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2020_1__LEGV2__CH_00407",
+   "reviewed_id": "UKPGA_2020_1__LEGV2__CH_00407",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2025_18__LEGV2__CH_00079",
+   "reviewed_id": "UKPGA_2025_18__LEGV2__CH_00079",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2025_18__LEGV2__CH_00111",
+   "reviewed_id": "UKPGA_2025_18__LEGV2__CH_00111",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2025_18__LEGV2__CH_00115",
+   "reviewed_id": "UKPGA_2025_18__LEGV2__CH_00115",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2025_18__LEGV2__CH_00293",
+   "reviewed_id": "UKPGA_2025_18__LEGV2__CH_00293",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2025_18__LEGV2__CH_00480",
+   "reviewed_id": "UKPGA_2025_18__LEGV2__CH_00480",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2025_18__LEGV2__CH_00573",
+   "reviewed_id": "UKPGA_2025_18__LEGV2__CH_00573",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2025_18__LEGV2__CH_00608",
+   "reviewed_id": "UKPGA_2025_18__LEGV2__CH_00608",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2025_18__LEGV2__CH_00623",
+   "reviewed_id": "UKPGA_2025_18__LEGV2__CH_00623",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2025_18__LEGV2__CH_00624",
+   "reviewed_id": "UKPGA_2025_18__LEGV2__CH_00624",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2025_18__LEGV2__CH_00638",
+   "reviewed_id": "UKPGA_2025_18__LEGV2__CH_00638",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2025_18__LEGV2__CH_00677",
+   "reviewed_id": "UKPGA_2025_18__LEGV2__CH_00677",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2025_18__LEGV2__CH_00693",
+   "reviewed_id": "UKPGA_2025_18__LEGV2__CH_00693",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2025_18__LEGV2__CH_00766",
+   "reviewed_id": "UKPGA_2025_18__LEGV2__CH_00766",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2025_18__LEGV2__CH_00812",
+   "reviewed_id": "UKPGA_2025_18__LEGV2__CH_00812",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2025_18__LEGV2__CH_00820",
+   "reviewed_id": "UKPGA_2025_18__LEGV2__CH_00820",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2025_18__LEGV2__CH_00821",
+   "reviewed_id": "UKPGA_2025_18__LEGV2__CH_00821",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2025_18__LEGV2__CH_00892",
+   "reviewed_id": "UKPGA_2025_18__LEGV2__CH_00892",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2025_18__LEGV2__CH_00893",
+   "reviewed_id": "UKPGA_2025_18__LEGV2__CH_00893",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2025_18__LEGV2__CH_00921",
+   "reviewed_id": "UKPGA_2025_18__LEGV2__CH_00921",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2025_18__LEGV2__CH_00926",
+   "reviewed_id": "UKPGA_2025_18__LEGV2__CH_00926",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2025_18__LEGV2__CH_01017",
+   "reviewed_id": "UKPGA_2025_18__LEGV2__CH_01017",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2025_36__LEGV2__CH_00003",
+   "reviewed_id": "UKPGA_2025_36__LEGV2__CH_00003",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2025_36__LEGV2__CH_00228",
+   "reviewed_id": "UKPGA_2025_36__LEGV2__CH_00228",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2025_36__LEGV2__CH_00272",
+   "reviewed_id": "UKPGA_2025_36__LEGV2__CH_00272",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2025_36__LEGV2__CH_00513",
+   "reviewed_id": "UKPGA_2025_36__LEGV2__CH_00513",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2025_36__LEGV2__CH_00525",
+   "reviewed_id": "UKPGA_2025_36__LEGV2__CH_00525",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2025_36__LEGV2__CH_00572",
+   "reviewed_id": "UKPGA_2025_36__LEGV2__CH_00572",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2025_36__LEGV2__CH_00626",
+   "reviewed_id": "UKPGA_2025_36__LEGV2__CH_00626",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2025_36__LEGV2__CH_00699",
+   "reviewed_id": "UKPGA_2025_36__LEGV2__CH_00699",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2025_36__LEGV2__CH_00708",
+   "reviewed_id": "UKPGA_2025_36__LEGV2__CH_00708",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2025_36__LEGV2__CH_00714",
+   "reviewed_id": "UKPGA_2025_36__LEGV2__CH_00714",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2025_36__LEGV2__CH_00903",
+   "reviewed_id": "UKPGA_2025_36__LEGV2__CH_00903",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2025_36__LEGV2__CH_01028",
+   "reviewed_id": "UKPGA_2025_36__LEGV2__CH_01028",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2025_36__LEGV2__CH_01034",
+   "reviewed_id": "UKPGA_2025_36__LEGV2__CH_01034",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2025_36__LEGV2__CH_01117",
+   "reviewed_id": "UKPGA_2025_36__LEGV2__CH_01117",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2025_36__LEGV2__CH_01142",
+   "reviewed_id": "UKPGA_2025_36__LEGV2__CH_01142",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2025_36__LEGV2__CH_01169",
+   "reviewed_id": "UKPGA_2025_36__LEGV2__CH_01169",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2025_36__LEGV2__CH_01345",
+   "reviewed_id": "UKPGA_2025_36__LEGV2__CH_01345",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2025_36__LEGV2__CH_01392",
+   "reviewed_id": "UKPGA_2025_36__LEGV2__CH_01392",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2025_36__LEGV2__CH_01416",
+   "reviewed_id": "UKPGA_2025_36__LEGV2__CH_01416",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2025_36__LEGV2__CH_01503",
+   "reviewed_id": "UKPGA_2025_36__LEGV2__CH_01503",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2025_36__LEGV2__CH_01504",
+   "reviewed_id": "UKPGA_2025_36__LEGV2__CH_01504",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2025_36__LEGV2__CH_01534",
+   "reviewed_id": "UKPGA_2025_36__LEGV2__CH_01534",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2025_36__LEGV2__CH_01536",
+   "reviewed_id": "UKPGA_2025_36__LEGV2__CH_01536",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2025_36__LEGV2__CH_01561",
+   "reviewed_id": "UKPGA_2025_36__LEGV2__CH_01561",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2025_36__LEGV2__CH_01581",
+   "reviewed_id": "UKPGA_2025_36__LEGV2__CH_01581",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2025_36__LEGV2__CH_01634",
+   "reviewed_id": "UKPGA_2025_36__LEGV2__CH_01634",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKSI_2002_1860__LEGV2__CH_00044",
+   "reviewed_id": "UKSI_2002_1860__LEGV2__CH_00044",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKSI_2019_419__LEGV2__CH_00014",
+   "reviewed_id": "UKSI_2019_419__LEGV2__CH_00014",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKSI_2019_419__LEGV2__CH_00091",
+   "reviewed_id": "UKSI_2019_419__LEGV2__CH_00091",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKSI_2019_419__LEGV2__CH_00095",
+   "reviewed_id": "UKSI_2019_419__LEGV2__CH_00095",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKSI_2019_419__LEGV2__CH_00096",
+   "reviewed_id": "UKSI_2019_419__LEGV2__CH_00096",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKSI_2019_419__LEGV2__CH_00112",
+   "reviewed_id": "UKSI_2019_419__LEGV2__CH_00112",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKSI_2019_419__LEGV2__CH_00211",
+   "reviewed_id": "UKSI_2019_419__LEGV2__CH_00211",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKSI_2019_419__LEGV2__CH_00231",
+   "reviewed_id": "UKSI_2019_419__LEGV2__CH_00231",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKSI_2019_419__LEGV2__CH_00237",
+   "reviewed_id": "UKSI_2019_419__LEGV2__CH_00237",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKSI_2019_419__LEGV2__CH_00239",
+   "reviewed_id": "UKSI_2019_419__LEGV2__CH_00239",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKSI_2019_419__LEGV2__CH_00261",
+   "reviewed_id": "UKSI_2019_419__LEGV2__CH_00261",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKSI_2019_419__LEGV2__CH_00295",
+   "reviewed_id": "UKSI_2019_419__LEGV2__CH_00295",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKSI_2019_419__LEGV2__CH_00330",
+   "reviewed_id": "UKSI_2019_419__LEGV2__CH_00330",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKSI_2019_419__LEGV2__CH_00391",
+   "reviewed_id": "UKSI_2019_419__LEGV2__CH_00391",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKSI_2025_163__LEGV2__CH_00120",
+   "reviewed_id": "UKSI_2025_163__LEGV2__CH_00120",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "d5ba02c0719f811068f58a9e__PDFV2__CH_0007",
+   "reviewed_id": "d5ba02c0719f811068f58a9e__PDFV2__CH_0007",
+   "section": "drop_tier3_review",
+   "decision": "DISCARD",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "7364f857b0b4d9bf4e96126a__7364f857b0b4d9bf4e96126a__SEG_0001__CH_001",
+   "reviewed_id": "7364f857b0b4d9bf4e96126a__7364f857b0b4d9bf4e96126a__SEG_0001__CH_001",
+   "section": "rechunk_residue",
+   "decision": "TEMPLATE_ONLY",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "dd58c3281bbd321135a59321__dd58c3281bbd321135a59321__SEG_0001__CH_003",
+   "reviewed_id": "dd58c3281bbd321135a59321__dd58c3281bbd321135a59321__SEG_0001__CH_003",
+   "section": "rechunk_residue",
+   "decision": "TEMPLATE_ONLY",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "f1144564525067e12ff9acb7__f1144564525067e12ff9acb7__SEG_0004__CH_001",
+   "reviewed_id": "f1144564525067e12ff9acb7__f1144564525067e12ff9acb7__SEG_0004__CH_001",
+   "section": "rechunk_residue",
+   "decision": "TEMPLATE_ONLY",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "d61868f1e6e7f32e4be397b4__d61868f1e6e7f32e4be397b4__SEG_0001__CH_007",
+   "reviewed_id": "d61868f1e6e7f32e4be397b4__d61868f1e6e7f32e4be397b4__SEG_0001__CH_007",
+   "section": "rechunk_residue",
+   "decision": "TEMPLATE_ONLY",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "05829a0f4e9f0f1d8ccca035__05829a0f4e9f0f1d8ccca035__SEG_0001__CH_003",
+   "reviewed_id": "05829a0f4e9f0f1d8ccca035__05829a0f4e9f0f1d8ccca035__SEG_0001__CH_003__M",
+   "section": "rechunk_residue",
+   "decision": "TEMPLATE_ONLY",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "05829a0f4e9f0f1d8ccca035__05829a0f4e9f0f1d8ccca035__SEG_0001__CH_004",
+   "reviewed_id": "05829a0f4e9f0f1d8ccca035__05829a0f4e9f0f1d8ccca035__SEG_0001__CH_003__M",
+   "section": "rechunk_residue",
+   "decision": "TEMPLATE_ONLY",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "091faf8fce48e2dd8621a2c7__PDFV2__CH_0010",
+   "reviewed_id": "091faf8fce48e2dd8621a2c7__PDFV2__CH_0010",
+   "section": "rechunk_residue",
+   "decision": "TEMPLATE_ONLY",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "1a5e801ab667fbdf60778af5__PDFV2__CH_0006",
+   "reviewed_id": "1a5e801ab667fbdf60778af5__PDFV2__CH_0006",
+   "section": "rechunk_residue",
+   "decision": "TEMPLATE_ONLY",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "200a88e602d16026b4bbb29a__PDFV2__CH_0010",
+   "reviewed_id": "200a88e602d16026b4bbb29a__PDFV2__CH_0010",
+   "section": "rechunk_residue",
+   "decision": "TEMPLATE_ONLY",
+   "previous_filtered_out": "JUDGE_DROP_T2_COMMENTARY_NEWS",
+   "edge_target": false
+  },
+  {
+   "chunk_id": "298d3ad07f06a32bc222e786__298d3ad07f06a32bc222e786__SEG_0001__CH_002",
+   "reviewed_id": "298d3ad07f06a32bc222e786__298d3ad07f06a32bc222e786__SEG_0001__CH_002",
+   "section": "rechunk_residue",
+   "decision": "TEMPLATE_ONLY",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "931443aa83c1b4233ba0b58d__PDFV2__CH_0006",
+   "reviewed_id": "931443aa83c1b4233ba0b58d__PDFV2__CH_0006",
+   "section": "rechunk_residue",
+   "decision": "TEMPLATE_ONLY",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "ccf3d731ad06bbebd543a514__PDFV2__CH_0028",
+   "reviewed_id": "ccf3d731ad06bbebd543a514__PDFV2__CH_0028",
+   "section": "rechunk_residue",
+   "decision": "TEMPLATE_ONLY",
+   "previous_filtered_out": "JUDGE_DROP_T1_NAVIGATION_BOILERPLATE",
+   "edge_target": false
+  },
+  {
+   "chunk_id": "0ca2bfea6ba357d9000d5870__PDFV2__CH_0003",
+   "reviewed_id": "0ca2bfea6ba357d9000d5870__PDFV2__CH_0003",
+   "section": "drop_tier3_review",
+   "decision": "TEMPLATE_ONLY",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "10a4c17721d16750f8102c4f__PDFV2__CH_0024",
+   "reviewed_id": "10a4c17721d16750f8102c4f__PDFV2__CH_0024",
+   "section": "drop_tier3_review",
+   "decision": "TEMPLATE_ONLY",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "10a4c17721d16750f8102c4f__PDFV2__CH_0059",
+   "reviewed_id": "10a4c17721d16750f8102c4f__PDFV2__CH_0059",
+   "section": "drop_tier3_review",
+   "decision": "TEMPLATE_ONLY",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "1bcc0e08db2d894524cff484__PDFV2__CH_0002",
+   "reviewed_id": "1bcc0e08db2d894524cff484__PDFV2__CH_0002",
+   "section": "drop_tier3_review",
+   "decision": "TEMPLATE_ONLY",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "23cee8ec0fac8124b6ad7c25__23cee8ec0fac8124b6ad7c25__SEG_0001__CH_006",
+   "reviewed_id": "23cee8ec0fac8124b6ad7c25__23cee8ec0fac8124b6ad7c25__SEG_0001__CH_006",
+   "section": "drop_tier3_review",
+   "decision": "TEMPLATE_ONLY",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "2b7f0be7e2b1f6d7ec739622__PDFV2__CH_0020",
+   "reviewed_id": "2b7f0be7e2b1f6d7ec739622__PDFV2__CH_0020",
+   "section": "drop_tier3_review",
+   "decision": "TEMPLATE_ONLY",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "3ea536da835e800dda2d7f43__PDFV2__CH_0018",
+   "reviewed_id": "3ea536da835e800dda2d7f43__PDFV2__CH_0018",
+   "section": "drop_tier3_review",
+   "decision": "TEMPLATE_ONLY",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "768e2cd512d2979e299de414__768e2cd512d2979e299de414__SEG_0002__CH_006",
+   "reviewed_id": "768e2cd512d2979e299de414__768e2cd512d2979e299de414__SEG_0002__CH_006",
+   "section": "drop_tier3_review",
+   "decision": "TEMPLATE_ONLY",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "768e2cd512d2979e299de414__768e2cd512d2979e299de414__SEG_0002__CH_010",
+   "reviewed_id": "768e2cd512d2979e299de414__768e2cd512d2979e299de414__SEG_0002__CH_010",
+   "section": "drop_tier3_review",
+   "decision": "TEMPLATE_ONLY",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "bfaeed58134d26bdbe3e4f3d__PDFV2__CH_0029",
+   "reviewed_id": "bfaeed58134d26bdbe3e4f3d__PDFV2__CH_0029",
+   "section": "drop_tier3_review",
+   "decision": "TEMPLATE_ONLY",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "071f87cb2958be165a94bb8b__071f87cb2958be165a94bb8b__SEG_0001__CH_001",
+   "reviewed_id": "071f87cb2958be165a94bb8b__071f87cb2958be165a94bb8b__SEG_0001__CH_001",
+   "section": "drop_overruled_kept",
+   "decision": "EVAL_ONLY",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "08a992a58c2d234d20e923a4__08a992a58c2d234d20e923a4__SEG_0001__CH_001",
+   "reviewed_id": "08a992a58c2d234d20e923a4__08a992a58c2d234d20e923a4__SEG_0001__CH_001",
+   "section": "drop_overruled_kept",
+   "decision": "EVAL_ONLY",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "13deaad96b7551395ff63642__13deaad96b7551395ff63642__SEG_0001__CH_001",
+   "reviewed_id": "13deaad96b7551395ff63642__13deaad96b7551395ff63642__SEG_0001__CH_001",
+   "section": "drop_overruled_kept",
+   "decision": "EVAL_ONLY",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "15b2dc4688fdb13b608d8fe6__PDFV2__CH_0017",
+   "reviewed_id": "15b2dc4688fdb13b608d8fe6__PDFV2__CH_0017",
+   "section": "drop_overruled_kept",
+   "decision": "EVAL_ONLY",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "1943682c988f7744c205ea18__PDFV2__CH_0015",
+   "reviewed_id": "1943682c988f7744c205ea18__PDFV2__CH_0015",
+   "section": "drop_overruled_kept",
+   "decision": "EVAL_ONLY",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "1943682c988f7744c205ea18__PDFV2__CH_0649",
+   "reviewed_id": "1943682c988f7744c205ea18__PDFV2__CH_0649",
+   "section": "drop_overruled_kept",
+   "decision": "EVAL_ONLY",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "1943682c988f7744c205ea18__PDFV2__CH_0690",
+   "reviewed_id": "1943682c988f7744c205ea18__PDFV2__CH_0690",
+   "section": "drop_overruled_kept",
+   "decision": "EVAL_ONLY",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "1dd7d4f26525eccc6d16a7ed__PDFV2__CH_0036",
+   "reviewed_id": "1dd7d4f26525eccc6d16a7ed__PDFV2__CH_0036",
+   "section": "drop_overruled_kept",
+   "decision": "EVAL_ONLY",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "2298a3b6851317ba51fa4241__2298a3b6851317ba51fa4241__SEG_0001__CH_001",
+   "reviewed_id": "2298a3b6851317ba51fa4241__2298a3b6851317ba51fa4241__SEG_0001__CH_001",
+   "section": "drop_overruled_kept",
+   "decision": "EVAL_ONLY",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "23dbd90b80e05ef54171fa7e__23dbd90b80e05ef54171fa7e__SEG_0001__CH_001",
+   "reviewed_id": "23dbd90b80e05ef54171fa7e__23dbd90b80e05ef54171fa7e__SEG_0001__CH_001",
+   "section": "drop_overruled_kept",
+   "decision": "EVAL_ONLY",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "38275835aaf61c29c963bbb0__38275835aaf61c29c963bbb0__SEG_0002__CH_006",
+   "reviewed_id": "38275835aaf61c29c963bbb0__38275835aaf61c29c963bbb0__SEG_0002__CH_006",
+   "section": "drop_overruled_kept",
+   "decision": "EVAL_ONLY",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "3c7fdc9eb00a1090618e505f__PDFV2__CH_0012",
+   "reviewed_id": "3c7fdc9eb00a1090618e505f__PDFV2__CH_0012",
+   "section": "drop_overruled_kept",
+   "decision": "EVAL_ONLY",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "4251f906de514ec77c7b30ba__4251f906de514ec77c7b30ba__SEG_0001__CH_001",
+   "reviewed_id": "4251f906de514ec77c7b30ba__4251f906de514ec77c7b30ba__SEG_0001__CH_001",
+   "section": "drop_overruled_kept",
+   "decision": "EVAL_ONLY",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "4419c3d916f9e92686517b73__PDFV2__CH_0034",
+   "reviewed_id": "4419c3d916f9e92686517b73__PDFV2__CH_0034",
+   "section": "drop_overruled_kept",
+   "decision": "EVAL_ONLY",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "4419c3d916f9e92686517b73__PDFV2__CH_0047",
+   "reviewed_id": "4419c3d916f9e92686517b73__PDFV2__CH_0047",
+   "section": "drop_overruled_kept",
+   "decision": "EVAL_ONLY",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "49b207eaac78538dcd2c8b53__PDFV2__CH_0066",
+   "reviewed_id": "49b207eaac78538dcd2c8b53__PDFV2__CH_0066",
+   "section": "drop_overruled_kept",
+   "decision": "EVAL_ONLY",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "569832f999da586fbf7eff5d__PDFV2__CH_0003",
+   "reviewed_id": "569832f999da586fbf7eff5d__PDFV2__CH_0003",
+   "section": "drop_overruled_kept",
+   "decision": "EVAL_ONLY",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "569832f999da586fbf7eff5d__PDFV2__CH_0009",
+   "reviewed_id": "569832f999da586fbf7eff5d__PDFV2__CH_0009",
+   "section": "drop_overruled_kept",
+   "decision": "EVAL_ONLY",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "6aef3ba704e97e8e374617de__PDFV2__CH_0006",
+   "reviewed_id": "6aef3ba704e97e8e374617de__PDFV2__CH_0006",
+   "section": "drop_overruled_kept",
+   "decision": "EVAL_ONLY",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "717032ad1090f198aedfcd2a__717032ad1090f198aedfcd2a__SEG_0002__CH_005",
+   "reviewed_id": "717032ad1090f198aedfcd2a__717032ad1090f198aedfcd2a__SEG_0002__CH_005",
+   "section": "drop_overruled_kept",
+   "decision": "EVAL_ONLY",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "82b3a4892a5912e1d9c01532__82b3a4892a5912e1d9c01532__SEG_0001__CH_003",
+   "reviewed_id": "82b3a4892a5912e1d9c01532__82b3a4892a5912e1d9c01532__SEG_0001__CH_003",
+   "section": "drop_overruled_kept",
+   "decision": "EVAL_ONLY",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "9fa239e6cb58ebf76f8aa2e4__PDFV2__CH_0001",
+   "reviewed_id": "9fa239e6cb58ebf76f8aa2e4__PDFV2__CH_0001",
+   "section": "drop_overruled_kept",
+   "decision": "EVAL_ONLY",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "CMA_COMPETITION_PUBLIC_AUTHORITIES__CMA_COMPETITION_PUBLIC_AUTHORITIES__SEG_0001__CH_001",
+   "reviewed_id": "CMA_COMPETITION_PUBLIC_AUTHORITIES__CMA_COMPETITION_PUBLIC_AUTHORITIES__SEG_0001__CH_001",
+   "section": "drop_overruled_kept",
+   "decision": "EVAL_ONLY",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "TROWERS_ONE_YEAR_REVIEW__TROWERS_ONE_YEAR_REVIEW__SEG_0001__CH_001",
+   "reviewed_id": "TROWERS_ONE_YEAR_REVIEW__TROWERS_ONE_YEAR_REVIEW__SEG_0001__CH_001",
+   "section": "drop_overruled_kept",
+   "decision": "EVAL_ONLY",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "bfab6abebcd1c6324162ec0d__PDFV2__CH_0002",
+   "reviewed_id": "bfab6abebcd1c6324162ec0d__PDFV2__CH_0002",
+   "section": "drop_overruled_kept",
+   "decision": "EVAL_ONLY",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "d2c786ee2a1f8c0de0e11d75__d2c786ee2a1f8c0de0e11d75__SEG_0001__CH_001",
+   "reviewed_id": "d2c786ee2a1f8c0de0e11d75__d2c786ee2a1f8c0de0e11d75__SEG_0001__CH_001",
+   "section": "drop_overruled_kept",
+   "decision": "EVAL_ONLY",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "e5919c5f0e702a5368dc92ad__e5919c5f0e702a5368dc92ad__SEG_0001__CH_003",
+   "reviewed_id": "e5919c5f0e702a5368dc92ad__e5919c5f0e702a5368dc92ad__SEG_0001__CH_003",
+   "section": "drop_overruled_kept",
+   "decision": "EVAL_ONLY",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "edc20b9acb7be3e54d0452c3__PDFV2__CH_0020",
+   "reviewed_id": "edc20b9acb7be3e54d0452c3__PDFV2__CH_0020",
+   "section": "drop_overruled_kept",
+   "decision": "EVAL_ONLY",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "f5b49c2dede1cdb3c0454c3a__f5b49c2dede1cdb3c0454c3a__SEG_0005__CH_005",
+   "reviewed_id": "f5b49c2dede1cdb3c0454c3a__f5b49c2dede1cdb3c0454c3a__SEG_0005__CH_005",
+   "section": "drop_overruled_kept",
+   "decision": "EVAL_ONLY",
+   "previous_filtered_out": null,
+   "edge_target": false
+  },
+  {
+   "chunk_id": "UKPGA_2023_54__NODEV1__CH_00124",
+   "reviewed_id": "UKPGA_2023_54__NODEV1__CH_00124",
+   "section": "drop_overruled_kept",
+   "decision": "EVAL_ONLY",
+   "previous_filtered_out": null,
+   "edge_target": true
+  },
+  {
+   "chunk_id": "UKPGA_2023_54__NODEV1__CH_00224",
+   "reviewed_id": "UKPGA_2023_54__NODEV1__CH_00224",
+   "section": "drop_overruled_kept",
+   "decision": "EVAL_ONLY",
+   "previous_filtered_out": null,
+   "edge_target": true
+  },
+  {
+   "chunk_id": "UKPGA_2023_54__NODEV1__CH_00233",
+   "reviewed_id": "UKPGA_2023_54__NODEV1__CH_00233",
+   "section": "drop_overruled_kept",
+   "decision": "EVAL_ONLY",
+   "previous_filtered_out": null,
+   "edge_target": true
+  },
+  {
+   "chunk_id": "UKPGA_2023_54__NODEV1__CH_00237",
+   "reviewed_id": "UKPGA_2023_54__NODEV1__CH_00237",
+   "section": "drop_overruled_kept",
+   "decision": "EVAL_ONLY",
+   "previous_filtered_out": null,
+   "edge_target": true
+  },
+  {
+   "chunk_id": "UKPGA_2023_54__NODEV1__CH_00239",
+   "reviewed_id": "UKPGA_2023_54__NODEV1__CH_00239",
+   "section": "drop_overruled_kept",
+   "decision": "EVAL_ONLY",
+   "previous_filtered_out": null,
+   "edge_target": true
+  },
+  {
+   "chunk_id": "UKPGA_2023_54__NODEV1__CH_00245",
+   "reviewed_id": "UKPGA_2023_54__NODEV1__CH_00245",
+   "section": "drop_overruled_kept",
+   "decision": "EVAL_ONLY",
+   "previous_filtered_out": null,
+   "edge_target": true
+  },
+  {
+   "chunk_id": "UKPGA_2023_54__NODEV1__CH_00248",
+   "reviewed_id": "UKPGA_2023_54__NODEV1__CH_00248",
+   "section": "drop_overruled_kept",
+   "decision": "EVAL_ONLY",
+   "previous_filtered_out": null,
+   "edge_target": true
+  },
+  {
+   "chunk_id": "UKPGA_2023_54__NODEV1__CH_00249",
+   "reviewed_id": "UKPGA_2023_54__NODEV1__CH_00249",
+   "section": "drop_overruled_kept",
+   "decision": "EVAL_ONLY",
+   "previous_filtered_out": null,
+   "edge_target": true
+  },
+  {
+   "chunk_id": "UKPGA_2023_54__NODEV1__CH_00253",
+   "reviewed_id": "UKPGA_2023_54__NODEV1__CH_00253",
+   "section": "drop_overruled_kept",
+   "decision": "EVAL_ONLY",
+   "previous_filtered_out": null,
+   "edge_target": true
+  },
+  {
+   "chunk_id": "UKPGA_2023_54__NODEV1__CH_00327",
+   "reviewed_id": "UKPGA_2023_54__NODEV1__CH_00327",
+   "section": "drop_overruled_kept",
+   "decision": "EVAL_ONLY",
+   "previous_filtered_out": null,
+   "edge_target": true
+  },
+  {
+   "chunk_id": "UKSI_2015_102__UKSI_2015_102__SEG_0009__CH_001",
+   "reviewed_id": "UKSI_2015_102__UKSI_2015_102__SEG_0009__CH_001",
+   "section": "drop_overruled_kept",
+   "decision": "EVAL_ONLY",
+   "previous_filtered_out": null,
+   "edge_target": true
+  },
+  {
+   "chunk_id": "UKSI_2015_102__UKSI_2015_102__SEG_0017__CH_001",
+   "reviewed_id": "UKSI_2015_102__UKSI_2015_102__SEG_0017__CH_001",
+   "section": "drop_overruled_kept",
+   "decision": "EVAL_ONLY",
+   "previous_filtered_out": null,
+   "edge_target": true
+  },
+  {
+   "chunk_id": "UKSI_2015_102__UKSI_2015_102__SEG_0056__CH_001",
+   "reviewed_id": "UKSI_2015_102__UKSI_2015_102__SEG_0056__CH_001",
+   "section": "drop_overruled_kept",
+   "decision": "EVAL_ONLY",
+   "previous_filtered_out": "HUMAN_REVIEW_DISCARD",
+   "edge_target": true
+  },
+  {
+   "chunk_id": "UKSI_2015_102__UKSI_2015_102__SEG_0074__CH_001",
+   "reviewed_id": "UKSI_2015_102__UKSI_2015_102__SEG_0074__CH_001",
+   "section": "drop_overruled_kept",
+   "decision": "EVAL_ONLY",
+   "previous_filtered_out": null,
+   "edge_target": true
+  },
+  {
+   "chunk_id": "UKSI_2024_692__NODEV1__CH_00060",
+   "reviewed_id": "UKSI_2024_692__NODEV1__CH_00060",
+   "section": "drop_overruled_kept",
+   "decision": "EVAL_ONLY",
+   "previous_filtered_out": null,
+   "edge_target": true
+  },
+  {
+   "chunk_id": "10a4c17721d16750f8102c4f__PDFV2__CH_0057",
+   "reviewed_id": "10a4c17721d16750f8102c4f__PDFV2__CH_0057",
+   "section": "drop_tier3_review",
+   "decision": "KEEP",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "1943682c988f7744c205ea18__PDFV2__CH_0328",
+   "reviewed_id": "1943682c988f7744c205ea18__PDFV2__CH_0328",
+   "section": "drop_tier3_review",
+   "decision": "KEEP",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "1943682c988f7744c205ea18__PDFV2__CH_0640",
+   "reviewed_id": "1943682c988f7744c205ea18__PDFV2__CH_0640",
+   "section": "drop_tier3_review",
+   "decision": "KEEP",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "23cee8ec0fac8124b6ad7c25__23cee8ec0fac8124b6ad7c25__SEG_0001__CH_003",
+   "reviewed_id": "23cee8ec0fac8124b6ad7c25__23cee8ec0fac8124b6ad7c25__SEG_0001__CH_003",
+   "section": "drop_tier3_review",
+   "decision": "KEEP",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "35535610b3a4d8092d3140fc__35535610b3a4d8092d3140fc__SEG_0001__CH_005",
+   "reviewed_id": "35535610b3a4d8092d3140fc__35535610b3a4d8092d3140fc__SEG_0001__CH_005",
+   "section": "drop_tier3_review",
+   "decision": "KEEP",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "3a1023ee13689a1d4d155cf8__3a1023ee13689a1d4d155cf8__SEG_0001__CH_003",
+   "reviewed_id": "3a1023ee13689a1d4d155cf8__3a1023ee13689a1d4d155cf8__SEG_0001__CH_003",
+   "section": "drop_tier3_review",
+   "decision": "KEEP",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "53b62e2a3b1dd0638080fa78__53b62e2a3b1dd0638080fa78__SEG_0001__CH_001",
+   "reviewed_id": "53b62e2a3b1dd0638080fa78__53b62e2a3b1dd0638080fa78__SEG_0001__CH_001",
+   "section": "drop_tier3_review",
+   "decision": "KEEP",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "57f384cb8d2f209d3bf1b444__57f384cb8d2f209d3bf1b444__SEG_0001__CH_001",
+   "reviewed_id": "57f384cb8d2f209d3bf1b444__57f384cb8d2f209d3bf1b444__SEG_0001__CH_001",
+   "section": "drop_tier3_review",
+   "decision": "KEEP",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "6118b7f0105671c9e492f8c3__6118b7f0105671c9e492f8c3__SEG_0001__CH_003",
+   "reviewed_id": "6118b7f0105671c9e492f8c3__6118b7f0105671c9e492f8c3__SEG_0001__CH_003",
+   "section": "drop_tier3_review",
+   "decision": "KEEP",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "66c15fa31a96fba7dd1ffeb2__66c15fa31a96fba7dd1ffeb2__SEG_0002__CH_003",
+   "reviewed_id": "66c15fa31a96fba7dd1ffeb2__66c15fa31a96fba7dd1ffeb2__SEG_0002__CH_003",
+   "section": "drop_tier3_review",
+   "decision": "KEEP",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "6b4f861be36c3b744f924029__6b4f861be36c3b744f924029__SEG_0001__CH_003",
+   "reviewed_id": "6b4f861be36c3b744f924029__6b4f861be36c3b744f924029__SEG_0001__CH_003",
+   "section": "drop_tier3_review",
+   "decision": "KEEP",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "789fb8e388c8b70bda8fc044__789fb8e388c8b70bda8fc044__SEG_0001__CH_001",
+   "reviewed_id": "789fb8e388c8b70bda8fc044__789fb8e388c8b70bda8fc044__SEG_0001__CH_001",
+   "section": "drop_tier3_review",
+   "decision": "KEEP",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "7ceb1dab725f9324c7d6dcca__7ceb1dab725f9324c7d6dcca__SEG_0001__CH_001",
+   "reviewed_id": "7ceb1dab725f9324c7d6dcca__7ceb1dab725f9324c7d6dcca__SEG_0001__CH_001",
+   "section": "drop_tier3_review",
+   "decision": "KEEP",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "8290bc1c85fb9a143724da1e__8290bc1c85fb9a143724da1e__SEG_0001__CH_002",
+   "reviewed_id": "8290bc1c85fb9a143724da1e__8290bc1c85fb9a143724da1e__SEG_0001__CH_002",
+   "section": "drop_tier3_review",
+   "decision": "KEEP",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "96a80bccf5b98e946a9cd3ab__96a80bccf5b98e946a9cd3ab__SEG_0001__CH_003",
+   "reviewed_id": "96a80bccf5b98e946a9cd3ab__96a80bccf5b98e946a9cd3ab__SEG_0001__CH_003",
+   "section": "drop_tier3_review",
+   "decision": "KEEP",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "9b1486b7372867c029fdd92d__9b1486b7372867c029fdd92d__SEG_0001__CH_001",
+   "reviewed_id": "9b1486b7372867c029fdd92d__9b1486b7372867c029fdd92d__SEG_0001__CH_001",
+   "section": "drop_tier3_review",
+   "decision": "KEEP",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "PROCUREMENTPORTAL_PHRASEBOOK_PDF__PDFV2__CH_0003",
+   "reviewed_id": "PROCUREMENTPORTAL_PHRASEBOOK_PDF__PDFV2__CH_0003",
+   "section": "drop_tier3_review",
+   "decision": "KEEP",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "UKPGA_2023_54__NODEV1__CH_00152",
+   "reviewed_id": "UKPGA_2023_54__NODEV1__CH_00152",
+   "section": "drop_tier3_review",
+   "decision": "KEEP",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "UKPGA_2023_54__NODEV1__CH_00174",
+   "reviewed_id": "UKPGA_2023_54__NODEV1__CH_00174",
+   "section": "drop_tier3_review",
+   "decision": "KEEP",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "UKPGA_2023_54__NODEV1__CH_00177",
+   "reviewed_id": "UKPGA_2023_54__NODEV1__CH_00177",
+   "section": "drop_tier3_review",
+   "decision": "KEEP",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "UKPGA_2023_54__NODEV1__CH_00180",
+   "reviewed_id": "UKPGA_2023_54__NODEV1__CH_00180",
+   "section": "drop_tier3_review",
+   "decision": "KEEP",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "UKPGA_2023_54__NODEV1__CH_00206",
+   "reviewed_id": "UKPGA_2023_54__NODEV1__CH_00206",
+   "section": "drop_tier3_review",
+   "decision": "KEEP",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "UKPGA_2023_54__NODEV1__CH_00242",
+   "reviewed_id": "UKPGA_2023_54__NODEV1__CH_00242",
+   "section": "drop_tier3_review",
+   "decision": "KEEP",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "UKPGA_2023_54__NODEV1__CH_00243",
+   "reviewed_id": "UKPGA_2023_54__NODEV1__CH_00243",
+   "section": "drop_tier3_review",
+   "decision": "KEEP",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "UKPGA_2023_54__NODEV1__CH_00308",
+   "reviewed_id": "UKPGA_2023_54__NODEV1__CH_00308",
+   "section": "drop_tier3_review",
+   "decision": "KEEP",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "a7fc9a0229f90c8b0e1b5a54__a7fc9a0229f90c8b0e1b5a54__SEG_0001__CH_002",
+   "reviewed_id": "a7fc9a0229f90c8b0e1b5a54__a7fc9a0229f90c8b0e1b5a54__SEG_0001__CH_002",
+   "section": "drop_tier3_review",
+   "decision": "KEEP",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "be1e556eda431bf7320bd312__PDFV2__CH_0013",
+   "reviewed_id": "be1e556eda431bf7320bd312__PDFV2__CH_0013",
+   "section": "drop_tier3_review",
+   "decision": "KEEP",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "c0395066e3e6297abf6c9a9e__PDFV2__CH_0026",
+   "reviewed_id": "c0395066e3e6297abf6c9a9e__PDFV2__CH_0026",
+   "section": "drop_tier3_review",
+   "decision": "KEEP",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "d265d75216271e8dad43072a__PDFV2__CH_0046",
+   "reviewed_id": "d265d75216271e8dad43072a__PDFV2__CH_0046",
+   "section": "drop_tier3_review",
+   "decision": "KEEP",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "f4dea177acd0ea4cca767416__f4dea177acd0ea4cca767416__SEG_0001__CH_004",
+   "reviewed_id": "f4dea177acd0ea4cca767416__f4dea177acd0ea4cca767416__SEG_0001__CH_004",
+   "section": "drop_tier3_review",
+   "decision": "KEEP",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "f4dea177acd0ea4cca767416__f4dea177acd0ea4cca767416__SEG_0001__CH_005",
+   "reviewed_id": "f4dea177acd0ea4cca767416__f4dea177acd0ea4cca767416__SEG_0001__CH_005",
+   "section": "drop_tier3_review",
+   "decision": "KEEP",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "03b56aace697cb2fd3a9b856__03b56aace697cb2fd3a9b856__SEG_0001__CH_001",
+   "reviewed_id": "03b56aace697cb2fd3a9b856__03b56aace697cb2fd3a9b856__SEG_0001__CH_001",
+   "section": "drop_overruled_kept",
+   "decision": "KEEP",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "09a1c32d70bf64112b85d3a9__09a1c32d70bf64112b85d3a9__SEG_0001__CH_002",
+   "reviewed_id": "09a1c32d70bf64112b85d3a9__09a1c32d70bf64112b85d3a9__SEG_0001__CH_002",
+   "section": "drop_overruled_kept",
+   "decision": "KEEP",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "16033821862348bc294f4b4f__16033821862348bc294f4b4f__SEG_0001__CH_001",
+   "reviewed_id": "16033821862348bc294f4b4f__16033821862348bc294f4b4f__SEG_0001__CH_001",
+   "section": "drop_overruled_kept",
+   "decision": "KEEP",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "53a7efdfa8f755c454c4261c__53a7efdfa8f755c454c4261c__SEG_0001__CH_002",
+   "reviewed_id": "53a7efdfa8f755c454c4261c__53a7efdfa8f755c454c4261c__SEG_0001__CH_002",
+   "section": "drop_overruled_kept",
+   "decision": "KEEP",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "55ffc180a135fde883ba22b3__55ffc180a135fde883ba22b3__SEG_0001__CH_001",
+   "reviewed_id": "55ffc180a135fde883ba22b3__55ffc180a135fde883ba22b3__SEG_0001__CH_001",
+   "section": "drop_overruled_kept",
+   "decision": "KEEP",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "68c89771830c76a49cb869a5__68c89771830c76a49cb869a5__SEG_0001__CH_003",
+   "reviewed_id": "68c89771830c76a49cb869a5__68c89771830c76a49cb869a5__SEG_0001__CH_003",
+   "section": "drop_overruled_kept",
+   "decision": "KEEP",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "6a120d38497353a1b311685d__6a120d38497353a1b311685d__SEG_0002__CH_002",
+   "reviewed_id": "6a120d38497353a1b311685d__6a120d38497353a1b311685d__SEG_0002__CH_002",
+   "section": "drop_overruled_kept",
+   "decision": "KEEP",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "833a0b18f39731725384a925__833a0b18f39731725384a925__SEG_0001__CH_002",
+   "reviewed_id": "833a0b18f39731725384a925__833a0b18f39731725384a925__SEG_0001__CH_002",
+   "section": "drop_overruled_kept",
+   "decision": "KEEP",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "8f04adae15aec1c4fc11f12b__8f04adae15aec1c4fc11f12b__SEG_0001__CH_001",
+   "reviewed_id": "8f04adae15aec1c4fc11f12b__8f04adae15aec1c4fc11f12b__SEG_0001__CH_001",
+   "section": "drop_overruled_kept",
+   "decision": "KEEP",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "PA23_NATIONAL_SECURITY_EXCLUSIONS_ANNEX__PA23_NATIONAL_SECURITY_EXCLUSIONS_ANNEX__SEG_0001__CH_001",
+   "reviewed_id": "PA23_NATIONAL_SECURITY_EXCLUSIONS_ANNEX__PA23_NATIONAL_SECURITY_EXCLUSIONS_ANNEX__SEG_0001__CH_001",
+   "section": "drop_overruled_kept",
+   "decision": "KEEP",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "PA23_NATIONAL_SECURITY_EXCLUSIONS_ANNEX__PA23_NATIONAL_SECURITY_EXCLUSIONS_ANNEX__SEG_0002__CH_001",
+   "reviewed_id": "PA23_NATIONAL_SECURITY_EXCLUSIONS_ANNEX__PA23_NATIONAL_SECURITY_EXCLUSIONS_ANNEX__SEG_0002__CH_001",
+   "section": "drop_overruled_kept",
+   "decision": "KEEP",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "a2590f405a81d1aed805f4c1__a2590f405a81d1aed805f4c1__SEG_0001__CH_001",
+   "reviewed_id": "a2590f405a81d1aed805f4c1__a2590f405a81d1aed805f4c1__SEG_0001__CH_001",
+   "section": "drop_overruled_kept",
+   "decision": "KEEP",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "UKSI_2024_692__NODEV1__CH_00062",
+   "reviewed_id": "UKSI_2024_692__NODEV1__CH_00062",
+   "section": "drop_overruled_kept",
+   "decision": "KEEP",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "UKSI_2024_692__NODEV1__CH_00063",
+   "reviewed_id": "UKSI_2024_692__NODEV1__CH_00063",
+   "section": "drop_overruled_kept",
+   "decision": "KEEP",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "UKSI_2015_102__UKSI_2015_102__SEG_0113__CH_001",
+   "reviewed_id": "UKSI_2015_102__UKSI_2015_102__SEG_0113__CH_001",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "2eb6bb94923cddae3031ea6d__2eb6bb94923cddae3031ea6d__SEG_0004__CH_002",
+   "reviewed_id": "2eb6bb94923cddae3031ea6d__2eb6bb94923cddae3031ea6d__SEG_0004__CH_002",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "735ab4a93e201d136bb566d0__735ab4a93e201d136bb566d0__SEG_0001__CH_001",
+   "reviewed_id": "735ab4a93e201d136bb566d0__735ab4a93e201d136bb566d0__SEG_0001__CH_001",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "7f3a9e3f6c5e82ef78b09c7e__7f3a9e3f6c5e82ef78b09c7e__SEG_0002__CH_003",
+   "reviewed_id": "7f3a9e3f6c5e82ef78b09c7e__7f3a9e3f6c5e82ef78b09c7e__SEG_0002__CH_003",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "a5ebde1ff7f9615ff202b732__a5ebde1ff7f9615ff202b732__SEG_0001__CH_004",
+   "reviewed_id": "a5ebde1ff7f9615ff202b732__a5ebde1ff7f9615ff202b732__SEG_0001__CH_004",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "ad3a39d43fd58b730564e9a8__ad3a39d43fd58b730564e9a8__SEG_0001__CH_004",
+   "reviewed_id": "ad3a39d43fd58b730564e9a8__ad3a39d43fd58b730564e9a8__SEG_0001__CH_004",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "b68ea298e8741f802964589f__b68ea298e8741f802964589f__SEG_0004__CH_001",
+   "reviewed_id": "b68ea298e8741f802964589f__b68ea298e8741f802964589f__SEG_0004__CH_001",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "ca28e50c2d09121cd8e57ad3__ca28e50c2d09121cd8e57ad3__SEG_0001__CH_004",
+   "reviewed_id": "ca28e50c2d09121cd8e57ad3__ca28e50c2d09121cd8e57ad3__SEG_0001__CH_004",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "f1144564525067e12ff9acb7__f1144564525067e12ff9acb7__SEG_0001__CH_002",
+   "reviewed_id": "f1144564525067e12ff9acb7__f1144564525067e12ff9acb7__SEG_0001__CH_002",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "f1144564525067e12ff9acb7__f1144564525067e12ff9acb7__SEG_0003__CH_002",
+   "reviewed_id": "f1144564525067e12ff9acb7__f1144564525067e12ff9acb7__SEG_0003__CH_002",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "0ca2bfea6ba357d9000d5870__PDFV2__CH_0007",
+   "reviewed_id": "0ca2bfea6ba357d9000d5870__PDFV2__CH_0007",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "1943682c988f7744c205ea18__PDFV2__CH_0705",
+   "reviewed_id": "1943682c988f7744c205ea18__PDFV2__CH_0705",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "2206a9a9eec40cce3431efcf__PDFV2__CH_0014",
+   "reviewed_id": "2206a9a9eec40cce3431efcf__PDFV2__CH_0014",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "606a15f8bce3690aae72c595__PDFV2__CH_0009",
+   "reviewed_id": "606a15f8bce3690aae72c595__PDFV2__CH_0009",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "773ae67b9ff7e2875936e709__PDFV2__CH_0026",
+   "reviewed_id": "773ae67b9ff7e2875936e709__PDFV2__CH_0026",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "8ae169052ffaa3df6b6f1b10__PDFV2__CH_0012",
+   "reviewed_id": "8ae169052ffaa3df6b6f1b10__PDFV2__CH_0012",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "b2aa2a6f8e21929688cdc377__PDFV2__CH_0003",
+   "reviewed_id": "b2aa2a6f8e21929688cdc377__PDFV2__CH_0003",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "da6fcf4361da18ef125f3918__PDFV2__CH_0009",
+   "reviewed_id": "da6fcf4361da18ef125f3918__PDFV2__CH_0009",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "UKSI_2025_163__LEGV2__CH_00011",
+   "reviewed_id": "UKSI_2025_163__LEGV2__CH_00011",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "UKSI_2025_163__LEGV2__CH_00009",
+   "reviewed_id": "UKSI_2025_163__LEGV2__CH_00009",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "UKSI_2025_163__LEGV2__CH_00069",
+   "reviewed_id": "UKSI_2025_163__LEGV2__CH_00069",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "UKSI_2025_163__LEGV2__CH_00067",
+   "reviewed_id": "UKSI_2025_163__LEGV2__CH_00067",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "5cdbaa650437e614cbce2aa6__5cdbaa650437e614cbce2aa6__SEG_0003__CH_002",
+   "reviewed_id": "5cdbaa650437e614cbce2aa6__5cdbaa650437e614cbce2aa6__SEG_0003__CH_002",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "62e7e66afb3e68ba4961b88e__62e7e66afb3e68ba4961b88e__SEG_0001__CH_001",
+   "reviewed_id": "62e7e66afb3e68ba4961b88e__62e7e66afb3e68ba4961b88e__SEG_0001__CH_001",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "717032ad1090f198aedfcd2a__717032ad1090f198aedfcd2a__SEG_0002__CH_003",
+   "reviewed_id": "717032ad1090f198aedfcd2a__717032ad1090f198aedfcd2a__SEG_0002__CH_003",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "717032ad1090f198aedfcd2a__717032ad1090f198aedfcd2a__SEG_0011__CH_005",
+   "reviewed_id": "717032ad1090f198aedfcd2a__717032ad1090f198aedfcd2a__SEG_0011__CH_005",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "717032ad1090f198aedfcd2a__717032ad1090f198aedfcd2a__SEG_0016__CH_003",
+   "reviewed_id": "717032ad1090f198aedfcd2a__717032ad1090f198aedfcd2a__SEG_0016__CH_003",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "717032ad1090f198aedfcd2a__717032ad1090f198aedfcd2a__SEG_0017__CH_004",
+   "reviewed_id": "717032ad1090f198aedfcd2a__717032ad1090f198aedfcd2a__SEG_0017__CH_004",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "717032ad1090f198aedfcd2a__717032ad1090f198aedfcd2a__SEG_0016__CH_002",
+   "reviewed_id": "717032ad1090f198aedfcd2a__717032ad1090f198aedfcd2a__SEG_0016__CH_002",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "8f5ecfa08d125a783cbb659e__8f5ecfa08d125a783cbb659e__SEG_0001__CH_003",
+   "reviewed_id": "8f5ecfa08d125a783cbb659e__8f5ecfa08d125a783cbb659e__SEG_0001__CH_003",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "98d219fc6ad9cd1fd358ed58__98d219fc6ad9cd1fd358ed58__SEG_0001__CH_001",
+   "reviewed_id": "98d219fc6ad9cd1fd358ed58__98d219fc6ad9cd1fd358ed58__SEG_0001__CH_001",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "b68ea298e8741f802964589f__b68ea298e8741f802964589f__SEG_0003__CH_002",
+   "reviewed_id": "b68ea298e8741f802964589f__b68ea298e8741f802964589f__SEG_0003__CH_002",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "b68ea298e8741f802964589f__b68ea298e8741f802964589f__SEG_0004__CH_002",
+   "reviewed_id": "b68ea298e8741f802964589f__b68ea298e8741f802964589f__SEG_0004__CH_002",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "10a4c17721d16750f8102c4f__PDFV2__CH_0042",
+   "reviewed_id": "10a4c17721d16750f8102c4f__PDFV2__CH_0042",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "1db54b68a6a44897f5c749ce__PDFV2__CH_0067",
+   "reviewed_id": "1db54b68a6a44897f5c749ce__PDFV2__CH_0067",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "34b1845b35fd2874dc61e1cf__PDFV2__CH_0021",
+   "reviewed_id": "34b1845b35fd2874dc61e1cf__PDFV2__CH_0021",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "5a0b09f0cc56fd9f4256c733__PDFV2__CH_0055",
+   "reviewed_id": "5a0b09f0cc56fd9f4256c733__PDFV2__CH_0055",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "b7f6893a95b0550289119d34__PDFV2__CH_0038",
+   "reviewed_id": "b7f6893a95b0550289119d34__PDFV2__CH_0038",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "08b89e530c329442ffabc36d__PDFV2__CH_0007",
+   "reviewed_id": "08b89e530c329442ffabc36d__PDFV2__CH_0007",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": "JUDGE_DROP_T2_COMMENTARY_NEWS"
+  },
+  {
+   "chunk_id": "15b2dc4688fdb13b608d8fe6__PDFV2__CH_0025",
+   "reviewed_id": "15b2dc4688fdb13b608d8fe6__PDFV2__CH_0025",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "1679f2bf64884c1319459c78__1679f2bf64884c1319459c78__SEG_0001__CH_004",
+   "reviewed_id": "1679f2bf64884c1319459c78__1679f2bf64884c1319459c78__SEG_0001__CH_004",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "1943682c988f7744c205ea18__PDFV2__CH_0241",
+   "reviewed_id": "1943682c988f7744c205ea18__PDFV2__CH_0241__M",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "1943682c988f7744c205ea18__PDFV2__CH_0242",
+   "reviewed_id": "1943682c988f7744c205ea18__PDFV2__CH_0241__M",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "1943682c988f7744c205ea18__PDFV2__CH_0243",
+   "reviewed_id": "1943682c988f7744c205ea18__PDFV2__CH_0241__M",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "1943682c988f7744c205ea18__PDFV2__CH_0247",
+   "reviewed_id": "1943682c988f7744c205ea18__PDFV2__CH_0247",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "1943682c988f7744c205ea18__PDFV2__CH_0339",
+   "reviewed_id": "1943682c988f7744c205ea18__PDFV2__CH_0339",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "1943682c988f7744c205ea18__PDFV2__CH_0345",
+   "reviewed_id": "1943682c988f7744c205ea18__PDFV2__CH_0345__M",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "1943682c988f7744c205ea18__PDFV2__CH_0346",
+   "reviewed_id": "1943682c988f7744c205ea18__PDFV2__CH_0345__M",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "1943682c988f7744c205ea18__PDFV2__CH_0347",
+   "reviewed_id": "1943682c988f7744c205ea18__PDFV2__CH_0345__M",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "1a2b7b96d07f90a04255b802__PDFV2__CH_0004",
+   "reviewed_id": "1a2b7b96d07f90a04255b802__PDFV2__CH_0004",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "1a2b7b96d07f90a04255b802__PDFV2__CH_0069",
+   "reviewed_id": "1a2b7b96d07f90a04255b802__PDFV2__CH_0069",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "1a2b7b96d07f90a04255b802__PDFV2__CH_0096",
+   "reviewed_id": "1a2b7b96d07f90a04255b802__PDFV2__CH_0096",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "1a2b7b96d07f90a04255b802__PDFV2__CH_0102",
+   "reviewed_id": "1a2b7b96d07f90a04255b802__PDFV2__CH_0102",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "2372aee90f9a0ad97e1f43a9__PDFV2__CH_0004",
+   "reviewed_id": "2372aee90f9a0ad97e1f43a9__PDFV2__CH_0004",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "26aaf3d203295cfea6ecbd68__PDFV2__CH_0003",
+   "reviewed_id": "26aaf3d203295cfea6ecbd68__PDFV2__CH_0003",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "26ba02ec059c8139cceb8e32__PDFV2__CH_0002",
+   "reviewed_id": "26ba02ec059c8139cceb8e32__PDFV2__CH_0002",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "2b21a8f184e5e786e6953a65__PDFV2__CH_0007",
+   "reviewed_id": "2b21a8f184e5e786e6953a65__PDFV2__CH_0007",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "3467e311195fd00c537262bd__PDFV2__CH_0013",
+   "reviewed_id": "3467e311195fd00c537262bd__PDFV2__CH_0013",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "34b1845b35fd2874dc61e1cf__PDFV2__CH_0048",
+   "reviewed_id": "34b1845b35fd2874dc61e1cf__PDFV2__CH_0048",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "5dcfd518b30e8ceb24ad9191__PDFV2__CH_0019",
+   "reviewed_id": "5dcfd518b30e8ceb24ad9191__PDFV2__CH_0019",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "5dcfd518b30e8ceb24ad9191__PDFV2__CH_0028",
+   "reviewed_id": "5dcfd518b30e8ceb24ad9191__PDFV2__CH_0028",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "5f838d492a1602416eb588d4__PDFV2__CH_0017",
+   "reviewed_id": "5f838d492a1602416eb588d4__PDFV2__CH_0017",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "717032ad1090f198aedfcd2a__717032ad1090f198aedfcd2a__SEG_0008__CH_009",
+   "reviewed_id": "717032ad1090f198aedfcd2a__717032ad1090f198aedfcd2a__SEG_0008__CH_009",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "717032ad1090f198aedfcd2a__717032ad1090f198aedfcd2a__SEG_0011__CH_004",
+   "reviewed_id": "717032ad1090f198aedfcd2a__717032ad1090f198aedfcd2a__SEG_0011__CH_004__S1",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "71f3fb3c40336f79663760c8__PDFV2__CH_0005",
+   "reviewed_id": "71f3fb3c40336f79663760c8__PDFV2__CH_0005",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "7ade775088fd5e17875134e9__PDFV2__CH_0018",
+   "reviewed_id": "7ade775088fd5e17875134e9__PDFV2__CH_0018",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "7d730f271249c6e5c70eaad1__PDFV2__CH_0130",
+   "reviewed_id": "7d730f271249c6e5c70eaad1__PDFV2__CH_0130",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "81b403770c3439ae7f30d993__81b403770c3439ae7f30d993__SEG_0001__CH_005",
+   "reviewed_id": "81b403770c3439ae7f30d993__81b403770c3439ae7f30d993__SEG_0001__CH_005",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "8f5ecfa08d125a783cbb659e__8f5ecfa08d125a783cbb659e__SEG_0001__CH_004",
+   "reviewed_id": "8f5ecfa08d125a783cbb659e__8f5ecfa08d125a783cbb659e__SEG_0001__CH_004",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": "JUDGE_DROP_T2_COMMENTARY_NEWS"
+  },
+  {
+   "chunk_id": "9d93a90995f2b8079a089276__PDFV2__CH_0057",
+   "reviewed_id": "9d93a90995f2b8079a089276__PDFV2__CH_0057",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "9d93a90995f2b8079a089276__PDFV2__CH_0132",
+   "reviewed_id": "9d93a90995f2b8079a089276__PDFV2__CH_0132",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "9d93a90995f2b8079a089276__PDFV2__CH_0199",
+   "reviewed_id": "9d93a90995f2b8079a089276__PDFV2__CH_0199",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "a57fe06256db3b3cca8b54b7__PDFV2__CH_0015",
+   "reviewed_id": "a57fe06256db3b3cca8b54b7__PDFV2__CH_0015",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "a57fe06256db3b3cca8b54b7__PDFV2__CH_0019",
+   "reviewed_id": "a57fe06256db3b3cca8b54b7__PDFV2__CH_0019",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "b353150f1b71066b658f4ebd__b353150f1b71066b658f4ebd__SEG_0003__CH_002",
+   "reviewed_id": "b353150f1b71066b658f4ebd__b353150f1b71066b658f4ebd__SEG_0003__CH_002",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "c8544a0dc611bfeab45f5f15__PDFV2__CH_0008",
+   "reviewed_id": "c8544a0dc611bfeab45f5f15__PDFV2__CH_0008",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "d9247a7550599c2c9f6c6977__PDFV2__CH_0005",
+   "reviewed_id": "d9247a7550599c2c9f6c6977__PDFV2__CH_0005",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "d9c61fefe7a341de4c252bf8__PDFV2__CH_0021",
+   "reviewed_id": "d9c61fefe7a341de4c252bf8__PDFV2__CH_0021",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "ed1315ffccc0e32751fca736__ed1315ffccc0e32751fca736__SEG_0001__CH_002",
+   "reviewed_id": "ed1315ffccc0e32751fca736__ed1315ffccc0e32751fca736__SEG_0001__CH_002",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "f85e8b129b865e5d245ff877__PDFV2__CH_0012",
+   "reviewed_id": "f85e8b129b865e5d245ff877__PDFV2__CH_0012",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "f85e8b129b865e5d245ff877__PDFV2__CH_0026",
+   "reviewed_id": "f85e8b129b865e5d245ff877__PDFV2__CH_0026",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "f85e8b129b865e5d245ff877__PDFV2__CH_0060",
+   "reviewed_id": "f85e8b129b865e5d245ff877__PDFV2__CH_0060",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "f85e8b129b865e5d245ff877__PDFV2__CH_0061",
+   "reviewed_id": "f85e8b129b865e5d245ff877__PDFV2__CH_0061",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "1934429c9498f7847b2c8d93__1934429c9498f7847b2c8d93__SEG_0001__CH_004",
+   "reviewed_id": "1934429c9498f7847b2c8d93__1934429c9498f7847b2c8d93__SEG_0001__CH_004",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "195a99ec51cfff3159964165__PDFV2__CH_0049",
+   "reviewed_id": "195a99ec51cfff3159964165__PDFV2__CH_0049",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "1a2b7b96d07f90a04255b802__PDFV2__CH_0038",
+   "reviewed_id": "1a2b7b96d07f90a04255b802__PDFV2__CH_0038",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "1f6d43de6bf1851c1890bbc6__PDFV2__CH_0021",
+   "reviewed_id": "1f6d43de6bf1851c1890bbc6__PDFV2__CH_0021",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "2206a9a9eec40cce3431efcf__PDFV2__CH_0029",
+   "reviewed_id": "2206a9a9eec40cce3431efcf__PDFV2__CH_0029",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "230b6813b5193d2cec7ff99b__PDFV2__CH_0009",
+   "reviewed_id": "230b6813b5193d2cec7ff99b__PDFV2__CH_0009",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": "JUDGE_DROP_T2_COMMENTARY_NEWS"
+  },
+  {
+   "chunk_id": "2364b4e7b540c915fbef9174__PDFV2__CH_0012",
+   "reviewed_id": "2364b4e7b540c915fbef9174__PDFV2__CH_0012",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "23dbd90b80e05ef54171fa7e__23dbd90b80e05ef54171fa7e__SEG_0001__CH_006",
+   "reviewed_id": "23dbd90b80e05ef54171fa7e__23dbd90b80e05ef54171fa7e__SEG_0001__CH_006",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "23dbd90b80e05ef54171fa7e__23dbd90b80e05ef54171fa7e__SEG_0001__CH_008",
+   "reviewed_id": "23dbd90b80e05ef54171fa7e__23dbd90b80e05ef54171fa7e__SEG_0001__CH_008",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "25950396dbe362cc85e3a06d__25950396dbe362cc85e3a06d__SEG_0001__CH_004",
+   "reviewed_id": "25950396dbe362cc85e3a06d__25950396dbe362cc85e3a06d__SEG_0001__CH_004",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "2eb6bb94923cddae3031ea6d__2eb6bb94923cddae3031ea6d__SEG_0001__CH_002",
+   "reviewed_id": "2eb6bb94923cddae3031ea6d__2eb6bb94923cddae3031ea6d__SEG_0001__CH_002",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "36228f881bf04d9d7c78b620__36228f881bf04d9d7c78b620__SEG_0001__CH_002",
+   "reviewed_id": "36228f881bf04d9d7c78b620__36228f881bf04d9d7c78b620__SEG_0001__CH_002",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "4e9fdf2e3da38bd74160a50e__4e9fdf2e3da38bd74160a50e__SEG_0001__CH_005",
+   "reviewed_id": "4e9fdf2e3da38bd74160a50e__4e9fdf2e3da38bd74160a50e__SEG_0001__CH_005",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "503ca347555b48201acaa271__503ca347555b48201acaa271__SEG_0001__CH_002",
+   "reviewed_id": "503ca347555b48201acaa271__503ca347555b48201acaa271__SEG_0001__CH_002",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "5ea3bf1f8f34def4277d6c88__5ea3bf1f8f34def4277d6c88__SEG_0001__CH_001",
+   "reviewed_id": "5ea3bf1f8f34def4277d6c88__5ea3bf1f8f34def4277d6c88__SEG_0001__CH_001",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "6bd148a5bd41ed69dff9e5c4__6bd148a5bd41ed69dff9e5c4__SEG_0001__CH_001",
+   "reviewed_id": "6bd148a5bd41ed69dff9e5c4__6bd148a5bd41ed69dff9e5c4__SEG_0001__CH_001",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "6ed828097959f772a7d8aa69__6ed828097959f772a7d8aa69__SEG_0001__CH_001",
+   "reviewed_id": "6ed828097959f772a7d8aa69__6ed828097959f772a7d8aa69__SEG_0001__CH_001",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "717032ad1090f198aedfcd2a__717032ad1090f198aedfcd2a__SEG_0006__CH_004",
+   "reviewed_id": "717032ad1090f198aedfcd2a__717032ad1090f198aedfcd2a__SEG_0006__CH_004",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": "JUDGE_DROP_T1_NAVIGATION_BOILERPLATE"
+  },
+  {
+   "chunk_id": "717032ad1090f198aedfcd2a__717032ad1090f198aedfcd2a__SEG_0007__CH_002",
+   "reviewed_id": "717032ad1090f198aedfcd2a__717032ad1090f198aedfcd2a__SEG_0007__CH_002",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "717032ad1090f198aedfcd2a__717032ad1090f198aedfcd2a__SEG_0008__CH_008",
+   "reviewed_id": "717032ad1090f198aedfcd2a__717032ad1090f198aedfcd2a__SEG_0008__CH_008",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "717032ad1090f198aedfcd2a__717032ad1090f198aedfcd2a__SEG_0008__CH_010",
+   "reviewed_id": "717032ad1090f198aedfcd2a__717032ad1090f198aedfcd2a__SEG_0008__CH_010",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "717032ad1090f198aedfcd2a__717032ad1090f198aedfcd2a__SEG_0011__CH_006",
+   "reviewed_id": "717032ad1090f198aedfcd2a__717032ad1090f198aedfcd2a__SEG_0011__CH_006",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "717032ad1090f198aedfcd2a__717032ad1090f198aedfcd2a__SEG_0015__CH_004",
+   "reviewed_id": "717032ad1090f198aedfcd2a__717032ad1090f198aedfcd2a__SEG_0015__CH_004",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": "JUDGE_DROP_T1_NAVIGATION_BOILERPLATE"
+  },
+  {
+   "chunk_id": "717032ad1090f198aedfcd2a__717032ad1090f198aedfcd2a__SEG_0016__CH_006",
+   "reviewed_id": "717032ad1090f198aedfcd2a__717032ad1090f198aedfcd2a__SEG_0016__CH_006",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": "JUDGE_DROP_T1_NAVIGATION_BOILERPLATE"
+  },
+  {
+   "chunk_id": "717032ad1090f198aedfcd2a__717032ad1090f198aedfcd2a__SEG_0017__CH_002",
+   "reviewed_id": "717032ad1090f198aedfcd2a__717032ad1090f198aedfcd2a__SEG_0017__CH_002",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "72af6014c51fe24e915e4682__72af6014c51fe24e915e4682__SEG_0002__CH_001",
+   "reviewed_id": "72af6014c51fe24e915e4682__72af6014c51fe24e915e4682__SEG_0002__CH_001",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "72af6014c51fe24e915e4682__72af6014c51fe24e915e4682__SEG_0002__CH_003",
+   "reviewed_id": "72af6014c51fe24e915e4682__72af6014c51fe24e915e4682__SEG_0002__CH_003",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "81b403770c3439ae7f30d993__81b403770c3439ae7f30d993__SEG_0001__CH_003",
+   "reviewed_id": "81b403770c3439ae7f30d993__81b403770c3439ae7f30d993__SEG_0001__CH_003",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "CMA_PA23_EXCLUSION_DEBARMENT__CMA_PA23_EXCLUSION_DEBARMENT__SEG_0001__CH_001",
+   "reviewed_id": "CMA_PA23_EXCLUSION_DEBARMENT__CMA_PA23_EXCLUSION_DEBARMENT__SEG_0001__CH_001",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "PROCUREMENTPORTAL_PART3_PDF_6A6B1B04A58D__PDFV2__CH_0003",
+   "reviewed_id": "PROCUREMENTPORTAL_PART3_PDF_6A6B1B04A58D__PDFV2__CH_0003",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "ae285919cfb3171447ececa6__ae285919cfb3171447ececa6__SEG_0001__CH_002",
+   "reviewed_id": "ae285919cfb3171447ececa6__ae285919cfb3171447ececa6__SEG_0001__CH_002",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "b353150f1b71066b658f4ebd__b353150f1b71066b658f4ebd__SEG_0001__CH_002",
+   "reviewed_id": "b353150f1b71066b658f4ebd__b353150f1b71066b658f4ebd__SEG_0001__CH_002",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "b68ea298e8741f802964589f__b68ea298e8741f802964589f__SEG_0001__CH_002",
+   "reviewed_id": "b68ea298e8741f802964589f__b68ea298e8741f802964589f__SEG_0001__CH_002",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "c15bb03dc82f0e4f8a23c807__c15bb03dc82f0e4f8a23c807__SEG_0001__CH_004",
+   "reviewed_id": "c15bb03dc82f0e4f8a23c807__c15bb03dc82f0e4f8a23c807__SEG_0001__CH_004__M",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "c15bb03dc82f0e4f8a23c807__c15bb03dc82f0e4f8a23c807__SEG_0001__CH_005",
+   "reviewed_id": "c15bb03dc82f0e4f8a23c807__c15bb03dc82f0e4f8a23c807__SEG_0001__CH_004__M",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "c15bb03dc82f0e4f8a23c807__c15bb03dc82f0e4f8a23c807__SEG_0001__CH_011",
+   "reviewed_id": "c15bb03dc82f0e4f8a23c807__c15bb03dc82f0e4f8a23c807__SEG_0001__CH_011",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "c8544a0dc611bfeab45f5f15__PDFV2__CH_0001",
+   "reviewed_id": "c8544a0dc611bfeab45f5f15__PDFV2__CH_0001",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "ca6794823b7862ce59dfc408__ca6794823b7862ce59dfc408__SEG_0001__CH_002",
+   "reviewed_id": "ca6794823b7862ce59dfc408__ca6794823b7862ce59dfc408__SEG_0001__CH_002",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "d0e52702711e06a790bb200f__d0e52702711e06a790bb200f__SEG_0001__CH_004",
+   "reviewed_id": "d0e52702711e06a790bb200f__d0e52702711e06a790bb200f__SEG_0001__CH_004",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "d6c15fa70db7010e5cd22369__d6c15fa70db7010e5cd22369__SEG_0002__CH_002",
+   "reviewed_id": "d6c15fa70db7010e5cd22369__d6c15fa70db7010e5cd22369__SEG_0002__CH_002",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "f11a333bb769eb542d1cf8c8__f11a333bb769eb542d1cf8c8__SEG_0001__CH_004",
+   "reviewed_id": "f11a333bb769eb542d1cf8c8__f11a333bb769eb542d1cf8c8__SEG_0001__CH_004",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "f1c0407ecf3f05113a0cbf52__f1c0407ecf3f05113a0cbf52__SEG_0001__CH_002",
+   "reviewed_id": "f1c0407ecf3f05113a0cbf52__f1c0407ecf3f05113a0cbf52__SEG_0001__CH_002",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "f98f9c9ca4de97058a11841f__f98f9c9ca4de97058a11841f__SEG_0002__CH_003",
+   "reviewed_id": "f98f9c9ca4de97058a11841f__f98f9c9ca4de97058a11841f__SEG_0002__CH_003",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "1a2b7b96d07f90a04255b802__PDFV2__CH_0008",
+   "reviewed_id": "1a2b7b96d07f90a04255b802__PDFV2__CH_0008__M",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "1a2b7b96d07f90a04255b802__PDFV2__CH_0009",
+   "reviewed_id": "1a2b7b96d07f90a04255b802__PDFV2__CH_0008__M",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "c0c26f82b891b0197f6a86c9__c0c26f82b891b0197f6a86c9__SEG_0001__CH_002",
+   "reviewed_id": "c0c26f82b891b0197f6a86c9__c0c26f82b891b0197f6a86c9__SEG_0001__CH_002",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "dc0d8c2b8978a7e66fa64fe2__dc0d8c2b8978a7e66fa64fe2__SEG_0001__CH_001",
+   "reviewed_id": "dc0d8c2b8978a7e66fa64fe2__dc0d8c2b8978a7e66fa64fe2__SEG_0001__CH_001",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "781033e13a70373bffaabce0__PDFV2__CH_0012",
+   "reviewed_id": "781033e13a70373bffaabce0__PDFV2__CH_0012__M",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "781033e13a70373bffaabce0__PDFV2__CH_0013",
+   "reviewed_id": "781033e13a70373bffaabce0__PDFV2__CH_0012__M",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "7f3a9e3f6c5e82ef78b09c7e__7f3a9e3f6c5e82ef78b09c7e__SEG_0003__CH_005",
+   "reviewed_id": "7f3a9e3f6c5e82ef78b09c7e__7f3a9e3f6c5e82ef78b09c7e__SEG_0003__CH_005__M",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "7f3a9e3f6c5e82ef78b09c7e__7f3a9e3f6c5e82ef78b09c7e__SEG_0003__CH_006",
+   "reviewed_id": "7f3a9e3f6c5e82ef78b09c7e__7f3a9e3f6c5e82ef78b09c7e__SEG_0003__CH_005__M",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "ad3a39d43fd58b730564e9a8__ad3a39d43fd58b730564e9a8__SEG_0002__CH_003",
+   "reviewed_id": "ad3a39d43fd58b730564e9a8__ad3a39d43fd58b730564e9a8__SEG_0002__CH_003",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "f85e8b129b865e5d245ff877__PDFV2__CH_0005",
+   "reviewed_id": "f85e8b129b865e5d245ff877__PDFV2__CH_0005__M",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "f85e8b129b865e5d245ff877__PDFV2__CH_0006",
+   "reviewed_id": "f85e8b129b865e5d245ff877__PDFV2__CH_0005__M",
+   "section": "rechunk_residue",
+   "decision": "KEEP_RECHUNK",
+   "previous_filtered_out": null
+  },
+  {
+   "chunk_id": "UKPGA_2023_54__NODEV1__CH_00284",
+   "reviewed_id": "UKPGA_2023_54__NODEV1__CH_00284",
+   "section": "drop_tier3_review",
+   "decision": "GRAPH_ONLY",
+   "vector_backed_up": true
+  },
+  {
+   "chunk_id": "UKPGA_2023_54__NODEV1__CH_00335",
+   "reviewed_id": "UKPGA_2023_54__NODEV1__CH_00335",
+   "section": "drop_tier3_review",
+   "decision": "GRAPH_ONLY",
+   "vector_backed_up": true
+  },
+  {
+   "chunk_id": "UKPGA_2023_54__NODEV1__CH_00349",
+   "reviewed_id": "UKPGA_2023_54__NODEV1__CH_00349",
+   "section": "drop_tier3_review",
+   "decision": "GRAPH_ONLY",
+   "vector_backed_up": true
+  },
+  {
+   "chunk_id": "UKSI_2025_163__LEGV2__CH_00126",
+   "reviewed_id": "UKSI_2025_163__LEGV2__CH_00126",
+   "section": "drop_tier3_review",
+   "decision": "GRAPH_ONLY",
+   "vector_backed_up": true
+  }
+ ],
+ "keep_rechunk": {
+  "in_llm_split_job": [
+   "2eb6bb94923cddae3031ea6d__2eb6bb94923cddae3031ea6d__SEG_0004__CH_002",
+   "735ab4a93e201d136bb566d0__735ab4a93e201d136bb566d0__SEG_0001__CH_001",
+   "7f3a9e3f6c5e82ef78b09c7e__7f3a9e3f6c5e82ef78b09c7e__SEG_0002__CH_003",
+   "a5ebde1ff7f9615ff202b732__a5ebde1ff7f9615ff202b732__SEG_0001__CH_004",
+   "ad3a39d43fd58b730564e9a8__ad3a39d43fd58b730564e9a8__SEG_0001__CH_004",
+   "b68ea298e8741f802964589f__b68ea298e8741f802964589f__SEG_0004__CH_001",
+   "ca28e50c2d09121cd8e57ad3__ca28e50c2d09121cd8e57ad3__SEG_0001__CH_004",
+   "f1144564525067e12ff9acb7__f1144564525067e12ff9acb7__SEG_0001__CH_002",
+   "f1144564525067e12ff9acb7__f1144564525067e12ff9acb7__SEG_0003__CH_002",
+   "5cdbaa650437e614cbce2aa6__5cdbaa650437e614cbce2aa6__SEG_0003__CH_002",
+   "62e7e66afb3e68ba4961b88e__62e7e66afb3e68ba4961b88e__SEG_0001__CH_001",
+   "717032ad1090f198aedfcd2a__717032ad1090f198aedfcd2a__SEG_0002__CH_003",
+   "717032ad1090f198aedfcd2a__717032ad1090f198aedfcd2a__SEG_0011__CH_005",
+   "717032ad1090f198aedfcd2a__717032ad1090f198aedfcd2a__SEG_0017__CH_004",
+   "717032ad1090f198aedfcd2a__717032ad1090f198aedfcd2a__SEG_0016__CH_002",
+   "98d219fc6ad9cd1fd358ed58__98d219fc6ad9cd1fd358ed58__SEG_0001__CH_001",
+   "b68ea298e8741f802964589f__b68ea298e8741f802964589f__SEG_0003__CH_002",
+   "b68ea298e8741f802964589f__b68ea298e8741f802964589f__SEG_0004__CH_002",
+   "1679f2bf64884c1319459c78__1679f2bf64884c1319459c78__SEG_0001__CH_004",
+   "717032ad1090f198aedfcd2a__717032ad1090f198aedfcd2a__SEG_0008__CH_009",
+   "8f5ecfa08d125a783cbb659e__8f5ecfa08d125a783cbb659e__SEG_0001__CH_004",
+   "25950396dbe362cc85e3a06d__25950396dbe362cc85e3a06d__SEG_0001__CH_004",
+   "2eb6bb94923cddae3031ea6d__2eb6bb94923cddae3031ea6d__SEG_0001__CH_002",
+   "36228f881bf04d9d7c78b620__36228f881bf04d9d7c78b620__SEG_0001__CH_002",
+   "717032ad1090f198aedfcd2a__717032ad1090f198aedfcd2a__SEG_0007__CH_002",
+   "717032ad1090f198aedfcd2a__717032ad1090f198aedfcd2a__SEG_0008__CH_008",
+   "717032ad1090f198aedfcd2a__717032ad1090f198aedfcd2a__SEG_0015__CH_004",
+   "717032ad1090f198aedfcd2a__717032ad1090f198aedfcd2a__SEG_0016__CH_006",
+   "717032ad1090f198aedfcd2a__717032ad1090f198aedfcd2a__SEG_0017__CH_002",
+   "72af6014c51fe24e915e4682__72af6014c51fe24e915e4682__SEG_0002__CH_001",
+   "72af6014c51fe24e915e4682__72af6014c51fe24e915e4682__SEG_0002__CH_003",
+   "CMA_PA23_EXCLUSION_DEBARMENT__CMA_PA23_EXCLUSION_DEBARMENT__SEG_0001__CH_001",
+   "b353150f1b71066b658f4ebd__b353150f1b71066b658f4ebd__SEG_0001__CH_002",
+   "b68ea298e8741f802964589f__b68ea298e8741f802964589f__SEG_0001__CH_002",
+   "d0e52702711e06a790bb200f__d0e52702711e06a790bb200f__SEG_0001__CH_004",
+   "ad3a39d43fd58b730564e9a8__ad3a39d43fd58b730564e9a8__SEG_0002__CH_003"
+  ],
+  "relaxed_rule_pass": [
+   "UKSI_2015_102__UKSI_2015_102__SEG_0113__CH_001",
+   "0ca2bfea6ba357d9000d5870__PDFV2__CH_0007",
+   "1943682c988f7744c205ea18__PDFV2__CH_0705",
+   "2206a9a9eec40cce3431efcf__PDFV2__CH_0014",
+   "606a15f8bce3690aae72c595__PDFV2__CH_0009",
+   "773ae67b9ff7e2875936e709__PDFV2__CH_0026",
+   "8ae169052ffaa3df6b6f1b10__PDFV2__CH_0012",
+   "b2aa2a6f8e21929688cdc377__PDFV2__CH_0003",
+   "da6fcf4361da18ef125f3918__PDFV2__CH_0009",
+   "UKSI_2025_163__LEGV2__CH_00011",
+   "UKSI_2025_163__LEGV2__CH_00009",
+   "UKSI_2025_163__LEGV2__CH_00069",
+   "UKSI_2025_163__LEGV2__CH_00067",
+   "717032ad1090f198aedfcd2a__717032ad1090f198aedfcd2a__SEG_0016__CH_003",
+   "8f5ecfa08d125a783cbb659e__8f5ecfa08d125a783cbb659e__SEG_0001__CH_003",
+   "10a4c17721d16750f8102c4f__PDFV2__CH_0042",
+   "1db54b68a6a44897f5c749ce__PDFV2__CH_0067",
+   "34b1845b35fd2874dc61e1cf__PDFV2__CH_0021",
+   "5a0b09f0cc56fd9f4256c733__PDFV2__CH_0055",
+   "b7f6893a95b0550289119d34__PDFV2__CH_0038",
+   "08b89e530c329442ffabc36d__PDFV2__CH_0007",
+   "15b2dc4688fdb13b608d8fe6__PDFV2__CH_0025",
+   "1943682c988f7744c205ea18__PDFV2__CH_0241__M",
+   "1943682c988f7744c205ea18__PDFV2__CH_0247",
+   "1943682c988f7744c205ea18__PDFV2__CH_0339",
+   "1943682c988f7744c205ea18__PDFV2__CH_0345__M",
+   "1a2b7b96d07f90a04255b802__PDFV2__CH_0004",
+   "1a2b7b96d07f90a04255b802__PDFV2__CH_0069",
+   "1a2b7b96d07f90a04255b802__PDFV2__CH_0096",
+   "1a2b7b96d07f90a04255b802__PDFV2__CH_0102",
+   "2372aee90f9a0ad97e1f43a9__PDFV2__CH_0004",
+   "26aaf3d203295cfea6ecbd68__PDFV2__CH_0003",
+   "26ba02ec059c8139cceb8e32__PDFV2__CH_0002",
+   "2b21a8f184e5e786e6953a65__PDFV2__CH_0007",
+   "3467e311195fd00c537262bd__PDFV2__CH_0013",
+   "34b1845b35fd2874dc61e1cf__PDFV2__CH_0048",
+   "5dcfd518b30e8ceb24ad9191__PDFV2__CH_0019",
+   "5dcfd518b30e8ceb24ad9191__PDFV2__CH_0028",
+   "5f838d492a1602416eb588d4__PDFV2__CH_0017",
+   "717032ad1090f198aedfcd2a__717032ad1090f198aedfcd2a__SEG_0011__CH_004__S1",
+   "71f3fb3c40336f79663760c8__PDFV2__CH_0005",
+   "7ade775088fd5e17875134e9__PDFV2__CH_0018",
+   "7d730f271249c6e5c70eaad1__PDFV2__CH_0130",
+   "81b403770c3439ae7f30d993__81b403770c3439ae7f30d993__SEG_0001__CH_005",
+   "9d93a90995f2b8079a089276__PDFV2__CH_0057",
+   "9d93a90995f2b8079a089276__PDFV2__CH_0132",
+   "9d93a90995f2b8079a089276__PDFV2__CH_0199",
+   "a57fe06256db3b3cca8b54b7__PDFV2__CH_0015",
+   "a57fe06256db3b3cca8b54b7__PDFV2__CH_0019",
+   "b353150f1b71066b658f4ebd__b353150f1b71066b658f4ebd__SEG_0003__CH_002",
+   "c8544a0dc611bfeab45f5f15__PDFV2__CH_0008",
+   "d9247a7550599c2c9f6c6977__PDFV2__CH_0005",
+   "d9c61fefe7a341de4c252bf8__PDFV2__CH_0021",
+   "ed1315ffccc0e32751fca736__ed1315ffccc0e32751fca736__SEG_0001__CH_002",
+   "f85e8b129b865e5d245ff877__PDFV2__CH_0012",
+   "f85e8b129b865e5d245ff877__PDFV2__CH_0026",
+   "f85e8b129b865e5d245ff877__PDFV2__CH_0060",
+   "f85e8b129b865e5d245ff877__PDFV2__CH_0061",
+   "1934429c9498f7847b2c8d93__1934429c9498f7847b2c8d93__SEG_0001__CH_004",
+   "195a99ec51cfff3159964165__PDFV2__CH_0049",
+   "1a2b7b96d07f90a04255b802__PDFV2__CH_0038",
+   "1f6d43de6bf1851c1890bbc6__PDFV2__CH_0021",
+   "2206a9a9eec40cce3431efcf__PDFV2__CH_0029",
+   "230b6813b5193d2cec7ff99b__PDFV2__CH_0009",
+   "2364b4e7b540c915fbef9174__PDFV2__CH_0012",
+   "23dbd90b80e05ef54171fa7e__23dbd90b80e05ef54171fa7e__SEG_0001__CH_006",
+   "23dbd90b80e05ef54171fa7e__23dbd90b80e05ef54171fa7e__SEG_0001__CH_008",
+   "4e9fdf2e3da38bd74160a50e__4e9fdf2e3da38bd74160a50e__SEG_0001__CH_005",
+   "503ca347555b48201acaa271__503ca347555b48201acaa271__SEG_0001__CH_002",
+   "5ea3bf1f8f34def4277d6c88__5ea3bf1f8f34def4277d6c88__SEG_0001__CH_001",
+   "6bd148a5bd41ed69dff9e5c4__6bd148a5bd41ed69dff9e5c4__SEG_0001__CH_001",
+   "6ed828097959f772a7d8aa69__6ed828097959f772a7d8aa69__SEG_0001__CH_001",
+   "717032ad1090f198aedfcd2a__717032ad1090f198aedfcd2a__SEG_0006__CH_004",
+   "717032ad1090f198aedfcd2a__717032ad1090f198aedfcd2a__SEG_0008__CH_010",
+   "717032ad1090f198aedfcd2a__717032ad1090f198aedfcd2a__SEG_0011__CH_006",
+   "81b403770c3439ae7f30d993__81b403770c3439ae7f30d993__SEG_0001__CH_003",
+   "PROCUREMENTPORTAL_PART3_PDF_6A6B1B04A58D__PDFV2__CH_0003",
+   "ae285919cfb3171447ececa6__ae285919cfb3171447ececa6__SEG_0001__CH_002",
+   "c15bb03dc82f0e4f8a23c807__c15bb03dc82f0e4f8a23c807__SEG_0001__CH_004__M",
+   "c15bb03dc82f0e4f8a23c807__c15bb03dc82f0e4f8a23c807__SEG_0001__CH_011",
+   "c8544a0dc611bfeab45f5f15__PDFV2__CH_0001",
+   "ca6794823b7862ce59dfc408__ca6794823b7862ce59dfc408__SEG_0001__CH_002",
+   "d6c15fa70db7010e5cd22369__d6c15fa70db7010e5cd22369__SEG_0002__CH_002",
+   "f11a333bb769eb542d1cf8c8__f11a333bb769eb542d1cf8c8__SEG_0001__CH_004",
+   "f1c0407ecf3f05113a0cbf52__f1c0407ecf3f05113a0cbf52__SEG_0001__CH_002",
+   "f98f9c9ca4de97058a11841f__f98f9c9ca4de97058a11841f__SEG_0002__CH_003",
+   "1a2b7b96d07f90a04255b802__PDFV2__CH_0008__M",
+   "c0c26f82b891b0197f6a86c9__c0c26f82b891b0197f6a86c9__SEG_0001__CH_002",
+   "dc0d8c2b8978a7e66fa64fe2__dc0d8c2b8978a7e66fa64fe2__SEG_0001__CH_001",
+   "781033e13a70373bffaabce0__PDFV2__CH_0012__M",
+   "7f3a9e3f6c5e82ef78b09c7e__7f3a9e3f6c5e82ef78b09c7e__SEG_0003__CH_005__M",
+   "f85e8b129b865e5d245ff877__PDFV2__CH_0005__M"
+  ]
+ }
+}
