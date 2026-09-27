@@ -346,7 +346,9 @@ def main():
                     group_den[grp] = group_den.get(grp, 0) + 1
                     if rank is not None and rank <= 25:
                         group_num[grp] = group_num.get(grp, 0) + 1
-        for grp, den in group_den.items():
+        # sorted, not insertion-ordered: group_den is populated while iterating a set of
+        # chunk ids, so without this two correct runs differ by row order alone.
+        for grp, den in sorted(group_den.items()):
             num = group_num.get(grp, 0)
             add_row(f"EssentialGoldCoverage@25 by authority class [{grp}]", variant, num, den, "chunk", "top-25 in chunk's own lane", "per-chunk, home-lane only")
 

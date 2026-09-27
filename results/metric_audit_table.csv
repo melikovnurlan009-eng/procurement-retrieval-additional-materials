@@ -77,14 +77,14 @@ LaneEssentialGoldCoverage@10 [legislation lane only],best_metadata_enriched_fusi
 LaneEssentialGoldCoverage@25 [legislation lane only],best_metadata_enriched_fusion_lambda0.5,125.0,156,0.8013,chunk,top-25 within legislation lane,"legislation lane only, no OR with other lane"
 LaneEssentialGoldCoverage@10 [other lane only],best_metadata_enriched_fusion_lambda0.5,18.0,43,0.4186,chunk,top-10 within other lane,"other lane only, no OR with other lane"
 LaneEssentialGoldCoverage@25 [other lane only],best_metadata_enriched_fusion_lambda0.5,28.0,43,0.6512,chunk,top-25 within other lane,"other lane only, no OR with other lane"
-EssentialGoldCoverage@25 by authority class [primary_legislation],1_baseline_raw_text_CE,89.0,114,0.7807,chunk,top-25 in chunk's own lane,"per-chunk, home-lane only"
-EssentialGoldCoverage@25 by authority class [secondary_legislation],1_baseline_raw_text_CE,35.0,42,0.8333,chunk,top-25 in chunk's own lane,"per-chunk, home-lane only"
 EssentialGoldCoverage@25 by authority class [guidance_workflow],1_baseline_raw_text_CE,9.0,15,0.6,chunk,top-25 in chunk's own lane,"per-chunk, home-lane only"
 EssentialGoldCoverage@25 by authority class [official_guidance],1_baseline_raw_text_CE,18.0,28,0.6429,chunk,top-25 in chunk's own lane,"per-chunk, home-lane only"
-EssentialGoldCoverage@25 by authority class [primary_legislation],best_metadata_enriched_fusion_lambda0.5,89.0,114,0.7807,chunk,top-25 in chunk's own lane,"per-chunk, home-lane only"
-EssentialGoldCoverage@25 by authority class [secondary_legislation],best_metadata_enriched_fusion_lambda0.5,36.0,42,0.8571,chunk,top-25 in chunk's own lane,"per-chunk, home-lane only"
+EssentialGoldCoverage@25 by authority class [primary_legislation],1_baseline_raw_text_CE,89.0,114,0.7807,chunk,top-25 in chunk's own lane,"per-chunk, home-lane only"
+EssentialGoldCoverage@25 by authority class [secondary_legislation],1_baseline_raw_text_CE,35.0,42,0.8333,chunk,top-25 in chunk's own lane,"per-chunk, home-lane only"
 EssentialGoldCoverage@25 by authority class [guidance_workflow],best_metadata_enriched_fusion_lambda0.5,9.0,15,0.6,chunk,top-25 in chunk's own lane,"per-chunk, home-lane only"
 EssentialGoldCoverage@25 by authority class [official_guidance],best_metadata_enriched_fusion_lambda0.5,19.0,28,0.6786,chunk,top-25 in chunk's own lane,"per-chunk, home-lane only"
+EssentialGoldCoverage@25 by authority class [primary_legislation],best_metadata_enriched_fusion_lambda0.5,89.0,114,0.7807,chunk,top-25 in chunk's own lane,"per-chunk, home-lane only"
+EssentialGoldCoverage@25 by authority class [secondary_legislation],best_metadata_enriched_fusion_lambda0.5,36.0,42,0.8571,chunk,top-25 in chunk's own lane,"per-chunk, home-lane only"
 CE chunk moved into top25,1_baseline_raw_text_CE,22.0,187,,chunk,top-25,own-lane rank
 CE chunk moved out of top25,1_baseline_raw_text_CE,12.0,187,,chunk,top-25,own-lane rank
 Harmful demotion rate P(post>25|pre<=25),1_baseline_raw_text_CE,12.0,132,0.0909,chunk,top-25,own-lane rank
