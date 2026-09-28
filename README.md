@@ -53,19 +53,19 @@ The run ends with:
 
 ```
   1  corpus         Corpus composition                           10/10  PASS
-  2  artifacts      Frozen artifact integrity and provenance     23/23  PASS
+  2  artifacts      Frozen artifact integrity and provenance     26/26  PASS
   3  rq1            RQ1: matched-budget comparison               71/71  PASS
   4  signals        Signal behaviour and authority calibration   15/15  PASS
   5  graph          RQ2: graph edge quality and retrieval effect  19/19  PASS
   6  regime         RQ2: regime-compatibility constraint           8/8  PASS
   7  reranking      RQ3: cross-encoder variants and completeness  34/34  PASS
-  8  performance    Final fixed-configuration performance         24/24  PASS
+  8  performance    Final fixed-configuration performance         32/32  PASS
   9  ir-metrics     Secondary IR diagnostics                      11/11  PASS
  10  tokens         Token distributions and the 512-token window  13/13  PASS
  11  figures        Figure regeneration                           11/11  PASS
  12  cross-check    Independent cross-check of headline numbers   34/34  PASS
   ------------------------------------------------------------------------
-  12/12 parts reproduced   281/281 checks passed
+  12/12 parts reproduced   284/284 checks passed
   48 artifacts regenerated under results/ and figures/ — 48 identical to the shipped copy
 ```
 
@@ -96,7 +96,7 @@ configuration reaches a requirement recall of 0.612; the two-lane architecture r
 | | |
 |---|---|
 | [`TECHNICAL_APPENDIX.md`](TECHNICAL_APPENDIX.md) | **The main document.** System, parameters, workflow, every file explained. |
-| [`benchmark/`](benchmark/) | 208 scenarios with requirement-level gold evidence, and [`BENCHMARK.md`](benchmark/BENCHMARK.md) documenting the schema and how it was built. |
+| [`benchmark/`](benchmark/) | The 189-scenario evaluation set with requirement-level gold evidence, and [`BENCHMARK.md`](benchmark/BENCHMARK.md) documenting the schema and how it was built. |
 | [`config/`](config/) | The freeze record: every tunable, with the DEV-only evidence that justified it, written before TEST was scored. |
 | [`corpus/`](corpus/) | [`CORPUS_BUILD.md`](corpus/CORPUS_BUILD.md) — what the corpus is, how it was built, its SHA-256, how to obtain it. The 165 MB index itself is not shipped. |
 | [`src/`](src/) | The system under test: the retriever, and the corpus-construction chain. |

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """RQ1 (same-budget, 50-result) and RQ3 (CE on/off at 25/lane) recomputed on the CURRENT
-208-scenario benchmark (95 DEV / 94 TEST scoreable), frozen alpha=0.10/beta=0.40/graph-off,
+189-scenario benchmark (95 DEV / 94 TEST), frozen alpha=0.10/beta=0.40/graph-off,
 using the CORRECTED evaluator (mandatory_requirements_with_targets: acceptable_chunk_ids
 unioned, mandatory-only filter) - the same evaluator now cited as authoritative in the
 dissertation's Appendix A. Fixes the budget mismatch in the current RQ1 draft (pooled top-10

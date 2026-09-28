@@ -51,7 +51,7 @@ def mandatory_requirements_with_targets(gold_record: dict) -> dict[str, dict]:
          requirement's target set alongside resolution.chunk_id, gated on the SAME item's
          resolution.status being MATCHED/FUZZY_MATCHED (never trusted on an unresolved item).
          The prior harness silently dropped these - 145 extra valid chunk ids across the
-         208-scenario set (191/402 essential_evidence items carry at least one).
+         benchmark (191/402 essential_evidence items carry at least one).
     """
     out = {}
     for req in gold_record.get("requirements", []):

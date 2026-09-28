@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Reconstruct the earlier 150-scenario benchmark view from the shipped 208-scenario one.
+"""Reconstruct the earlier 150-scenario benchmark view from the shipped scenario file.
 
 Two sections of the report - the regime-compatibility experiment (Section 6.2.2) and the
 graph-expansion comparison (Section 6.2.3) - were computed on an earlier, smaller version of
@@ -7,7 +7,7 @@ the benchmark: the 150 scenarios collected in the first two rounds, under their 
 stratified DEV/TEST split. The later 58-scenario expansion round, and the re-split that came
 with it, post-date those two experiments.
 
-Nothing is lost, because the 208-scenario file carries both. Each scenario records its
+Nothing is lost, because the shipped file carries both. Each scenario records its
 collection round in `source_set`, and each of the original 150 also records its split under
 that earlier protocol in `source_split_150rebalance`. This script materialises that view:
 the same records, filtered to the original 150, with `split` set to the earlier split, so

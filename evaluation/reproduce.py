@@ -188,7 +188,21 @@ def check_artifacts(c: Checker) -> None:
     cache_ids = set(cache.scenario_id.unique())
     dropped = {f"EXP_GRAPH{i:03d}" for i in range(1, 11)}
 
-    c.exact("Benchmark scenarios", 208, len(scen_ids))
+    c.exact("Scenario records in the shipped file", 208, len(scen_ids))
+
+    # The benchmark is the 189 scenarios that carry a scoreable mandatory requirement -
+    # 95 DEV and 94 TEST, the figures the report gives. The rest of the records are
+    # carried in the file but never scored.
+    from evaluation.ce_metrics_audit import mandatory_requirements_with_targets
+    gold_by_id = {r["scenario_id"]: r for r in
+                  (json.loads(l) for l in open(GOLD_PATH) if l.strip())}
+    scen = [json.loads(l) for l in open(SCENARIOS_PATH) if l.strip()]
+    scoreable = {s_["scenario_id"] for s_ in scen
+                 if mandatory_requirements_with_targets(gold_by_id.get(s_["scenario_id"], {}))}
+    c.exact("Benchmark scenarios", 189, len(scoreable))
+    for split, n in (("dev", 95), ("test", 94)):
+        ids = {s_["scenario_id"] for s_ in scen if s_.get("split") == split}
+        c.exact(f"{split.upper()} scenarios", n, len(ids & scoreable))
     c.exact("Gold records (frozen 218-set)", 218, len(gold_ids))
     c.exact("Candidate cache scenarios (frozen 218-set)", 218, len(cache_ids))
     c.exact("Gold minus scenarios = ten dropped EXP_GRAPH", sorted(dropped),

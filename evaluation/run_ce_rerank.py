@@ -6,7 +6,7 @@ build_candidate_cache.py (run that first) and fetches each candidate's chunk tex
 from the frozen corpus DB, because chunk text is deliberately not stored in the parquet.
 
 The shipped output (data/reranked_top75_output_COMBINED218_bge-reranker-v2-m3.json) was
-produced by this script over the 208-scenario benchmark. max_length is 512 by deliberate
+produced by this script over every scenario record. max_length is 512 by deliberate
 choice, not by model limit - see TECHNICAL_APPENDIX.md, "Cross-encoder settings".
 
 Run:

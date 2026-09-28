@@ -1,8 +1,8 @@
-# Benchmark: 208 scenarios with requirement-level gold evidence
+# Benchmark: 189 scenarios with requirement-level gold evidence
 
 Two files, one JSON object per line:
 
-- `scenarios_all_208.jsonl` — 208 scenarios: the query, its context, and its split.
+- `scenarios_all_208.jsonl` — the scenario records: the query, its context, and its split.
 - `gold_evidence_218.jsonl` — the evidence each scenario's answer must rest on, broken down
   into individually-checkable requirements.
 
@@ -15,10 +15,14 @@ mandatory requirement is.
 
 ## Composition
 
+The benchmark is **189 scenarios: 95 DEV and 94 TEST**. These are the scenarios that carry at
+least one mandatory requirement resolving to a chunk in the corpus, so they are the ones every
+reported metric is computed over.
+
 | Suite | DEV | TEST | Total |
 |---|---:|---:|---:|
-| semantic / practitioner phrasing | 27 | 27 | 54 |
-| exact_anchor (direct legal anchor) | 23 | 23 | 46 |
+| exact_anchor (direct legal anchor) | 23 | 22 | 45 |
+| semantic / practitioner phrasing | 18 | 18 | 36 |
 | procedural_multi_evidence | 10 | 10 | 20 |
 | cross_reference_multi_instrument | 9 | 10 | 19 |
 | applicability / transition | 8 | 8 | 16 |
@@ -28,22 +32,43 @@ mandatory requirement is.
 | vocabulary_mismatch | 4 | 4 | 8 |
 | compound / multi-requirement | 3 | 2 | 5 |
 | authority / source-role sensitive | 2 | 2 | 4 |
-| **Total** | **104** | **104** | **208** |
+| **Total** | **95** | **94** | **189** |
 
-Legal regime: PA2023 115, PCR2015 61, OTHER_REGIME 15, mixed 12, and single-figure counts for
-UCR2016, CCR2016, DSPCR2011 and PCR2015_POLICY.
+Legal regime across the set: PA2023, PCR2015, mixed and OTHER_REGIME, with single-figure counts
+for UCR2016, CCR2016, DSPCR2011 and PCR2015_POLICY.
 
-Not all 208 scenarios carry mandatory requirements that resolve to chunks present in the corpus,
-so the **scoreable** counts used throughout the report are 95 DEV and 94 TEST scenarios,
-carrying 155 and 139 mandatory requirements respectively. Every script derives these counts from
-the data rather than hardcoding them.
+Requirement counts, which are the denominators of RequirementRecall: **155 on DEV and 139 on
+TEST**.
+
+### What the shipped file contains
+
+`scenarios_all_208.jsonl` holds **208 records** — the 189 above plus 19 that carry no mandatory
+requirement resolving into the corpus and are therefore never scored (9 on DEV, 10 on TEST).
+They are kept in the file rather than stripped from it, so the file stays as the pipeline read
+it, and every script derives the scoreable set from the gold rather than from a hardcoded list.
+Confirm the split yourself:
+
+```bash
+python - <<'PY'
+import sys, json; sys.path.insert(0, ".")
+from evaluation.ce_metrics_audit import load_jsonl, mandatory_requirements_with_targets
+S = load_jsonl("benchmark/scenarios_all_208.jsonl")
+G = {r["scenario_id"]: r for r in load_jsonl("benchmark/gold_evidence_218.jsonl")}
+scoreable = {s["scenario_id"] for s in S
+             if mandatory_requirements_with_targets(G.get(s["scenario_id"], {}))}
+for split in ("dev", "test"):
+    ids = {s["scenario_id"] for s in S if s["split"] == split}
+    print(f"{split.upper():5} records {len(ids)}, scored {len(ids & scoreable)}")
+print(f"TOTAL records {len(S)}, scored {len(scoreable)}")
+PY
+```
 
 ## Splits
 
-`split` is `dev` or `test`, 104 each. The split is **stratified by suite and legal regime**:
+`split` is `dev` or `test`. The split is **stratified by suite and legal regime**:
 scenarios were grouped by `(suite, regime_context)`, shuffled deterministically within each
 group with seed 20260920, and each group divided as close to evenly as integer counts allow,
-alternating the rounding direction between groups to land on an exact 104/104.
+alternating the rounding direction between groups so the two sides carry a comparable mix.
 
 DEV is where every tunable was chosen. TEST was scored once, after freezing, and no parameter
 was adjusted in response to a TEST result; `config/frozen_config.json` is the record of that,
@@ -59,7 +84,7 @@ file emitted from these fields; `evaluation/make_benchmark150.py` does exactly t
 
 The corpus was assembled over three collection rounds (`source_set`: `current60` 60, `faq90` 90,
 `expansion_v2` 58), and later rounds added fields earlier ones did not have. Every field below
-is present on all 208 scenarios unless marked otherwise.
+is present on every scenario record unless marked otherwise.
 
 | Field | Meaning |
 |---|---|
@@ -144,9 +169,9 @@ returned it.
 
 ## Record counts
 
-`gold_evidence_218.jsonl` contains **218 records for 208 scenarios**: the 208 in the benchmark
-plus ten `EXP_GRAPH*` records carried over from the frozen retrieval run, which covered 218.
-The candidate cache covers the same 218.
+`gold_evidence_218.jsonl` contains **218 records**: one for each of the 208 scenario records in
+the file, plus ten `EXP_GRAPH*` records carried over from the frozen retrieval run, which
+covered 218. The candidate cache covers the same 218.
 
 Every evaluation script joins gold to scenarios by `scenario_id` and iterates over scenario
 ids, so the ten extra records are never read. Both files are shipped unmodified, which is why

@@ -10,7 +10,10 @@ part_number,part,report,check,reported,recomputed,status
 1,corpus,"Section 3.1, Figure 1",Index manifest: chunks indexed,19087,19087,PASS
 1,corpus,"Section 3.1, Figure 1",Index manifest: FTS tokenizer,porter,porter,PASS
 2,artifacts,"Sections 4 and 5.3, Appendix A",Gold evidence SHA-256 matches the frozen manifest,c97bf4d4a70eeb28c33401a2c01e17f1b1567d9d29a422677162d1635067da22,c97bf4d4a70eeb28c33401a2c01e17f1b1567d9d29a422677162d1635067da22,PASS
-2,artifacts,"Sections 4 and 5.3, Appendix A",Benchmark scenarios,208,208,PASS
+2,artifacts,"Sections 4 and 5.3, Appendix A",Scenario records in the shipped file,208,208,PASS
+2,artifacts,"Sections 4 and 5.3, Appendix A",Benchmark scenarios,189,189,PASS
+2,artifacts,"Sections 4 and 5.3, Appendix A",DEV scenarios,95,95,PASS
+2,artifacts,"Sections 4 and 5.3, Appendix A",TEST scenarios,94,94,PASS
 2,artifacts,"Sections 4 and 5.3, Appendix A",Gold records (frozen 218-set),218,218,PASS
 2,artifacts,"Sections 4 and 5.3, Appendix A",Candidate cache scenarios (frozen 218-set),218,218,PASS
 2,artifacts,"Sections 4 and 5.3, Appendix A",Gold minus scenarios = ten dropped EXP_GRAPH,"['EXP_GRAPH001', 'EXP_GRAPH002', 'EXP_GRAPH003', 'EXP_GRAPH004', 'EXP_GRAPH005', 'EXP_GRAPH006', 'EXP_GRAPH007', 'EXP_GRAPH008', 'EXP_GRAPH009', 'EXP_GRAPH010']","['EXP_GRAPH001', 'EXP_GRAPH002', 'EXP_GRAPH003', 'EXP_GRAPH004', 'EXP_GRAPH005', 'EXP_GRAPH006', 'EXP_GRAPH007', 'EXP_GRAPH008', 'EXP_GRAPH009', 'EXP_GRAPH010']",PASS

@@ -352,24 +352,24 @@ read first.
 A final summary gives one row per part plus the artifact tally, and every check is written to
 `results/reproduction_report.csv`. Exit status is 0 only if every selected part passed.
 
-**Current state: 12/12 parts, 281/281 checks, 48 artifacts regenerated and all 48 identical
+**Current state: 12/12 parts, 284/284 checks, 48 artifacts regenerated and all 48 identical
 to the shipped copies.**
 
 ```
   1  corpus         Corpus composition                           10/10  PASS
-  2  artifacts      Frozen artifact integrity and provenance     23/23  PASS
+  2  artifacts      Frozen artifact integrity and provenance     26/26  PASS
   3  rq1            RQ1: matched-budget comparison               71/71  PASS
   4  signals        Signal behaviour and authority calibration   15/15  PASS
   5  graph          RQ2: graph edge quality and retrieval effect  19/19  PASS
   6  regime         RQ2: regime-compatibility constraint           8/8  PASS
   7  reranking      RQ3: cross-encoder variants and completeness  34/34  PASS
-  8  performance    Final fixed-configuration performance         24/24  PASS
+  8  performance    Final fixed-configuration performance         32/32  PASS
   9  ir-metrics     Secondary IR diagnostics                      11/11  PASS
  10  tokens         Token distributions and the 512-token window  13/13  PASS
  11  figures        Figure regeneration                           11/11  PASS
  12  cross-check    Independent cross-check of headline numbers   34/34  PASS
   ------------------------------------------------------------------------
-  12/12 parts reproduced   281/281 checks passed
+  12/12 parts reproduced   284/284 checks passed
   48 artifacts regenerated under results/ and figures/ — 48 identical to the shipped copy
 ```
 
@@ -581,7 +581,7 @@ The retriever and the corpus-construction chain. These are the code under test, 
 | `category_boost.py` | The query-category classifier and boost rule that `test_confirmation.py` evaluates in Section 6.3.3. Imported, not run directly. |
 | `ce_variants_test.py` | The cross-encoder variants re-measured on TEST, so the DEV selection can be checked against a split nothing was tuned on. |
 | `test_confirmation.py` | Section 6.3.1 and 6.3.3's TEST-side confirmation: authority-alpha sensitivity, cross-encoder diagnostics, and the category-boost reflection against an oracle. Reporting only; nothing is selected from TEST. |
-| `make_benchmark150.py` | Materialises the earlier 150-scenario benchmark view from the shipped 208-scenario file, for the two experiments that used it. |
+| `make_benchmark150.py` | Materialises the earlier 150-scenario benchmark view from the shipped scenario file, for the two experiments that used it. |
 | `rq1_rq3_same_budget.py` | The same-budget ablation: six conventional pooled configurations at top-50 against three two-lane configurations at 25+25, so no comparison is confounded by budget. Adds bootstrap CIs, permutation p-values, Cohen's *d* and McNemar. |
 | `ce_experiment_metrics.py` | Cross-encoder variants 1 and 3. Writes `summaries_v1_v3.json`. **Run before `ce_experiment_metrics2.py`.** |
 | `ce_experiment_metrics2.py` | Variants 2, 4 and the truncation diagnostic, then the variant comparison table. |
@@ -594,7 +594,7 @@ The retriever and the corpus-construction chain. These are the code under test, 
 
 | File | What it is |
 |---|---|
-| `candidate_cache.parquet` | **The single most important file here.** One row per (scenario, lane, candidate) for all 208 scenarios: raw and normalised BM25, dense and authority values, jurisdiction weight, fused/blended/final scores, first-stage rank, merged cross-encoder score and rank, and gold flags. Everything in Path B reads this. |
+| `candidate_cache.parquet` | **The single most important file here.** One row per (scenario, lane, candidate) for every scenario record: raw and normalised BM25, dense and authority values, jurisdiction weight, fused/blended/final scores, first-stage rank, merged cross-encoder score and rank, and gold flags. Everything in Path B reads this. |
 | `reranked_top75_output_COMBINED218_bge-reranker-v2-m3.json` | Raw baseline reranker output, top 75 per lane per scenario, with pre- and post-rerank positions. |
 | `variant2_ce_output_DEV.json`, `variant2_ce_output_TEST.json` | Metadata-enriched reranker output, same schema. |
 | `benchmark150/candidate_cache_graph_off.parquet` | The frozen graph-off cache over the earlier 150-scenario benchmark. Needed by Sections 6.2.2 and 6.2.3. |
@@ -730,7 +730,7 @@ not for headline performance.
 
 ### Which benchmark view each part uses
 
-Ten of the twelve parts run against the 208-scenario benchmark shipped in `benchmark/`. Parts 5
+Ten of the twelve parts run against the 189-scenario benchmark shipped in `benchmark/`. Parts 5
 and 6 — Sections 6.2.3 and 6.2.2 — run against the 150-scenario view of it, which is the set
 those two experiments were computed on, at n = 68 on DEV and n = 63 on TEST.
 
