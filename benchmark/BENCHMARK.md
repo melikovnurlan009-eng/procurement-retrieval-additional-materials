@@ -74,11 +74,9 @@ DEV is where every tunable was chosen. TEST was scored once, after freezing, and
 was adjusted in response to a TEST result; `config/frozen_config.json` is the record of that,
 and the analysis scripts refuse to run on TEST without it.
 
-An earlier split by source is preserved per-scenario as `split_by_source`, and the split used
-for the two experiments in Sections 6.2.2 and 6.2.3 as `source_split_150rebalance`. Nothing in
-the pipeline hardcodes `split`, so any of the three can be selected with `--scenarios` and a
-file emitted from these fields; `evaluation/make_benchmark150.py` does exactly that for the
-150-scenario view.
+Two earlier splits are preserved per scenario, as `split_by_source` and
+`source_split_150rebalance`. Nothing in the pipeline hardcodes `split`, so any of them can be
+selected by emitting a scenario file from those fields and passing it with `--scenarios`.
 
 ## Scenario fields
 

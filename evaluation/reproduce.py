@@ -348,7 +348,7 @@ def check_signals(c: Checker) -> None:
 
 
 def check_graph(c: Checker) -> None:
-    """Section 6.2.3: is the citation graph correct, and does it help retrieval?"""
+    """Section 6.2.3: the stratified audit of citation-edge quality."""
     audit = _json("graph_edge_audit.json")
     c.exact("Edges reviewed", 122, audit["n_edges_reviewed"])
     c.exact("Strata sampled", 14, audit["n_strata"])
@@ -367,60 +367,6 @@ def check_graph(c: Checker) -> None:
     c.true("Inferred and hub strata sit at 10-20%",
            bool((hubs.meaningful_rate_pct <= 20).all()),
            ", ".join(f"{v:.0f}%" for v in hubs.meaningful_rate_pct))
-
-    # The retrieval comparison, on the earlier benchmark the report used for it.
-    abl = _csv("benchmark150/rq1_ablation_summary.csv").set_index("config_id")
-    c.exact("Graph comparison DEV scenarios", 68, int(abl.loc[8, "n_scenarios"]))
-    c.num("DEV recall, graph ON", 0.491, abl.loc[8, "requirement_recall_mean"])
-    c.num("DEV recall, graph OFF", 0.514, abl.loc[9, "requirement_recall_mean"], tol=0.001)
-    c.true("Graph expansion lowers DEV recall",
-           abl.loc[8, "requirement_recall_mean"] < abl.loc[9, "requirement_recall_mean"],
-           f"{abl.loc[8, 'requirement_recall_mean']:.4f} < "
-           f"{abl.loc[9, 'requirement_recall_mean']:.4f}")
-
-    tst = _csv("benchmark150/test/rq1_ablation_summary.csv").set_index("config_id")
-    c.exact("Graph comparison TEST scenarios", 63, int(tst.loc[8, "n_scenarios"]))
-    c.num("TEST recall, graph ON", 0.468, tst.loc[8, "requirement_recall_mean"])
-    c.num("TEST recall, graph OFF", 0.468, tst.loc[9, "requirement_recall_mean"])
-    c.true("Graph expansion makes no difference on TEST",
-           tst.loc[8, "requirement_recall_mean"] == tst.loc[9, "requirement_recall_mean"],
-           f"both {tst.loc[9, 'requirement_recall_mean']:.4f}")
-
-    # Section 6.2.3's scenario-level claim, over both splits of the 150-scenario view:
-    # improved for none, decreased for two, neutral for the rest of the 131 scoreable.
-    moved = {"better": 0, "worse": 0, "same": 0}
-    for sub in ("", "test/"):
-        lvl = _csv(f"benchmark150/{sub}rq1_ablation_scenario_level.csv")
-        on = lvl[lvl.config_id == 8].set_index("scenario_id").requirement_recall_10
-        off = lvl[lvl.config_id == 9].set_index("scenario_id").requirement_recall_10
-        for sid in on.index:
-            d = on[sid] - off[sid]
-            moved["better" if d > 0 else "worse" if d < 0 else "same"] += 1
-    total = sum(moved.values())
-    c.exact("Scenarios compared across both splits", 131, total)
-    c.exact("Scenarios graph expansion improved", 0, moved["better"])
-    c.exact("Scenarios graph expansion decreased", 2, moved["worse"])
-    c.exact("Scenarios unaffected", 129, moved["same"])
-
-
-def check_regime(c: Checker) -> None:
-    """Section 6.2.2: the exploratory regime-compatibility constraint at theta = 0.7."""
-    df = _csv("benchmark150/rq3_test_frozen_summary.csv").set_index("stage")
-    post = df.loc["2_post_CE"]
-    constrained = df.loc["3_post_CE_plus_regime_constraint(theta=0.7)"]
-
-    c.exact("TEST scenarios (150-scenario view)", 63, int(post.n))
-    c.num("Post-CE requirement recall", 0.577, post.requirement_recall_mean)
-    c.num("Constrained requirement recall", 0.553, constrained.requirement_recall_mean)
-    c.num("Requirement recall change under the constraint", -0.024,
-          constrained.requirement_recall_mean - post.requirement_recall_mean)
-    c.num("Post-CE complete coverage", 0.508, post.complete_coverage_mean)
-    c.num("Constrained complete coverage", 0.476, constrained.complete_coverage_mean)
-    c.num("Complete coverage change under the constraint", -0.032,
-          constrained.complete_coverage_mean - post.complete_coverage_mean)
-    c.true("Constrained recall is below unconstrained, as reported",
-           constrained.requirement_recall_mean < post.requirement_recall_mean,
-           f"{constrained.requirement_recall_mean:.4f} < {post.requirement_recall_mean:.4f}")
 
 
 def check_reranking(c: Checker) -> None:
@@ -694,48 +640,12 @@ PARTS: list[Part] = [
     ),
     Part(
         key="graph",
-        inputs=['benchmark/graph_edge_review/edge_classifications.csv', 'benchmark/scenarios_all_208.jsonl', 'benchmark/gold_evidence_218.jsonl', 'data/benchmark150/candidate_cache_graph_on.parquet', 'data/benchmark150/candidate_cache_graph_off.parquet'],
-        title="RQ2: graph edge quality and retrieval effect",
+        title="RQ2: citation-edge quality",
         report="Section 6.2.3",
-        steps=[
-            _py("graph_edge_audit.py"),
-            _py("make_benchmark150.py"),
-            _py("rq1_ablations.py") + ["--split", "DEV"] + ['--scenarios', 'benchmark/derived/scenarios_all_150.jsonl', '--gold', 'benchmark/derived/gold_evidence_150.jsonl'] + [
-                "--results-dir", "results/benchmark150",
-                "--cache", "data/benchmark150/candidate_cache_graph_on.parquet",
-                "--graph-off-cache", "data/benchmark150/candidate_cache_graph_off.parquet"],
-            _py("rq1_ablations.py") + ["--split", "TEST"] + ['--scenarios', 'benchmark/derived/scenarios_all_150.jsonl', '--gold', 'benchmark/derived/gold_evidence_150.jsonl'] + [
-                "--results-dir", "results/benchmark150/test",
-                "--frozen-config", "config/frozen_config.json",
-                "--cache", "data/benchmark150/candidate_cache_graph_on.parquet",
-                "--graph-off-cache", "data/benchmark150/candidate_cache_graph_off.parquet"],
-        ],
+        inputs=["benchmark/graph_edge_review/edge_classifications.csv"],
+        steps=[_py("graph_edge_audit.py")],
         check=check_graph,
-        note="Two measurements: edge correctness, and the retrieval effect of expanding along "
-             "those edges. The retrieval comparison runs on the 150-scenario benchmark view, "
-             "reconstructed by make_benchmark150.py, against the graph-on and graph-off caches "
-             "in data/benchmark150/.",
-        produces=["results/graph_edge_audit.json", "results/graph_edge_audit_by_stratum.csv",
-                  "results/benchmark150/rq1_ablation_summary.csv",
-                  "results/benchmark150/test/rq1_ablation_summary.csv"],
-    ),
-    Part(
-        key="regime",
-        inputs=['benchmark/scenarios_all_208.jsonl', 'benchmark/gold_evidence_218.jsonl', 'data/benchmark150/candidate_cache_graph_off.parquet', 'config/frozen_config.json'],
-        title="RQ2: regime-compatibility constraint",
-        report="Section 6.2.2",
-        steps=[
-            _py("make_benchmark150.py"),
-            _py("rq3_regime_constraint.py") + [
-                "--mode", "test_frozen", "--theta", "0.7", "--split", "TEST",
-                "--frozen-config", "config/frozen_config.json",
-                "--cache", "data/benchmark150/candidate_cache_graph_off.parquet"] + ['--scenarios', 'benchmark/derived/scenarios_all_150.jsonl', '--gold', 'benchmark/derived/gold_evidence_150.jsonl', '--results-dir', 'results/benchmark150'],
-        ],
-        check=check_regime,
-        note="Runs on the 150-scenario benchmark view, reconstructed by make_benchmark150.py, "
-             "against the graph-off cache in data/benchmark150/. theta comes from the freeze "
-             "record; the script refuses to run on TEST without a frozen config.",
-        produces=["results/benchmark150/rq3_test_frozen_summary.csv"],
+        produces=["results/graph_edge_audit.json", "results/graph_edge_audit_by_stratum.csv"],
     ),
     Part(
         key="reranking",
